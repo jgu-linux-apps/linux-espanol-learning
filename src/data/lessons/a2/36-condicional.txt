@@ -1,0 +1,58 @@
+# id: a2-36
+# title: Me gustaría… Tryb przypuszczający (condicional)
+# unit: 9
+# unit_title: Trabajo y futuro — praca i przyszłość
+@goals
+Grzecznie prosić i wyrażać życzenia
+Dawać rady: yo que tú…, deberías…
+Tworzyć condicional
+@dialog
+Rosa: Marek, ¿podrías ayudarme con el ordenador? No funciona Internet. | Marek, mógłbyś mi pomóc z komputerem? Nie działa internet.
+Marek: Claro. ¿Has reiniciado el router? | Jasne. Zrestartowałaś router?
+Rosa: No… ¿Tendría que hacerlo? | Nie… Powinnam to zrobić?
+Marek: Yo que tú, lo reiniciaría primero. Casi siempre funciona. | Na twoim miejscu najpierw bym go zrestartował. Prawie zawsze działa.
+Rosa: ¡Ya funciona! Muchas gracias. Me gustaría invitarte a un café. | Już działa! Bardzo dziękuję. Chciałabym zaprosić cię na kawę.
+Marek: Me encantaría. ¿Te vendría bien el jueves? | Bardzo chętnie. Pasowałby ci czwartek?
+Rosa: Perfecto, el jueves a las cinco. | Idealnie, w czwartek o piątej.
+@vocab
+me gustaría | chciałbym / chciałabym | phr | Me gustaría viajar a Cuba. / Chciałbym pojechać na Kubę.
+me encantaría | bardzo chętnie, bardzo bym chciał | phr
+¿podrías…? | czy mógłbyś…? | phr
+¿le importaría…? | czy nie miałby Pan nic przeciwko…? | phr
+yo que tú | na twoim miejscu | phr
+deberías | powinieneś | v
+reiniciar | restartować | v
+el router | router | m
+Internet | internet | m
+venir bien | pasować (o terminie) | phr | ¿Te viene bien el lunes? / Pasuje ci poniedziałek?
+invitar a | zapraszać na | v
+el favor | przysługa | m | ¿Me haces un favor? / Zrobisz mi przysługę?
+@grammar
+## Condicional — końcówki do bezokolicznika
+|| yo | hablaría
+|| tú | hablarías
+|| él/ella/usted | hablaría
+|| nosotros/as | hablaríamos
+|| vosotros/as | hablaríais
+|| ellos/ellas/ustedes | hablarían
+Nieregularne tematy jak w futuro: **tendría, podría, saldría, vendría, pondría, sabría, querría, haría, diría, habría**.
+
+## Do czego służy
+- **grzeczne prośby**: **¿Podrías ayudarme? ¿Le importaría cerrar la ventana?**
+- **życzenia**: **Me gustaría vivir en España. Me encantaría.**
+- **rady**: **Deberías descansar. Yo que tú, iría al médico.**
+- **hipotezy**: **Con más dinero, viajaría más.**
+@exercises
+conj: hablar (yo, condicional) | hablaría
+conj: poder (tú, condicional) | podrías
+conj: hacer (nosotros, condicional) | haríamos
+conj: tener (ellos, condicional) | tendrían
+conj: gustar (a mí, condicional) | me gustaría
+choice: Mógłbyś mi pomóc? | ¿Podrías ayudarme? | ¿Podrías ayudarme?; ¿Puedrías ayudarme?; ¿Podrás ayudarme ahora?
+choice: Na twoim miejscu poszedłbym do lekarza: | Yo que tú, iría al médico. | Yo que tú, iría al médico.; Yo como tú, voy al médico.; Si yo tú, iría al médico.
+fill: Me ___ (gustar) visitar Cuba. | gustaría
+fill: ___ (deber, tú) dormir más. | Deberías
+trans: Chciałbym cię zaprosić na kawę. | Me gustaría invitarte a un café.
+trans: Pasuje ci czwartek? | ¿Te viene bien el jueves?
+@culture
+W Hiszpanii do zaproszenia na kawę często dodaje się **¡Invito yo!** (Ja stawiam!). Kłótnia o to, kto płaci rachunek, to w hiszpańskich barach scena niemal rytualna.

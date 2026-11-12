@@ -1,0 +1,26 @@
+# id: r10
+# level: A2
+# unit: 10
+# title: La noche de las doce uvas
+@text
+Era mi primera Nochevieja en España. Mis amigos españoles me invitaron a cenar en su casa en Valencia, y me explicaron la tradición: a las doce en punto hay que comer doce uvas, una con cada campanada del reloj. Si lo consigues, tendrás suerte todo el año.
+Parecía fácil. A las once y cincuenta y cinco encendimos la televisión para ver el reloj de la Puerta del Sol, en Madrid. Todos teníamos nuestras doce uvas preparadas en un plato. Yo estaba muy nervioso.
+De repente empezaron las campanadas. Comí la primera uva, luego la segunda… pero las uvas eran grandes y tenían semillas. Cuando sonó la última campanada, ¡yo todavía tenía cinco uvas en el plato! Todos se rieron mucho.
+Al final, mi amiga Lucía me dijo: "No te preocupes, el año que viene compramos uvas sin semillas". Y así fue. Desde entonces, cada Nochevieja como mis doce uvas, aunque esté en Polonia.
+@translation
+To był mój pierwszy sylwester w Hiszpanii. Moi hiszpańscy przyjaciele zaprosili mnie na kolację do swojego domu w Walencji i wyjaśnili mi tradycję: punktualnie o dwunastej trzeba zjeść dwanaście winogron, po jednym z każdym uderzeniem zegara. Jeśli ci się uda, będziesz mieć szczęście przez cały rok.
+Wydawało się to łatwe. Za pięć dwunasta włączyliśmy telewizor, żeby oglądać zegar na Puerta del Sol w Madrycie. Wszyscy mieliśmy dwanaście winogron przygotowanych na talerzu. Byłem bardzo zdenerwowany.
+Nagle zaczęły się uderzenia zegara. Zjadłem pierwsze winogrono, potem drugie… ale winogrona były duże i miały pestki. Kiedy wybiło ostatnie uderzenie, ja wciąż miałem pięć winogron na talerzu! Wszyscy bardzo się śmiali.
+W końcu moja przyjaciółka Lucía powiedziała: „Nie martw się, w przyszłym roku kupimy winogrona bez pestek”. I tak było. Od tamtej pory w każdego sylwestra jem moje dwanaście winogron, nawet kiedy jestem w Polsce.
+@glossary
+en punto | punktualnie (o godzinie)
+conseguir | udać się, osiągnąć
+la suerte | szczęście (los)
+la semilla | pestka, nasiono
+reírse | śmiać się
+aunque esté | nawet jeśli jestem (tryb łączący — poziom B1)
+@questions
+¿Dónde pasó el narrador su primera Nochevieja en España? | En Valencia. | En Madrid.; En Valencia.; En Polonia.
+¿Qué hay que hacer a las doce? | Comer doce uvas. | Beber cava.; Comer doce uvas.; Cantar una canción.
+¿Por qué no pudo comer todas las uvas? | Eran grandes y tenían semillas. | No le gustaban.; Eran grandes y tenían semillas.; Llegó tarde.
+¿Qué hace ahora cada Nochevieja? | Come doce uvas. | Viaja a España.; Come doce uvas.; Va a la Puerta del Sol.

@@ -1,0 +1,20 @@
+# id: r03
+# level: A1
+# unit: 3
+# title: Un día normal de Lucía
+@text
+Lucía es periodista y vive en Madrid. Todos los días se levanta a las siete. Se ducha, se viste y desayuna un café con leche y una tostada. Sale de casa a las ocho y cuarto y va a la oficina en metro.
+Trabaja de nueve a dos. A las dos y media come con sus compañeros en un restaurante cerca de la oficina. Por la tarde trabaja hasta las seis. Después, los lunes y los miércoles va al gimnasio, y los jueves estudia inglés.
+Lucía cena a las nueve y media, normalmente en casa. Antes de dormir, lee un libro. Se acuesta a las doce. Los fines de semana duerme mucho: ¡nunca se levanta antes de las diez!
+@translation
+Lucía jest dziennikarką i mieszka w Madrycie. Codziennie wstaje o siódmej. Bierze prysznic, ubiera się i je na śniadanie kawę z mlekiem i tosta. Wychodzi z domu kwadrans po ósmej i jedzie do biura metrem.
+Pracuje od dziewiątej do drugiej. O wpół do trzeciej je obiad z kolegami w restauracji niedaleko biura. Po południu pracuje do szóstej. Potem w poniedziałki i środy chodzi na siłownię, a w czwartki uczy się angielskiego.
+Lucía je kolację o wpół do dziesiątej, zwykle w domu. Przed snem czyta książkę. Kładzie się spać o dwunastej. W weekendy dużo śpi: nigdy nie wstaje przed dziesiątą!
+@glossary
+el periodista / la periodista | dziennikarz / dziennikarka
+antes de | przed
+@questions
+¿Cómo va Lucía a la oficina? | En metro. | En coche.; En metro.; Andando.
+¿A qué hora come? | A las dos y media. | A las dos.; A las dos y media.; A las nueve y media.
+¿Qué hace los jueves? | Estudia inglés. | Va al gimnasio.; Estudia inglés.; Lee un libro.
+¿Qué hace los fines de semana? | Duerme mucho. | Trabaja.; Duerme mucho.; Se levanta a las siete.

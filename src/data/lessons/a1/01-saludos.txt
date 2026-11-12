@@ -1,0 +1,66 @@
+# id: a1-01
+# title: ¡Hola! Powitania i przedstawianie się
+# unit: 1
+# unit_title: Primeros pasos — pierwsze kroki
+@goals
+Przywitać się i pożegnać o różnych porach dnia
+Przedstawić się i zapytać kogoś o imię
+Odpowiedzieć na „¿Qué tal?”
+@dialog
+Carmen: ¡Hola! Buenos días. | Cześć! Dzień dobry.
+Pablo: ¡Hola! ¿Qué tal? | Cześć! Co słychać?
+Carmen: Muy bien, gracias. ¿Y tú? | Bardzo dobrze, dziękuję. A ty?
+Pablo: Bien, bien. Me llamo Pablo. ¿Cómo te llamas? | Dobrze, dobrze. Mam na imię Pablo. Jak masz na imię?
+Carmen: Me llamo Carmen. | Mam na imię Carmen.
+Pablo: Encantado, Carmen. | Miło mi, Carmen.
+Carmen: Encantada. | Miło mi.
+Pablo: Bueno, me voy. ¡Hasta luego! | No dobrze, idę. Na razie!
+Carmen: ¡Adiós! ¡Hasta mañana! | Do widzenia! Do jutra!
+@vocab
+hola | cześć | interj | ¡Hola, Pablo! / Cześć, Pablo!
+buenos días | dzień dobry (rano, do obiadu ok. 14:00) | phr
+buenas tardes | dzień dobry (po południu), dobry wieczór (do zmroku) | phr
+buenas noches | dobry wieczór (po zmroku), dobranoc | phr
+¿qué tal? | co słychać? jak leci? | phr
+bien | dobrze | adv | Estoy bien. / Mam się dobrze.
+muy | bardzo | adv | muy bien / bardzo dobrze
+gracias | dziękuję | interj
+y | i, a | conj | ¿Y tú? / A ty?
+llamarse | nazywać się, mieć na imię | vr | Me llamo Ana. / Mam na imię Ana.
+¿cómo? | jak? | adv | ¿Cómo te llamas? / Jak masz na imię?
+encantado / encantada | miło mi (mówi mężczyzna / kobieta) | adj
+adiós | do widzenia, cześć (na pożegnanie) | interj
+hasta luego | na razie, do zobaczenia | phr
+hasta mañana | do jutra | phr
+por favor | proszę (prosząc o coś) | phr
+de nada | nie ma za co | phr
+sí | tak | adv
+no | nie | adv
+@grammar
+## Powitania w ciągu dnia
+W Hiszpanii **buenos días** mówi się mniej więcej do obiadu (ok. 14:00–15:00), potem **buenas tardes** aż do zmroku, a wieczorem **buenas noches** — to jest zarówno „dobry wieczór”, jak i „dobranoc”.
+
+## Czasownik llamarse
+Hiszpanie nie mówią „moje imię jest”, tylko „nazywam się”. Zaimek **me / te / se** stoi przed czasownikiem:
+|| yo | me llamo | nazywam się
+|| tú | te llamas | nazywasz się
+|| él / ella / usted | se llama | on/ona/Pan(i) się nazywa
+
+## Znaki zapytania i wykrzyknienia
+Po hiszpańsku pytanie i wykrzyknienie mają znak **również na początku**, odwrócony: **¿Cómo te llamas?**, **¡Hola!**. W aplikacji wpiszesz je przyciskami ¿ i ¡.
+
+## Encantado czy encantada?
+Mężczyzna mówi **encantado**, kobieta **encantada** — przymiotnik zgadza się z płcią osoby mówiącej. Można też po prostu powiedzieć **mucho gusto**.
+@exercises
+fill: Me ___ Pablo. | llamo
+fill: ¿Cómo te ___? | llamas
+fill: Ella se ___ Carmen. | llama
+choice: Jest 21:00. Jak się przywitasz? | Buenas noches | Buenos días; Buenas tardes; Buenas noches
+choice: Kobieta mówi „miło mi”: | Encantada | Encantado; Encantada; Encantados
+choice: Odpowiedź na „Gracias”: | De nada | De nada; Por favor; Hasta luego
+trans: Cześć! Co słychać? | ¡Hola! ¿Qué tal?
+trans: Bardzo dobrze, dziękuję. | Muy bien, gracias.
+trans: Jak masz na imię? | ¿Cómo te llamas?
+trans: Do jutra! | ¡Hasta mañana!
+@culture
+W Hiszpanii przy powitaniu znajomych (a często też nowo poznanych osób) daje się **dos besos** — dwa całusy w policzki, zaczynając od prawego. Mężczyźni między sobą zwykle podają dłoń.

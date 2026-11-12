@@ -1,0 +1,74 @@
+# id: a1-06
+# title: ¿Cómo es? Opisywanie ludzi i rzeczy
+# unit: 2
+# unit_title: Mi mundo — mój świat
+@goals
+Opisać wygląd i charakter osoby
+Uzgadniać przymiotniki z rzeczownikiem
+Nazwać kolory
+@dialog
+Laura: ¿Cómo es tu nuevo jefe? | Jaki jest twój nowy szef?
+Marek: Es alto, moreno y bastante joven. | Jest wysoki, ciemnowłosy i dość młody.
+Laura: ¿Y es simpático? | A jest sympatyczny?
+Marek: Sí, es muy simpático y trabajador. Pero es un poco serio. | Tak, jest bardzo sympatyczny i pracowity. Ale jest trochę poważny.
+Laura: Mi jefa es rubia, tiene los ojos azules y es muy divertida. | Moja szefowa jest blondynką, ma niebieskie oczy i jest bardzo zabawna.
+Marek: ¡Qué suerte! | Ale masz szczęście!
+@vocab
+alto / alta | wysoki | adj
+bajo / baja | niski | adj
+moreno / morena | ciemnowłosy, śniady | adj
+rubio / rubia | jasnowłosy, blondyn | adj
+joven | młody | adj
+mayor | starszy (o osobie) | adj
+simpático / simpática | sympatyczny, miły | adj
+antipático / antipática | niesympatyczny | adj
+divertido / divertida | zabawny | adj
+serio / seria | poważny | adj
+trabajador / trabajadora | pracowity | adj
+inteligente | inteligentny | adj
+grande | duży | adj
+pequeño / pequeña | mały | adj
+nuevo / nueva | nowy | adj
+viejo / vieja | stary | adj
+el jefe / la jefa | szef / szefowa | m
+los ojos | oczy | mpl
+el pelo | włosy | m | Tiene el pelo largo. / Ma długie włosy.
+blanco / blanca | biały | adj
+negro / negra | czarny | adj
+rojo / roja | czerwony | adj
+azul | niebieski | adj
+verde | zielony | adj
+amarillo / amarilla | żółty | adj
+bastante | dość, całkiem | adv
+un poco | trochę | adv
+pero | ale | conj
+@grammar
+## Jaki jest? — ser + przymiotnik
+Do opisu cech stałych (wygląd, charakter) używamy **ser**: **Es alto. Es simpática.**
+Pytanie: **¿Cómo es?** — Jaki/jaka jest?
+
+## Zgoda przymiotnika
+Przymiotnik zgadza się z rzeczownikiem w rodzaju i liczbie i zwykle stoi **po** rzeczowniku:
+|| | męski | żeński
+|| l. poj. | un chico alto | una chica alta
+|| l. mn. | unos chicos altos | unas chicas altas
+- Przymiotniki na **-e** i większość na spółgłoskę mają jedną formę: **inteligente, joven, azul, verde**.
+- Na **-or** dodają **-a**: trabajador → trabajadora.
+- Liczba mnoga: **-s** po samogłosce (altos), **-es** po spółgłosce (azules, jóvenes).
+
+## Tener do opisu
+Oczy i włosy się **ma**: **Tiene los ojos verdes. Tiene el pelo rubio / largo / corto.**
+@exercises
+fill: Mi madre es muy ___ (simpático). | simpática
+fill: Las chicas son ___ (alto). | altas
+fill: Tengo los ojos ___ (azul). | azules
+fill: Mis abuelos son ___ (trabajador). | trabajadores
+fill: Es una casa ___ (pequeño). | pequeña
+choice: Jaki jest Pedro? | ¿Cómo es Pedro? | ¿Qué es Pedro?; ¿Cómo es Pedro?; ¿Cómo está Pedro?
+choice: Ma zielone oczy: | Tiene los ojos verdes. | Es los ojos verdes.; Tiene los ojos verdes.; Tiene ojos verdos.
+choice: Sympatyczne dziewczyny: | chicas simpáticas | chicas simpáticos; chicas simpáticas; chicas simpática
+trans: Mój szef jest wysoki i ciemnowłosy. | Mi jefe es alto y moreno.
+trans: Ona ma długie włosy. | Tiene el pelo largo. /// Ella tiene el pelo largo.
+trans: Jesteśmy młodzi. | Somos jóvenes.
+@culture
+Słowo **guapo** w Hiszpanii to nie tylko „przystojny” — mówi się też „¡Qué guapo!” o ładnej rzeczy, np. o nowej kurtce. A **moreno** może oznaczać też kogoś opalonego.

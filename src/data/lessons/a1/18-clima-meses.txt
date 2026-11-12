@@ -1,0 +1,73 @@
+# id: a1-18
+# title: El tiempo — pogoda, pory roku i miesiące
+# unit: 5
+# unit_title: Planes y tiempo libre — plany i czas wolny
+@goals
+Opisać pogodę
+Nazwać miesiące i pory roku
+Podać datę
+@dialog
+Mercedes: ¿Qué tiempo hace en Polonia en diciembre? | Jaka jest pogoda w Polsce w grudniu?
+Marek: Hace mucho frío y a veces nieva. En la costa también hace viento. | Jest bardzo zimno i czasem pada śnieg. Na wybrzeżu jest też wietrznie.
+Mercedes: Aquí en Sevilla, en invierno hace sol y unos quince grados. | Tu w Sewilli zimą świeci słońce i jest około piętnastu stopni.
+Marek: ¡Qué envidia! ¿Y en verano? | Zazdroszczę! A latem?
+Mercedes: En verano hace muchísimo calor: ¡a veces cuarenta grados! | Latem jest strasznie gorąco: czasem czterdzieści stopni!
+Marek: Entonces voy en primavera, en abril. | To przyjadę wiosną, w kwietniu.
+@vocab
+el tiempo | pogoda; czas | m | ¿Qué tiempo hace? / Jaka jest pogoda?
+hace calor | jest gorąco | phr
+hace frío | jest zimno | phr
+hace sol | świeci słońce | phr
+hace viento | wieje wiatr | phr
+hace buen tiempo | jest ładna pogoda | phr
+hace mal tiempo | jest brzydka pogoda | phr
+llover | padać (o deszczu) | v | Llueve mucho. / Dużo pada.
+nevar | padać (o śniegu) | v | Nieva. / Pada śnieg.
+está nublado | jest pochmurno | phr
+el grado | stopień | m
+la primavera | wiosna | f
+el verano | lato | m
+el otoño | jesień | m
+el invierno | zima | m
+enero | styczeń | m
+febrero | luty | m
+marzo | marzec | m
+abril | kwiecień | m
+mayo | maj | m
+junio | czerwiec | m
+julio | lipiec | m
+agosto | sierpień | m
+septiembre | wrzesień | m
+octubre | październik | m
+noviembre | listopad | m
+diciembre | grudzień | m
+la costa | wybrzeże | f
+@grammar
+## Pogoda: hace, hay, está
+- **hace** + calor, frío, sol, viento, buen/mal tiempo: **Hace frío.**
+- **llueve / nieva** (od llover o→ue, nevar e→ie): **En noviembre llueve mucho.**
+- **está** + nublado / despejado: **Está nublado.**
+- **hay** + tormenta, niebla: **Hay niebla.**
+Wzmocnienie: **hace mucho frío / mucho calor** (nie „muy frío”!).
+
+## Miesiące i daty
+Miesiące piszemy małą literą. Data: **el + liczba + de + miesiąc (+ de + rok)**:
+- **Hoy es el 9 de noviembre.** — Dzisiaj jest 9 listopada.
+- **en abril** — w kwietniu; **en verano** — latem.
+- 1. dzień miesiąca to **el uno** (w Hiszpanii) lub **el primero**.
+
+## Przyrostek -ísimo
+**muchísimo** — bardzo, bardzo dużo; **guapísimo** — przepiękny.
+@exercises
+choice: Jest bardzo zimno: | Hace mucho frío. | Es muy frío.; Hace mucho frío.; Hace muy frío.
+choice: Pada deszcz: | Llueve. | Llueve.; Hace lluvia.; Es lluvia.
+choice: Miesiąc po czerwcu: | julio | junio; julio; agosto
+choice: Jest pochmurno: | Está nublado. | Hace nublado.; Está nublado.; Es nublado.
+fill: En verano ___ calor. | hace
+fill: Hoy es el diez ___ mayo. | de
+fill: En enero ___ (nevar) en la montaña. | nieva
+trans: Jaka jest pogoda? | ¿Qué tiempo hace?
+trans: Latem świeci słońce. | En verano hace sol.
+trans: Dzisiaj jest pierwszy grudnia. | Hoy es el uno de diciembre. /// Hoy es el primero de diciembre.
+@culture
+W Hiszpanii są bardzo różne klimaty: zielona i deszczowa Galicja na północy, gorąca Andaluzja na południu i wiecznie wiosenne Wyspy Kanaryjskie, gdzie zimą jest ok. 20 stopni.

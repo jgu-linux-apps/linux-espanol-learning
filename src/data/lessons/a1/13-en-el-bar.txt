@@ -1,0 +1,71 @@
+# id: a1-13
+# title: En el bar — zamawianie i płacenie
+# unit: 4
+# unit_title: En la ciudad — w mieście
+@goals
+Zamówić coś do jedzenia i picia
+Zapytać o cenę i zapłacić
+Używać grzecznych form (quería, ¿me pone…?)
+@dialog
+Camarero: ¡Buenos días! ¿Qué os pongo? | Dzień dobry! Co podać?
+Marek: Para mí, un café con leche y una tostada con tomate, por favor. | Dla mnie kawę z mlekiem i tosta z pomidorem, proszę.
+Ania: Yo quería un zumo de naranja y un cruasán. | Ja poproszę sok pomarańczowy i rogalika.
+Camarero: Muy bien. ¿Algo más? | Bardzo dobrze. Coś jeszcze?
+Marek: No, nada más, gracias. | Nie, nic więcej, dziękuję.
+Marek: Perdone, ¿cuánto es? | Przepraszam, ile płacę?
+Camarero: Son siete euros con cincuenta. | Razem siedem euro pięćdziesiąt.
+Marek: ¿Puedo pagar con tarjeta? | Mogę zapłacić kartą?
+Camarero: Sí, claro. | Tak, oczywiście.
+@vocab
+el camarero / la camarera | kelner / kelnerka | m
+el café con leche | kawa z mlekiem | m
+el café solo | czarna kawa (espresso) | m
+el cortado | espresso z odrobiną mleka | m
+el té | herbata | m
+el zumo | sok (w Hiszpanii) | m | un zumo de naranja / sok pomarańczowy
+la cerveza | piwo | f
+el vino | wino | m
+la tostada | tost, grzanka | f
+el bocadillo | kanapka z bagietki | m
+la tapa | przekąska do napoju | f
+la cuenta | rachunek | f | La cuenta, por favor. / Poproszę rachunek.
+pagar | płacić | v
+la tarjeta | karta (płatnicza) | f
+en efectivo | gotówką | phr
+el euro | euro | m
+¿cuánto es? | ile to kosztuje? ile płacę? | phr
+quería | chciałbym/chciałabym (grzecznie) | v | Quería un café. / Poproszę kawę.
+para mí | dla mnie | phr
+algo | coś | pron | ¿Algo más? / Coś jeszcze?
+nada | nic | pron
+claro | jasne, oczywiście | adv
+perdone | przepraszam (forma grzecznościowa) | interj
+@grammar
+## Jak zamawiać
+- **Quería…** — Chciałem/chciałabym… (bardzo naturalne i uprzejme)
+- **Para mí, …** — Dla mnie…
+- **¿Me pone…?** — Poda mi Pan/Pani…? (typowe w Hiszpanii)
+- **Un café, por favor.** — najprościej.
+
+## Pytania kelnera
+- **¿Qué os pongo?** / **¿Qué le pongo?** — Co podać (wam / Panu)?
+- **¿Algo más?** — Coś jeszcze?
+- **¿Para tomar aquí o para llevar?** — Na miejscu czy na wynos?
+
+## Tú czy usted?
+Do kelnera w zwykłym barze w Hiszpanii często mówi się na **tú**, ale **usted** jest zawsze bezpieczne: **Perdone** (usted) / **Perdona** (tú).
+
+## Ceny
+**Son siete euros con cincuenta** (7,50 €). Waluta odmienia się: **un euro, dos euros**.
+@exercises
+choice: Jak uprzejmie zamówić kawę? | Quería un café, por favor. | Quiero café ahora.; Quería un café, por favor.; Dame café.
+choice: Prośba o rachunek: | La cuenta, por favor. | La cuenta, por favor.; El cuento, por favor.; La carta, por favor.
+choice: Sok pomarańczowy w Hiszpanii: | un zumo de naranja | un jugo de naranja; un zumo de naranja; una naranja de zumo
+fill: ¿Puedo pagar ___ tarjeta? | con
+fill: Para ___, una cerveza. | mí
+fill: ¿Algo ___? — No, nada más. | más
+trans: Ile płacę? | ¿Cuánto es?
+trans: Dla mnie herbata, proszę. | Para mí, un té, por favor.
+trans: Mogę zapłacić gotówką? | ¿Puedo pagar en efectivo?
+@culture
+W wielu barach w Hiszpanii (zwłaszcza w Granadzie, Leónie czy Jaén) do każdego zamówionego napoju dostaje się **tapa** gratis. Napiwki nie są obowiązkowe — zostawia się drobne lub zaokrągla rachunek.

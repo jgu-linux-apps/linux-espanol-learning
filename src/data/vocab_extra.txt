@@ -1,0 +1,298 @@
+// Dodatkowe słownictwo A1–A2 według tematów: słowo | tłumaczenie | część mowy | przykład ES / PL
+[Zwierzęta]
+el perro | pies | m | Tengo un perro. / Mam psa.
+el gato | kot | m
+el pájaro | ptak | m
+el pez | ryba (żywa) | m | Los peces viven en el agua. / Ryby żyją w wodzie.
+el caballo | koń | m
+la vaca | krowa | f
+el cerdo | świnia | m
+la oveja | owca | f
+el ratón | mysz | m
+el conejo | królik | m
+el oso | niedźwiedź | m
+el toro | byk | m
+el mosquito | komar | m
+el animal | zwierzę | m
+[Natura i krajobraz]
+el río | rzeka | m
+el lago | jezioro | m
+el bosque | las | m
+el árbol | drzewo | m
+la flor | kwiat | f
+el campo | wieś; pole | m | Vivo en el campo. / Mieszkam na wsi.
+el cielo | niebo | m
+el sol | słońce | m
+la luna | księżyc | f
+la estrella | gwiazda | f
+la nube | chmura | f
+la lluvia | deszcz | f
+la nieve | śnieg | f
+el viento | wiatr | m
+la tierra | ziemia | f
+la arena | piasek | f
+el pueblo | wieś, miasteczko | m
+[Dom i przedmioty]
+la puerta | drzwi | f
+la ventana | okno | f
+la pared | ściana | f
+el suelo | podłoga | m
+el techo | sufit; dach | m
+la escalera | schody | f
+el ascensor | winda | m
+el jardín | ogród | m
+el garaje | garaż | m
+la lámpara | lampa | f
+el armario | szafa | m
+la estantería | regał | f
+la nevera | lodówka | f
+el horno | piekarnik | m
+el microondas | mikrofalówka | m
+la lavadora | pralka | f
+el lavavajillas | zmywarka | m
+la ducha | prysznic | f
+el espejo | lustro | m
+el reloj | zegar, zegarek | m
+la caja | pudełko; kasa | f
+la bolsa | torba, reklamówka | f
+el bolso | torebka | m
+la cartera | portfel | f
+las gafas | okulary | fpl
+el paraguas | parasol | m
+[Jedzenie i picie]
+el desayuno | śniadanie | m
+la comida | jedzenie; obiad | f
+la cena | kolacja | f
+el aceite | olej, oliwa | m
+el azúcar | cukier | m
+la pimienta | pieprz | f
+la mantequilla | masło | f
+la leche | mleko | f
+el yogur | jogurt | m
+el zumo | sok | m
+el refresco | napój gazowany | m
+la sopa | zupa | f
+la ensalada | sałatka | f
+la carne de cerdo | wieprzowina | f
+la carne de ternera | cielęcina, wołowina | f
+el marisco | owoce morza | m
+la gamba | krewetka | f
+el atún | tuńczyk | m
+la pasta | makaron | f
+el ajo | czosnek | m
+la zanahoria | marchewka | f
+la lechuga | sałata | f
+el pimiento | papryka | m
+el limón | cytryna | f
+la pera | gruszka | f
+la uva | winogrono | f
+la sandía | arbuz | f
+el melón | melon | m
+el pastel | ciasto | m
+la galleta | ciastko, herbatnik | f
+el helado | lody | m
+el vaso | szklanka | m
+la taza | filiżanka, kubek | f
+la botella | butelka | f
+el cuchillo | nóż | m
+el tenedor | widelec | m
+la cuchara | łyżka | f
+la servilleta | serwetka | f
+la carta | karta dań; list | f | ¿Me trae la carta? / Poda mi Pan kartę?
+el menú del día | zestaw dnia (obiad) | m
+el postre | deser | m
+de primero / de segundo | na pierwsze / na drugie danie | phr
+¡que aproveche! | smacznego! | phr
+[Miasto i miejsca]
+el ayuntamiento | ratusz, urząd miasta | m
+la biblioteca | biblioteka | f
+el mercado | targ | m
+la panadería | piekarnia | f
+la carnicería | sklep mięsny | f
+la pescadería | sklep rybny | f
+la librería | księgarnia | f
+el quiosco | kiosk | m
+correos | poczta | m | ¿Dónde está correos? / Gdzie jest poczta?
+la comisaría | komisariat | f
+el aeropuerto | lotnisko | m
+el puerto | port | m
+el puente | most | m
+la catedral | katedra | f
+el barrio | dzielnica | m
+la esquina | róg (ulicy) | f
+el semáforo | sygnalizacja świetlna | m
+la parada | przystanek | f
+la gasolinera | stacja benzynowa | f
+el aparcamiento | parking | m
+el centro comercial | centrum handlowe | m
+la universidad | uniwersytet | f
+el instituto | liceum | m
+[Transport i podróże]
+el billete | bilet | m | un billete de ida y vuelta / bilet w obie strony
+de ida y vuelta | w obie strony | phr
+el andén | peron | m
+la salida | wyjście; odjazd | f
+la llegada | przyjazd, przylot | f
+el vuelo | lot | m
+la moto | motocykl | f
+el barco | statek | m
+la carretera | droga, szosa | f
+la autopista | autostrada | f
+el mapa | mapa | m
+el turista / la turista | turysta / turystka | mf
+la oficina de turismo | informacja turystyczna | f
+el cajero automático | bankomat | m
+[Praca, biuro, technologia]
+el ordenador portátil | laptop | m
+la pantalla | ekran | f
+el teclado | klawiatura | f
+el ratón | myszka (komputerowa); mysz | m
+la contraseña | hasło | f
+la aplicación | aplikacja | f
+la página web | strona internetowa | f
+el correo electrónico | e-mail | m
+descargar | pobierać (plik) | v
+guardar | zapisywać; przechowywać | v
+borrar | usuwać | v
+imprimir | drukować | v
+la impresora | drukarka | f
+el archivo | plik; archiwum | m
+la red | sieć | f
+el cliente / la clienta | klient / klientka | m
+el jefe de equipo | kierownik zespołu | m
+la jornada | dzień pracy | f | jornada completa / pełny etat
+el horario | grafik, rozkład | m
+las vacaciones pagadas | płatny urlop | fpl
+el despacho | gabinet, biuro | m
+[Ciało i zdrowie]
+la cara | twarz | f
+la nariz | nos | f
+la boca | usta | f
+la oreja | ucho (zewnętrzne) | f
+el cuello | szyja | m
+el hombro | bark | m
+el dedo | palec | m
+la rodilla | kolano | f
+el corazón | serce | m
+la sangre | krew | f
+el hospital | szpital | m
+la farmacia | apteka | f
+la ambulancia | karetka | f
+la herida | rana | f
+el dolor | ból | m
+[Uczucia i stany]
+feliz | szczęśliwy | adj
+alegre | wesoły | adj
+enfadado / enfadada | zły, zagniewany | adj
+preocupado / preocupada | zmartwiony | adj
+aburrido / aburrida | znudzony; nudny | adj
+sorprendido / sorprendida | zaskoczony | adj
+tranquilo / tranquila | spokojny | adj
+el amor | miłość | m
+el miedo | strach | m
+la alegría | radość | f
+la tristeza | smutek | f
+echar de menos | tęsknić | phr | Te echo de menos. / Tęsknię za tobą.
+[Częste czasowniki]
+abrir | otwierać | v
+cerrar | zamykać | v
+ayudar | pomagać | v
+bajar | schodzić, wysiadać | v
+cambiar | zmieniać | v
+cumplir | spełniać; kończyć (lata) | v | Hoy cumplo 40 años. / Dziś kończę 40 lat.
+dejar | zostawiać; pozwalać | v
+dar | dawać | v
+esperar | czekać; mieć nadzieję | v
+ganar | wygrywać; zarabiać | v
+gastar | wydawać (pieniądze) | v
+llevar | nieść, nosić | v
+llorar | płakać | v
+mover | ruszać | v
+necesitar | potrzebować | v
+olvidar | zapominać | v
+oír | słyszeć | v
+pensar | myśleć | v
+perder | gubić; przegrywać; spóźnić się na | v | He perdido el tren. / Spóźniłem się na pociąg.
+poner | kłaść, stawiać | v
+recordar | pamiętać, przypominać | v
+saber | wiedzieć; umieć | v
+sentarse | siadać | vr
+sentir | czuć; żałować | v | Lo siento. / Przykro mi.
+terminar | kończyć | v
+usar | używać | v
+ver | widzieć; oglądać | v
+volar | latać | v
+[Częste przymiotniki]
+largo / larga | długi | adj
+corto / corta | krótki | adj
+ancho / ancha | szeroki | adj
+estrecho / estrecha | wąski | adj
+gordo / gorda | gruby | adj
+delgado / delgada | szczupły | adj
+fuerte | silny | adj
+débil | słaby | adj
+limpio / limpia | czysty | adj
+sucio / sucia | brudny | adj
+lleno / llena | pełny | adj
+vacío / vacía | pusty | adj
+caliente | gorący (o rzeczy) | adj
+frío / fría | zimny | adj
+rico / rica | bogaty; smaczny | adj
+pobre | biedny | adj
+bueno / buena | dobry | adj
+malo / mala | zły | adj
+nuevo / nueva | nowy | adj
+último / última | ostatni | adj
+próximo / próxima | następny | adj
+mismo / misma | ten sam | adj
+otro / otra | inny | adj
+necesario / necesaria | potrzebny, konieczny | adj
+posible | możliwy | adj
+libre | wolny | adj
+famoso / famosa | sławny | adj
+peligroso / peligrosa | niebezpieczny | adj
+[Słowa funkcyjne i zwroty]
+porque | ponieważ | conj
+cuando | kiedy (w zdaniu) | conj
+donde | gdzie (w zdaniu) | adv
+también | też | adv
+muy | bardzo | adv
+poco | mało | adv
+todo / toda | wszystko; cały | pron
+nadie | nikt | pron
+alguien | ktoś | pron
+siempre | zawsze | adv
+casi nunca | prawie nigdy | phr
+a menudo | często | phr
+pronto | wcześnie; wkrótce | adv
+enseguida | od razu | adv
+todavía | wciąż, jeszcze | adv
+sobre | na; o (temat) | prep | un libro sobre España / książka o Hiszpanii
+sin | bez | prep
+para | dla; żeby | prep
+por | przez; za; z powodu | prep
+hacia | w kierunku | prep
+durante | podczas | prep
+¡qué pena! | jaka szkoda! | phr
+¡no pasa nada! | nic nie szkodzi! | phr
+¡ojalá! | oby! | interj
+¿en serio? | serio? naprawdę? | phr
+¿me puedes repetir? | możesz powtórzyć? | phr
+más despacio, por favor | wolniej, proszę | phr
+no entiendo | nie rozumiem | phr
+¿cómo se dice … en español? | jak się mówi … po hiszpańsku? | phr
+[Kraje i narodowości]
+Alemania | Niemcy | f
+Francia | Francja | f
+Italia | Włochy | f
+Portugal | Portugalia | m
+Inglaterra | Anglia | f
+el Reino Unido | Wielka Brytania | m
+Estados Unidos | Stany Zjednoczone | mpl
+México | Meksyk | m
+Argentina | Argentyna | f
+Europa | Europa | f
+portugués / portuguesa | Portugalczyk / Portugalka; portugalski | adj
+mexicano / mexicana | Meksykanin / Meksykanka; meksykański | adj
+americano / americana | Amerykanin / Amerykanka; amerykański | adj
+europeo / europea | Europejczyk / Europejka; europejski | adj

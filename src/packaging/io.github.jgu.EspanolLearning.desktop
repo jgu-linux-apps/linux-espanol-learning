@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Linux Español Learning
+GenericName=Nauka hiszpańskiego
+Comment=Kurs hiszpańskiego od zera (A1–A2): lekcje, słownik ES–PL, powtórki, testy i ocena wymowy
+Comment[en]=Spanish course from scratch (A1–A2) with lessons, ES–PL dictionary, spaced repetition, tests and pronunciation feedback
+Exec=linux-espanol-learning
+Icon=linux-espanol-learning
+Terminal=false
+Categories=Education;Languages;
+Keywords=spanish;español;hiszpański;nauka;language;learning;
+StartupNotify=true
+StartupWMClass=linux-espanol-learning

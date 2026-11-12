@@ -1,0 +1,68 @@
+# id: a2-25
+# title: Cuando era niño… Pretérito imperfecto
+# unit: 7
+# unit_title: Recuerdos — wspomnienia
+@goals
+Opowiadać o przyzwyczajeniach z przeszłości
+Opisywać, jak coś wyglądało dawniej
+Tworzyć pretérito imperfecto
+@dialog
+Abuela: Cuando yo era pequeña, no había móviles ni internet. | Kiedy byłam mała, nie było komórek ani internetu.
+Nieto: ¿Y qué hacíais todo el día? | To co robiliście cały dzień?
+Abuela: Jugábamos en la calle con los vecinos. Siempre estábamos fuera. | Bawiliśmy się na ulicy z sąsiadami. Zawsze byliśmy na dworze.
+Nieto: ¿Ibas al colegio andando? | Chodziłaś do szkoły pieszo?
+Abuela: Sí, el colegio estaba lejos y caminábamos media hora cada día. | Tak, szkoła była daleko i codziennie szliśmy pół godziny.
+Nieto: ¿Y la televisión? | A telewizja?
+Abuela: Solo teníamos un canal y lo veíamos todos juntos los domingos. | Mieliśmy tylko jeden kanał i oglądaliśmy go wszyscy razem w niedziele.
+@vocab
+el abuelo / la abuela | dziadek / babcia | m
+el nieto / la nieta | wnuk / wnuczka | m
+el vecino / la vecina | sąsiad / sąsiadka | m
+pequeño / pequeña | mały (też: dzieckiem) | adj | Cuando era pequeño… / Kiedy byłem mały…
+el móvil | komórka (w Hiszpanii) | m
+la televisión | telewizja, telewizor | f
+el canal | kanał | m
+fuera | na zewnątrz, na dworze | adv
+caminar | iść, chodzić pieszo | v
+cada día | każdego dnia | phr
+de niño / de niña | jako dziecko | phr
+antes | dawniej, przedtem | adv
+ahora | teraz | adv
+soler | zwykle coś robić (mieć zwyczaj) | v | Solía leer mucho. / Zwykle dużo czytałem.
+juntos / juntas | razem | adj
+ni | ani | conj
+@grammar
+## Pretérito imperfecto — odmiana
+|| | hablar | comer / vivir
+|| yo | hablaba | comía / vivía
+|| tú | hablabas | comías / vivías
+|| él/ella/usted | hablaba | comía / vivía
+|| nosotros/as | hablábamos | comíamos / vivíamos
+|| vosotros/as | hablabais | comíais / vivíais
+|| ellos/ellas/ustedes | hablaban | comían / vivían
+Tylko **trzy** czasowniki są nieregularne:
+- **ser**: era, eras, era, éramos, erais, eran
+- **ir**: iba, ibas, iba, íbamos, ibais, iban
+- **ver**: veía, veías, veía, veíamos, veíais, veían
+**hay → había** (było/były).
+
+## Kiedy używać imperfecto
+- **zwyczaje w przeszłości**: **De niño jugaba al fútbol todos los días.**
+- **opisy** ludzi, miejsc, sytuacji: **La casa era grande. Hacía sol.**
+- **wiek i godzina** w przeszłości: **Tenía diez años. Eran las tres.**
+Typowe sygnały: **antes, de niño, cuando era pequeño, siempre, todos los días, a menudo**.
+@exercises
+conj: jugar (nosotros, imperfecto) | jugábamos
+conj: tener (yo, imperfecto) | tenía
+conj: vivir (ellos, imperfecto) | vivían
+conj: ser (yo, imperfecto) | era
+conj: ir (tú, imperfecto) | ibas
+conj: ver (nosotros, imperfecto) | veíamos
+fill: Antes no ___ (haber) internet. | había
+fill: Cuando ___ (ser) pequeño, vivía en un pueblo. | era
+choice: Jako dziecko grałem w piłkę codziennie: | De niño jugaba al fútbol todos los días. | De niño jugué al fútbol todos los días.; De niño jugaba al fútbol todos los días.; De niño he jugado al fútbol todos los días.
+trans: Kiedy byłam mała, mieszkałam w Gdańsku. | Cuando era pequeña, vivía en Gdańsk.
+trans: Dawniej nie było komórek. | Antes no había móviles.
+trans: Mieliśmy psa. | Teníamos un perro.
+@culture
+W hiszpańskich miasteczkach (**pueblos**) wciąż żywy jest zwyczaj **tomar el fresco** — w letnie wieczory starsi sąsiedzi wystawiają krzesła przed dom i rozmawiają na ulicy do późna.

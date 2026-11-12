@@ -1,0 +1,26 @@
+# id: r07
+# level: A2
+# unit: 7
+# title: Los veranos en el pueblo
+@text
+Cuando yo era niño, pasaba todos los veranos en el pueblo de mis abuelos, en Asturias. El pueblo era muy pequeño: tenía una iglesia, un bar y unas treinta casas. No había piscina, pero había un río con el agua muy fría.
+Por las mañanas ayudaba a mi abuelo con las vacas y por las tardes jugaba con los otros niños en la plaza. Mi abuela cocinaba mejor que nadie: su fabada era la más rica del mundo.
+Un verano, cuando tenía doce años, pasó algo increíble. Una noche, mientras todos dormían, oí un ruido en el jardín. Salí con una linterna y… ¡vi un oso! Era enorme. Corrí a casa y desperté a toda la familia, pero cuando salimos, el oso ya no estaba. Nadie me creyó… hasta el día siguiente, cuando el vecino encontró sus huellas.
+@translation
+Kiedy byłem dzieckiem, spędzałem każde wakacje we wsi moich dziadków w Asturii. Wieś była bardzo mała: miała kościół, bar i około trzydziestu domów. Nie było basenu, ale była rzeka z bardzo zimną wodą.
+Rano pomagałem dziadkowi przy krowach, a po południu bawiłem się z innymi dziećmi na placu. Babcia gotowała lepiej niż ktokolwiek: jej fabada była najsmaczniejsza na świecie.
+Pewnego lata, gdy miałem dwanaście lat, wydarzyło się coś niesamowitego. Pewnej nocy, gdy wszyscy spali, usłyszałem hałas w ogrodzie. Wyszedłem z latarką i… zobaczyłem niedźwiedzia! Był ogromny. Pobiegłem do domu i obudziłem całą rodzinę, ale kiedy wyszliśmy, niedźwiedzia już nie było. Nikt mi nie uwierzył… aż do następnego dnia, kiedy sąsiad znalazł jego ślady.
+@glossary
+el pueblo | wieś, miasteczko
+el río | rzeka
+la vaca | krowa
+la fabada | fabada (asturyjski gulasz z fasoli)
+rico / rica | smaczny; bogaty
+la linterna | latarka
+el oso | niedźwiedź
+la huella | ślad
+@questions
+¿Dónde pasaba los veranos el narrador? | En el pueblo de sus abuelos. | En la playa.; En el pueblo de sus abuelos.; En Madrid.
+¿Qué hacía por las tardes? | Jugaba con otros niños. | Ayudaba con las vacas.; Jugaba con otros niños.; Nadaba en la piscina.
+¿Qué vio una noche? | Un oso. | Un ladrón.; Un oso.; Una vaca.
+¿Por qué le creyeron al final? | El vecino encontró las huellas. | Hizo una foto.; El vecino encontró las huellas.; El oso volvió.

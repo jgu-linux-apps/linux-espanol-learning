@@ -1,0 +1,74 @@
+# id: a1-02
+# title: ¿De dónde eres? Pochodzenie i narodowość
+# unit: 1
+# unit_title: Primeros pasos — pierwsze kroki
+@goals
+Powiedzieć, skąd jesteś i jakiej jesteś narodowości
+Poznać czasownik ser w czasie teraźniejszym
+Poznać zaimki osobowe
+@dialog
+Lucía: ¿De dónde eres, Marek? | Skąd jesteś, Marek?
+Marek: Soy de Polonia, de Rumia. Es una ciudad cerca de Gdańsk. | Jestem z Polski, z Rumi. To miasto niedaleko Gdańska.
+Lucía: ¡Qué interesante! Entonces eres polaco. | Jak ciekawie! Czyli jesteś Polakiem.
+Marek: Sí, soy polaco. ¿Y tú? ¿Eres española? | Tak, jestem Polakiem. A ty? Jesteś Hiszpanką?
+Lucía: Sí, soy española, de Valencia. | Tak, jestem Hiszpanką, z Walencji.
+Marek: ¿Y tu amigo Marc? | A twój kolega Marc?
+Lucía: Marc es de Barcelona. Habla español y catalán. | Marc jest z Barcelony. Mówi po hiszpańsku i po katalońsku.
+@vocab
+ser | być (tożsamość, pochodzenie) | v | Soy de Polonia. / Jestem z Polski.
+¿de dónde? | skąd? | adv | ¿De dónde eres? / Skąd jesteś?
+de | z, od | prep | Soy de Rumia. / Jestem z Rumi.
+Polonia | Polska | f
+polaco / polaca | Polak / Polka; polski | adj | Soy polaco. / Jestem Polakiem.
+España | Hiszpania | f
+español / española | Hiszpan / Hiszpanka; hiszpański | adj
+el español | język hiszpański | m | Hablo un poco de español. / Mówię trochę po hiszpańsku.
+inglés / inglesa | Anglik / Angielka; angielski | adj
+alemán / alemana | Niemiec / Niemka; niemiecki | adj
+francés / francesa | Francuz / Francuzka; francuski | adj
+italiano / italiana | Włoch / Włoszka; włoski | adj
+la ciudad | miasto | f | una ciudad bonita / ładne miasto
+el país | kraj | m
+cerca de | blisko, niedaleko | prep
+el amigo / la amiga | przyjaciel, kolega / przyjaciółka | m
+hablar | mówić (w języku) | v | Hablo polaco. / Mówię po polsku.
+interesante | ciekawy | adj
+@grammar
+## Zaimki osobowe
+|| yo | ja
+|| tú | ty
+|| él / ella / usted | on / ona / Pan, Pani
+|| nosotros / nosotras | my (rodzaj męski / żeński)
+|| vosotros / vosotras | wy (rodzaj męski / żeński)
+|| ellos / ellas / ustedes | oni / one / Państwo
+**Usted** (Pan/Pani) i **ustedes** (Państwo) odmieniają się jak 3. osoba. W Hiszpanii do grupy znajomych mówi się **vosotros**, a **ustedes** to forma grzecznościowa.
+Zaimki zwykle się pomija, bo końcówka czasownika mówi, kto działa: **Soy polaco** (nie trzeba „yo soy”).
+
+## Czasownik ser (być) — czas teraźniejszy
+|| yo | soy
+|| tú | eres
+|| él / ella / usted | es
+|| nosotros/as | somos
+|| vosotros/as | sois
+|| ellos / ellas / ustedes | son
+Ser używamy m.in. do mówienia o pochodzeniu (**ser de** + miejsce), narodowości, zawodzie i tożsamości.
+
+## Narodowości: rodzaj
+- Zakończone na **-o** → żeński na **-a**: polaco → polaca, italiano → italiana.
+- Zakończone na spółgłoskę → dodajemy **-a**: español → española, alemán → alemana (akcent znika!), inglés → inglesa.
+Narodowości i języki piszemy **małą literą**: español, polaco. Kraje — wielką: España, Polonia.
+@exercises
+fill: Yo ___ de Polonia. | soy
+fill: ¿De dónde ___ tú? | eres
+fill: Ella ___ española. | es
+fill: Nosotros ___ polacos. | somos
+fill: Vosotros ___ de Madrid, ¿verdad? | sois
+fill: Ellos ___ italianos. | son
+choice: Anna jest Polką: | Anna es polaca. | Anna es polaco.; Anna es polaca.; Anna es Polonia.
+choice: Laura jest Hiszpanką: | Laura es española. | Laura es español.; Laura es española.; Laura es espanola.
+trans: Jestem z Polski. | Soy de Polonia. /// Yo soy de Polonia.
+trans: Skąd jesteś? | ¿De dónde eres?
+trans: Ona jest Niemką. | Es alemana. /// Ella es alemana.
+trans: Mówię po hiszpańsku. | Hablo español. /// Yo hablo español.
+@culture
+W Hiszpanii oprócz hiszpańskiego (castellano) urzędowymi językami w swoich regionach są też kataloński, galicyjski i baskijski (euskera). Dlatego Hiszpanie często mówią na swój język **castellano**.

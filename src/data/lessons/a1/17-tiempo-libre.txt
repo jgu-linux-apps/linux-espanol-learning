@@ -1,0 +1,60 @@
+# id: a1-17
+# title: Tiempo libre — hobby i zainteresowania
+# unit: 5
+# unit_title: Planes y tiempo libre — plany i czas wolny
+@goals
+Opowiedzieć o swoich zainteresowaniach
+Wyrazić gust i preferencje (me gusta + bezokolicznik, prefiero)
+Zaproponować wspólne wyjście
+@dialog
+Clara: ¿Qué te gusta hacer en tu tiempo libre? | Co lubisz robić w wolnym czasie?
+Marek: Me encanta la música. Toco la guitarra y escribo canciones. | Uwielbiam muzykę. Gram na gitarze i piszę piosenki.
+Clara: ¡Qué guay! A mí me gusta mucho leer y viajar. | Super! Ja bardzo lubię czytać i podróżować.
+Marek: ¿Te gusta el cine? | Lubisz kino?
+Clara: Sí, pero prefiero el teatro. | Tak, ale wolę teatr.
+Marek: ¿Quieres ir a un concierto el viernes? | Chcesz iść na koncert w piątek?
+Clara: ¡Vale! ¿A qué hora quedamos? | Dobra! O której się umawiamy?
+@vocab
+el tiempo libre | czas wolny | m
+tocar | grać (na instrumencie); dotykać | v | Toco el piano. / Gram na pianinie.
+la guitarra | gitara | f
+viajar | podróżować | v
+el cine | kino | m
+el teatro | teatr | m
+el concierto | koncert | m
+la película | film | f
+la serie | serial | f
+pasear | spacerować | v
+nadar | pływać | v
+pintar | malować | v
+la foto | zdjęcie | f | hacer fotos / robić zdjęcia
+salir con amigos | wychodzić ze znajomymi | phr
+quedar | umawiać się | v | ¿Quedamos a las ocho? / Umawiamy się na ósmą?
+vale | dobra, OK (w Hiszpanii) | interj
+guay | super, fajny (potocznie, Hiszpania) | adj
+la afición | hobby, zainteresowanie | f
+@grammar
+## Gustar + bezokolicznik
+Po **me gusta / me encanta / prefiero / quiero** stawiamy bezokolicznik: **Me gusta leer. Prefiero nadar. Quiero viajar.** Gustar jest wtedy zawsze w liczbie pojedynczej, nawet jeśli czynności jest kilka: **Me gusta leer y viajar.**
+
+## Jugar czy tocar?
+- **jugar a** — grać w grę lub sport: **juego al fútbol, juego a las cartas**.
+- **tocar** — grać na instrumencie: **toco la guitarra**.
+
+## Propozycje i umawianie się
+- **¿Quieres + bezokolicznik?** — Chcesz…? **¿Quieres ir al cine?**
+- **¿Vamos a…?** — Idziemy…? **¿Vamos al teatro?**
+- **¿Quedamos?** — Umawiamy się? **¿A qué hora quedamos? ¿Dónde quedamos?**
+- Odpowiedzi: **¡Vale! / ¡Genial! / Lo siento, no puedo.**
+@exercises
+choice: Gram na gitarze: | Toco la guitarra. | Juego la guitarra.; Toco la guitarra.; Juego a la guitarra.
+choice: Gram w piłkę nożną: | Juego al fútbol. | Toco el fútbol.; Juego al fútbol.; Juego el fútbol.
+choice: Me gusta ___ y viajar. | leer | leo; leer; leyendo
+choice: Przykro mi, nie mogę: | Lo siento, no puedo. | Lo siento, no puedo.; No quiero, vale.; Perdona, no pido.
+fill: ¿___ (querer, tú) ir al cine? | Quieres
+fill: Prefiero ___ (pasear) por la playa. | pasear
+trans: Co lubisz robić w wolnym czasie? | ¿Qué te gusta hacer en tu tiempo libre?
+trans: Lubię podróżować. | Me gusta viajar.
+trans: O której się umawiamy? | ¿A qué hora quedamos?
+@culture
+Słowo **vale** usłyszysz w Hiszpanii co kilka sekund — znaczy „dobra”, „OK”, „zgoda”. A **guay** to typowo hiszpańskie „super”, którego w Ameryce Łacińskiej prawie się nie używa.

@@ -1,0 +1,79 @@
+# id: a1-16
+# title: De compras — ubrania, ceny, ten/tamten
+# unit: 4
+# unit_title: En la ciudad — w mieście
+@goals
+Kupić ubranie i zapytać o rozmiar
+Używać este, ese, aquel
+Podawać ceny i duże liczby
+@dialog
+Dependienta: Hola, ¿puedo ayudarle? | Dzień dobry, mogę w czymś pomóc?
+Marek: Sí, busco una chaqueta para el invierno. | Tak, szukam kurtki na zimę.
+Dependienta: ¿Qué talla tiene? | Jaki ma Pan rozmiar?
+Marek: La cincuenta. ¿Cuánto cuesta esa chaqueta negra? | Pięćdziesiąt. Ile kosztuje ta czarna kurtka?
+Dependienta: Ciento veinte euros. Y aquella azul, noventa y nueve. | Sto dwadzieścia euro. A tamta niebieska dziewięćdziesiąt dziewięć.
+Marek: ¿Puedo probarme la azul? | Mogę przymierzyć niebieską?
+Dependienta: Claro, el probador está allí. | Oczywiście, przymierzalnia jest tam.
+Marek: Me queda bien. Me la llevo. | Dobrze leży. Biorę ją.
+@vocab
+la tienda | sklep | f
+el dependiente / la dependienta | sprzedawca / sprzedawczyni | m
+buscar | szukać | v
+costar | kosztować | v | ¿Cuánto cuesta? / Ile kosztuje?
+probarse | przymierzać | vr
+la talla | rozmiar (ubrań) | f
+el número | rozmiar (butów); numer | m
+la ropa | ubrania | f
+la chaqueta | kurtka, marynarka | f
+el abrigo | płaszcz | m
+la camisa | koszula | f
+la camiseta | koszulka, T-shirt | f
+los pantalones | spodnie | mpl
+la falda | spódnica | f
+el vestido | sukienka | m
+los zapatos | buty | mpl
+el jersey | sweter | m
+caro / cara | drogi | adj
+barato / barata | tani | adj
+quedar bien / mal | dobrze / źle leżeć | phr | Te queda muy bien. / Bardzo dobrze na tobie leży.
+llevarse | wziąć (kupić) | vr | Me lo llevo. / Biorę to.
+allí | tam | adv
+aquí | tu | adv
+el invierno | zima | m
+ciento | sto (101–199) | num
+doscientos / doscientas | dwieście | num
+quinientos / quinientas | pięćset | num
+mil | tysiąc | num
+@grammar
+## Este, ese, aquel — ten, ten (tam), tamten
+|| | blisko mnie | blisko ciebie | daleko
+|| m. poj. | este | ese | aquel
+|| ż. poj. | esta | esa | aquella
+|| m. mn. | estos | esos | aquellos
+|| ż. mn. | estas | esas | aquellas
+Formy nijakie **esto, eso, aquello** odnoszą się do rzeczy nieznanych lub ogólnie: **¿Qué es esto?** — Co to jest?
+
+## Costar (o→ue)
+**¿Cuánto cuesta?** (jedna rzecz) / **¿Cuánto cuestan?** (wiele rzeczy).
+
+## Duże liczby
+- 100 = **cien**, 101–199 = **ciento** + …: **ciento veinte**.
+- Setki zgadzają się z rodzajem: **doscientos euros**, **doscientas personas**.
+- Nieregularne: **quinientos** (500), **setecientos** (700), **novecientos** (900).
+- 1000 = **mil**, 2000 = **dos mil**.
+
+## Zaimek dopełnienia (zapowiedź)
+**Me la llevo** — biorę ją (la = la chaqueta). **Me lo llevo** — biorę go/to. Szczegóły na poziomie A2.
+@exercises
+choice: (ta, blisko mnie) ___ camisa | esta | esta; este; esa
+choice: (tamte, daleko) ___ zapatos | aquellos | esos; aquellos; aquellas
+choice: Ile kosztują te spodnie? | ¿Cuánto cuestan estos pantalones? | ¿Cuánto cuesta estos pantalones?; ¿Cuánto cuestan estos pantalones?; ¿Cuánto costan estos pantalones?
+choice: 500 euros | quinientos euros | cincocientos euros; quinientos euros; quinientas euros
+choice: 200 personas | doscientas personas | doscientos personas; doscientas personas; dos cien personas
+fill: ¿Cuánto ___ (costar) esta falda? | cuesta
+fill: Esta camiseta es muy ___ (barato). | barata
+trans: Szukam kurtki. | Busco una chaqueta.
+trans: Jaki ma Pan rozmiar? | ¿Qué talla tiene?
+trans: Biorę to. | Me lo llevo.
+@culture
+W Hiszpanii **las rebajas** (wyprzedaże) zaczynają się tradycyjnie 7 stycznia, tuż po święcie Trzech Króli, oraz 1 lipca.

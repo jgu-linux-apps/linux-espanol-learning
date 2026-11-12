@@ -1,0 +1,63 @@
+# id: a2-34
+# title: Buscar trabajo — rozmowa kwalifikacyjna
+# unit: 9
+# unit_title: Trabajo y futuro — praca i przyszłość
+@goals
+Opowiedzieć o doświadczeniu zawodowym
+Przejść prostą rozmowę kwalifikacyjną
+Mówić o czasie trwania (desde, desde hace, llevar)
+@dialog
+Entrevistadora: Buenos días, siéntese, por favor. Háblenos de su experiencia. | Dzień dobry, proszę usiąść. Proszę nam opowiedzieć o swoim doświadczeniu.
+Marek: Soy ingeniero informático. Trabajo en el sector de la nube desde hace diez años. | Jestem inżynierem informatykiem. Pracuję w branży chmurowej od dziesięciu lat.
+Entrevistadora: ¿Qué hace exactamente en su puesto actual? | Czym dokładnie zajmuje się Pan na obecnym stanowisku?
+Marek: Me encargo de la seguridad y de automatizar procesos. También coordino un equipo de cinco personas. | Odpowiadam za bezpieczeństwo i automatyzację procesów. Koordynuję też zespół pięciu osób.
+Entrevistadora: ¿Por qué quiere trabajar con nosotros? | Dlaczego chce Pan z nami pracować?
+Marek: Porque su empresa es líder en el sector y me interesa mucho el proyecto. | Ponieważ Państwa firma jest liderem w branży, a projekt bardzo mnie interesuje.
+Entrevistadora: ¿Cuáles son sus puntos fuertes? | Jakie są Pana mocne strony?
+Marek: Soy responsable, organizado y me gusta trabajar en equipo. | Jestem odpowiedzialny, zorganizowany i lubię pracę zespołową.
+@vocab
+la entrevista de trabajo | rozmowa kwalifikacyjna | f
+el currículum | CV | m
+el puesto | stanowisko | m
+el sueldo | pensja | m
+el contrato | umowa | m
+el equipo | zespół; sprzęt | m | trabajar en equipo / pracować w zespole
+el proyecto | projekt | m
+la seguridad | bezpieczeństwo | f
+la nube | chmura | f
+encargarse de | odpowiadać za, zajmować się | vr
+coordinar | koordynować | v
+interesar | interesować (jak gustar) | v | Me interesa el puesto. / Interesuje mnie to stanowisko.
+actual | obecny, aktualny | adj
+responsable | odpowiedzialny | adj
+organizado / organizada | zorganizowany | adj
+el punto fuerte / débil | mocna / słaba strona | m
+desde hace | od (jakiegoś czasu) | phr | desde hace diez años / od dziesięciu lat
+llevar + tiempo | być (gdzieś) od, spędzić | phr | Llevo dos años aquí. / Jestem tu od dwóch lat.
+porque | ponieważ, bo | conj
+¿por qué? | dlaczego? | adv
+@grammar
+## Jak długo? desde, desde hace, hace, llevar
+- **desde** + punkt w czasie: **Trabajo aquí desde 2015.** — od 2015 roku
+- **desde hace** + okres: **Trabajo aquí desde hace diez años.** — od dziesięciu lat
+- **llevar** + okres (+ gerundio): **Llevo diez años trabajando aquí.** — Pracuję tu od dziesięciu lat.
+- **hace** + okres (w przeszłości) = temu: **Empecé hace diez años.** — Zacząłem dziesięć lat temu.
+
+## Por qué / porque
+- **¿Por qué?** (osobno, z akcentem) — dlaczego?
+- **porque** (razem) — ponieważ, bo.
+
+## Interesar
+Działa jak gustar: **Me interesa el proyecto. Me interesan las nuevas tecnologías.**
+@exercises
+choice: Pracuję tu od 2015 roku: | Trabajo aquí desde 2015. | Trabajo aquí desde hace 2015.; Trabajo aquí desde 2015.; Trabajo aquí hace 2015.
+choice: Uczę się hiszpańskiego od roku: | Estudio español desde hace un año. | Estudio español desde un año.; Estudio español desde hace un año.; Estudio español hace un año desde.
+choice: Zacząłem trzy lata temu: | Empecé hace tres años. | Empecé hace tres años.; Empecé desde tres años.; Empecé tres años hace.
+fill: ___ dos años viviendo en Madrid. (llevar, yo) | Llevo
+fill: Me ___ (interesar) mucho los idiomas. | interesan
+fill: ¿Por qué estudias español? — ___ me gusta. | Porque
+trans: Jestem odpowiedzialny i zorganizowany. | Soy responsable y organizado.
+trans: Lubię pracować w zespole. | Me gusta trabajar en equipo.
+trans: Dlaczego chce Pan tu pracować? | ¿Por qué quiere trabajar aquí?
+@culture
+W Hiszpanii pensję często wypłaca się w **14 ratach** (**catorce pagas**): co miesiąc plus dwie dodatkowe — w lipcu i w grudniu (**paga extra**).

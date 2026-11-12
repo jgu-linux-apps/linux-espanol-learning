@@ -1,0 +1,67 @@
+# id: a2-27
+# title: Comparar — stopniowanie i porównania
+# unit: 7
+# unit_title: Recuerdos — wspomnienia
+@goals
+Porównywać ludzi, miasta i rzeczy
+Używać stopnia najwyższego i form nieregularnych
+@dialog
+Andrés: ¿Qué te gusta más: Madrid o Barcelona? | Co bardziej ci się podoba: Madryt czy Barcelona?
+Marek: Es difícil. Barcelona es más bonita que Madrid, pero Madrid es más animada. | Trudno powiedzieć. Barcelona jest ładniejsza niż Madryt, ale Madryt jest bardziej żywy.
+Andrés: Y Madrid es más grande. Tiene más habitantes que Barcelona. | I Madryt jest większy. Ma więcej mieszkańców niż Barcelona.
+Marek: Sí, pero el clima de Barcelona es mejor: tiene playa. | Tak, ale klimat Barcelony jest lepszy: ma plażę.
+Andrés: Para mí, la ciudad más bonita de España es San Sebastián. | Dla mnie najpiękniejsze miasto w Hiszpanii to San Sebastián.
+Marek: ¿Más bonita que Sevilla? | Ładniejsze niż Sewilla?
+Andrés: Bueno, Sevilla es tan bonita como San Sebastián… ¡pero hace demasiado calor! | No cóż, Sewilla jest tak samo ładna jak San Sebastián… ale jest za gorąco!
+@vocab
+más … que | bardziej … niż | phr | Es más alto que yo. / Jest wyższy ode mnie.
+menos … que | mniej … niż | phr
+tan … como | tak … jak | phr
+tanto / tanta … como | tyle … co | phr
+mejor | lepszy, lepiej | adj
+peor | gorszy, gorzej | adj
+mayor | starszy; większy | adj
+menor | młodszy; mniejszy | adj
+el / la más … de | najbardziej … w/z | phr | el más alto de la clase / najwyższy w klasie
+animado / animada | ożywiony, tętniący życiem | adj
+el habitante | mieszkaniec | m
+el clima | klimat | m
+difícil | trudny | adj
+fácil | łatwy | adj
+demasiado | za, zbyt (dużo) | adv
+tranquilo / tranquila | spokojny | adj
+moderno / moderna | nowoczesny | adj
+antiguo / antigua | stary, zabytkowy | adj
+@grammar
+## Porównania
+|| más + przymiotnik + que | Madrid es más grande que Gdańsk.
+|| menos + przymiotnik + que | Gdańsk es menos caro que Madrid.
+|| tan + przymiotnik + como | Sevilla es tan bonita como Granada.
+|| más / menos + rzeczownik + que | Madrid tiene más habitantes que Barcelona.
+|| tanto/a/os/as + rzeczownik + como | Tengo tantos libros como tú.
+
+## Formy nieregularne
+|| bueno / bien | mejor (lepszy, lepiej)
+|| malo / mal | peor (gorszy, gorzej)
+|| grande (wiek) | mayor (starszy) — **mi hermano mayor**
+|| pequeño (wiek) | menor (młodszy) — **mi hermana menor**
+Nie mówimy „más bueno” w znaczeniu „lepszy”.
+
+## Stopień najwyższy
+**el / la / los / las + (rzeczownik) + más + przymiotnik + de**:
+**Es la ciudad más bonita de España.** — To najpiękniejsze miasto Hiszpanii.
+**Es el mejor restaurante de Rumia.** — To najlepsza restauracja w Rumi.
+Bardzo wysoki stopień: **-ísimo**: **bonitísima, carísimo, facilísimo**.
+@exercises
+fill: Mi hermano es ___ alto que yo. | más
+fill: Gdańsk es ___ grande que Madrid. (mniejszy, użyj „menos”) | menos
+fill: Sevilla es tan bonita ___ Granada. | como
+choice: Ten film jest lepszy niż książka: | La película es mejor que el libro. | La película es más buena que el libro.; La película es mejor que el libro.; La película es mejor como el libro.
+choice: Mój starszy brat: | mi hermano mayor | mi hermano más viejo; mi hermano mayor; mi hermano más mayor
+choice: najwyższa góra Hiszpanii: | la montaña más alta de España | la montaña más alta en España de; la montaña más alta de España; la más montaña alta de España
+choice: Mam tyle samo czasu co ty: | Tengo tanto tiempo como tú. | Tengo tan tiempo como tú.; Tengo tanto tiempo como tú.; Tengo tanto tiempo que tú.
+trans: Barcelona jest ładniejsza niż Madryt. | Barcelona es más bonita que Madrid.
+trans: To najlepsza restauracja w mieście. | Es el mejor restaurante de la ciudad.
+trans: Hiszpański jest łatwiejszy niż polski. | El español es más fácil que el polaco.
+@culture
+Najwyższy szczyt Hiszpanii, **el Teide** (3715 m), nie leży na Półwyspie Iberyjskim, tylko na Teneryfie, na Wyspach Kanaryjskich. To wulkan.

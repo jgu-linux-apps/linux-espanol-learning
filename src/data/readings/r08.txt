@@ -1,0 +1,26 @@
+# id: r08
+# level: A2
+# unit: 8
+# title: Consejos para dormir mejor
+@text
+¿Duermes mal? No eres el único: según algunos estudios, uno de cada tres españoles tiene problemas para dormir. Aquí tienes algunos consejos de los expertos.
+Acuéstate y levántate siempre a la misma hora, también los fines de semana. Haz deporte, pero no por la noche: es mejor por la mañana o por la tarde. No tomes café después de las cinco de la tarde y no cenes demasiado.
+Una hora antes de dormir, apaga el móvil, el ordenador y la televisión. La luz de las pantallas no deja descansar al cerebro. Es mejor leer un libro o escuchar música tranquila.
+Tu dormitorio debe ser oscuro, silencioso y no demasiado caliente: la temperatura ideal está entre dieciocho y veinte grados. Y si después de veinte minutos en la cama no puedes dormir, levántate y haz algo relajante.
+@translation
+Źle śpisz? Nie jesteś jedyny: według niektórych badań co trzeci Hiszpan ma problemy ze snem. Oto kilka rad ekspertów.
+Kładź się i wstawaj zawsze o tej samej porze, także w weekendy. Uprawiaj sport, ale nie wieczorem: lepiej rano albo po południu. Nie pij kawy po piątej po południu i nie jedz za dużo na kolację.
+Godzinę przed snem wyłącz komórkę, komputer i telewizor. Światło ekranów nie pozwala mózgowi odpocząć. Lepiej poczytać książkę albo posłuchać spokojnej muzyki.
+Twoja sypialnia powinna być ciemna, cicha i niezbyt ciepła: idealna temperatura to od osiemnastu do dwudziestu stopni. A jeśli po dwudziestu minutach w łóżku nie możesz zasnąć, wstań i zrób coś relaksującego.
+@glossary
+según | według
+el estudio | badanie; nauka
+la pantalla | ekran
+el cerebro | mózg
+oscuro / oscura | ciemny
+relajante | relaksujący
+@questions
+¿Cuántos españoles tienen problemas para dormir? | Uno de cada tres. | La mitad.; Uno de cada tres.; Muy pocos.
+¿Cuándo es mejor hacer deporte? | Por la mañana o por la tarde. | Por la noche.; Por la mañana o por la tarde.; Antes de dormir.
+¿Qué hay que hacer una hora antes de dormir? | Apagar las pantallas. | Tomar un café.; Apagar las pantallas.; Hacer deporte.
+¿Cuál es la temperatura ideal del dormitorio? | Entre 18 y 20 grados. | Entre 15 y 16 grados.; Entre 18 y 20 grados.; Más de 25 grados.

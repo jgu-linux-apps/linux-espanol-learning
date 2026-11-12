@@ -3,7 +3,7 @@
 **Prawdziwy kurs hiszpańskiego od zera dla Ubuntu** — hiszpański z Hiszpanii (castellano), wyjaśnienia po polsku.
 Bez punktów, serii i maskotek: lekcje, gramatyka, słownictwo, powtórki, testy i ocena wymowy.
 
-Wersja **1.10.2** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
+Wersja **1.10.3** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
 
 ---
 
@@ -57,8 +57,10 @@ Aplikacja sama sprawdza sprzęt (Ustawienia → *Twój komputer*) i dobiera mode
 
 ## Instalacja
 
+Najnowszy plik `linux-espanol-learning_<wersja>_all.deb` pobierz ze [strony Releases](https://github.com/jgu-linux-apps/linux-espanol-learning/releases/latest):
+
 ```bash
-sudo apt install ./linux-espanol-learning_1.10.2_all.deb
+sudo apt install ./linux-espanol-learning_<wersja>_all.deb
 ```
 
 Aplikacja pojawi się w menu jako **„Linux Español Learning”** (polecenie: `linux-espanol-learning`).
@@ -119,11 +121,15 @@ rm -rf ~/.local/share/linux-espanol-learning ~/.cache/linux-espanol-learning   #
 
 ## Budowanie ze źródeł
 
+Kod źródłowy jest w katalogu `src/` repozytorium (paczek `.deb` nie ma w gicie, są w [Releases](https://github.com/jgu-linux-apps/linux-espanol-learning/releases)).
+Wypchnięcie tagu `vX.Y.Z` zgodnego z `VERSION` w `src/src/espanol/__init__.py` uruchamia GitHub Actions
+(`.github/workflows/release.yml`), które budują paczkę i publikują wydanie. Polecenia poniżej uruchamiaj w `src/`:
+
 ```bash
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 \
      gstreamer1.0-plugins-good python3-venv librsvg2-bin dpkg-dev
 ./bin/linux-espanol-learning      # uruchomienie bez instalacji
-./build-deb.sh                    # -> dist/linux-espanol-learning_1.10.2_all.deb
+./build-deb.sh                    # -> dist/linux-espanol-learning_<wersja>_all.deb
 ```
 
 ### Struktura
@@ -167,6 +173,7 @@ icons/                ikona jasna i ciemna (SVG)
 Komponenty pobierane osobno przy pierwszym uruchomieniu (Piper, faster-whisper, głosy, modele Whisper) mają własne licencje.
 
 ## Zmiany
+- **1.10.3** — bez zmian w aplikacji: kod w repozytorium w katalogu `src/`, paczka `.deb` na stronie GitHub Releases (budowana automatycznie dla każdego tagu wersji); README: instalacja z Releases.
 - **1.10.2** — lepsze polskie tłumaczenia wypowiedzi Paco: słowniczek gotowych, sprawdzonych tłumaczeń najczęstszych zwrotów, tłumaczenie „sensu, nie słowo w słowo” z przykładami trudnych konstrukcji (gustar, preferencje) i krótka druga runda korekty polszczyzny.
 - **1.10.1** — motyw Nowoczesny (jasny „Soft” i ciemny „Glass”) dostał te same efekty co pozostałe: podświetlenie i poświatę aktywnej pozycji menu, akcent przy najechaniu, płynne przejścia; nowy adres projektu: github.com/jgu-linux-apps; poprawiony opis testu poziomującego.
 - **1.10.0** — klucz Claude API trafia do systemowego schowka haseł (GNOME Keyring; stary plik jest automatycznie migrowany, a gdy schowka brak — plik z prawami 600); **test poziomujący** (Testy i egzaminy oraz karta na ekranie „Dzisiaj” dla nowych: pytania o rosnącej trudności → polecana lekcja startowa, opcjonalnie oznaczenie wcześniejszych jako znanych); **wymowa w statystykach** (wykres średniego wyniku dnia z 30 dni + najtrudniejsze zdania); **skróty klawiszowe** (F1 — lista, Ctrl+1…9 — ekrany, Ctrl+M — mikrofon bota, F2/F3/F4 w Dyktandzie, Ctrl+Enter w Scenkach).

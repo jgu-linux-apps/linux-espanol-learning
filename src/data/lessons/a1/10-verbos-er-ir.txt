@@ -1,0 +1,77 @@
+# id: a1-10
+# title: Czasowniki na -er i -ir. Liczby do 100
+# unit: 3
+# unit_title: Día a día — dzień po dniu
+@goals
+Odmieniać regularne czasowniki na -er i -ir
+Liczyć od 21 do 100
+Powiedzieć, gdzie mieszkasz
+@dialog
+Álvaro: ¿Dónde vives? | Gdzie mieszkasz?
+Marek: Vivo en Rumia, en el norte de Polonia. ¿Y vosotros? | Mieszkam w Rumi, na północy Polski. A wy?
+Álvaro: Vivimos en Sevilla. Mi mujer escribe libros y yo vendo bicicletas. | Mieszkamy w Sewilli. Moja żona pisze książki, a ja sprzedaję rowery.
+Marek: ¿Coméis en casa o en restaurantes? | Jecie w domu czy w restauracjach?
+Álvaro: Normalmente comemos en casa. Mi mujer cocina muy bien. | Zwykle jemy w domu. Moja żona bardzo dobrze gotuje.
+Marek: ¿Y leéis mucho? | A dużo czytacie?
+Álvaro: Ella lee unos cincuenta libros al año. ¡Yo solo leo el periódico! | Ona czyta jakieś pięćdziesiąt książek rocznie. Ja czytam tylko gazetę!
+@vocab
+comer | jeść | v | Comemos a las dos. / Jemy o drugiej.
+beber | pić | v | Bebo agua. / Piję wodę.
+leer | czytać | v
+aprender | uczyć się (czegoś) | v | Aprendo español. / Uczę się hiszpańskiego.
+vender | sprzedawać | v
+comprender | rozumieć | v
+vivir | mieszkać, żyć | v | Vivo en Rumia. / Mieszkam w Rumi.
+escribir | pisać | v
+abrir | otwierać | v
+recibir | otrzymywać | v
+el libro | książka | m
+el periódico | gazeta | m
+la bicicleta | rower | f
+el agua | woda | f | el agua fría / zimna woda
+el norte | północ | m
+el sur | południe | m
+normalmente | zwykle | adv
+solo | tylko | adv
+veinte | dwadzieścia | num
+treinta | trzydzieści | num
+cuarenta | czterdzieści | num
+cincuenta | pięćdziesiąt | num
+sesenta | sześćdziesiąt | num
+setenta | siedemdziesiąt | num
+ochenta | osiemdziesiąt | num
+noventa | dziewięćdziesiąt | num
+cien | sto | num
+@grammar
+## Odmiana -er (comer) i -ir (vivir)
+|| | comer | vivir
+|| yo | como | vivo
+|| tú | comes | vives
+|| él/ella/usted | come | vive
+|| nosotros/as | comemos | vivimos
+|| vosotros/as | coméis | vivís
+|| ellos/ellas/ustedes | comen | viven
+Różnią się tylko formy **nosotros** i **vosotros**: **-emos/-éis** dla -er, **-imos/-ís** dla -ir.
+
+## Liczby 21–100
+- 21–29 piszemy jednym słowem: **veintiuno, veintidós, veintitrés… veintinueve**.
+- Od 31 z „y”: **treinta y uno, cuarenta y cinco, noventa y nueve**.
+- 100 = **cien**; 101 = **ciento uno**.
+
+## El agua
+**Agua** jest rodzaju żeńskiego, ale w liczbie pojedynczej ma rodzajnik **el** (bo zaczyna się akcentowanym „a”): **el agua fría**, **las aguas**.
+@exercises
+conj: comer (nosotros) | comemos
+conj: vivir (vosotros) | vivís
+conj: escribir (yo) | escribo
+conj: leer (tú) | lees
+conj: beber (ellos) | beben
+conj: aprender (ella) | aprende
+choice: 45 to: | cuarenta y cinco | cuatro y cinco; cuarenta y cinco; cincuenta y cuatro
+choice: 22 to: | veintidós | veinte y dos; veintidós; doce
+choice: 100 to: | cien | ciento; cien; mil
+trans: Gdzie mieszkasz? | ¿Dónde vives?
+trans: Pijemy wodę. | Bebemos agua.
+trans: Ona pisze książki. | Escribe libros. /// Ella escribe libros.
+@culture
+Gazety w Hiszpanii (np. El País, El Mundo, ABC) czyta się dziś głównie w internecie, ale poranna gazeta przy kawie w barze to wciąż widok codzienny.

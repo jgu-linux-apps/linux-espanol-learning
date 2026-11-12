@@ -1,0 +1,72 @@
+# id: a2-33
+# title: El futuro — czas przyszły prosty
+# unit: 9
+# unit_title: Trabajo y futuro — praca i przyszłość
+@goals
+Przewidywać przyszłość i składać obietnice
+Tworzyć futuro simple, także nieregularne
+@dialog
+Pilar: ¿Cómo te imaginas el mundo dentro de veinte años? | Jak wyobrażasz sobie świat za dwadzieścia lat?
+Marek: Creo que los coches serán eléctricos y no habrá conductores. | Myślę, że samochody będą elektryczne i nie będzie kierowców.
+Pilar: ¿Y el trabajo? | A praca?
+Marek: Trabajaremos menos horas y muchas personas trabajarán desde casa. | Będziemy pracować mniej godzin, a wiele osób będzie pracować z domu.
+Pilar: ¿Y tú? ¿Dónde vivirás? | A ty? Gdzie będziesz mieszkać?
+Marek: Seguramente viviré en España, cerca del mar. ¡Y hablaré español perfectamente! | Prawdopodobnie będę mieszkał w Hiszpanii, blisko morza. I będę mówił po hiszpańsku perfekcyjnie!
+Pilar: Te lo prometo: si estudias cada día, lo harás. | Obiecuję ci: jeśli będziesz się uczyć codziennie, uda ci się.
+@vocab
+imaginarse | wyobrażać sobie | vr
+dentro de | za (o czasie), w środku | prep | dentro de dos años / za dwa lata
+creer | sądzić, wierzyć | v | Creo que sí. / Myślę, że tak.
+eléctrico / eléctrica | elektryczny | adj
+el conductor / la conductora | kierowca | m
+la persona | osoba | f
+seguramente | prawdopodobnie, na pewno | adv
+quizás | może | adv
+el mar | morze | m
+prometer | obiecywać | v
+el futuro | przyszłość | m
+si | jeśli | conj | Si llueve, no iré. / Jeśli będzie padać, nie pójdę.
+el próximo año | w przyszłym roku | phr
+perfectamente | doskonale | adv
+@grammar
+## Futuro simple — końcówki dodajemy do bezokolicznika
+|| yo | hablaré
+|| tú | hablarás
+|| él/ella/usted | hablará
+|| nosotros/as | hablaremos
+|| vosotros/as | hablaréis
+|| ellos/ellas/ustedes | hablarán
+Te same końcówki dla **-ar, -er, -ir**: **comeré, viviré**.
+
+## Nieregularne tematy (końcówki takie same)
+|| tener | tendré
+|| poder | podré
+|| salir | saldré
+|| venir | vendré
+|| poner | pondré
+|| saber | sabré
+|| querer | querré
+|| hacer | haré
+|| decir | diré
+|| haber | habrá (będzie / będą)
+
+## Futuro czy ir a?
+- **ir a** — plany, zamiary, coś pewnego: **Voy a cenar con Ana.**
+- **futuro** — przewidywania, obietnice, przyszłość odległa lub niepewna: **Algún día viviré en España.**
+
+## Zdania warunkowe: si + presente, futuro
+**Si estudias, aprobarás.** — Jeśli będziesz się uczyć, zdasz. (Po **si** nigdy futuro!)
+@exercises
+conj: hablar (nosotros, futuro) | hablaremos
+conj: vivir (yo, futuro) | viviré
+conj: tener (tú, futuro) | tendrás
+conj: hacer (ellos, futuro) | harán
+conj: decir (yo, futuro) | diré
+conj: poder (vosotros, futuro) | podréis
+conj: salir (ella, futuro) | saldrá
+choice: Jeśli będzie padać, zostanę w domu: | Si llueve, me quedaré en casa. | Si lloverá, me quedaré en casa.; Si llueve, me quedaré en casa.; Si llueve, me quedo en casa mañana será.
+choice: Nie będzie kierowców: | No habrá conductores. | No habrán conductores.; No habrá conductores.; No hay será conductores.
+trans: Za dwadzieścia lat będę mieszkać w Hiszpanii. | Dentro de veinte años viviré en España.
+trans: Obiecuję ci. | Te lo prometo.
+@culture
+Hiszpanie często używają futuro do wyrażania przypuszczeń o teraźniejszości: **¿Dónde está Ana? — Estará en casa.** (Pewnie jest w domu.)

@@ -1,0 +1,23 @@
+# id: r04
+# level: A1
+# unit: 4
+# title: Un sábado en el mercado
+@text
+Los sábados por la mañana, Pedro va al mercado de su barrio en Sevilla. Le encanta: hay mucha gente, colores y olores. Primero compra fruta: un kilo de naranjas y medio kilo de fresas. Las fresas son un poco caras, pero muy dulces.
+Después va a la carnicería y compra pollo para la paella del domingo. Al lado hay una tienda de quesos. A Pedro le gusta mucho el queso manchego, pero a su mujer no le gusta nada.
+Antes de volver a casa, Pedro siempre toma un café y una tostada con tomate en el bar de la plaza. El camarero es su amigo Manolo. "¿Lo de siempre, Pedro?", pregunta. "Sí, lo de siempre", contesta él.
+@translation
+W soboty rano Pedro chodzi na targ w swojej dzielnicy w Sewilli. Uwielbia to: jest dużo ludzi, kolorów i zapachów. Najpierw kupuje owoce: kilogram pomarańczy i pół kilo truskawek. Truskawki są trochę drogie, ale bardzo słodkie.
+Potem idzie do mięsnego i kupuje kurczaka do niedzielnej paelli. Obok jest sklep z serami. Pedro bardzo lubi ser manchego, ale jego żona w ogóle go nie lubi.
+Przed powrotem do domu Pedro zawsze pije kawę i je tosta z pomidorem w barze na placu. Kelnerem jest jego przyjaciel Manolo. „To co zawsze, Pedro?” — pyta. „Tak, to co zawsze” — odpowiada on.
+@glossary
+el mercado | targ
+el barrio | dzielnica
+el olor | zapach
+la carnicería | sklep mięsny
+lo de siempre | to, co zawsze
+@questions
+¿Cuándo va Pedro al mercado? | Los sábados por la mañana. | Los domingos.; Los sábados por la mañana.; Todos los días.
+¿Cómo son las fresas? | Un poco caras pero dulces. | Baratas y dulces.; Un poco caras pero dulces.; Caras y malas.
+¿A quién no le gusta el queso manchego? | A la mujer de Pedro. | A Pedro.; A Manolo.; A la mujer de Pedro.
+¿Qué toma Pedro en el bar? | Un café y una tostada. | Una cerveza.; Un café y una tostada.; Un zumo.

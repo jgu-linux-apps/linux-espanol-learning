@@ -1,0 +1,64 @@
+# id: a1-19
+# title: Planes — ir a + bezokolicznik, querer, poder, tener que
+# unit: 5
+# unit_title: Planes y tiempo libre — plany i czas wolny
+@goals
+Mówić o planach na przyszłość (ir a + bezokolicznik)
+Mówić o obowiązkach (tener que)
+Przyjąć lub odrzucić zaproszenie
+@dialog
+Diego: ¿Qué vas a hacer este fin de semana? | Co będziesz robić w ten weekend?
+Marek: El sábado voy a visitar a mis padres. ¿Y tú? | W sobotę odwiedzę rodziców. A ty?
+Diego: Vamos a hacer una barbacoa en mi casa. ¿Puedes venir el domingo? | Robimy grilla u mnie w domu. Możesz przyjść w niedzielę?
+Marek: El domingo por la mañana tengo que trabajar, pero por la tarde sí puedo. | W niedzielę rano muszę pracować, ale po południu tak, mogę.
+Diego: ¡Genial! ¿Vas a traer a tu familia? | Świetnie! Przyprowadzisz rodzinę?
+Marek: Mi mujer va a venir, pero mi hijo no puede: tiene que estudiar. | Moja żona przyjdzie, ale syn nie może: musi się uczyć.
+@vocab
+ir a + infinitivo | zamierzać, mieć zamiar (przyszłość) | phr | Voy a estudiar. / Będę się uczyć.
+tener que + infinitivo | musieć | phr | Tengo que trabajar. / Muszę pracować.
+visitar | odwiedzać, zwiedzać | v | Visito a mis abuelos. / Odwiedzam dziadków.
+venir | przychodzić, przyjeżdżać | v | ¿Vienes? / Przyjdziesz?
+traer | przynosić | v
+invitar | zapraszać | v
+la barbacoa | grill | f
+la fiesta | impreza, święto | f
+el cumpleaños | urodziny | m
+mañana | jutro | adv
+pasado mañana | pojutrze | adv
+esta noche | dziś wieczorem | phr
+la próxima semana | w przyszłym tygodniu | phr
+genial | świetnie, genialny | adj
+lo siento | przykro mi | phr
+@grammar
+## Ir a + bezokolicznik — najprostsza przyszłość
+**ir** (voy, vas, va, vamos, vais, van) + **a** + bezokolicznik:
+- **Voy a visitar a mis padres.** — Odwiedzę rodziców.
+- **¿Qué vas a hacer mañana?** — Co będziesz robić jutro?
+- **Va a llover.** — Będzie padać.
+
+## Tener que — musieć
+**tengo que / tienes que / tiene que…** + bezokolicznik: **Tengo que trabajar.**
+
+## Querer / poder + bezokolicznik
+**Quiero ir. ¿Puedes venir?** Zauważ zmiany tematu: quiero, puedo.
+
+## „a” przed osobą
+Gdy dopełnieniem jest **osoba**, stawiamy przed nią **a**: **Visito a mis padres. Invito a Marta.** Ale: **Visito Madrid** (miejsce — bez „a”).
+
+## Venir i traer
+- **venir**: vengo, vienes, viene, venimos, venís, vienen
+- **traer**: traigo, traes, trae, traemos, traéis, traen
+@exercises
+fill: Mañana ___ a llover. | va
+fill: Nosotros ___ a hacer una fiesta. | vamos
+fill: ¿Qué ___ a hacer tú esta noche? | vas
+fill: Mi hijo tiene ___ estudiar. | que
+fill: Visito ___ mis abuelos los domingos. | a
+conj: venir (yo) | vengo
+conj: traer (yo) | traigo
+choice: Muszę pracować: | Tengo que trabajar. | Tengo trabajar.; Tengo que trabajar.; Debo de trabajar.
+trans: Co będziesz robić w weekend? | ¿Qué vas a hacer el fin de semana? /// ¿Qué vas a hacer este fin de semana?
+trans: Możesz przyjść w niedzielę? | ¿Puedes venir el domingo?
+trans: Przykro mi, muszę się uczyć. | Lo siento, tengo que estudiar.
+@culture
+Na hiszpańskie zaproszenie warto przyjść kilkanaście minut po czasie — punktualność co do minuty na prywatnym spotkaniu bywa wręcz zaskakująca. Do pracy i na wizyty urzędowe przychodzi się jednak punktualnie.

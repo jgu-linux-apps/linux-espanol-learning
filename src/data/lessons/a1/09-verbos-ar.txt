@@ -1,0 +1,68 @@
+# id: a1-09
+# title: Czasowniki na -ar w czasie teraźniejszym
+# unit: 3
+# unit_title: Día a día — dzień po dniu
+@goals
+Odmieniać regularne czasowniki na -ar
+Mówić o pracy, nauce i codziennych czynnościach
+Zadawać pytania tak/nie i przeczyć
+@dialog
+Nuria: ¿Trabajas o estudias? | Pracujesz czy studiujesz?
+Marek: Trabajo en una empresa de informática. Y por la tarde estudio español. | Pracuję w firmie informatycznej. A po południu uczę się hiszpańskiego.
+Nuria: ¿Dónde estudias? | Gdzie się uczysz?
+Marek: En casa, con una aplicación. Escucho diálogos y practico la pronunciación. | W domu, z aplikacją. Słucham dialogów i ćwiczę wymowę.
+Nuria: ¡Hablas muy bien! ¿Tu mujer también habla español? | Bardzo dobrze mówisz! Twoja żona też mówi po hiszpańsku?
+Marek: No, no habla español, pero canta canciones en español. | Nie, nie mówi po hiszpańsku, ale śpiewa piosenki po hiszpańsku.
+@vocab
+estudiar | uczyć się, studiować | v | Estudio español. / Uczę się hiszpańskiego.
+escuchar | słuchać | v | Escucho música. / Słucham muzyki.
+practicar | ćwiczyć | v
+cantar | śpiewać | v
+bailar | tańczyć | v
+cocinar | gotować | v
+comprar | kupować | v
+llevar | nosić; zabierać | v
+mirar | patrzeć, oglądać | v
+necesitar | potrzebować | v | Necesito ayuda. / Potrzebuję pomocy.
+tomar | brać; pić, jeść (coś) | v | Tomo un café. / Piję kawę.
+llamar | dzwonić; wołać | v | Llamo a mi madre. / Dzwonię do mamy.
+la empresa | firma | f
+la tarde | popołudnie | f | por la tarde / po południu
+la mañana | ranek | f | por la mañana / rano
+la noche | noc, wieczór | f | por la noche / wieczorem
+la canción | piosenka | f
+la música | muzyka | f
+también | też, także | adv
+o | lub, czy | conj
+@grammar
+## Odmiana regularna: -ar (hablar — mówić)
+|| yo | hablo
+|| tú | hablas
+|| él / ella / usted | habla
+|| nosotros/as | hablamos
+|| vosotros/as | habláis
+|| ellos / ellas / ustedes | hablan
+Odcinamy **-ar** i dodajemy końcówki **-o, -as, -a, -amos, -áis, -an**.
+
+## Przeczenie
+Stawiamy **no** przed czasownikiem: **No hablo francés.** — Nie mówię po francusku.
+
+## Pytania tak/nie
+Szyk się nie zmienia — wystarczy intonacja (i znaki ¿?): **¿Hablas español?** — Mówisz po hiszpańsku?
+
+## Pory dnia
+**por la mañana** (rano), **por la tarde** (po południu), **por la noche** (wieczorem/w nocy).
+@exercises
+conj: hablar (nosotros) | hablamos
+conj: estudiar (tú) | estudias
+conj: trabajar (ellos) | trabajan
+conj: escuchar (vosotros) | escucháis
+conj: cocinar (yo) | cocino
+conj: comprar (ella) | compra
+fill: Mi hermano no ___ (bailar) bien. | baila
+fill: ¿___ (tú, tomar) un café? | Tomas
+trans: Nie mówię po niemiecku. | No hablo alemán.
+trans: Pracujesz czy studiujesz? | ¿Trabajas o estudias?
+trans: Po południu uczę się hiszpańskiego. | Por la tarde estudio español.
+@culture
+Hiszpanie jedzą obiad późno — zwykle między 14:00 a 15:30 — a kolację nawet o 21:00–22:00. Dlatego „tarde” w Hiszpanii trwa aż do wieczora.

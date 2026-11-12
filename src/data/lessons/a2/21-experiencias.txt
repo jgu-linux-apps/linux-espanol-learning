@@ -1,0 +1,65 @@
+# id: a2-21
+# title: ¿Has estado alguna vez…? Doświadczenia życiowe
+# unit: 6
+# unit_title: Experiencias — doświadczenia
+@goals
+Pytać o doświadczenia i o nich opowiadać
+Używać alguna vez, nunca, ya, todavía no, varias veces
+@dialog
+Irene: Marek, ¿has estado alguna vez en España? | Marek, byłeś kiedyś w Hiszpanii?
+Marek: Sí, he estado tres veces: en Barcelona, en Madrid y en las Islas Canarias. | Tak, byłem trzy razy: w Barcelonie, w Madrycie i na Wyspach Kanaryjskich.
+Irene: ¿Y has probado la paella de verdad? | A próbowałeś prawdziwej paelli?
+Marek: Todavía no. Nunca he estado en Valencia. | Jeszcze nie. Nigdy nie byłem w Walencji.
+Irene: ¡Tienes que ir! ¿Has visto alguna vez un partido en el Bernabéu? | Musisz pojechać! Widziałeś kiedyś mecz na Bernabéu?
+Marek: Sí, ya he visto dos partidos allí. ¡Una experiencia increíble! | Tak, widziałem tam już dwa mecze. Niesamowite przeżycie!
+Irene: Pues yo nunca he ido a un estadio. | A ja nigdy nie byłam na stadionie.
+@vocab
+alguna vez | kiedykolwiek, kiedyś (w pytaniu) | phr | ¿Has comido pulpo alguna vez? / Jadłeś kiedyś ośmiornicę?
+nunca | nigdy | adv
+ya | już | adv
+todavía no | jeszcze nie | phr
+la vez / las veces | raz / razy | f | dos veces / dwa razy
+varias veces | kilka razy | phr
+muchas veces | wiele razy | phr
+probar | próbować (smakować) | v
+conocer | znać, poznawać | v | ¿Conoces Sevilla? / Znasz Sewillę?
+la experiencia | doświadczenie, przeżycie | f
+increíble | niesamowity | adj
+el partido | mecz | m
+el estadio | stadion | m
+la isla | wyspa | f
+de verdad | prawdziwy; naprawdę | phr
+subir | wchodzić (na górę), wsiadać | v
+la montaña | góra, góry | f
+el extranjero | zagranica; cudzoziemiec | m | viajar al extranjero / podróżować za granicę
+@grammar
+## Pretérito perfecto dla doświadczeń
+Gdy pytamy o doświadczenie w **całym życiu** (bez konkretnej daty), używamy perfecto:
+- **¿Has estado alguna vez en Japón?** — Byłeś kiedyś w Japonii?
+- **He estado dos veces.** — Byłem dwa razy.
+- **Nunca he probado el pulpo.** — Nigdy nie próbowałem ośmiornicy.
+
+## Ya / todavía no
+- **¿Ya has visto la película?** — Już widziałeś film?
+- **Sí, ya la he visto. / No, todavía no la he visto.**
+
+## Estar en czy ir a?
+- **He estado en Madrid.** — Byłem w Madrycie (przebywałem tam).
+- **He ido a Madrid.** — Pojechałem do Madrytu (ruch).
+
+## Conocer
+**conocer** (yo **conozco**) — znać osobę lub miejsce: **¿Conoces a Pedro? ¿Conoces Madrid?** Do faktów i umiejętności służy **saber**: **Sé nadar.** — Umiem pływać.
+@exercises
+fill: ¿___ estado alguna vez en México? (tú) | Has
+fill: Nunca ___ probado el gazpacho. (yo) | he
+fill: Mis padres ___ viajado mucho. | han
+fill: ¿Ya habéis ___ (ver) la catedral? | visto
+choice: Jeszcze nie: | todavía no | ya no; todavía no; nunca más
+choice: Znasz Barcelonę? | ¿Conoces Barcelona? | ¿Sabes Barcelona?; ¿Conoces Barcelona?; ¿Conoces a Barcelona?
+choice: Umiem pływać: | Sé nadar. | Conozco nadar.; Sé nadar.; Puedo nadar bien conozco.
+conj: conocer (yo) | conozco
+trans: Byłeś kiedyś w Hiszpanii? | ¿Has estado alguna vez en España?
+trans: Nigdy nie widziałem meczu na stadionie. | Nunca he visto un partido en un estadio.
+trans: Byłam w Madrycie dwa razy. | He estado en Madrid dos veces. /// He estado dos veces en Madrid.
+@culture
+Prawdziwa **paella valenciana** pochodzi z okolic Walencji i jest z kurczakiem, królikiem i fasolką — a nie z owocami morza. Paella z owocami morza to **paella de marisco**.

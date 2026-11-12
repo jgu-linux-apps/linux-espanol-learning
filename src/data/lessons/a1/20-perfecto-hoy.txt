@@ -1,0 +1,78 @@
+# id: a1-20
+# title: ¿Qué has hecho hoy? Pretérito perfecto
+# unit: 5
+# unit_title: Planes y tiempo libre — plany i czas wolny
+@goals
+Opowiedzieć, co dziś zrobiłeś
+Tworzyć pretérito perfecto (he hablado)
+Poznać nieregularne imiesłowy
+@dialog
+Ana: ¡Hola, cariño! ¿Qué tal el día? | Cześć, kochanie! Jak minął dzień?
+Marek: Muy intenso. He tenido tres reuniones y he escrito muchos correos. | Bardzo intensywnie. Miałem trzy spotkania i napisałem mnóstwo maili.
+Ana: ¿Has comido? | Jadłeś coś?
+Marek: Sí, he comido con un compañero en un restaurante nuevo. ¿Y tú, qué has hecho? | Tak, zjadłem obiad z kolegą w nowej restauracji. A ty, co robiłaś?
+Ana: Esta mañana he ido al médico y luego he hecho la compra. | Dziś rano byłam u lekarza, a potem zrobiłam zakupy.
+Marek: ¿Y el niño? | A mały?
+Ana: Ha vuelto del colegio a las cinco y ya ha hecho los deberes. | Wrócił ze szkoły o piątej i już odrobił lekcje.
+@vocab
+haber | mieć (czasownik posiłkowy) | v
+hoy | dzisiaj | adv
+esta mañana | dziś rano | phr
+esta semana | w tym tygodniu | phr
+este año | w tym roku | phr
+ya | już | adv
+la reunión | spotkanie, zebranie | f
+el correo | mail, poczta | m
+el compañero / la compañera | kolega, koleżanka (z pracy, klasy) | m
+el restaurante | restauracja | m
+ir al médico | iść do lekarza | phr | Mañana voy al médico. / Jutro idę do lekarza.
+hacer la compra | robić zakupy (spożywcze) | phr
+los deberes | zadanie domowe | mpl
+el niño / la niña | dziecko, chłopiec / dziewczynka | m
+cariño | kochanie | m
+intenso / intensa | intensywny | adj
+@grammar
+## Pretérito perfecto: haber + imiesłów
+|| yo | he hablado
+|| tú | has hablado
+|| él/ella/usted | ha hablado
+|| nosotros/as | hemos hablado
+|| vosotros/as | habéis hablado
+|| ellos/ellas/ustedes | han hablado
+Imiesłów: **-ar → -ado** (hablado), **-er/-ir → -ido** (comido, vivido). Nie zmienia się z osobą!
+
+## Kiedy go używać (w Hiszpanii)
+W Hiszpanii pretérito perfecto opisuje przeszłość w okresie, który **jeszcze trwa**:
+- **hoy, esta mañana, esta semana, este año** — **Hoy he trabajado mucho.**
+- doświadczenia życiowe: **¿Has estado en Madrid?** (więcej na A2)
+- z **ya** (już) i **todavía no** (jeszcze nie).
+
+## Nieregularne imiesłowy
+|| hacer | hecho
+|| decir | dicho
+|| ver | visto
+|| escribir | escrito
+|| volver | vuelto
+|| poner | puesto
+|| abrir | abierto
+|| romper | roto
+|| morir | muerto
+Uwaga: **ir → ido**, **ser → sido**.
+
+## Szyk
+Nic nie wstawiamy między **haber** a imiesłów: **Ya he comido. No he comido.** Zaimki idą przed haber: **Me he levantado.**
+@exercises
+conj: comer (yo, perfecto) | he comido
+conj: hablar (nosotros, perfecto) | hemos hablado
+conj: hacer (tú, perfecto) | has hecho
+conj: escribir (ella, perfecto) | ha escrito
+conj: volver (ellos, perfecto) | han vuelto
+conj: ver (vosotros, perfecto) | habéis visto
+fill: Hoy me ___ levantado a las siete. | he
+fill: ¿Ya has ___ (decir) la verdad? | dicho
+choice: Dziś rano byłam u lekarza: | Esta mañana he ido al médico. | Esta mañana he ido al médico.; Esta mañana fui médico.; Esta mañana he va al médico.
+trans: Co dzisiaj robiłeś? | ¿Qué has hecho hoy?
+trans: Już zjadłem. | Ya he comido.
+trans: Napisałam trzy maile. | He escrito tres correos.
+@culture
+To charakterystyczna różnica: Hiszpan powie **Hoy he comido paella**, a Meksykanin raczej **Hoy comí paella**. Ucząc się wersji z Hiszpanii, używaj perfecto dla „dzisiaj” i „w tym tygodniu”.

@@ -1,0 +1,68 @@
+# id: a2-32
+# title: Lo, la, le — zaimki dopełnienia
+# unit: 8
+# unit_title: Salud y cuidados — zdrowie
+@goals
+Zastępować rzeczowniki zaimkami (lo, la, los, las)
+Używać zaimków dopełnienia dalszego (le, les) i połączenia se lo
+@dialog
+Marta: ¿Has comprado el regalo para tu madre? | Kupiłeś prezent dla mamy?
+Marek: Sí, lo compré ayer. Es un libro de cocina. | Tak, kupiłem go wczoraj. To książka kucharska.
+Marta: ¿Y cuándo se lo vas a dar? | A kiedy jej go dasz?
+Marek: Se lo doy el domingo, en su cumpleaños. | Dam jej go w niedzielę, na urodziny.
+Marta: ¿Y las flores? | A kwiaty?
+Marek: Las compro el domingo por la mañana. ¿Me ayudas a elegirlas? | Kupię je w niedzielę rano. Pomożesz mi je wybrać?
+Marta: Claro. Te llamo el sábado y lo hablamos. | Jasne. Zadzwonię do ciebie w sobotę i to omówimy.
+@vocab
+el regalo | prezent | m
+regalar | dawać w prezencie | v | Le regalé un libro. / Dałem mu w prezencie książkę.
+dar | dawać | v
+las flores | kwiaty | fpl
+ayudar | pomagać | v | ¿Me ayudas? / Pomożesz mi?
+elegir | wybierać | v
+enviar / mandar | wysyłać | v
+prestar | pożyczać (komuś) | v
+devolver | oddawać, zwracać | v
+explicar | wyjaśniać | v
+enseñar | uczyć (kogoś); pokazywać | v
+el mensaje | wiadomość | m
+@grammar
+## Zaimki dopełnienia bliższego (kogo? co?)
+|| me | mnie
+|| te | ciebie
+|| lo / la | go (jego, to) / ją
+|| nos | nas
+|| os | was
+|| los / las | ich / je
+**¿El libro? Lo compré ayer.** — Książkę? Kupiłem ją wczoraj. (el libro → lo)
+
+## Zaimki dopełnienia dalszego (komu?)
+|| me | mi
+|| te | ci
+|| le | mu, jej, Panu/Pani
+|| nos | nam
+|| os | wam
+|| les | im, Państwu
+**Le doy un regalo a mi madre.** — Daję mamie prezent. (Hiszpanie często powtarzają: le … a mi madre.)
+
+## Dwa zaimki naraz: le/les → se
+Najpierw „komu”, potem „co”. **le / les + lo / la / los / las → se lo / se la…**:
+**Le doy el libro → Se lo doy.** (nie „le lo”!)
+
+## Gdzie stoi zaimek
+- Przed odmienionym czasownikiem: **Lo compré.**
+- Z bezokolicznikiem lub gerundio — przed lub dołączony: **Se lo voy a dar = Voy a dárselo.**
+- W trybie rozkazującym twierdzącym — dołączony: **¡Dámelo!**
+@exercises
+choice: ¿El regalo? ___ compré ayer. | Lo | La; Lo; Le
+choice: ¿Las flores? ___ compro mañana. | Las | Los; Las; Les
+choice: Daję mamie kwiaty (las flores) → ___ doy. | Se las | Le las; Se las; Se los
+choice: Daję jej książkę (el libro) → ___ doy. | Se lo | Le lo; Se la; Se lo
+fill: ¿Me ayudas? — Sí, ___ ayudo. (ciebie) | te
+fill: A mis padres ___ escribo cada semana. | les
+fill: Voy a dár___ (jej to — el libro). | selo
+trans: Kupiłem go wczoraj. (el libro) | Lo compré ayer.
+trans: Pomożesz mi? | ¿Me ayudas?
+trans: Zadzwonię do ciebie w sobotę. | Te llamo el sábado.
+@culture
+W Hiszpanii (zwłaszcza w Madrycie) usłyszysz też **le** zamiast **lo** w odniesieniu do mężczyzn: **Le vi ayer** zamiast **Lo vi ayer**. To tzw. **leísmo** — akceptowane przez Akademię Królewską dla osób płci męskiej.

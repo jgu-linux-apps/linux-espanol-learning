@@ -1,0 +1,70 @@
+# id: a1-11
+# title: ¿Qué hora es? Godzina i codzienna rutyna
+# unit: 3
+# unit_title: Día a día — dzień po dniu
+@goals
+Pytać o godzinę i ją podawać
+Opowiedzieć o swoim dniu
+Używać czasowników zwrotnych
+@dialog
+Isabel: ¿A qué hora te levantas? | O której wstajesz?
+Marek: Me levanto a las seis y media. Me ducho, desayuno y salgo de casa a las siete y cuarto. | Wstaję o wpół do siódmej. Biorę prysznic, jem śniadanie i wychodzę z domu kwadrans po siódmej.
+Isabel: ¡Qué pronto! Yo me levanto a las nueve. | Jak wcześnie! Ja wstaję o dziewiątej.
+Marek: ¿Y a qué hora te acuestas? | A o której kładziesz się spać?
+Isabel: Muy tarde, a la una o a las dos. | Bardzo późno, o pierwszej albo o drugiej.
+Marek: Perdona, ¿qué hora es ahora? | Przepraszam, która jest teraz godzina?
+Isabel: Son las cinco menos diez. | Jest za dziesięć piąta.
+@vocab
+levantarse | wstawać | vr | Me levanto a las siete. / Wstaję o siódmej.
+ducharse | brać prysznic | vr
+lavarse | myć się | vr
+vestirse | ubierać się | vr
+acostarse | kłaść się spać | vr
+despertarse | budzić się | vr
+desayunar | jeść śniadanie | v
+comer | jeść obiad; jeść | v
+cenar | jeść kolację | v
+salir | wychodzić | v | Salgo de casa a las ocho. / Wychodzę z domu o ósmej.
+¿qué hora es? | która godzina? | phr
+la hora | godzina | f
+y media | wpół do (…+30 min) | phr | las tres y media / 15:30
+y cuarto | kwadrans po | phr
+menos cuarto | za kwadrans | phr
+pronto | wcześnie; wkrótce | adv
+tarde | późno | adv
+ahora | teraz | adv
+después | potem | adv
+perdona | przepraszam (do „ty”) | interj
+@grammar
+## Która godzina?
+- **¿Qué hora es?** — **Es la una** (1:00), **Son las dos / las tres…**
+- **y cuarto** (kwadrans po), **y media** (wpół do następnej, czyli :30), **menos cuarto** (za kwadrans)
+- **Son las cinco y diez** (5:10), **Son las cinco menos diez** (4:50).
+- **¿A qué hora…?** — O której…? **A las ocho.** — O ósmej.
+
+## Czasowniki zwrotne
+Zaimek zwrotny stoi przed czasownikiem i zmienia się z osobą:
+|| yo | me levanto
+|| tú | te levantas
+|| él/ella/usted | se levanta
+|| nosotros/as | nos levantamos
+|| vosotros/as | os levantáis
+|| ellos/ellas/ustedes | se levantan
+Uwaga: **acostarse** (o→ue: me acuesto), **vestirse** (e→i: me visto), **despertarse** (e→ie: me despierto) — o tych zmianach więcej w następnej lekcji.
+
+## Salir — nieregularne „yo”
+**salgo**, sales, sale, salimos, salís, salen.
+@exercises
+choice: 15:30 | Son las tres y media. | Son las tres y media.; Son las tres y cuarto.; Es la tres y media.
+choice: 1:00 | Es la una. | Son la una.; Es la una.; Es una hora.
+choice: 8:45 | Son las nueve menos cuarto. | Son las ocho y cuarto.; Son las nueve menos cuarto.; Son las ocho menos cuarto.
+fill: Yo ___ levanto a las siete. | me
+fill: ¿A qué hora ___ duchas? | te
+fill: Nosotros ___ acostamos tarde. | nos
+conj: levantarse (ellos) | se levantan
+conj: salir (yo) | salgo
+trans: Która jest godzina? | ¿Qué hora es?
+trans: Jem kolację o dziewiątej. | Ceno a las nueve.
+trans: O której wstajesz? | ¿A qué hora te levantas?
+@culture
+W Hiszpanii **comer** oznacza przede wszystkim zjeść obiad — główny posiłek dnia, ok. 14:00. Wiele firm ma długą przerwę obiadową, choć w dużych miastach coraz częściej pracuje się w trybie ciągłym (**jornada continua**).

@@ -1,0 +1,64 @@
+# id: a2-30
+# title: Consejos — rady, obowiązki i tryb rozkazujący (tú)
+# unit: 8
+# unit_title: Salud y cuidados — zdrowie
+@goals
+Dawać rady i mówić o obowiązkach (deber, hay que, tener que)
+Tworzyć tryb rozkazujący twierdzący dla tú i vosotros
+@dialog
+Elena: Estoy muy estresada. Duermo mal y no tengo energía. | Jestem bardzo zestresowana. Źle śpię i nie mam energii.
+Marek: Tienes que descansar más. ¿Por qué no haces deporte? | Musisz więcej odpoczywać. Czemu nie uprawiasz sportu?
+Elena: No tengo tiempo… | Nie mam czasu…
+Marek: Pues sal a caminar media hora cada día. Y apaga el móvil una hora antes de dormir. | No to wychodź na półgodzinny spacer codziennie. I wyłączaj komórkę godzinę przed snem.
+Elena: ¿Y qué más? | I co jeszcze?
+Marek: Come mejor y bebe menos café. Hay que cuidarse, Elena. | Jedz lepiej i pij mniej kawy. Trzeba o siebie dbać, Eleno.
+Elena: Tienes razón. Debería cambiar algunas cosas. | Masz rację. Powinnam zmienić kilka rzeczy.
+@vocab
+deber + infinitivo | powinien, musieć | v | Debes dormir más. / Powinieneś więcej spać.
+hay que + infinitivo | trzeba | phr | Hay que comer bien. / Trzeba dobrze jeść.
+el consejo | rada | m
+descansar | odpoczywać | v
+cuidarse | dbać o siebie | vr
+estresado / estresada | zestresowany | adj
+la energía | energia | f
+apagar | wyłączać, gasić | v
+encender | włączać, zapalać | v
+dejar de + infinitivo | przestać | phr | Dejé de fumar. / Rzuciłem palenie.
+fumar | palić (papierosy) | v
+sano / sana | zdrowy | adj
+la cosa | rzecz | f
+tener razón | mieć rację | phr
+¿por qué no…? | dlaczego nie…?, może byś…? | phr
+@grammar
+## Rady i obowiązki
+- **tener que** + bezokolicznik — musieć (konkretna osoba): **Tienes que descansar.**
+- **deber** + bezokolicznik — powinien: **Debes dormir más.** Grzeczniej: **Deberías…** (powinieneś).
+- **hay que** + bezokolicznik — trzeba (ogólnie, bez osoby): **Hay que beber agua.**
+- **¿Por qué no…?** — Może byś…? **¿Por qué no vas al médico?**
+
+## Tryb rozkazujący twierdzący — tú
+Forma **tú** = 3. osoba l. poj. czasu teraźniejszego:
+**habla, come, escribe, duerme, empieza**.
+Nieregularne: **ten** (tener), **ven** (venir), **pon** (poner), **sal** (salir), **haz** (hacer), **di** (decir), **ve** (ir), **sé** (ser).
+
+## Tryb rozkazujący — vosotros (Hiszpania)
+Bezokolicznik: **-r → -d**: **hablad, comed, escribid, venid**.
+
+## Z zaimkami
+Zaimki dołączamy na końcu i dodajemy akcent: **levántate, cuídate, siéntate**; vosotros: **levantaos, sentaos**.
+@exercises
+conj: comer (tú, imperativo) | come
+conj: hacer (tú, imperativo) | haz
+conj: salir (tú, imperativo) | sal
+conj: venir (tú, imperativo) | ven
+conj: hablar (vosotros, imperativo) | hablad
+conj: escribir (vosotros, imperativo) | escribid
+choice: Trzeba dużo pić: | Hay que beber mucho. | Hay que beber mucho.; Tiene que beber mucho hay.; Hay beber mucho.
+choice: Uważaj na siebie! (tú) | ¡Cuídate! | ¡Cuídate!; ¡Te cuidas!; ¡Cuida te!
+fill: Tienes ___ dormir más. | que
+fill: ___ (deber, tú, tryb grzeczny) ir al médico. | Deberías
+trans: Powinieneś więcej odpoczywać. | Deberías descansar más. /// Debes descansar más.
+trans: Wyłącz komórkę! | ¡Apaga el móvil!
+trans: Masz rację. | Tienes razón.
+@culture
+**Dieta śródziemnomorska** — oliwa z oliwek, warzywa, ryby, rośliny strączkowe — jest uważana za jedną z najzdrowszych na świecie. Hiszpanie należą do najdłużej żyjących narodów Europy.

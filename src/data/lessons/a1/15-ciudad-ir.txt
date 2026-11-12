@@ -1,0 +1,74 @@
+# id: a1-15
+# title: Moverse por la ciudad — transport i drogi
+# unit: 4
+# unit_title: En la ciudad — w mieście
+@goals
+Mówić, dokąd i czym jedziesz (ir a, en)
+Zapytać o drogę i ją wyjaśnić
+@dialog
+Marek: Perdone, ¿para ir al Museo del Prado? | Przepraszam, jak dojść do Muzeum Prado?
+Señora: Está un poco lejos. Puede ir en metro o en autobús. | To trochę daleko. Może Pan pojechać metrem albo autobusem.
+Marek: ¿Y andando? | A pieszo?
+Señora: Andando son veinte minutos. Siga todo recto por esta calle y gire a la derecha en la plaza. | Pieszo to dwadzieścia minut. Proszę iść prosto tą ulicą i skręcić w prawo na placu.
+Marek: ¿Todo recto y luego a la derecha? | Prosto, a potem w prawo?
+Señora: Eso es. El museo está a la izquierda, enfrente del parque. | Właśnie tak. Muzeum jest po lewej, naprzeciwko parku.
+Marek: Muchas gracias. | Bardzo dziękuję.
+@vocab
+ir | iść, jechać | v | Voy al trabajo en coche. / Jadę do pracy samochodem.
+el coche | samochód (w Hiszpanii) | m
+el autobús | autobus | m
+el metro | metro | m
+el tren | pociąg | m
+el avión | samolot | m
+andando / a pie | pieszo | adv
+coger | brać; łapać (autobus) — w Hiszpanii | v | Cojo el metro. / Jadę metrem.
+la calle | ulica | f
+la plaza | plac | f
+el museo | muzeum | m
+el parque | park | m
+la iglesia | kościół | f
+el banco | bank; ławka | m
+la farmacia | apteka | f
+lejos de | daleko od | prep
+todo recto | prosto | phr
+a la derecha | w prawo, po prawej | phr
+a la izquierda | w lewo, po lewej | phr
+girar | skręcać | v
+seguir | iść dalej, kontynuować | v
+cruzar | przechodzić (przez ulicę) | v
+luego | potem | adv
+el minuto | minuta | m
+@grammar
+## Czasownik ir (iść, jechać) — nieregularny
+|| yo | voy
+|| tú | vas
+|| él/ella/usted | va
+|| nosotros/as | vamos
+|| vosotros/as | vais
+|| ellos/ellas/ustedes | van
+- **ir a + miejsce**: **Voy a Madrid. Voy al banco** (a + el = al).
+- **ir en + środek transportu**: **en coche, en tren, en metro**. Ale pieszo: **a pie / andando**.
+
+## Wskazywanie drogi (forma usted)
+- **Siga todo recto.** — Proszę iść prosto.
+- **Gire a la derecha / a la izquierda.** — Proszę skręcić w prawo / w lewo.
+- **Cruce la calle.** — Proszę przejść przez ulicę.
+- **Coja la primera / segunda calle.** — Proszę skręcić w pierwszą / drugą ulicę.
+Do kolegi (tú): **sigue, gira, cruza, coge**.
+
+## Coger w Hiszpanii
+W Hiszpanii **coger** (brać, łapać) to słowo zupełnie neutralne: **coger el autobús**. W Ameryce Łacińskiej lepiej go unikać — tam mówi się **tomar el autobús**.
+@exercises
+conj: ir (nosotros) | vamos
+conj: ir (yo) | voy
+conj: ir (vosotros) | vais
+fill: Voy ___ trabajo en tren. | al
+fill: Mis padres van a Málaga ___ avión. | en
+fill: Vamos al museo ___ pie. | a
+choice: Proszę skręcić w lewo: | Gire a la izquierda. | Gire a la derecha.; Gire a la izquierda.; Siga todo recto.
+choice: Apteka: | la farmacia | la farmacia; el banco; la iglesia
+trans: Jadę do pracy samochodem. | Voy al trabajo en coche.
+trans: Gdzie jest bank? | ¿Dónde está el banco?
+trans: Muzeum jest po prawej. | El museo está a la derecha.
+@culture
+Madryckie metro jest jednym z największych w Europie. W Hiszpanii popularne są też szybkie pociągi **AVE** — z Madrytu do Sewilli jedzie się nimi ok. 2,5 godziny.

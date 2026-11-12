@@ -1,0 +1,99 @@
+# id: a1-07
+# title: Estar — samopoczucie i położenie. Ser czy estar?
+# unit: 2
+# unit_title: Mi mundo — mój świat
+@goals
+Powiedzieć, jak się czujesz
+Powiedzieć, gdzie coś lub ktoś jest
+Odróżniać ser od estar
+@dialog
+Pedro: ¡Hola, Marek! ¿Cómo estás? | Cześć, Marek! Jak się masz?
+Marek: Estoy un poco cansado. Trabajo mucho esta semana. ¿Y tú? | Jestem trochę zmęczony. Dużo pracuję w tym tygodniu. A ty?
+Pedro: Yo estoy muy contento: ¡estoy de vacaciones! | Ja jestem bardzo zadowolony: jestem na wakacjach!
+Marek: ¡Qué bien! ¿Dónde estás? | Super! Gdzie jesteś?
+Pedro: Estoy en Málaga, con mi familia. El hotel está cerca de la playa. | Jestem w Maladze, z rodziną. Hotel jest blisko plaży.
+Marek: ¿Y Málaga es bonita? | A Malaga jest ładna?
+Pedro: Sí, es una ciudad preciosa. | Tak, to przepiękne miasto.
+@vocab
+estar | być (stan, położenie) | v | Estoy en casa. / Jestem w domu.
+¿cómo estás? | jak się masz? | phr
+cansado / cansada | zmęczony | adj
+contento / contenta | zadowolony | adj
+triste | smutny | adj
+enfermo / enferma | chory | adj
+nervioso / nerviosa | zdenerwowany | adj
+ocupado / ocupada | zajęty | adj
+¿dónde? | gdzie? | adv | ¿Dónde está el hotel? / Gdzie jest hotel?
+la casa | dom | f | Estoy en casa. / Jestem w domu.
+la playa | plaża | f
+el hotel | hotel | m
+las vacaciones | wakacje, urlop | fpl | Estoy de vacaciones. / Jestem na urlopie.
+la semana | tydzień | f
+mucho | dużo, bardzo | adv
+bonito / bonita | ładny | adj
+precioso / preciosa | przepiękny | adj
+abierto / abierta | otwarty | adj
+cerrado / cerrada | zamknięty | adj
+@grammar
+## Czasownik estar — czas teraźniejszy
+|| yo | estoy
+|| tú | estás
+|| él / ella / usted | está
+|| nosotros/as | estamos
+|| vosotros/as | estáis
+|| ellos / ellas / ustedes | están
+
+## Ser czy estar? Najważniejsza zasada
+**SER** — czym/kim coś jest, cechy stałe:
+- tożsamość, zawód, narodowość, pochodzenie: **Soy ingeniero. Es de Málaga.**
+- cechy charakteru i wyglądu: **Es alto. Es simpática.**
+- czas i godzina: **Son las tres. Hoy es lunes.**
+**ESTAR** — jak/gdzie coś jest, stany:
+- samopoczucie i stany przejściowe: **Estoy cansado. Está enfermo.**
+- położenie: **El hotel está cerca de la playa. Estoy en casa.**
+- **estar de vacaciones** — być na urlopie.
+
+## Jak szybko wybrać? Dwa pytania
+1. Czy mówię, **kim / czym / jaki** ktoś jest z natury (zawód, narodowość, cecha, godzina, z czego jest)? → **SER**
+2. Czy mówię, **gdzie** ktoś jest albo **jak się teraz ma** (nastrój, stan, położenie)? → **ESTAR**
+- Trik: **estar** kojarz ze „**stać/stan**”: stan i położenie. **Ser** to „istota” rzeczy.
+- Uwaga: **ser** nie służy do położenia! Mówimy **Estoy en Rumia**, nie „Soy en Rumia”. Pochodzenie to ser: **Soy de Rumia** (skąd jestem).
+
+## Najczęstsze pomyłki Polaków
+|| ✗ Soy cansado. | ✔ Estoy cansado. (zmęczenie to stan)
+|| ✗ Estoy ingeniero. | ✔ Soy ingeniero. (zawód to tożsamość)
+|| ✗ Somos en casa. | ✔ Estamos en casa. (położenie)
+|| ✗ Estamos polacos. | ✔ Somos polacos. (narodowość)
+|| ✗ El hotel es cerca. | ✔ El hotel está cerca. (położenie)
+- Pamiętaj: **somos** = my jesteśmy (ser), **estamos** = my jesteśmy/znajdujemy się (estar).
+
+## Te same przymiotniki, inny sens
+|| Es aburrido. | Jest nudny (to nudny człowiek).
+|| Está aburrido. | Nudzi się (teraz).
+|| Es listo. | Jest bystry.
+|| Está listo. | Jest gotowy.
+@exercises
+fill: Hoy ___ muy cansada. (yo) | estoy
+fill: ¿Dónde ___ el hotel? | está
+fill: Nosotros ___ de vacaciones. | estamos
+fill: ¿Cómo ___ vosotros? | estáis
+choice: Madrid ___ en España. | está | es; está; son
+choice: Mi padre ___ médico. | es | es; está; tiene
+choice: Ana ___ enferma hoy. | está | es; está; son
+choice: La tienda ___ cerrada. | está | es; está; hay
+choice: Ellos ___ de Polonia. | son | son; están; tienen
+fill: Nosotros ___ polacos. (kim jesteśmy) | somos
+fill: Nosotros ___ en casa. (gdzie jesteśmy) | estamos
+fill: Yo ___ ingeniero. | soy
+fill: Hoy ___ triste. | estoy
+fill: Mi hermana ___ simpática. | es
+choice: Ellas ___ en el hotel. | están | son; están; hay
+choice: Hoy ___ lunes. | es | es; está; son
+choice: Tú ___ de Polonia, ¿verdad? | eres | eres; estás; tienes
+choice: ¿Dónde ___ tú? | estás | eres; estás; vives
+choice: Mi café ___ frío. | está | es; está; son
+trans: Jak się masz? | ¿Cómo estás?
+trans: Jestem w domu. | Estoy en casa.
+trans: Hotel jest blisko plaży. | El hotel está cerca de la playa.
+@culture
+W Hiszpanii wiele sklepów i urzędów zamyka się w porze sjesty, mniej więcej od 14:00 do 17:00, zwłaszcza w mniejszych miastach. Napis **cerrado** zobaczysz wtedy na drzwiach często.

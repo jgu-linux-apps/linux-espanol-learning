@@ -1,0 +1,70 @@
+# id: a1-08
+# title: Hay / está — mieszkanie i położenie
+# unit: 2
+# unit_title: Mi mundo — mój świat
+@goals
+Opisać swoje mieszkanie
+Używać hay i está poprawnie
+Określać położenie przyimkami
+@dialog
+Sofía: ¿Cómo es tu piso nuevo? | Jakie jest twoje nowe mieszkanie?
+Marek: Es pequeño pero muy cómodo. Hay un salón, dos dormitorios, una cocina y un baño. | Jest małe, ale bardzo wygodne. Jest salon, dwie sypialnie, kuchnia i łazienka.
+Sofía: ¿Hay terraza? | Jest taras?
+Marek: No, pero hay un balcón pequeño. | Nie, ale jest mały balkon.
+Sofía: ¿Y dónde está? | A gdzie się znajduje?
+Marek: Está en el centro, al lado de la estación. Enfrente hay un supermercado. | W centrum, obok dworca. Naprzeciwko jest supermarket.
+Sofía: ¡Perfecto! | Idealnie!
+@vocab
+el piso | mieszkanie; piętro | m
+el salón | salon, pokój dzienny | m
+el dormitorio | sypialnia | m
+la cocina | kuchnia | f
+el baño | łazienka | m
+la terraza | taras | f
+el balcón | balkon | m
+la mesa | stół | f
+la silla | krzesło | f
+la cama | łóżko | f
+el sofá | kanapa | m
+cómodo / cómoda | wygodny | adj
+hay | jest, są (istnieje) | v | Hay un parque cerca. / W pobliżu jest park.
+al lado de | obok | prep
+enfrente de | naprzeciwko | prep
+encima de | na, nad | prep
+debajo de | pod | prep
+delante de | przed | prep
+detrás de | za | prep
+entre | między | prep
+el centro | centrum | m
+la estación | dworzec, stacja | f
+el supermercado | supermarket | m
+@grammar
+## Hay — jest/są (coś istnieje)
+**Hay** to jedna forma dla liczby pojedynczej i mnogiej. Używamy jej z rodzajnikiem nieokreślonym, liczebnikiem albo bez rodzajnika:
+- **Hay un balcón.** — Jest balkon.
+- **Hay dos dormitorios.** — Są dwie sypialnie.
+- **¿Hay supermercados cerca?** — Są w pobliżu supermarkety?
+
+## Está / están — gdzie jest konkretna rzecz
+Gdy mówimy o konkretnej, znanej rzeczy (z **el, la**, imieniem, **mi** itp.), używamy **estar**:
+- **El baño está al lado del dormitorio.** — Łazienka jest obok sypialni.
+- **Mis llaves están encima de la mesa.** — Moje klucze są na stole.
+
+## Ściągnięcia: al i del
+**a + el = al**, **de + el = del**: **al lado del sofá** (obok kanapy). Z **la** nie ma ściągnięcia: **al lado de la cama**.
+
+## Piso
+W Hiszpanii **el piso** to mieszkanie w bloku, a także piętro: **Vivo en el tercer piso.**
+@exercises
+choice: En mi piso ___ dos baños. | hay | hay; está; están
+choice: El sofá ___ en el salón. | está | hay; está; es
+choice: ¿Dónde ___ las sillas? | están | hay; están; son
+choice: ___ un supermercado enfrente. | Hay | Hay; Está; Es
+fill: La lámpara está encima ___ la mesa. | de
+fill: El gato está debajo ___ sofá. | del
+fill: El banco está al lado ___ hotel. | del
+trans: W mieszkaniu są dwie sypialnie. | En el piso hay dos dormitorios. /// Hay dos dormitorios en el piso.
+trans: Kuchnia jest obok salonu. | La cocina está al lado del salón.
+trans: Czy jest taras? | ¿Hay terraza?
+@culture
+Większość Hiszpanów w miastach mieszka w blokach (**pisos**), a nie w domach. Na parterze często jest bar albo sklep, a w starszych budynkach — portier (**el portero**).

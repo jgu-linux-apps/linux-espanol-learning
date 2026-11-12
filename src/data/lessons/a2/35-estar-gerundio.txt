@@ -1,0 +1,59 @@
+# id: a2-35
+# title: ¿Qué estás haciendo? Estar + gerundio
+# unit: 9
+# unit_title: Trabajo y futuro — praca i przyszłość
+@goals
+Mówić o czynnościach, które trwają teraz
+Tworzyć gerundio (także nieregularne)
+@dialog
+Marek: ¿Diga? | Halo?
+Javier: ¡Hola, Marek! Soy Javier. ¿Qué estás haciendo? ¿Te pillo mal? | Cześć, Marek! Tu Javier. Co robisz? Przeszkadzam?
+Marek: Un poco. Estoy preparando una presentación para mañana. | Trochę. Przygotowuję prezentację na jutro.
+Javier: Vale, solo una pregunta rápida. ¿Sigues buscando piso en Valencia? | Dobra, tylko jedno szybkie pytanie. Wciąż szukasz mieszkania w Walencji?
+Marek: Sí, estoy mirando anuncios todos los días. | Tak, codziennie przeglądam ogłoszenia.
+Javier: Mi primo está alquilando su piso. Te mando las fotos. | Mój kuzyn wynajmuje swoje mieszkanie. Wyślę ci zdjęcia.
+Marek: ¡Genial! Gracias. Te llamo esta noche. | Świetnie! Dzięki. Zadzwonię do ciebie dziś wieczorem.
+@vocab
+¿diga? / ¿dígame? | halo? (odbierając telefon w Hiszpanii) | phr
+pillar | złapać; (potocznie) trafić na kogoś | v | ¿Te pillo mal? / Dzwonię w złym momencie?
+preparar | przygotowywać | v
+la presentación | prezentacja | f
+la pregunta | pytanie | f
+rápido / rápida | szybki | adj
+seguir + gerundio | wciąż coś robić | phr | Sigo estudiando. / Wciąż się uczę.
+el anuncio | ogłoszenie, reklama | m
+alquilar | wynajmować | v
+mandar | wysyłać | v
+en este momento | w tej chwili | phr
+ahora mismo | w tej chwili, zaraz | phr
+@grammar
+## Gerundio
+- **-ar → -ando**: hablar → **hablando**
+- **-er, -ir → -iendo**: comer → **comiendo**, vivir → **viviendo**
+- po samogłosce **-yendo**: leer → **leyendo**, oír → **oyendo**, traer → **trayendo**, ir → **yendo**
+- **-ir** ze zmianą tematu: e→i, o→u: pedir → **pidiendo**, decir → **diciendo**, dormir → **durmiendo**, sentir → **sintiendo**
+
+## Estar + gerundio — „właśnie teraz”
+**estoy, estás, está, estamos, estáis, están + gerundio**:
+**Estoy preparando una presentación.** — (Właśnie) przygotowuję prezentację.
+Także dla sytuacji przejściowych: **Este mes estoy trabajando mucho.**
+
+## Seguir / llevar + gerundio
+- **seguir + gerundio** — nadal coś robić: **Sigo buscando piso.**
+- **llevar + czas + gerundio** — robić coś od jakiegoś czasu: **Llevo una hora esperando.**
+
+## Zaimki
+**Lo estoy haciendo = Estoy haciéndolo** (z akcentem przy dołączeniu).
+@exercises
+fill: Estoy ___ (comer). | comiendo
+fill: ¿Qué estás ___ (leer)? | leyendo
+fill: El niño está ___ (dormir). | durmiendo
+fill: Están ___ (pedir) la cuenta. | pidiendo
+fill: Sigo ___ (buscar) trabajo. | buscando
+conj: hablar (nosotros, estar + gerundio) | estamos hablando
+choice: Co teraz robisz? | ¿Qué estás haciendo? | ¿Qué estás haciendo?; ¿Qué eres haciendo?; ¿Qué haces haciendo?
+choice: Czekam od godziny: | Llevo una hora esperando. | Llevo una hora esperando.; Estoy una hora esperando desde.; Espero hace una hora.
+trans: Przygotowuję prezentację. | Estoy preparando una presentación.
+trans: Wciąż szukam mieszkania. | Sigo buscando piso.
+@culture
+Hiszpanie odbierają telefon słowami **¿Diga?**, **¿Dígame?** albo **¿Sí?**, a mówiąc, kto dzwoni, używają **Soy…** („Jestem…”), a nie „Mówi…”.

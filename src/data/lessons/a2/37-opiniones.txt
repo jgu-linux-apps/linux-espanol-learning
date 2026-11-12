@@ -1,0 +1,65 @@
+# id: a2-37
+# title: Opiniones — wyrażanie zdania, zgoda i niezgoda
+# unit: 10
+# unit_title: Sociedad y costumbres — społeczeństwo i zwyczaje
+@goals
+Wyrazić opinię i ją uzasadnić
+Zgodzić się i nie zgodzić uprzejmie
+@dialog
+Sergio: ¿Qué opinas de las redes sociales? | Co sądzisz o mediach społecznościowych?
+Marek: Pienso que son útiles, pero creo que pasamos demasiado tiempo con el móvil. | Myślę, że są przydatne, ale uważam, że spędzamy za dużo czasu z komórką.
+Sergio: Estoy de acuerdo contigo. Además, hay muchas noticias falsas. | Zgadzam się z tobą. Poza tym jest dużo fałszywych wiadomości.
+Marek: Sin embargo, para aprender idiomas son fantásticas. | Jednak do nauki języków są fantastyczne.
+Sergio: Bueno, depende. Yo no estoy tan seguro. | No cóż, to zależy. Ja nie jestem tego taki pewien.
+Marek: ¿Por qué? | Dlaczego?
+Sergio: Porque para mí, es mejor hablar con personas de verdad. | Bo dla mnie lepiej rozmawiać z prawdziwymi ludźmi.
+Marek: En eso tienes razón. | W tym masz rację.
+@vocab
+opinar | sądzić, mieć zdanie | v | ¿Qué opinas? / Co sądzisz?
+pensar | myśleć | v | Pienso que… / Myślę, że…
+creer que | uważać, że | phr
+en mi opinión | moim zdaniem | phr
+para mí | dla mnie, moim zdaniem | phr
+estar de acuerdo | zgadzać się | phr | No estoy de acuerdo. / Nie zgadzam się.
+depende | to zależy | phr
+además | poza tym, ponadto | adv
+sin embargo | jednak | phr
+por un lado… por otro lado | z jednej strony… z drugiej strony | phr
+las redes sociales | media społecznościowe | fpl
+la noticia | wiadomość (news) | f
+falso / falsa | fałszywy | adj
+útil | przydatny | adj
+seguro / segura | pewny; bezpieczny | adj
+el idioma | język (obcy) | m
+@grammar
+## Wyrażanie opinii
+- **Creo que / Pienso que / Me parece que** + zdanie: **Creo que es importante.**
+- **En mi opinión, … / Para mí, …**
+- **¿Qué opinas de…? ¿Qué piensas de…? ¿Qué te parece…?**
+Uwaga: w przeczeniu **No creo que…** wymaga trybu łączącego (subjuntivo) — to temat poziomu B1. Na razie mów: **Creo que no** (Myślę, że nie).
+
+## Zgoda i niezgoda
+|| Estoy de acuerdo (contigo). | Zgadzam się (z tobą).
+|| No estoy de acuerdo. | Nie zgadzam się.
+|| Tienes razón. | Masz rację.
+|| Depende. | To zależy.
+|| No estoy tan seguro/a. | Nie jestem taki/taka pewien/pewna.
+|| ¡Claro que sí! / ¡Claro que no! | Oczywiście, że tak! / Oczywiście, że nie!
+
+## Łączniki
+**además** (poza tym), **sin embargo** (jednak), **por eso** (dlatego), **por un lado… por otro…**
+
+## Contigo, conmigo
+**con + tú = contigo**, **con + yo = conmigo**: **¿Vienes conmigo?**
+@exercises
+choice: Zgadzam się z tobą: | Estoy de acuerdo contigo. | Estoy de acuerdo con tú.; Estoy de acuerdo contigo.; Soy de acuerdo contigo.
+choice: Moim zdaniem: | En mi opinión | En mi opinión; Por mi opinión; A mi opinión
+choice: Jednak: | sin embargo | además; sin embargo; por eso
+choice: Pójdziesz ze mną? | ¿Vienes conmigo? | ¿Vienes con yo?; ¿Vienes conmigo?; ¿Vienes con mí?
+fill: ¿Qué ___ (opinar, tú) de esta película? | opinas
+fill: ___ que tienes razón. (creer, yo) | Creo
+trans: Myślę, że to ważne. | Creo que es importante. /// Pienso que es importante.
+trans: Nie zgadzam się. | No estoy de acuerdo.
+trans: To zależy. | Depende.
+@culture
+Hiszpanie dyskutują żywo i głośno, często sobie przerywając — to oznaka zaangażowania, a nie braku kultury. Cisza w rozmowie bywa dla nich bardziej niezręczna niż gorąca wymiana zdań.

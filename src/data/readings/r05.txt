@@ -1,0 +1,27 @@
+# id: r05
+# level: A1
+# unit: 5
+# title: Un mensaje de Carlos
+@text
+¡Hola, Marek!
+¿Qué tal? Aquí en Santander hace buen tiempo esta semana, pero mañana va a llover. Hoy he tenido un día muy tranquilo: me he levantado tarde, he paseado por la playa y he comido con mi hermana.
+El próximo fin de semana voy a ir a un concierto de flamenco en Madrid con unos amigos. ¿Quieres venir? Podemos quedar el viernes por la tarde en la estación. Si no puedes, no pasa nada: en diciembre voy a visitar Polonia y vamos a vernos allí.
+¿Hace mucho frío en Rumia ahora? ¡Llévame a ver la nieve!
+Un abrazo,
+Carlos
+@translation
+Cześć, Marek!
+Co słychać? Tu w Santanderze w tym tygodniu jest ładna pogoda, ale jutro będzie padać. Dzisiaj miałem bardzo spokojny dzień: wstałem późno, spacerowałem po plaży i zjadłem obiad z siostrą.
+W przyszły weekend jadę na koncert flamenco do Madrytu z przyjaciółmi. Chcesz przyjechać? Możemy się umówić w piątek po południu na dworcu. Jeśli nie możesz, nic nie szkodzi: w grudniu odwiedzę Polskę i zobaczymy się tam.
+Czy w Rumi jest teraz bardzo zimno? Zabierz mnie, żebym zobaczył śnieg!
+Ściskam,
+Carlos
+@glossary
+no pasa nada | nic nie szkodzi
+la nieve | śnieg
+un abrazo | ściskam (zakończenie listu)
+@questions
+¿Qué tiempo va a hacer mañana en Santander? | Va a llover. | Va a hacer sol.; Va a llover.; Va a nevar.
+¿Qué ha hecho Carlos hoy? | Ha paseado por la playa. | Ha ido a un concierto.; Ha paseado por la playa.; Ha trabajado mucho.
+¿Adónde va a ir Carlos el fin de semana? | A Madrid. | A Polonia.; A Madrid.; A Santander.
+¿Cuándo va a visitar Polonia? | En diciembre. | En verano.; En diciembre.; El viernes.

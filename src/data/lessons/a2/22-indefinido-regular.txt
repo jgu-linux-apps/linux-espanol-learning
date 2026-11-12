@@ -1,0 +1,70 @@
+# id: a2-22
+# title: Ayer… Pretérito indefinido (regularne)
+# unit: 6
+# unit_title: Experiencias — doświadczenia
+@goals
+Opowiadać o zakończonych wydarzeniach w przeszłości
+Odmieniać regularne czasowniki w indefinido
+Odróżniać perfecto od indefinido
+@dialog
+Lola: ¿Qué hiciste ayer? | Co robiłeś wczoraj?
+Marek: Ayer trabajé hasta las seis y después cené con unos amigos en el centro. | Wczoraj pracowałem do szóstej, a potem zjadłem kolację z przyjaciółmi w centrum.
+Lola: ¿Y el fin de semana pasado? | A w zeszły weekend?
+Marek: El sábado visité el castillo de Malbork con mi familia. Comimos allí y volvimos por la noche. | W sobotę zwiedziłem z rodziną zamek w Malborku. Zjedliśmy tam i wróciliśmy wieczorem.
+Lola: ¿Os gustó? | Podobało się wam?
+Marek: Sí, mucho. Mi hijo sacó cien fotos. | Tak, bardzo. Mój syn zrobił sto zdjęć.
+Lola: Yo el sábado no salí de casa. Leí un libro entero. | Ja w sobotę nie wychodziłam z domu. Przeczytałam całą książkę.
+@vocab
+ayer | wczoraj | adv
+anoche | wczoraj wieczorem | adv
+anteayer | przedwczoraj | adv
+el año pasado | w zeszłym roku | phr
+la semana pasada | w zeszłym tygodniu | phr
+el fin de semana pasado | w zeszły weekend | phr
+hace dos días | dwa dni temu | phr
+en 2020 | w 2020 roku | phr
+el castillo | zamek | m
+sacar | wyjmować; robić (zdjęcia), dostawać (ocenę) | v | sacar fotos / robić zdjęcia
+entero / entera | cały | adj
+hasta | do (czasu, miejsca) | prep
+empezar | zaczynać | v
+terminar | kończyć | v
+llegar | przychodzić, przyjeżdżać | v
+nacer | urodzić się | v
+@grammar
+## Pretérito indefinido — regularne
+|| | hablar | comer | vivir
+|| yo | hablé | comí | viví
+|| tú | hablaste | comiste | viviste
+|| él/ella/usted | habló | comió | vivió
+|| nosotros/as | hablamos | comimos | vivimos
+|| vosotros/as | hablasteis | comisteis | vivisteis
+|| ellos/ellas/ustedes | hablaron | comieron | vivieron
+Akcent jest ważny: **hablo** (mówię) ≠ **habló** (mówił).
+
+## Zmiany pisowni w formie yo
+- **-car → -qué**: sacar → **saqué**, buscar → **busqué**, tocar → **toqué**
+- **-gar → -gué**: llegar → **llegué**, pagar → **pagué**, jugar → **jugué**
+- **-zar → -cé**: empezar → **empecé**, almorzar → **almorcé**
+- **leer, creer, oír**: leyó, leyeron; creyó; oyó.
+
+## Perfecto czy indefinido? (Hiszpania)
+- **Perfecto** — okres, który trwa: **hoy, esta semana, este año**, doświadczenia.
+- **Indefinido** — okres zamknięty: **ayer, anoche, la semana pasada, en 2020, hace dos años**.
+|| Hoy he comido paella. | Dziś jadłem paellę.
+|| Ayer comí paella. | Wczoraj jadłem paellę.
+@exercises
+conj: trabajar (yo, indefinido) | trabajé
+conj: comer (nosotros, indefinido) | comimos
+conj: vivir (ellos, indefinido) | vivieron
+conj: hablar (tú, indefinido) | hablaste
+conj: llegar (yo, indefinido) | llegué
+conj: empezar (yo, indefinido) | empecé
+conj: leer (ella, indefinido) | leyó
+choice: Ayer ___ con mis amigos. | cené | he cenado; cené; ceno
+choice: Hoy ___ mucho. | he trabajado | he trabajado; trabajé; trabajaba
+choice: En 2019 ___ en Madrid. | viví | he vivido; viví; vivo
+trans: Wczoraj pracowałem do szóstej. | Ayer trabajé hasta las seis.
+trans: W zeszłym roku zwiedziliśmy Sewillę. | El año pasado visitamos Sevilla.
+@culture
+**Malbork** po hiszpańsku to po prostu Malbork, ale Gdańsk to czasem **Danzig** w starszych tekstach, a Warszawa to **Varsovia**, Kraków — **Cracovia**.

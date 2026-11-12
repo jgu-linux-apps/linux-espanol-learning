@@ -1,0 +1,74 @@
+# id: a2-23
+# title: Indefinido — czasowniki nieregularne
+# unit: 6
+# unit_title: Experiencias — doświadczenia
+@goals
+Używać najczęstszych nieregularnych form indefinido
+Opowiedzieć o wakacjach
+@dialog
+Teresa: ¿Dónde fuiste de vacaciones el verano pasado? | Gdzie pojechałeś na wakacje zeszłego lata?
+Marek: Fuimos a Andalucía. Estuvimos dos semanas en Granada y en Córdoba. | Pojechaliśmy do Andaluzji. Byliśmy dwa tygodnie w Granadzie i w Kordobie.
+Teresa: ¿Qué tal fue? | I jak było?
+Marek: Fue fantástico, aunque hizo muchísimo calor. | Było fantastycznie, chociaż było strasznie gorąco.
+Teresa: ¿Pudisteis entrar en la Alhambra? | Udało wam się wejść do Alhambry?
+Marek: Sí, pero tuvimos que comprar las entradas con un mes de antelación. | Tak, ale musieliśmy kupić bilety z miesięcznym wyprzedzeniem.
+Teresa: ¿Y qué dijo tu hijo? | A co powiedział twój syn?
+Marek: Dijo que es el lugar más bonito del mundo. | Powiedział, że to najpiękniejsze miejsce na świecie.
+@vocab
+fui | byłem / pojechałem (ser, ir) | v
+estuve | byłem (estar) | v
+tuve | miałem (tener) | v
+hice | zrobiłem (hacer) | v
+pude | mogłem, udało mi się (poder) | v
+dije | powiedziałem (decir) | v
+vine | przyszedłem (venir) | v
+puse | położyłem (poner) | v
+quise | chciałem (querer) | v
+supe | dowiedziałem się (saber) | v
+la entrada | bilet wstępu; wejście | f
+con antelación | z wyprzedzeniem | phr
+aunque | chociaż | conj
+el lugar | miejsce | m
+el mundo | świat | m
+fantástico / fantástica | fantastyczny | adj
+entrar | wchodzić | v
+@grammar
+## Ser i ir — te same formy!
+**fui, fuiste, fue, fuimos, fuisteis, fueron** — znaczenie wynika z kontekstu:
+- **Fui a Granada.** — Pojechałem do Granady (ir).
+- **Fue fantástico.** — Było fantastycznie (ser).
+
+## Nieregularne z nowym tematem
+Te czasowniki mają specjalny temat i wspólne końcówki **-e, -iste, -o, -imos, -isteis, -ieron** (bez akcentów!):
+|| estar | estuv- | estuve, estuviste, estuvo…
+|| tener | tuv- | tuve, tuviste, tuvo…
+|| poder | pud- | pude, pudiste, pudo…
+|| poner | pus- | puse, pusiste, puso…
+|| saber | sup- | supe, supiste, supo…
+|| hacer | hic- | hice, hiciste, **hizo**…
+|| querer | quis- | quise, quisiste, quiso…
+|| venir | vin- | vine, viniste, vino…
+|| decir | dij- | dije, dijiste, dijo, dijimos, dijisteis, **dijeron**
+|| traer | traj- | traje, trajiste, trajo… **trajeron**
+
+## Dar i ver
+**dar**: di, diste, dio, dimos, disteis, dieron. **ver**: vi, viste, vio, vimos, visteis, vieron.
+
+## Hacer + pogoda w przeszłości
+**Hizo calor. Hizo mucho frío. Llovió mucho.**
+@exercises
+conj: ir (nosotros, indefinido) | fuimos
+conj: estar (yo, indefinido) | estuve
+conj: tener (ellos, indefinido) | tuvieron
+conj: hacer (él, indefinido) | hizo
+conj: decir (ellos, indefinido) | dijeron
+conj: poder (tú, indefinido) | pudiste
+conj: venir (vosotros, indefinido) | vinisteis
+conj: dar (yo, indefinido) | di
+choice: Było fantastycznie: | Fue fantástico. | Estuvo fantástica.; Fue fantástico.; Fui fantástico.
+choice: Zeszłego lata było bardzo gorąco: | El verano pasado hizo mucho calor. | El verano pasado hizo mucho calor.; El verano pasado hacía mucho calor ayer.; El verano pasado fue mucho calor.
+trans: Gdzie pojechałeś na wakacje? | ¿Dónde fuiste de vacaciones?
+trans: Musieliśmy kupić bilety. | Tuvimos que comprar las entradas.
+trans: Co powiedział? | ¿Qué dijo?
+@culture
+**Alhambra** w Granadzie to dawny pałac i twierdza władców muzułmańskich. Dziennie może ją zwiedzić ograniczona liczba osób, dlatego bilety w sezonie znikają tygodnie wcześniej.

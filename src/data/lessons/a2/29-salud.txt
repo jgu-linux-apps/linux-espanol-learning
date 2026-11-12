@@ -1,0 +1,65 @@
+# id: a2-29
+# title: En el médico — ciało i zdrowie
+# unit: 8
+# unit_title: Salud y cuidados — zdrowie
+@goals
+Nazwać części ciała
+Opisać objawy u lekarza (doler, tener fiebre)
+Zrozumieć proste zalecenia
+@dialog
+Médica: Buenos días. ¿Qué le pasa? | Dzień dobry. Co Panu dolega?
+Marek: Me duele mucho la garganta y tengo fiebre desde ayer. | Bardzo boli mnie gardło i mam gorączkę od wczoraj.
+Médica: ¿Le duele también la cabeza? | Czy boli też Pana głowa?
+Marek: Sí, un poco. Y estoy muy cansado. | Tak, trochę. I jestem bardzo zmęczony.
+Médica: A ver… Tiene la garganta muy roja. Es una infección. | Zobaczmy… Ma Pan bardzo czerwone gardło. To infekcja.
+Marek: ¿Es grave? | Czy to coś poważnego?
+Médica: No, no se preocupe. Tome estas pastillas cada ocho horas y beba mucha agua. | Nie, proszę się nie martwić. Proszę brać te tabletki co osiem godzin i pić dużo wody.
+Marek: ¿Puedo ir a trabajar? | Mogę iść do pracy?
+Médica: Mejor quédese en casa dos o tres días. | Lepiej niech Pan zostanie w domu dwa, trzy dni.
+@vocab
+doler | boleć | v | Me duele la cabeza. / Boli mnie głowa.
+el cuerpo | ciało | m
+la cabeza | głowa | f
+la garganta | gardło | f
+el estómago | żołądek, brzuch | m
+la espalda | plecy | f
+el brazo | ramię, ręka (od barku) | m
+la mano | dłoń, ręka | f
+la pierna | noga | f
+el pie | stopa | m
+el diente / la muela | ząb / ząb trzonowy | m
+el oído | ucho (wewnętrzne), słuch | m
+la fiebre | gorączka | f
+la tos | kaszel | f
+el resfriado | przeziębienie | m | Estoy resfriado. / Jestem przeziębiony.
+la gripe | grypa | f
+la pastilla | tabletka | f
+la receta | recepta; przepis | f
+grave | poważny (o chorobie) | adj
+preocuparse | martwić się | vr | No se preocupe. / Proszę się nie martwić.
+quedarse | zostać | vr
+el centro de salud | przychodnia | m
+@grammar
+## Doler — działa jak gustar
+|| me duele + l. poj. | Me duele la cabeza.
+|| me duelen + l. mn. | Me duelen los pies.
+Z rodzajnikiem, nie z zaimkiem dzierżawczym: **Me duele la espalda** (nie „mi espalda”). Pytanie: **¿Qué te duele? / ¿Qué le duele?**
+
+## Objawy
+- **tener** + fiebre, tos, gripe, dolor de cabeza: **Tengo dolor de estómago.**
+- **estar** + resfriado, mareado (mieć zawroty), enfermo: **Estoy resfriada.**
+
+## Zalecenia lekarza (imperativo usted)
+**Tome** (proszę brać), **beba** (proszę pić), **descanse** (proszę odpoczywać), **quédese en casa** (proszę zostać w domu), **no se preocupe** (proszę się nie martwić). Więcej o trybie rozkazującym w kolejnych lekcjach.
+@exercises
+choice: Bolą mnie nogi: | Me duelen las piernas. | Me duele las piernas.; Me duelen las piernas.; Me duelen mis piernas.
+choice: Boli mnie głowa: | Me duele la cabeza. | Me duele la cabeza.; Tengo duele la cabeza.; Mi cabeza duele me.
+choice: Jestem przeziębiony: | Estoy resfriado. | Soy resfriado.; Estoy resfriado.; Tengo resfriado estoy.
+fill: ¿Qué ___ duele? (tobie) | te
+fill: A mi hijo le ___ (doler) los oídos. | duelen
+fill: Tengo ___ desde ayer. (gorączka) | fiebre
+trans: Boli mnie gardło. | Me duele la garganta.
+trans: Mam kaszel i gorączkę. | Tengo tos y fiebre.
+trans: Czy to coś poważnego? | ¿Es grave?
+@culture
+Numer alarmowy w Hiszpanii (jak w całej UE) to **112**. W aptekach (**farmacias**, z zielonym krzyżem) farmaceuci często doradzają przy drobnych dolegliwościach, a jedna apteka w okolicy zawsze ma dyżur nocny (**farmacia de guardia**).

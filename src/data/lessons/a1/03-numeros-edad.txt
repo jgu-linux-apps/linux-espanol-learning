@@ -1,0 +1,74 @@
+# id: a1-03
+# title: Números 0–20 i wiek
+# unit: 1
+# unit_title: Primeros pasos — pierwsze kroki
+@goals
+Liczyć od 0 do 20
+Zapytać o wiek i podać swój wiek
+Podać numer telefonu
+@dialog
+Profesora: ¿Cuántos años tienes, Sara? | Ile masz lat, Saro?
+Sara: Tengo diecinueve años. | Mam dziewiętnaście lat.
+Profesora: ¿Y tu hermano? | A twój brat?
+Sara: Mi hermano tiene doce años. | Mój brat ma dwanaście lat.
+Profesora: ¿Cuál es tu número de teléfono? | Jaki jest twój numer telefonu?
+Sara: Es el seis, uno, cinco, cero, tres, ocho, dos, nueve, siete. | To sześć, jeden, pięć, zero, trzy, osiem, dwa, dziewięć, siedem.
+Profesora: Perfecto, gracias. | Świetnie, dziękuję.
+@vocab
+cero | zero | num
+uno / una | jeden / jedna | num
+dos | dwa | num
+tres | trzy | num
+cuatro | cztery | num
+cinco | pięć | num
+seis | sześć | num
+siete | siedem | num
+ocho | osiem | num
+nueve | dziewięć | num
+diez | dziesięć | num
+once | jedenaście | num
+doce | dwanaście | num
+trece | trzynaście | num
+catorce | czternaście | num
+quince | piętnaście | num
+dieciséis | szesnaście | num
+diecisiete | siedemnaście | num
+dieciocho | osiemnaście | num
+diecinueve | dziewiętnaście | num
+veinte | dwadzieścia | num
+tener | mieć | v | Tengo veinte años. / Mam dwadzieścia lat.
+el año | rok | m
+¿cuántos? / ¿cuántas? | ile? | adv | ¿Cuántos años tienes? / Ile masz lat?
+el número de teléfono | numer telefonu | m
+el hermano / la hermana | brat / siostra | m
+@grammar
+## Wiek: tener + años
+Po hiszpańsku wiek się **ma** (jak po polsku): **Tengo 30 años** — Mam 30 lat. Nigdy nie mów „soy 30”!
+
+## Czasownik tener (mieć) — nieregularny
+|| yo | tengo
+|| tú | tienes
+|| él / ella / usted | tiene
+|| nosotros/as | tenemos
+|| vosotros/as | tenéis
+|| ellos / ellas / ustedes | tienen
+
+## Liczby 16–19
+To skrócone „dziesięć i sześć”: **dieciséis** (diez y seis), **diecisiete**, **dieciocho**, **diecinueve**. Uwaga na akcent w **dieciséis**.
+
+## Uno, un, una
+Przed rzeczownikiem rodzaju męskiego **uno** skraca się do **un**: **un año** (jeden rok), ale **una hermana**. Liczymy jednak „uno, dos, tres…”.
+@exercises
+fill: Yo ___ veinte años. | tengo
+fill: ¿Cuántos años ___ tú? | tienes
+fill: Mi hermana ___ quince años. | tiene
+fill: Nosotros ___ un perro. | tenemos
+choice: 14 to: | catorce | cuatro; catorce; cuarenta
+choice: 16 to: | dieciséis | diecisiete; seis; dieciséis
+choice: 7 + 5 = | doce | once; doce; trece
+choice: Jak zapytać o wiek? | ¿Cuántos años tienes? | ¿Cuántos años eres?; ¿Cuántos años tienes?; ¿Qué años tienes?
+trans: Mam osiemnaście lat. | Tengo dieciocho años.
+trans: Ile masz lat? | ¿Cuántos años tienes?
+trans: Mój brat ma jedenaście lat. | Mi hermano tiene once años.
+@culture
+Hiszpańskie numery komórkowe zaczynają się zwykle od 6 lub 7 i mają 9 cyfr. Hiszpanie często podają je parami: „seiscientos quince, cero tres…” — na początek wystarczy cyfra po cyfrze.

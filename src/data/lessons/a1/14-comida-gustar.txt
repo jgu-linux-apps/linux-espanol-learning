@@ -1,0 +1,74 @@
+# id: a1-14
+# title: La comida — jedzenie i czasownik gustar
+# unit: 4
+# unit_title: En la ciudad — w mieście
+@goals
+Mówić, co lubisz, a czego nie
+Robić zakupy na targu
+Używać gustar, encantar i también/tampoco
+@dialog
+Vendedora: ¡Hola! ¿Qué le pongo? | Dzień dobry! Co podać?
+Marek: Quería un kilo de tomates y medio kilo de fresas. | Poproszę kilogram pomidorów i pół kilo truskawek.
+Vendedora: Aquí tiene. ¿Algo más? | Proszę bardzo. Coś jeszcze?
+Marek: ¿Las naranjas son de Valencia? | Pomarańcze są z Walencji?
+Vendedora: Sí, son muy dulces. ¿Le gustan las naranjas? | Tak, są bardzo słodkie. Lubi Pan pomarańcze?
+Marek: ¡Me encantan! Pero a mi hijo no le gusta la fruta. | Uwielbiam! Ale mój syn nie lubi owoców.
+Vendedora: A mi hija tampoco. ¡Solo le gusta el chocolate! | Moja córka też nie. Lubi tylko czekoladę!
+@vocab
+gustar | podobać się, lubić | v | Me gusta el café. / Lubię kawę.
+encantar | uwielbiać | v | Me encanta España. / Uwielbiam Hiszpanię.
+la fruta | owoce | f
+la verdura | warzywa | f
+el tomate | pomidor | m
+la naranja | pomarańcza | f
+la manzana | jabłko | f
+la fresa | truskawka | f
+el plátano | banan | m
+la patata | ziemniak (w Hiszpanii) | f
+la cebolla | cebula | f
+el pan | chleb | m
+el queso | ser | m
+el jamón | szynka | m
+la carne | mięso | f
+el pescado | ryba (jako jedzenie) | m
+el pollo | kurczak | m
+el arroz | ryż | m
+el huevo | jajko | m
+el chocolate | czekolada | m
+el kilo | kilogram | m | medio kilo / pół kilo
+dulce | słodki | adj
+también | też | adv
+tampoco | też nie | adv
+aquí tiene | proszę (podając coś) | phr
+@grammar
+## Gustar — „podobać się”
+Gustar działa jak polskie „podobać się”: rzecz, która się podoba, jest podmiotem.
+|| (a mí) | me gusta / me gustan
+|| (a ti) | te gusta / te gustan
+|| (a él, ella, usted) | le gusta / le gustan
+|| (a nosotros) | nos gusta / nos gustan
+|| (a vosotros) | os gusta / os gustan
+|| (a ellos, ustedes) | les gusta / les gustan
+- **gusta** + liczba pojedyncza lub bezokolicznik: **Me gusta el queso. Me gusta cocinar.**
+- **gustan** + liczba mnoga: **Me gustan las fresas.**
+- Z rzeczownikiem zawsze rodzajnik: **Me gusta la fruta** (nie „me gusta fruta”).
+- Z imieniem: **A Pedro le gusta el jamón.**
+**Encantar** odmienia się tak samo: **Me encantan las naranjas.**
+
+## También / tampoco
+- **Me gusta el café. — A mí también.** (Ja też.)
+- **No me gusta el té. — A mí tampoco.** (Ja też nie.)
+- **No me gusta. — A mí sí.** / **Me gusta. — A mí no.**
+@exercises
+choice: Me ___ las fresas. | gustan | gusta; gustan; gusto
+choice: Me ___ cocinar. | gusta | gusta; gustan; gusto
+choice: A mi madre ___ gusta el pescado. | le | me; le; les
+choice: Nie lubię mleka. — Ja też nie. | A mí tampoco. | A mí también.; A mí tampoco.; Yo no.
+fill: ¿Te ___ (gustar) los plátanos? | gustan
+fill: A nosotros ___ encanta España. | nos
+fill: A mis hijos no ___ gusta la verdura. | les
+trans: Lubię ser. | Me gusta el queso.
+trans: Uwielbiam truskawki. | Me encantan las fresas.
+trans: Poproszę kilogram pomidorów. | Quería un kilo de tomates.
+@culture
+**Jamón ibérico** i **jamón serrano** to dwie słynne hiszpańskie szynki dojrzewające. Najdroższa, **jamón ibérico de bellota**, pochodzi od świń karmionych żołędziami.

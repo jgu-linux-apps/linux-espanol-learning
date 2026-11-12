@@ -1,0 +1,77 @@
+# id: a1-12
+# title: Dni tygodnia, jak często? Zmiany e→ie, o→ue, e→i
+# unit: 3
+# unit_title: Día a día — dzień po dniu
+@goals
+Nazwać dni tygodnia
+Mówić, jak często coś robisz
+Odmieniać czasowniki ze zmianą tematu
+@dialog
+Raúl: ¿Qué haces los fines de semana? | Co robisz w weekendy?
+Marek: Los sábados juego al fútbol con mis amigos y los domingos duermo mucho. | W soboty gram w piłkę z kolegami, a w niedziele dużo śpię.
+Raúl: ¿Vas al gimnasio entre semana? | Chodzisz na siłownię w tygodniu?
+Marek: Sí, los lunes y los jueves. A veces también corro por la playa. | Tak, w poniedziałki i czwartki. Czasem też biegam po plaży.
+Raúl: Yo nunca hago deporte. Prefiero ver series. | Ja nigdy nie uprawiam sportu. Wolę oglądać seriale.
+Marek: ¡Pues empiezas el lunes conmigo! | No to zaczynasz w poniedziałek ze mną!
+@vocab
+el lunes | poniedziałek | m
+el martes | wtorek | m
+el miércoles | środa | m
+el jueves | czwartek | m
+el viernes | piątek | m
+el sábado | sobota | m
+el domingo | niedziela | m
+el fin de semana | weekend | m
+hacer | robić | v | ¿Qué haces? / Co robisz?
+jugar | grać (w grę, sport) | v | Juego al tenis. / Gram w tenisa.
+dormir | spać | v
+empezar | zaczynać | v
+preferir | woleć | v
+querer | chcieć; kochać | v
+poder | móc | v
+pedir | prosić, zamawiać | v
+volver | wracać | v
+correr | biegać | v
+el deporte | sport | m
+el gimnasio | siłownia | m
+siempre | zawsze | adv
+a veces | czasami | adv
+nunca | nigdy | adv
+todos los días | codziennie | phr
+@grammar
+## Dni tygodnia
+Piszemy małą literą i z rodzajnikiem: **el lunes** (w poniedziałek), **los lunes** (w poniedziałki). Nie dodajemy przyimka: „w sobotę” = **el sábado**.
+
+## Zmiana tematu w czasie teraźniejszym
+W niektórych czasownikach samogłoska tematu zmienia się we wszystkich osobach **oprócz nosotros i vosotros**:
+|| | e → ie (querer) | o → ue (poder) | e → i (pedir)
+|| yo | quiero | puedo | pido
+|| tú | quieres | puedes | pides
+|| él/ella | quiere | puede | pide
+|| nosotros | queremos | podemos | pedimos
+|| vosotros | queréis | podéis | pedís
+|| ellos | quieren | pueden | piden
+- e→ie: empezar, preferir, pensar, cerrar, entender
+- o→ue: dormir, volver, poder, contar, encontrar; **jugar** ma u→ue: juego
+- e→i: pedir, repetir, servir, vestirse
+
+## Hacer — nieregularne „yo”
+**hago**, haces, hace, hacemos, hacéis, hacen.
+
+## Nunca
+**Nunca** przed czasownikiem: **Nunca hago deporte.** Po czasowniku wymaga **no**: **No hago nunca deporte.**
+@exercises
+conj: querer (yo) | quiero
+conj: poder (nosotros) | podemos
+conj: dormir (tú) | duermes
+conj: jugar (ellos) | juegan
+conj: pedir (ella) | pide
+conj: empezar (vosotros) | empezáis
+conj: preferir (yo) | prefiero
+conj: hacer (yo) | hago
+choice: W soboty gram w tenisa. | Los sábados juego al tenis. | En sábados juego al tenis.; Los sábados juego al tenis.; Los sábados jugo al tenis.
+choice: Dzień po środzie: | el jueves | el martes; el jueves; el viernes
+trans: Nigdy nie uprawiam sportu. | Nunca hago deporte. /// No hago nunca deporte.
+trans: Co robisz w weekendy? | ¿Qué haces los fines de semana?
+@culture
+W Hiszpanii **el fútbol** to niemal religia: mecze Realu Madryt i FC Barcelony (**el Clásico**) ogląda cały kraj, a w barach w dzień meczu trudno o wolne miejsce.

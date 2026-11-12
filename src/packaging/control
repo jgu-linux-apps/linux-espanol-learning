@@ -1,0 +1,18 @@
+Package: linux-espanol-learning
+Version: 1.0.0
+Section: education
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.10), python3-gi, python3-gi-cairo, gir1.2-gtk-3.0, gir1.2-gstreamer-1.0, gir1.2-gst-plugins-base-1.0, gstreamer1.0-plugins-base, gstreamer1.0-plugins-good, gstreamer1.0-pulseaudio | gstreamer1.0-pipewire, python3-venv, librsvg2-common, zstd
+Recommends: espeak-ng, gir1.2-secret-1, gnome-keyring
+Installed-Size: @SIZE@
+Maintainer: JGu <noreply@example.invalid>
+Homepage: https://github.com/jgu-linux-apps
+Description: Linux Español Learning — kurs hiszpańskiego od zera (A1–A2)
+ Kurs hiszpańskiego z Hiszpanii dla Polaków: 40 lekcji (dialogi, słownictwo,
+ gramatyka po polsku, ćwiczenia), alfabet i wymowa, słownik hiszpańsko-polski
+ (ok. 1000 haseł), powtórki słówek (FSRS), odmiana czasowników, czytanki,
+ testy działów i egzaminy próbne, statystyki.
+ Synteza mowy (Piper) i ocena wymowy (Whisper) działają offline; modele są
+ pobierane jednorazowo przy pierwszym uruchomieniu.
+ Freeware — bez prawa do modyfikacji. Created by: JGu. Supported by Claude.

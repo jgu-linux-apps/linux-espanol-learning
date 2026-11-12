@@ -1,0 +1,65 @@
+# id: a1-05
+# title: La familia — rodzina i zaimki dzierżawcze
+# unit: 2
+# unit_title: Mi mundo — mój świat
+@goals
+Opowiedzieć o swojej rodzinie
+Używać mi, tu, su, nuestro, vuestro
+@dialog
+Marta: ¿Quién es este chico de la foto? | Kim jest ten chłopak ze zdjęcia?
+Marek: Es mi hijo, Kuba. Tiene diez años. | To mój syn, Kuba. Ma dziesięć lat.
+Marta: ¡Qué guapo! ¿Y esta mujer? | Jaki przystojny! A ta kobieta?
+Marek: Es mi mujer, Ania. Y estos son mis padres. | To moja żona, Ania. A to są moi rodzice.
+Marta: ¿Tienes hermanos? | Masz rodzeństwo?
+Marek: Sí, tengo una hermana. Su marido es español. | Tak, mam siostrę. Jej mąż jest Hiszpanem.
+Marta: ¡Ah! ¿Y vuestros hijos hablan español? | Ach! A wasze dzieci mówią po hiszpańsku?
+Marek: Mis sobrinos sí. ¡Mi hijo todavía no! | Moi siostrzeńcy tak. Mój syn jeszcze nie!
+@vocab
+la familia | rodzina | f
+el padre | ojciec | m
+la madre | matka | f
+los padres | rodzice | mpl
+el hijo / la hija | syn / córka | m | Tengo dos hijos. / Mam dwoje dzieci.
+los hijos | dzieci (czyjeś), synowie | mpl
+el abuelo / la abuela | dziadek / babcia | m
+el tío / la tía | wujek / ciocia | m
+el primo / la prima | kuzyn / kuzynka | m
+el sobrino / la sobrina | bratanek, siostrzeniec / bratanica, siostrzenica | m
+el novio / la novia | chłopak / dziewczyna (partner) | m
+casado / casada | żonaty / zamężna | adj
+el chico / la chica | chłopak / dziewczyna | m
+la foto | zdjęcie | f
+¿quién? | kto? | pron | ¿Quién es? / Kto to jest?
+guapo / guapa | przystojny / ładna | adj
+todavía | jeszcze, wciąż | adv
+este / esta | ten / ta | det
+@grammar
+## Zaimki dzierżawcze (przed rzeczownikiem)
+|| mi / mis | mój, moja / moi, moje
+|| tu / tus | twój / twoi
+|| su / sus | jego, jej, Pana/Pani; ich, Państwa
+|| nuestro, nuestra / nuestros, nuestras | nasz
+|| vuestro, vuestra / vuestros, vuestras | wasz
+- **mi, tu, su** zmieniają tylko liczbę: **mi hermano**, **mis hermanos**.
+- **nuestro, vuestro** zmieniają też rodzaj: **nuestra casa**, **vuestros padres**.
+- **su** może znaczyć „jego”, „jej”, „ich” albo „Pana/Pani” — sens wynika z kontekstu.
+
+## Rodzaj męski w liczbie mnogiej
+**Los padres** to rodzice, **los hijos** to dzieci (synowie i córki), **los hermanos** to rodzeństwo, **los abuelos** to dziadkowie. Liczba mnoga męska obejmuje grupę mieszaną.
+
+## Este, esta, estos, estas
+**este chico** (ten chłopak), **esta mujer** (ta kobieta), **estos padres**, **estas fotos**.
+@exercises
+fill: (mój) ___ padre es médico. | Mi
+fill: (moje) ___ hermanas viven en Gdańsk. | Mis
+fill: (nasza) ___ casa es grande. | Nuestra
+fill: (wasi) ___ hijos son muy guapos. | Vuestros
+fill: (jej) Ana y ___ marido. | su
+choice: Rodzeństwo to: | los hermanos | los hermanos; los primos; los padres
+choice: Matka mojej matki to: | mi abuela | mi tía; mi abuela; mi prima
+choice: Ta kobieta: | esta mujer | este mujer; esta mujer; estos mujer
+trans: Mam dwoje dzieci. | Tengo dos hijos.
+trans: Moi rodzice są z Gdańska. | Mis padres son de Gdańsk.
+trans: Kim jest ten chłopak? | ¿Quién es este chico?
+@culture
+Hiszpanie mają **dwa nazwiska**: pierwsze po ojcu, drugie po matce, np. Federico García Lorca. Kobiety po ślubie nie zmieniają nazwiska.

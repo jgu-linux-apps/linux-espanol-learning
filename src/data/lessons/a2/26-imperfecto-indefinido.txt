@@ -1,0 +1,59 @@
+# id: a2-26
+# title: Imperfecto czy indefinido? Opowiadanie historii
+# unit: 7
+# unit_title: Recuerdos — wspomnienia
+@goals
+Łączyć tło (imperfecto) z wydarzeniami (indefinido)
+Opowiedzieć anegdotę
+@dialog
+Marek: ¿Sabes qué me pasó ayer? | Wiesz, co mi się wczoraj przytrafiło?
+Paula: No, ¿qué te pasó? | Nie, co ci się stało?
+Marek: Estaba en el tren y leía un libro en español. De repente, una señora me habló. | Byłem w pociągu i czytałem książkę po hiszpańsku. Nagle zagadnęła mnie jakaś pani.
+Paula: ¿Y qué quería? | I czego chciała?
+Marek: Era española, de Bilbao. Vio el libro y me preguntó si estudiaba español. | Była Hiszpanką, z Bilbao. Zobaczyła książkę i zapytała, czy uczę się hiszpańskiego.
+Paula: ¡Qué casualidad! | Co za zbieg okoliczności!
+Marek: Hablamos todo el viaje. ¡Y no entendí solo la mitad, entendí casi todo! | Rozmawialiśmy przez całą podróż. I nie zrozumiałem tylko połowy, zrozumiałem prawie wszystko!
+@vocab
+pasar | dziać się, zdarzać się; spędzać (czas) | v | ¿Qué pasó? / Co się stało?
+de repente | nagle | phr
+preguntar | pytać | v
+contestar | odpowiadać | v
+entender | rozumieć | v
+la señora / el señor | pani / pan | f
+la casualidad | przypadek, zbieg okoliczności | f
+la mitad | połowa | f
+casi | prawie | adv
+mientras | podczas gdy | conj | Mientras cocinaba, sonó el teléfono. / Gdy gotowałem, zadzwonił telefon.
+sonar | dzwonić (o telefonie), brzmieć | v
+de pronto | nagle | phr
+en ese momento | w tym momencie | phr
+@grammar
+## Tło i wydarzenia
+W opowiadaniu oba czasy współpracują:
+- **Imperfecto** = tło, opis, czynność w trakcie („co się działo”): **Estaba en el tren. Leía un libro. Llovía.**
+- **Indefinido** = konkretne wydarzenie, które „przerywa” tło lub posuwa akcję: **Una señora me habló.**
+**Leía un libro cuando una señora me habló.** — Czytałem książkę, kiedy zagadnęła mnie pani.
+
+## Prosta reguła na start
+|| Pytanie | Czas
+|| Co się działo? Jak było? (tło) | imperfecto
+|| Co się stało? Co zrobił? (akcja) | indefinido
+|| Co robiłeś zwykle? (zwyczaj) | imperfecto
+|| Co zrobiłeś raz, w zamkniętym czasie? | indefinido
+
+## Mientras i cuando
+- **mientras** + imperfecto: **Mientras cocinaba, sonó el teléfono.**
+- **cuando** + indefinido: **Cuando llegué, todos dormían.**
+@exercises
+choice: ___ un libro cuando sonó el teléfono. | Leía | Leí; Leía; He leído
+choice: Cuando ___ a casa, mi mujer dormía. | llegué | llegaba; llegué; llego
+choice: Ayer ___ todo el día y no salimos de casa. | llovió | llovía; llovió; llueve
+choice: De pronto, ___ un ruido. | oímos | oíamos; oímos; oyendo
+fill: Mientras yo ___ (cocinar), mi hijo jugaba. | cocinaba
+fill: El niño ___ (dormir) cuando llegamos. | dormía
+fill: ¿Qué te ___ (pasar) ayer? | pasó
+trans: Nagle zadzwonił telefon. | De repente sonó el teléfono. /// De pronto sonó el teléfono.
+trans: Była Hiszpanką z Bilbao. | Era española, de Bilbao.
+trans: Rozumiałem prawie wszystko. | Entendía casi todo. /// Entendí casi todo.
+@culture
+**Bilbao** to największe miasto Kraju Basków, słynne z Muzeum Guggenheima. Baskowie mają swój język, **euskera**, zupełnie niespokrewniony z hiszpańskim.

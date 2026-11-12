@@ -1,0 +1,20 @@
+# id: r02
+# level: A1
+# unit: 2
+# title: Mi piso y mi familia
+@text
+Vivo con mi familia en un piso en el centro de Gdynia. El piso no es muy grande, pero es cómodo y bonito. Hay un salón, una cocina, un baño y tres dormitorios. Mi dormitorio está al lado del baño.
+Mi marido se llama Tomasz. Es alto, moreno y muy simpático. Tenemos dos hijos: Zosia tiene ocho años y es muy divertida; Antek tiene cinco años y es un poco serio. También tenemos un gato negro. Normalmente el gato está encima del sofá.
+Hoy estoy un poco cansada porque los niños están enfermos.
+@translation
+Mieszkam z rodziną w mieszkaniu w centrum Gdyni. Mieszkanie nie jest bardzo duże, ale jest wygodne i ładne. Jest salon, kuchnia, łazienka i trzy sypialnie. Moja sypialnia jest obok łazienki.
+Mój mąż ma na imię Tomasz. Jest wysoki, ciemnowłosy i bardzo sympatyczny. Mamy dwoje dzieci: Zosia ma osiem lat i jest bardzo zabawna; Antek ma pięć lat i jest trochę poważny. Mamy też czarnego kota. Zwykle kot leży na kanapie.
+Dzisiaj jestem trochę zmęczona, bo dzieci są chore.
+@glossary
+el gato | kot
+porque | ponieważ
+@questions
+¿Cuántos dormitorios hay en el piso? | Tres. | Dos.; Tres.; Cuatro.
+¿Cómo es Tomasz? | Alto, moreno y simpático. | Bajo y rubio.; Alto, moreno y simpático.; Serio y antipático.
+¿Dónde está normalmente el gato? | Encima del sofá. | Debajo de la cama.; En la cocina.; Encima del sofá.
+¿Por qué está cansada la mujer? | Porque los niños están enfermos. | Porque trabaja mucho.; Porque los niños están enfermos.; Porque el piso es grande.

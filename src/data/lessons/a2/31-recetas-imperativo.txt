@@ -1,0 +1,70 @@
+# id: a2-31
+# title: Recetas — przepisy i tryb rozkazujący (usted, ustedes, przeczenia)
+# unit: 8
+# unit_title: Salud y cuidados — zdrowie
+@goals
+Zrozumieć i podać przepis
+Tworzyć formy usted/ustedes oraz przeczenia w trybie rozkazującym
+@dialog
+Carmen: Hoy vamos a hacer una tortilla de patatas. Primero, pela y corta las patatas. | Dziś zrobimy tortillę ziemniaczaną. Najpierw obierz i pokrój ziemniaki.
+Marek: ¿En trozos grandes? | Na duże kawałki?
+Carmen: No, en trozos finos. Luego fríelas en aceite de oliva con la cebolla. | Nie, na cienkie plasterki. Potem usmaż je na oliwie z cebulą.
+Marek: ¿Cuántos huevos pongo? | Ile jajek dać?
+Carmen: Cinco o seis. Bátelos en un bol y añade sal. | Pięć albo sześć. Ubij je w misce i dodaj sól.
+Marek: ¿Y ahora? | A teraz?
+Carmen: Mezcla las patatas con los huevos y ponlo todo en la sartén. ¡Pero no lo dejes mucho tiempo! | Wymieszaj ziemniaki z jajkami i włóż wszystko na patelnię. Ale nie zostawiaj tego za długo!
+Marek: ¿Y cómo le doy la vuelta? | A jak ją obrócić?
+Carmen: Con un plato. ¡Y no tengas miedo! | Talerzem. I nie bój się!
+@vocab
+la receta | przepis; recepta | f
+pelar | obierać | v
+cortar | kroić | v
+freír | smażyć | v
+batir | ubijać | v
+añadir | dodawać | v
+mezclar | mieszać | v
+hervir | gotować (wrzątkiem), wrzeć | v
+el trozo | kawałek | m
+el aceite de oliva | oliwa z oliwek | m
+la sal | sól | f
+la sartén | patelnia | f
+el bol | miska | m
+el plato | talerz; danie | m
+dar la vuelta | obrócić, przewrócić | phr
+tener miedo | bać się | phr
+fino / fina | cienki, delikatny | adj
+la tortilla de patatas | tortilla ziemniaczana (omlet) | f
+@grammar
+## Tryb rozkazujący — usted / ustedes
+Tworzymy go od formy **yo** czasu teraźniejszego, „zamieniając” samogłoskę:
+- **-ar → -e / -en**: hablar (hablo) → **hable / hablen**
+- **-er, -ir → -a / -an**: comer (como) → **coma / coman**; salir (salgo) → **salga / salgan**
+Nieregularne: **sea** (ser), **vaya** (ir), **esté** (estar), **dé** (dar), **sepa** (saber).
+
+## Przeczenia (no + …)
+W przeczeniu wszystkie osoby mają formy trybu łączącego:
+|| | twierdzenie | przeczenie
+|| tú | habla, come | no hables, no comas
+|| usted | hable, coma | no hable, no coma
+|| vosotros | hablad, comed | no habléis, no comáis
+|| ustedes | hablen, coman | no hablen, no coman
+**¡No tengas miedo!** (tú) — Nie bój się! **¡No lo dejes!** — Nie zostawiaj tego!
+
+## Zaimki
+- W twierdzeniu **na końcu**: **bátelos, ponlo, fríelas, siéntese**.
+- W przeczeniu **przed czasownikiem**: **no lo dejes, no se siente**.
+@exercises
+conj: hablar (usted, imperativo) | hable
+conj: comer (ustedes, imperativo) | coman
+conj: salir (usted, imperativo) | salga
+conj: ir (usted, imperativo) | vaya
+fill: ¡No ___ (tú, hablar) tan alto! | hables
+fill: ¡No ___ (tú, comer) tanto! | comas
+fill: ___ (tú, añadir) sal a los huevos. | Añade
+choice: Nie bój się! (tú) | ¡No tengas miedo! | ¡No tienes miedo!; ¡No tengas miedo!; ¡No ten miedo!
+choice: Proszę usiąść (usted): | Siéntese. | Siéntese.; Siéntate.; Se siente.
+choice: Nie zostawiaj tego! | ¡No lo dejes! | ¡No déjalo!; ¡No lo dejes!; ¡No lo deja!
+trans: Pokrój ziemniaki. (tú) | Corta las patatas.
+trans: Dodaj sól. (tú) | Añade sal.
+@culture
+**Tortilla de patatas** to jeden z narodowych symboli Hiszpanii — i źródło wiecznego sporu: **con cebolla o sin cebolla?** Hiszpanie dzielą się na „cebollistas” i „sincebollistas”.

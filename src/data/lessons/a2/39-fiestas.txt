@@ -1,0 +1,61 @@
+# id: a2-39
+# title: Fiestas y tradiciones — święta i tradycje Hiszpanii
+# unit: 10
+# unit_title: Sociedad y costumbres — społeczeństwo i zwyczaje
+@goals
+Opowiedzieć o świętach i tradycjach
+Złożyć życzenia
+Porównać tradycje hiszpańskie i polskie
+@dialog
+Beatriz: ¿Cómo celebráis la Navidad en Polonia? | Jak obchodzicie Boże Narodzenie w Polsce?
+Marek: Lo más importante es la cena de Nochebuena. Comemos doce platos y no comemos carne. | Najważniejsza jest kolacja wigilijna. Jemy dwanaście potraw i nie jemy mięsa.
+Beatriz: ¡Doce platos! Nosotros en Nochevieja comemos doce uvas, una con cada campanada. | Dwanaście potraw! My w sylwestra jemy dwanaście winogron, po jednym z każdym uderzeniem zegara.
+Marek: ¿Y cuándo recibís los regalos? | A kiedy dostajecie prezenty?
+Beatriz: Muchos niños los reciben el seis de enero. Los traen los Reyes Magos. | Wiele dzieci dostaje je szóstego stycznia. Przynoszą je Trzej Królowie.
+Marek: ¡Qué bonito! Bueno, ¡felices fiestas! | Jak pięknie! No to wesołych świąt!
+Beatriz: ¡Igualmente! Y ¡feliz año nuevo! | Nawzajem! I szczęśliwego nowego roku!
+@vocab
+celebrar | świętować, obchodzić | v
+la Navidad | Boże Narodzenie | f
+la Nochebuena | Wigilia | f
+la Nochevieja | sylwester | f
+los Reyes Magos | Trzej Królowie | mpl
+la uva | winogrono | f
+la campanada | uderzenie dzwonu, zegara | f
+la Semana Santa | Wielki Tydzień, Wielkanoc | f
+la tradición | tradycja | f
+el desfile | parada, pochód | m
+los fuegos artificiales | fajerwerki | mpl
+¡feliz cumpleaños! | wszystkiego najlepszego z okazji urodzin! | phr
+¡felices fiestas! | wesołych świąt! | phr
+¡feliz Navidad! | wesołych świąt Bożego Narodzenia! | phr
+¡feliz año nuevo! | szczęśliwego nowego roku! | phr
+¡enhorabuena! | gratulacje! | interj
+¡igualmente! | nawzajem! | interj
+importante | ważny | adj
+lo más importante | najważniejsze | phr
+@grammar
+## Lo + przymiotnik
+**lo** + przymiotnik tworzy „to, co…”: **lo más importante** (najważniejsze), **lo mejor** (najlepsze), **lo bueno** (dobra strona), **lo malo** (zła strona).
+**Lo mejor de España es la gente.** — Najlepsze w Hiszpanii są ludzie.
+
+## Życzenia
+- **¡Feliz cumpleaños! ¡Feliz Navidad! ¡Feliz año nuevo!** (feliz + l. poj.)
+- **¡Felices fiestas! ¡Felices vacaciones!** (felices + l. mn.)
+- **¡Enhorabuena!** — gratulacje (z sukcesu); **¡Felicidades!** — gratulacje, wszystkiego najlepszego
+- Odpowiedź: **¡Gracias, igualmente!**
+
+## Daty świąt
+**el seis de enero** (Trzech Króli), **el veinticuatro de diciembre** (Wigilia), **el treinta y uno de diciembre** (sylwester).
+@exercises
+choice: Wesołych świąt! | ¡Felices fiestas! | ¡Feliz fiestas!; ¡Felices fiestas!; ¡Felices fiesta!
+choice: Nawzajem! | ¡Igualmente! | ¡Igualmente!; ¡También!; ¡Mismo!
+choice: Gratulacje (z okazji sukcesu): | ¡Enhorabuena! | ¡Buen provecho!; ¡Enhorabuena!; ¡Salud!
+choice: Kiedy dzieci w Hiszpanii tradycyjnie dostają prezenty od Trzech Króli? | el seis de enero | el veinticuatro de diciembre; el seis de enero; el uno de enero
+fill: Lo ___ importante es la familia. | más
+fill: ¡___ cumpleaños, Ana! | Feliz
+trans: Najlepsze w Hiszpanii jest jedzenie. | Lo mejor de España es la comida.
+trans: Wesołych świąt Bożego Narodzenia! | ¡Feliz Navidad!
+trans: Jak obchodzicie Boże Narodzenie? | ¿Cómo celebráis la Navidad?
+@culture
+Inne słynne hiszpańskie święta: **San Fermín** w Pampelunie (gonitwy byków, lipiec), **las Fallas** w Walencji (palenie ogromnych figur, marzec), **la Tomatina** w Buñol (bitwa na pomidory, sierpień) i **la Feria de Abril** w Sewilli.

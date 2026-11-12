@@ -1,0 +1,65 @@
+// litera | nazwa | jak wymawiać (dla Polaka) | przykłady (słowo = tłumaczenie; …)
+@letters
+A a | a | jak polskie „a” | agua = woda; casa = dom; mapa = mapa
+B b | be | jak polskie „b”; między samogłoskami bardzo miękkie | bueno = dobry; Barcelona; sábado = sobota
+C c | ce | przed e, i — jak angielskie „th” w „think” (Hiszpania); w innych miejscach — „k” | cena = kolacja; cine = kino; casa = dom; Cuba
+D d | de | jak „d”; między samogłoskami i na końcu bardzo miękkie, prawie jak angielskie „th” w „this” | dos = dwa; nada = nic; Madrid
+E e | e | czyste, krótkie „e”, bardziej zamknięte niż polskie | euro; mesa = stół; leche = mleko
+F f | efe | jak polskie „f” | foto = zdjęcie; café = kawa; familia = rodzina
+G g | ge | przed e, i — gardłowe „ch” (jak „j”); w innych miejscach — „g” | gente = ludzie; gato = kot; guitarra = gitara; agua = woda
+H h | hache | nieme — nie wymawiamy | hola = cześć; hotel; hermano = brat
+I i | i | jak polskie „i” | isla = wyspa; amigo = przyjaciel; vivir = żyć
+J j | jota | mocne, gardłowe „ch” | jamón = szynka; ojo = oko; Juan
+K k | ka | „k” (tylko w słowach obcych) | kilo; kiwi
+L l | ele | jak polskie „l” (nie „ł”) | luna = księżyc; sol = słońce; Lola
+LL ll | doble ele | w większości Hiszpanii — jak polskie „j” | llamar = dzwonić; calle = ulica; paella
+M m | eme | jak „m” | madre = matka; mesa = stół; mamá
+N n | ene | jak „n” | noche = noc; nada = nic; nuevo = nowy
+Ñ ñ | eñe | jak polskie „ń” przed samogłoską („ni”) | España = Hiszpania; niño = dziecko; mañana = jutro
+O o | o | czyste „o” | ocho = osiem; ojo = oko; mono = małpa
+P p | pe | „p”, bez przydechu | padre = ojciec; papá; sopa = zupa
+Q q | cu | tylko w „que, qui” = „ke, ki” („u” nieme) | queso = ser; qué = co; quince = piętnaście
+R r | erre | na początku słowa i po n, l, s — długie „rr”; w środku słowa — krótkie, pojedyncze uderzenie | pero = ale; caro = drogi; Roma; radio
+RR rr | doble erre | długie, wibrujące „r” (kilka uderzeń) | perro = pies; carro = wózek; tierra = ziemia
+S s | ese | „s”, w Hiszpanii nieco świszczące, bliżej „ś” | sí = tak; casa = dom; seis = sześć
+T t | te | „t”, bez przydechu | todo = wszystko; tomate = pomidor; té = herbata
+U u | u | jak polskie „u” | uno = jeden; luz = światło; mucho = dużo
+V v | uve | tak samo jak „b”! (nie jak polskie „w”) | vino = wino; vivir = żyć; nuevo = nowy
+W w | uve doble | „u” / „ł” (słowa obce) | wifi; web
+X x | equis | „ks”; w „México” — gardłowe „ch” | taxi = taksówka; examen = egzamin; México
+Y y | ye (i griega) | przed samogłoską — jak „j”; samo lub na końcu — „i” | yo = ja; playa = plaża; muy = bardzo; y = i
+Z z | zeta | jak angielskie „th” w „think” (Hiszpania) | zapato = but; azul = niebieski; diez = dziesięć
+@sounds
+// dźwięk | opis | przykłady
+ce / ci / z | W Hiszpanii (poza częścią Andaluzji i Kanarami) wymawiane jak angielskie „th” w „think” — język lekko między zębami. To tzw. „distinción”. | cena; cine; zumo; gracias; cerveza; Zaragoza
+j / ge / gi | Gardłowe „ch”, mocniejsze niż polskie „ch”, z tyłu gardła. | jamón; jueves; gente; girasol; mujer; ojo
+ll / y | Jak polskie „j”. Niektórzy mówią „dź” lub „ż” — wszystko jest zrozumiałe. | llave; lluvia; calle; yo; ayer; playa
+ñ | Jak „ń”: niño ≈ „ninio”, mañana ≈ „maniana”. | niño; año; España; mañana; señor
+r / rr | Pojedyncze „r” w środku słowa to jedno lekkie uderzenie języka. Podwójne „rr” (i „r” na początku słowa) — długie, wibrujące. | pero / perro; caro / carro; Roma; rojo; Enrique
+b / v | Brzmią identycznie. Na początku słowa — jak „b”; między samogłoskami — miękko, wargi prawie się nie stykają. | vaso; beso; uva; abuelo; vivir
+h | Zawsze nieme. | hola; hora; ahora; hablar; hijo
+qu / gu | W „que, qui, gue, gui” litera „u” jest niema. Gdy ma być słyszalna — dwie kropki: güe, güi. | queso; quiero; guerra; guitarra; pingüino
+d końcowe | Na końcu słowa „d” jest bardzo słabe, prawie znika. | Madrid; usted; verdad; ciudad
+diptongi | Dwie samogłoski w jednej sylabie wymawiamy płynnie, bez przerwy. | bueno; tienda; ciudad; aire; Europa
+@stress
+## Gdzie pada akcent?
+Hiszpański ma proste zasady akcentu, a jeśli słowo je łamie — akcent jest zapisany (á, é, í, ó, ú).
+- Słowa zakończone na **samogłoskę, -n lub -s** — akcent na **przedostatnią** sylabę: **CA**-sa, **HA**-blan, **LU**-nes.
+- Słowa zakończone na **inną spółgłoskę** — akcent na **ostatnią** sylabę: ha-**BLAR**, Ma-**DRID**, pa-**PEL**.
+- Jeśli akcent pada gdzie indziej — widać go w piśmie: ca-**FÉ**, a-**DIÓS**, **MÉ**-di-co, ja-**MÓN**, ár-bol.
+## Akcent rozróżnia znaczenia
+|| tu (twój) | tú (ty)
+|| el (rodzajnik) | él (on)
+|| si (jeśli) | sí (tak)
+|| mi (mój) | mí (mnie)
+|| que (że, który) | qué (co?)
+|| como (jak, jem) | cómo (jak?)
+|| hablo (mówię) | habló (mówił)
+## Polska pułapka
+Po polsku akcent jest prawie zawsze na przedostatniej sylabie — po hiszpańsku często pada na ostatnią (**hablar**, **ciudad**, **café**). Słuchaj nagrań i powtarzaj na głos!
+@keyboard
+## Jak pisać hiszpańskie znaki w Ubuntu
+- W tej aplikacji: przyciski **á é í ó ú ü ñ ¿ ¡** pod każdym polem tekstowym.
+- W całym systemie: Ustawienia → Klawiatura → **Klawisz Compose** (np. prawy Alt). Potem: Compose + ' + a = á, Compose + ~ + n = ñ, Compose + ? + ? = ¿, Compose + ! + ! = ¡.
+- Albo dodaj układ **Hiszpański** i przełączaj Super+Spacja.
+- W aplikacji brak akcentu nie jest liczony jako błąd — dostaniesz tylko przypomnienie.

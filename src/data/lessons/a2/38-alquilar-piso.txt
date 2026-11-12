@@ -1,0 +1,60 @@
+# id: a2-38
+# title: Alquilar un piso — wynajem i obowiązki domowe
+# unit: 10
+# unit_title: Sociedad y costumbres — społeczeństwo i zwyczaje
+@goals
+Zapytać o mieszkanie do wynajęcia
+Podzielić obowiązki domowe
+@dialog
+Marek: Hola, llamo por el anuncio del piso en la calle Colón. ¿Sigue disponible? | Dzień dobry, dzwonię w sprawie ogłoszenia o mieszkaniu przy ulicy Colón. Jest jeszcze dostępne?
+Propietaria: Sí. Tiene setenta metros, dos habitaciones y está amueblado. | Tak. Ma siedemdziesiąt metrów, dwa pokoje i jest umeblowane.
+Marek: ¿Cuánto es el alquiler? | Ile wynosi czynsz?
+Propietaria: Novecientos euros al mes, con los gastos de comunidad incluidos. La luz y el agua van aparte. | Dziewięćset euro miesięcznie, z opłatami wspólnoty. Prąd i woda osobno.
+Marek: ¿Hay que pagar fianza? | Trzeba zapłacić kaucję?
+Propietaria: Sí, un mes de fianza. ¿Quiere verlo mañana? | Tak, kaucja w wysokości jednego miesiąca. Chce Pan je obejrzeć jutro?
+Marek: Sí, ¿a las seis le viene bien? | Tak, czy pasuje Pani o szóstej?
+@vocab
+el alquiler | wynajem; czynsz | m
+el propietario / la propietaria | właściciel / właścicielka | m
+disponible | dostępny, wolny | adj
+amueblado / amueblada | umeblowany | adj
+los gastos | koszty, opłaty | mpl
+la comunidad | wspólnota (mieszkaniowa) | f
+la luz | światło; prąd | f
+aparte | osobno | adv
+la fianza | kaucja | f
+el metro cuadrado | metr kwadratowy | m
+al mes | miesięcznie | phr
+las tareas de la casa | obowiązki domowe | fpl
+limpiar | sprzątać | v
+fregar los platos | zmywać naczynia | phr
+poner la lavadora | nastawić pranie | phr
+sacar la basura | wynosić śmieci | phr
+hacer la cama | ścielić łóżko | phr
+planchar | prasować | v
+el compañero de piso | współlokator | m
+@grammar
+## Llamar por / preguntar por
+- **Llamo por el anuncio.** — Dzwonię w sprawie ogłoszenia.
+- **Pregunto por el piso.** — Pytam o mieszkanie.
+
+## Ceny i okresy
+**al mes** (miesięcznie), **al año** (rocznie), **a la semana** (tygodniowo), **por persona** (za osobę).
+
+## Obowiązki z „tocar”
+**Te toca a ti** — Twoja kolej. **Hoy me toca fregar.** — Dziś moja kolej zmywać. (Działa jak gustar.)
+
+## Powtórka: hay que / tener que
+**Hay que pagar un mes de fianza. Tienes que sacar la basura.**
+@exercises
+choice: Dzwonię w sprawie ogłoszenia: | Llamo por el anuncio. | Llamo para el anuncio.; Llamo por el anuncio.; Llamo de anuncio.
+choice: Dziś moja kolej zmywać: | Hoy me toca fregar. | Hoy me toca fregar.; Hoy toco fregar.; Hoy es mi tocar fregar.
+choice: Wynosić śmieci: | sacar la basura | tirar la basura fuera; sacar la basura; llevar basura
+fill: El piso cuesta 800 euros ___ mes. | al
+fill: ¿El piso sigue ___? (dostępne) | disponible
+fill: Hoy te ___ a ti poner la lavadora. | toca
+trans: Ile wynosi czynsz? | ¿Cuánto es el alquiler?
+trans: Mieszkanie jest umeblowane. | El piso está amueblado.
+trans: Trzeba zapłacić kaucję. | Hay que pagar fianza. /// Hay que pagar una fianza.
+@culture
+W hiszpańskich blokach co miesiąc płaci się **gastos de comunidad**, a ważne sprawy budynku ustala się na zebraniach wspólnoty (**reunión de vecinos**) — słynnych z długich i burzliwych dyskusji.

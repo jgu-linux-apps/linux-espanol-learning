@@ -1,0 +1,70 @@
+# id: a1-04
+# title: Zawody, rodzajniki, rodzaj i liczba
+# unit: 1
+# unit_title: Primeros pasos — pierwsze kroki
+@goals
+Powiedzieć, czym się zajmujesz
+Używać rodzajników el, la, un, una
+Tworzyć liczbę mnogą rzeczowników
+@dialog
+Elena: ¿A qué te dedicas? | Czym się zajmujesz?
+Marek: Soy ingeniero. Trabajo con ordenadores. ¿Y tú? | Jestem inżynierem. Pracuję z komputerami. A ty?
+Elena: Yo soy profesora en un colegio. | Ja jestem nauczycielką w szkole.
+Marek: ¿Y tu marido? | A twój mąż?
+Elena: Es médico. Trabaja en un hospital. | Jest lekarzem. Pracuje w szpitalu.
+Marek: ¡Qué bien! Mi mujer es enfermera. | Super! Moja żona jest pielęgniarką.
+@vocab
+dedicarse a | zajmować się (zawodowo) | vr | ¿A qué te dedicas? / Czym się zajmujesz?
+trabajar | pracować | v | Trabajo en una oficina. / Pracuję w biurze.
+el ingeniero / la ingeniera | inżynier | m
+el profesor / la profesora | nauczyciel / nauczycielka | m
+el médico / la médica | lekarz / lekarka | m
+el enfermero / la enfermera | pielęgniarz / pielęgniarka | m
+el camarero / la camarera | kelner / kelnerka | m
+el estudiante / la estudiante | student / studentka | mf
+el informático / la informática | informatyk / informatyczka | m
+el ordenador | komputer (w Hiszpanii) | m
+la oficina | biuro | f
+el colegio | szkoła (podstawowa) | m
+el hospital | szpital | m
+el marido | mąż | m
+la mujer | kobieta; żona | f
+el trabajo | praca | m
+con | z (kimś, czymś) | prep
+en | w, na | prep
+@grammar
+## Rodzaj rzeczowników
+Hiszpański ma tylko dwa rodzaje: męski i żeński.
+- Zwykle **-o** → męski: el libro, el año. **-a** → żeński: la casa, la ciudad.
+- Żeńskie są też zwykle słowa na **-ción, -sión, -dad, -tad**: la estación, la ciudad.
+- Wyjątki trzeba zapamiętać: **el día**, **el mapa**, **el problema**, **la mano**, **la foto**.
+
+## Rodzajniki
+|| | męski | żeński
+|| określony (ten) | el | la
+|| nieokreślony (jakiś, jeden) | un | una
+|| l. mnoga określony | los | las
+|| l. mnoga nieokreślony | unos | unas
+
+## Liczba mnoga
+- Po samogłosce dodajemy **-s**: el libro → los libros.
+- Po spółgłosce dodajemy **-es**: el profesor → los profesores, la ciudad → las ciudades.
+- **-z** zmienia się w **-ces**: el lápiz → los lápices.
+
+## Zawód bez rodzajnika
+Mówiąc, kim jesteś z zawodu, **nie** używasz rodzajnika: **Soy ingeniero** (nie „soy un ingeniero”).
+@exercises
+choice: ___ hospital | el | el; la; los
+choice: ___ ciudad | la | el; la; los
+choice: ___ problema | el | el; la; las
+choice: ___ mano | la | el; la; los
+fill: el profesor → los ___ | profesores
+fill: la ciudad → las ___ | ciudades
+fill: el lápiz → los ___ | lápices
+fill: la oficina → las ___ | oficinas
+choice: Jestem lekarzem: | Soy médico. | Soy un médico.; Soy médico.; Estoy médico.
+trans: Pracuję w biurze. | Trabajo en una oficina.
+trans: Ona jest nauczycielką. | Es profesora. /// Ella es profesora.
+trans: Czym się zajmujesz? | ¿A qué te dedicas?
+@culture
+W Hiszpanii komputer to **el ordenador**, a w Ameryce Łacińskiej **la computadora**. Kurs uczy wersji z Hiszpanii, ale warto znać obie.

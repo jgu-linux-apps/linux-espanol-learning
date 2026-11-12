@@ -1,0 +1,66 @@
+# id: a2-24
+# title: Biografías — opowiadanie o życiu
+# unit: 6
+# unit_title: Experiencias — doświadczenia
+@goals
+Opowiedzieć życiorys (swój lub czyjś)
+Używać wyrażeń czasu: a los … años, al cabo de, después de
+@dialog
+Periodista: Marek, cuéntenos un poco su vida. | Marek, proszę opowiedzieć nam trochę o swoim życiu.
+Marek: Nací en 1985 en Gdynia. A los dieciocho años empecé a estudiar informática. | Urodziłem się w 1985 roku w Gdyni. W wieku osiemnastu lat zacząłem studiować informatykę.
+Periodista: ¿Y cuándo empezó a trabajar? | A kiedy zaczął Pan pracować?
+Marek: Terminé la carrera en 2007 y dos años después encontré mi primer trabajo. | Skończyłem studia w 2007 roku, a dwa lata później znalazłem pierwszą pracę.
+Periodista: ¿Cuándo se casó? | Kiedy się Pan ożenił?
+Marek: Me casé en 2012. Al cabo de tres años nació nuestro hijo y nos mudamos a Rumia. | Ożeniłem się w 2012 roku. Po trzech latach urodził się nasz syn i przeprowadziliśmy się do Rumi.
+Periodista: ¿Y por qué decidió aprender español? | A dlaczego postanowił Pan uczyć się hiszpańskiego?
+Marek: Después de mi primer viaje a España, me enamoré del país. | Po mojej pierwszej podróży do Hiszpanii zakochałem się w tym kraju.
+@vocab
+nacer | urodzić się | v | Nací en 1983. / Urodziłem się w 1983 roku.
+morir | umrzeć | v
+casarse | brać ślub | vr | Se casaron en 2010. / Pobrali się w 2010 roku.
+mudarse | przeprowadzać się | vr
+la carrera | studia (kierunek) | f | terminar la carrera / skończyć studia
+encontrar | znaleźć | v
+decidir | postanowić, decydować | v
+enamorarse de | zakochać się w | vr
+el viaje | podróż | f
+cuándo | kiedy | adv
+a los … años | w wieku … lat | phr
+al cabo de | po (upływie) | phr | al cabo de un año / po roku
+después de | po (czymś) | prep
+dos años después | dwa lata później | phr
+desde | od (czasu) | prep
+la vida | życie | f
+contar | opowiadać; liczyć | v
+primero / primera | pierwszy | adj | mi primer trabajo / moja pierwsza praca
+@grammar
+## Wyrażenia czasu w życiorysie
+- **en + rok**: **en 1983**. Lata czytamy jak liczby: **mil novecientos ochenta y tres**, **dos mil siete**.
+- **a los dieciocho años** — w wieku osiemnastu lat
+- **dos años después / más tarde** — dwa lata później
+- **al cabo de tres años** — po trzech latach
+- **después de + rzeczownik / bezokolicznik**: **después de la boda**, **después de terminar la carrera**
+
+## Primero → primer
+Przed rzeczownikiem rodzaju męskiego w l. poj. **primero** i **tercero** tracą -o: **mi primer trabajo**, **el tercer piso**. Ale: **la primera vez**.
+
+## Zwrotne w indefinido
+**me casé, te casaste, se casó, nos casamos, os casasteis, se casaron**.
+
+## Morir (o→u w 3. os.)
+**murió, murieron**: **Cervantes murió en 1616.**
+@exercises
+conj: nacer (yo, indefinido) | nací
+conj: casarse (ellos, indefinido) | se casaron
+conj: mudarse (nosotros, indefinido) | nos mudamos
+conj: morir (él, indefinido) | murió
+conj: encontrar (yo, indefinido) | encontré
+fill: Empecé a trabajar ___ los veinte años. | a
+fill: ___ cabo de un año, volvió a Polonia. | Al
+choice: moja pierwsza praca: | mi primer trabajo | mi primero trabajo; mi primer trabajo; mi primera trabajo
+choice: 1983 czytamy: | mil novecientos ochenta y tres | diecinueve ochenta y tres; mil novecientos ochenta y tres; mil nueve ciento ochenta y tres
+trans: Urodziłem się w Gdyni. | Nací en Gdynia.
+trans: Kiedy się pobraliście? | ¿Cuándo os casasteis?
+trans: Po studiach znalazłam pracę. | Después de la carrera encontré trabajo. /// Después de terminar la carrera encontré trabajo.
+@culture
+**Miguel de Cervantes**, autor „Don Kichota”, zmarł w 1616 roku — w tym samym roku co Szekspir. W rocznicę ich śmierci, 23 kwietnia, obchodzi się Światowy Dzień Książki.

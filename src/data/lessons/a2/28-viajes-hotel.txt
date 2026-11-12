@@ -1,0 +1,62 @@
+# id: a2-28
+# title: De viaje — hotel, rezerwacje i problemy
+# unit: 7
+# unit_title: Recuerdos — wspomnienia
+@goals
+Zarezerwować pokój i zameldować się w hotelu
+Zgłosić problem i poprosić o pomoc
+@dialog
+Recepcionista: Buenas tardes, ¿en qué puedo ayudarle? | Dzień dobry, w czym mogę pomóc?
+Marek: Buenas tardes. Tengo una reserva a nombre de Marek Nowak. | Dzień dobry. Mam rezerwację na nazwisko Marek Nowak.
+Recepcionista: Sí, una habitación doble para tres noches con desayuno. ¿Me deja su pasaporte? | Tak, pokój dwuosobowy na trzy noce ze śniadaniem. Poproszę paszport.
+Marek: Aquí tiene. ¿A qué hora es el desayuno? | Proszę. O której jest śniadanie?
+Recepcionista: De siete a diez y media. Su habitación es la 305, en el tercer piso. | Od siódmej do wpół do jedenastej. Pana pokój to 305, na trzecim piętrze.
+Marek: Perdone, el aire acondicionado de la habitación no funciona. | Przepraszam, klimatyzacja w pokoju nie działa.
+Recepcionista: Lo siento mucho. Ahora mismo subimos a arreglarlo. | Bardzo przepraszam. Zaraz przyjdziemy to naprawić.
+@vocab
+la reserva | rezerwacja | f
+reservar | rezerwować | v
+la habitación | pokój (hotelowy) | f
+la habitación individual / doble | pokój jednoosobowy / dwuosobowy | f
+la llave | klucz | f
+el pasaporte | paszport | m
+el DNI | dowód osobisty (w Hiszpanii) | m
+el desayuno | śniadanie | m
+la recepción | recepcja | f
+el aire acondicionado | klimatyzacja | m
+funcionar | działać (o urządzeniu) | v | No funciona. / Nie działa.
+arreglar | naprawiać | v
+la toalla | ręcznik | f
+la maleta | walizka | f
+el equipaje | bagaż | m
+ahora mismo | od razu, w tej chwili | phr
+a nombre de | na nazwisko | phr
+la queja | skarga | f
+el ruido | hałas | m
+@grammar
+## Grzeczne prośby w hotelu
+- **¿Me deja…?** — Czy może mi Pan/Pani dać / pożyczyć…?
+- **¿Podría…?** — Czy mógłby Pan…? **¿Podría cambiarme de habitación?**
+- **Quería reservar una habitación doble para dos noches.**
+- **¿Está incluido el desayuno?** — Czy śniadanie jest wliczone?
+
+## Zgłaszanie problemów
+- **No funciona** + rzecz w l. poj.: **La ducha no funciona.**
+- **No funcionan** + l. mn.: **Las luces no funcionan.**
+- **No hay** + rzecz: **No hay toallas. No hay agua caliente.**
+- **Hay mucho ruido.** — Jest bardzo głośno.
+
+## Liczebniki porządkowe 1–10
+**primero, segundo, tercero, cuarto, quinto, sexto, séptimo, octavo, noveno, décimo**. Przed rzeczownikiem m. r.: **el primer piso, el tercer piso**.
+@exercises
+choice: Prysznic nie działa: | La ducha no funciona. | La ducha no funciona.; La ducha no trabaja.; La ducha no va funcionar.
+choice: Nie ma ręczników: | No hay toallas. | No están toallas.; No hay toallas.; No son toallas.
+choice: na trzecim piętrze: | en el tercer piso | en el tercero piso; en el tercer piso; en la tercera piso
+choice: Pokój dwuosobowy: | una habitación doble | una habitación doble; una habitación dos; un cuarto de dos camas doble
+fill: Tengo una reserva ___ nombre de Ana López. | a
+fill: Las luces no ___ (funcionar). | funcionan
+trans: Chciałbym zarezerwować pokój jednoosobowy. | Quería reservar una habitación individual.
+trans: Czy śniadanie jest wliczone? | ¿Está incluido el desayuno?
+trans: Klimatyzacja nie działa. | El aire acondicionado no funciona.
+@culture
+W Hiszpanii popularne są **paradores** — państwowe hotele w zabytkowych zamkach, klasztorach i pałacach. Nocleg w jednym z nich to sposób na mieszkanie w średniowiecznej twierdzy.
