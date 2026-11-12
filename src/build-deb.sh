@@ -21,6 +21,7 @@ for v in "" "-dark"; do
   done
 done
 install -m 644 README.md "$ROOT/usr/share/doc/$PKG/README.md"
+install -m 644 LICENSE "$ROOT/usr/share/doc/$PKG/copyright"
 install -m 755 packaging/postinst packaging/postrm "$ROOT/DEBIAN/"
 SIZE=$(du -sk "$ROOT/usr" | cut -f1)
 sed "s/@SIZE@/$SIZE/; s/^Version: .*/Version: $VER/" packaging/control > "$ROOT/DEBIAN/control"

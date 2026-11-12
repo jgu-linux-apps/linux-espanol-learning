@@ -3,7 +3,7 @@
 **Prawdziwy kurs hiszpańskiego od zera dla Ubuntu** — hiszpański z Hiszpanii (castellano), wyjaśnienia po polsku.
 Bez punktów, serii i maskotek: lekcje, gramatyka, słownictwo, powtórki, testy i ocena wymowy.
 
-Wersja **1.10.3** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
+Wersja **1.10.4** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
 
 ---
 
@@ -173,6 +173,7 @@ icons/                ikona jasna i ciemna (SVG)
 Komponenty pobierane osobno przy pierwszym uruchomieniu (Piper, faster-whisper, głosy, modele Whisper) mają własne licencje.
 
 ## Zmiany
+- **1.10.4** — licencja: aplikacja jest teraz na licencji Freeware License (No Modifications), zob. `LICENSE` — darmowe użytkowanie i udostępnianie bez zmian, bez prawa do modyfikacji; poza tym bez zmian w aplikacji.
 - **1.10.3** — bez zmian w aplikacji: kod w repozytorium w katalogu `src/`, paczka `.deb` na stronie GitHub Releases (budowana automatycznie dla każdego tagu wersji); README: instalacja z Releases.
 - **1.10.2** — lepsze polskie tłumaczenia wypowiedzi Paco: słowniczek gotowych, sprawdzonych tłumaczeń najczęstszych zwrotów, tłumaczenie „sensu, nie słowo w słowo” z przykładami trudnych konstrukcji (gustar, preferencje) i krótka druga runda korekty polszczyzny.
 - **1.10.1** — motyw Nowoczesny (jasny „Soft” i ciemny „Glass”) dostał te same efekty co pozostałe: podświetlenie i poświatę aktywnej pozycji menu, akcent przy najechaniu, płynne przejścia; nowy adres projektu: github.com/jgu-linux-apps; poprawiony opis testu poziomującego.
