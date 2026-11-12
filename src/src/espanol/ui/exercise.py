@@ -16,18 +16,26 @@ TYPE_TITLES = {
     "conj": "Odmień czasownik",
     "listen": "Dyktando",
     "order": "Ułóż zdanie z rozsypanki",
+    "fix": "Popraw zdanie z rozmowy z Paco",
+    "text": "Wpisz poprawną odpowiedź",
 }
 
 
 class ExerciseRunner(Gtk.Box):
-    """exercises: lista dict; on_finish(score, total, mistakes)."""
+    """exercises: lista dict; on_finish(score, total, mistakes).
 
-    def __init__(self, app, exercises, on_finish, source="", show_progress=True, allow_skip=True):
+    drill=True — błędne odpowiedzi trafiają do treningu błędów (Powtórki → Błędy).
+    on_result(ex, wynik) — wołane po każdej odpowiedzi (używa tego sam trening)."""
+
+    def __init__(self, app, exercises, on_finish, source="", show_progress=True, allow_skip=True,
+                 drill=True, on_result=None):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=12)
         self.app = app
         self.items = exercises
         self.on_finish = on_finish
         self.source = source
+        self.drill = drill
+        self.on_result = on_result
         self.idx = 0
         self.score = 0.0
         self.mistakes = []
@@ -146,6 +154,8 @@ class ExerciseRunner(Gtk.Box):
             self.area.pack_start(label("Podpowiedź: " + ex["hint"], "dim"), False, False, 0)
         self.entry = Gtk.Entry()
         self.entry.set_placeholder_text("Wpisz odpowiedź po hiszpańsku…")
+        if t == "fix":
+            self.entry.set_text(ex["q"])   # poprawiasz własne zdanie, nie przepisujesz go od zera
         self.entry.connect("activate", lambda *_: self._on_main())
         self.area.pack_start(self.entry, False, False, 0)
         self.area.pack_start(AccentBar(self.entry), False, False, 0)
@@ -234,10 +244,19 @@ class ExerciseRunner(Gtk.Box):
             self.mistakes.append(dict(q=ex["q"], given=given, expected=best))
             try:
                 self.app.db.save_mistake(ex.get("source", self.source), ex["q"], given, best)
-            except Exception:  # noqa
-                pass
+                if self.drill:
+                    self.app.db.drill_add(dict(ex, source=ex.get("source") or self.source))
+            except Exception as e:  # noqa
+                print("zapis błędu:", e)
         if ex["type"] == "listen" and ex.get("hint"):
             msg += f'\n<span alpha="70%">{esc(ex["hint"])}</span>'
+        if ex.get("note"):
+            msg += f'\n<span alpha="80%">{esc(ex["note"])}</span>'
+        if self.on_result:
+            try:
+                self.on_result(ex, res)
+            except Exception as e:  # noqa
+                print("on_result:", e)
         self.feedback.set_markup(msg)
         if ex["type"] == "choice":
             for b in self.choice_buttons:
@@ -246,7 +265,7 @@ class ExerciseRunner(Gtk.Box):
                 elif b.get_active():
                     b.get_style_context().add_class("destructive-action")
         # odczytaj poprawne zdanie po hiszpańsku
-        if ex["type"] in ("trans", "order", "listen", "fill", "conj") and self.app.db.get("autoplay", True):
+        if ex["type"] in ("trans", "order", "listen", "fill", "conj", "fix") and self.app.db.get("autoplay", True):
             spoken = best
             if ex["type"] == "fill" and "___" in ex["q"]:
                 spoken = re.sub(r"\(.*?\)", "", ex["q"].replace("___", best)).strip()

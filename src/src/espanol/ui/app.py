@@ -67,6 +67,7 @@ class App(Gtk.Application):
             Gtk.IconTheme.get_default().append_search_path(os.path.abspath(local_icons))
         self.db = DB()
         self.course = Course()
+        self._migrate_drill()
         self.speech = Speech(self.db)
         self.player = Player()
         self.recorder = Recorder()
@@ -346,12 +347,27 @@ class App(Gtk.Application):
         self.speech.shutdown()
         old = self.win
         self.db = DB()
+        self._migrate_drill()
         self.speech = Speech(self.db)
         self.build_window()          # ustawia self.win na nowe okno
         if old:
             old.destroy()
         self.win.present()
         self.speech.preload_stt()
+
+    def _migrate_drill(self):
+        """Jednorazowo przenosi dotychczasowe błędy do treningu (Powtórki → Błędy)."""
+        try:
+            from .. import drill
+            n = drill.migrate_mistakes(self.db, self.course)
+            if n:
+                print(f"trening błędów: przeniesiono {n} wcześniejszych błędów")
+        except Exception as e:  # noqa
+            print("migracja treningu błędów:", e)
+
+    def open_review(self, tab="cards"):
+        self.show_page("review")
+        self.pages["review"].show_tab(tab)
 
     def _on_close(self, *_):
         from ..ollama_local import Manager

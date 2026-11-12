@@ -3,7 +3,7 @@
 **Prawdziwy kurs hiszpańskiego od zera dla Ubuntu** — hiszpański z Hiszpanii (castellano), wyjaśnienia po polsku.
 Bez punktów, serii i maskotek: lekcje, gramatyka, słownictwo, powtórki, testy i ocena wymowy.
 
-Wersja **1.10.4** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
+Wersja **1.11.0** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
 
 ---
 
@@ -14,7 +14,7 @@ Wersja **1.10.4** · Created by: **JGu** · Supported by **Claude** · część 
 | **Kurs A1–A2** | 40 lekcji w 10 działach (A1: 20, A2: 20). Każda lekcja ma 5 kroków: dialog z nagraniem → słownictwo → gramatyka po polsku → ćwiczenia → mówienie. Do tego ciekawostki kulturowe i link do filmów na dany temat. |
 | **Alfabet i wymowa** | Wszystkie litery z nazwą, opisem wymowy dla Polaka i przykładami; trudne dźwięki (rr, j/g, c/z jako „th”, ll, ñ, b=v, nieme h); zasady akcentu; jak pisać á é í ó ú ñ ¿ ¡. |
 | **Ćwiczenia** | Wybór odpowiedzi, uzupełnianie luk, tłumaczenie PL→ES, odmiana czasowników, dyktando (ze słuchu), układanie zdań z rozsypanki. Ok. 430 ćwiczeń autorskich + generowane z dialogów i słownictwa. Brak akcentu nie jest błędem (dostajesz przypomnienie), literówka liczy się za pół punktu. |
-| **Powtórki** | Fiszki z algorytmem **FSRS** (jak w nowoczesnym Anki). Słowa trafiają tu automatycznie po ukończeniu lekcji; kierunek ES→PL, PL→ES albo na zmianę; skróty klawiszowe Spacja i 1–4. |
+| **Powtórki** | Dwie zakładki. **Fiszki** z algorytmem **FSRS** (jak w nowoczesnym Anki): słowa trafiają tu automatycznie po ukończeniu lekcji; kierunek ES→PL, PL→ES albo na zmianę; skróty klawiszowe Spacja i 1–4. **Błędy — trening**: ćwiczenia, w których się pomyliłeś (lekcje, testy, czytanki), i zdania poprawione przez Paco wracają jutro, potem za 3 i za 7 dni; po 3 dobrych odpowiedziach z rzędu znikają. |
 | **Słownik ES–PL** | Własny słownik hiszpańsko-polski, ok. **1000 haseł**: słowa z lekcji i listy tematyczne, z częścią mowy, przykładami i nagraniem. Wyszukiwanie w obu kierunkach, także bez akcentów. |
 | **Odmiana** | Tabele odmiany dowolnego czasownika: presente, perfecto, indefinido, imperfecto, futuro, condicional, imperativo, *ir a*, *estar + gerundio* — z formą **vosotros** i z czasownikami nieregularnymi, zwrotnymi i ze zmianą tematu. |
 | **Laboratorium wymowy** | Posłuchaj → nagraj się → ocena słowo po słowie (zielone/czerwone), wynik w %, odsłuch własnego nagrania i wskazówki dotyczące typowych błędów Polaków. |
@@ -173,6 +173,7 @@ icons/                ikona jasna i ciemna (SVG)
 Komponenty pobierane osobno przy pierwszym uruchomieniu (Piper, faster-whisper, głosy, modele Whisper) mają własne licencje.
 
 ## Zmiany
+- **1.11.0** — **trening błędów**: Powtórki mają dwie zakładki — *Fiszki* i *Błędy (trening)*; każde ćwiczenie, w którym się pomylisz (w lekcji, teście, czytance), oraz zdanie poprawione przez Paco wraca w całości (ten sam typ, opcje, nagranie) jutro, potem za 3 i za 7 dni, a po 3 dobrych odpowiedziach z rzędu znika; literówki i brak akcentu się nie liczą; dotychczasowe błędy są przenoszone automatycznie; licznik na ekranie Dzisiaj i w Statystykach. **🐢 Wolniej**: wolne odtwarzanie jest zawsze wyraźnie wolniejsze od tempa wybranego w Ustawieniach (wcześniej przy tempie „Wolno” prawie się nie różniło) i ma teraz przycisk także w scenkach, w rozmowie z Paco, w czytankach i w fiszkach.
 - **1.10.4** — licencja: aplikacja jest teraz na licencji Freeware License (No Modifications), zob. `LICENSE` — darmowe użytkowanie i udostępnianie bez zmian, bez prawa do modyfikacji; poza tym bez zmian w aplikacji.
 - **1.10.3** — bez zmian w aplikacji: kod w repozytorium w katalogu `src/`, paczka `.deb` na stronie GitHub Releases (budowana automatycznie dla każdego tagu wersji); README: instalacja z Releases.
 - **1.10.2** — lepsze polskie tłumaczenia wypowiedzi Paco: słowniczek gotowych, sprawdzonych tłumaczeń najczęstszych zwrotów, tłumaczenie „sensu, nie słowo w słowo” z przykładami trudnych konstrukcji (gustar, preferencje) i krótka druga runda korekty polszczyzny.

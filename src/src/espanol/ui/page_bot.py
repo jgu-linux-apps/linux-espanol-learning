@@ -8,8 +8,8 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib, Pango  # noqa: E402
 
-from .widgets import label, scrolled, page_box, card, clear, AccentBar, SpeakButton, run_bg
-from .. import bot
+from .widgets import label, scrolled, page_box, card, clear, AccentBar, SpeakButton, slow_button, run_bg
+from .. import bot, drill
 from ..audio import Recorder, Vad
 from ..paths import REC_DIR
 from .page_learner import load_manual, load_auto
@@ -540,6 +540,7 @@ class BotPage(Gtk.Box):
         top = Gtk.Box(spacing=6)
         top.pack_start(label("🤖 Rozmówca" if who == "bot" else "🙂 Ty", "dim", wrap=False), False, False, 0)
         if who == "bot":
+            top.pack_end(slow_button(self.app, es), False, False, 0)
             top.pack_end(SpeakButton(self.app, es), False, False, 0)
         c.pack_start(top, False, False, 0)
         txt = GLib.markup_escape_text(es)
@@ -641,6 +642,9 @@ class BotPage(Gtk.Box):
         self._persist_facts()
         for orig, ok, fix in s["fixes"]:
             db.save_mistake("bot", orig, "", (ok + " — " if ok else "") + fix)
+            item = drill.from_bot_fix(orig, ok, fix)
+            if item:
+                db.drill_add(item)
         score, verdict = bot.rate(s)
         s["score"], s["verdict"] = score, verdict
         if s["messages"]:
@@ -727,6 +731,7 @@ class BotPage(Gtk.Box):
                 row.pack_start(label(txt, markup=True), True, True, 0)
                 if ok:
                     row.pack_start(SpeakButton(self.app, ok), False, False, 0)
+                    row.pack_start(slow_button(self.app, ok), False, False, 0)
                 c2.pack_start(row, False, False, 0)
             cards = [(ok, fix) for _o, ok, fix in s["fixes"] if ok]
             if cards:
@@ -784,6 +789,7 @@ class BotPage(Gtk.Box):
             row.pack_start(col, True, True, 0)
             if not mine:
                 row.pack_start(SpeakButton(self.app, t["es"]), False, False, 0)
+                row.pack_start(slow_button(self.app, t["es"]), False, False, 0)
             c4.pack_start(row, False, False, 0)
         b.pack_start(c4, False, False, 0)
 

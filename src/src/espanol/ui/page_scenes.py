@@ -3,7 +3,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib  # noqa: E402
 
-from .widgets import label, scrolled, page_box, card, clear, SpeakButton
+from .widgets import label, scrolled, page_box, card, clear, SpeakButton, slow_button
 from .pron import SpeakPractice
 
 
@@ -120,6 +120,7 @@ class ScenesPage(Gtk.Box):
             r = Gtk.Box(spacing=8)
             r.pack_start(label(es, "big-es"), True, True, 0)
             r.pack_start(SpeakButton(self.app, es), False, False, 0)
+            r.pack_start(slow_button(self.app, es), False, False, 0)
             cur.pack_start(r, False, False, 0)
             cur.pack_start(label(pl, "dim"), False, False, 0)
             nxt = Gtk.Button(label="Dalej ▶")

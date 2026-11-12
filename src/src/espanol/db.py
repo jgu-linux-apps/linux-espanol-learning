@@ -22,6 +22,9 @@ CREATE TABLE IF NOT EXISTS conversations (
     id INTEGER PRIMARY KEY AUTOINCREMENT, ts REAL, scenario TEXT, title TEXT, level TEXT,
     score INTEGER, turns TEXT, summary TEXT);
 CREATE TABLE IF NOT EXISTS activity (day TEXT PRIMARY KEY, seconds INTEGER DEFAULT 0, items INTEGER DEFAULT 0);
+CREATE TABLE IF NOT EXISTS drill (
+    key TEXT PRIMARY KEY, ex TEXT, source TEXT, added REAL, due REAL,
+    streak INTEGER DEFAULT 0, wrong INTEGER DEFAULT 1, last REAL);
 """
 
 
@@ -235,9 +238,85 @@ class DB:
             best, prev = max(best, run), dt
         return cur, max(best, cur)
 
+    # ---- trening błędów (zakładka Powtórki → Błędy) ----
+    def drill_add(self, ex, now=None):
+        """Błędna odpowiedź: ćwiczenie trafia (lub wraca) do treningu, termin — jutro."""
+        from . import drill
+        now = now or time.time()
+        item = drill.clean(ex)
+        key = drill.key(item)
+        due = drill.due_after(drill.WRONG_DAYS, now)
+        with self.lock:
+            r = self.con.execute("SELECT key FROM drill WHERE key=?", (key,)).fetchone()
+            if r:
+                self.con.execute("UPDATE drill SET streak=0, wrong=wrong+1, due=?, last=?, ex=? WHERE key=?",
+                                 (due, now, json.dumps(item, ensure_ascii=False), key))
+            else:
+                self.con.execute("INSERT INTO drill VALUES (?,?,?,?,?,0,1,?)",
+                                 (key, json.dumps(item, ensure_ascii=False), item.get("source", ""),
+                                  now, due, now))
+            self.con.commit()
+        return key
+
+    def drill_answer(self, key, result, now=None):
+        """result: 'ok' | 'typo' | 'wrong'. Zwraca 'done' (opanowane i usunięte), 'next' lub 'again'."""
+        from . import drill
+        now = now or time.time()
+        with self.lock:
+            r = self.con.execute("SELECT streak FROM drill WHERE key=?", (key,)).fetchone()
+            if not r:
+                return "done"
+            if result == "ok":
+                streak = r["streak"] + 1
+                if streak >= drill.DONE_STREAK:
+                    self.con.execute("DELETE FROM drill WHERE key=?", (key,))
+                    self.con.execute("INSERT OR REPLACE INTO settings VALUES ('drill_mastered', ?)",
+                                     (json.dumps(self.get("drill_mastered", 0) + 1),))
+                    self.con.commit()
+                    return "done"
+                self.con.execute("UPDATE drill SET streak=?, due=?, last=? WHERE key=?",
+                                 (streak, drill.due_after(drill.OK_DAYS[streak], now), now, key))
+                out = "next"
+            elif result == "typo":
+                self.con.execute("UPDATE drill SET due=?, last=? WHERE key=?",
+                                 (drill.due_after(drill.WRONG_DAYS, now), now, key))
+                out = "again"
+            else:
+                self.con.execute("UPDATE drill SET streak=0, wrong=wrong+1, due=?, last=? WHERE key=?",
+                                 (drill.due_after(drill.WRONG_DAYS, now), now, key))
+                out = "again"
+            self.con.commit()
+        return out
+
+    def drill_due(self, limit=10, now=None):
+        now = now or time.time()
+        with self.lock:
+            rows = self.con.execute("SELECT * FROM drill WHERE due<=? ORDER BY due, added LIMIT ?",
+                                    (now, limit)).fetchall()
+        return [dict(r, ex=json.loads(r["ex"])) for r in rows]
+
+    def drill_all(self):
+        with self.lock:
+            rows = self.con.execute("SELECT * FROM drill ORDER BY due, added").fetchall()
+        return [dict(r, ex=json.loads(r["ex"])) for r in rows]
+
+    def drill_counts(self, now=None):
+        """(do powtórki teraz, wszystkie w treningu)."""
+        now = now or time.time()
+        with self.lock:
+            due = self.con.execute("SELECT COUNT(*) FROM drill WHERE due<=?", (now,)).fetchone()[0]
+            total = self.con.execute("SELECT COUNT(*) FROM drill").fetchone()[0]
+        return due, total
+
+    def drill_delete(self, key):
+        with self.lock:
+            self.con.execute("DELETE FROM drill WHERE key=?", (key,))
+            self.con.commit()
+
     def reset(self):
-        for t in ("lessons", "cards", "reviews", "tests", "pron", "mistakes", "activity"):
+        for t in ("lessons", "cards", "reviews", "tests", "pron", "mistakes", "activity", "drill"):
             self.con.execute(f"DELETE FROM {t}")
+        self.con.execute("DELETE FROM settings WHERE k='drill_mastered'")
         self.con.commit()
 
 

@@ -8,7 +8,8 @@ from gi.repository import Gtk, GLib  # noqa: E402
 
 from .widgets import (label, rich_text, scrolled, page_box, card, SpeakButton, slow_button, clear)
 from .pron import SpeakPractice
-from .. import fsrs
+from .exercise import ExerciseRunner, TYPE_TITLES
+from .. import answers, drill, fsrs
 from ..answers import strip_accents
 from ..conjugate import table as conj_table
 from ..content import POS_NAMES
@@ -106,14 +107,31 @@ class AlphabetPage(Gtk.Box):
 
 
 # ====================================================================== POWTÓRKI
+def _speak_pair(app, text):
+    """▶ i 🐢 obok siebie, wyśrodkowane (fiszki)."""
+    r = Gtk.Box(spacing=4)
+    r.set_halign(Gtk.Align.CENTER)
+    r.pack_start(SpeakButton(app, text), False, False, 0)
+    r.pack_start(slow_button(app, text), False, False, 0)
+    return r
+
+
 class ReviewPage(Gtk.Box):
+    """Powtórki: zakładka Fiszki (słówka, FSRS) i zakładka Błędy (trening błędów z ćwiczeń)."""
+
     def __init__(self, app):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.app = app
         self.inner = page_box()
-        self.pack_start(scrolled(self.inner), True, True, 0)
         self.queue = []
         self.done_count = 0
+        self.nb = Gtk.Notebook()
+        self.tab_cards = Gtk.Label(label="Fiszki")
+        self.tab_drill = Gtk.Label(label="Błędy (trening)")
+        self.nb.append_page(scrolled(self.inner), self.tab_cards)
+        self.drill = DrillPane(app, on_change=self._update_tabs)
+        self.nb.append_page(self.drill, self.tab_drill)
+        self.pack_start(self.nb, True, True, 0)
 
     def refresh(self):
         self.queue = self.app.db.due_cards(new_limit=self.app.db.get("new_per_day", 20))
@@ -121,6 +139,18 @@ class ReviewPage(Gtk.Box):
         self.queue.sort(key=lambda c: c["state"] == 0)  # najpierw zaległe, potem nowe
         self.done_count = 0
         self._show()
+        self.drill.refresh()
+        self._update_tabs()
+
+    def show_tab(self, name):
+        self.nb.set_current_page(1 if name == "drill" else 0)
+
+    def _update_tabs(self):
+        due, new = self.app.db.count_due()
+        n_cards = due + min(new, max(0, self.app.db.get("new_per_day", 20) - self.app.db.new_reviewed_today()))
+        d_due, _total = self.app.db.drill_counts()
+        self.tab_cards.set_text(f"Fiszki ({n_cards})" if n_cards else "Fiszki")
+        self.tab_drill.set_text(f"Błędy — trening ({d_due})" if d_due else "Błędy — trening")
 
     def _show(self):
         clear(self.inner)
@@ -151,9 +181,7 @@ class ReviewPage(Gtk.Box):
                      False, False, 0)
         c.pack_start(label(prompt, "big-es", xalign=0.5), False, False, 0)
         if es_first:
-            sb = SpeakButton(self.app, card_["es"])
-            sb.set_halign(Gtk.Align.CENTER)
-            c.pack_start(sb, False, False, 0)
+            c.pack_start(_speak_pair(self.app, card_["es"]), False, False, 0)
             if self.app.db.get("autoplay", True):
                 GLib.timeout_add(150, lambda: (self.app.say(card_["es"]), False)[1])
         self.answer_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
@@ -179,9 +207,7 @@ class ReviewPage(Gtk.Box):
         ab.pack_start(Gtk.Separator(), False, False, 0)
         ab.pack_start(label(card_["pl"] if es_first else card_["es"], "title2", xalign=0.5), False, False, 0)
         if not es_first:
-            sb = SpeakButton(self.app, card_["es"])
-            sb.set_halign(Gtk.Align.CENTER)
-            ab.pack_start(sb, False, False, 0)
+            ab.pack_start(_speak_pair(self.app, card_["es"]), False, False, 0)
             self.app.say(card_["es"])
         entry = next((w for w in self.app.course.dictionary if w["es"] == card_["es"]), None)
         if entry and entry.get("ex_es"):
@@ -211,11 +237,12 @@ class ReviewPage(Gtk.Box):
             n.update(es=card_["es"], pl=card_["pl"], pos=card_["pos"])
             self.queue.insert(min(len(self.queue), 4), n)
         self._show()
+        self._update_tabs()
         self.app.refresh_today()
 
     def on_key(self, keyval):
         from gi.repository import Gdk
-        if not self.queue:
+        if self.nb.get_current_page() != 0 or not self.queue:
             return False
         if keyval in (Gdk.KEY_space, Gdk.KEY_Return) and not self.revealed:
             self._reveal(*self.current)
@@ -224,6 +251,157 @@ class ReviewPage(Gtk.Box):
             self._grade(keyval - Gdk.KEY_0)
             return True
         return False
+
+
+# ====================================================================== POWTÓRKI → BŁĘDY
+def _when(due, now=None):
+    now = now or time.time()
+    days = round((drill.day_start(due) - drill.day_start(now)) / 86400)
+    if days <= 0:
+        return "dziś"
+    if days == 1:
+        return "jutro"
+    return f"za {days} dni"
+
+
+class DrillPane(Gtk.Box):
+    """Trening błędów: rundy po kilka zadań z ćwiczeń, w których się pomyliłeś."""
+
+    def __init__(self, app, on_change=None):
+        super().__init__(orientation=Gtk.Orientation.VERTICAL)
+        self.app = app
+        self.on_change = on_change
+        self.inner = page_box()
+        self.pack_start(scrolled(self.inner), True, True, 0)
+        self.running = False
+
+    def refresh(self):
+        if self.running:
+            return
+        db = self.app.db
+        due, total = db.drill_counts()
+        clear(self.inner)
+        b = self.inner
+        b.pack_start(label("Trening błędów", "hero"), False, False, 0)
+        b.pack_start(label("Tu wracają ćwiczenia, w których się pomyliłeś — w lekcjach, testach i czytankach — "
+                           "oraz zdania, które poprawił Paco. Zadanie wraca jutro, potem za 3 i za 7 dni; "
+                           "po 3 dobrych odpowiedziach z rzędu znika. Literówki i brak akcentu się nie liczą.",
+                           "dim"), False, False, 0)
+        c = card(spacing=8)
+        if total == 0:
+            c.pack_start(label("Nie masz błędów do treningu. 🎉", "title2"), False, False, 0)
+            c.pack_start(label("Gdy pomylisz się w ćwiczeniu albo Paco poprawi Twoje zdanie, zadanie trafi tutaj.",
+                               "dim"), False, False, 0)
+        elif due == 0:
+            nxt = min(it["due"] for it in db.drill_all())
+            c.pack_start(label("Na dziś wszystkie błędy powtórzone. ✔", "title2"), False, False, 0)
+            c.pack_start(label(f"W treningu: {total}. Następne wrócą {_when(nxt)}.", "dim"), False, False, 0)
+        else:
+            c.pack_start(label(f"Do powtórki teraz: {due}", "title2"), False, False, 0)
+            n = min(due, drill.ROUND)
+            c.pack_start(label(f"Runda: {n} {'zadanie' if n == 1 else 'zadania' if n in (2, 3, 4) else 'zadań'}"
+                               f"  ·  w treningu łącznie: {total}", "dim"), False, False, 0)
+            bt = Gtk.Button(label="▶  Zacznij trening")
+            bt.get_style_context().add_class("suggested-action")
+            bt.set_halign(Gtk.Align.START)
+            bt.connect("clicked", lambda *_: self.start())
+            c.pack_start(bt, False, False, 0)
+        mastered = db.get("drill_mastered", 0)
+        if mastered:
+            c.pack_start(label(f"Opanowane błędy (usunięte z treningu): {mastered}", "dim"), False, False, 0)
+        b.pack_start(c, False, False, 0)
+        if total:
+            b.pack_start(self._list(db.drill_all()), False, False, 0)
+        b.show_all()
+
+    def _list(self, items):
+        exp = Gtk.Expander(label=f"Wszystkie zapamiętane błędy ({len(items)})")
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+        box.set_margin_top(6)
+        for it in items:
+            ex = it["ex"]
+            row = Gtk.Box(spacing=10)
+            col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)
+            q = ex.get("q") or ""
+            if ex.get("type") == "listen":
+                q = "🔊 " + (ex.get("audio") or "")
+            col.pack_start(label(f"{q}  →  {(ex.get('answers') or [''])[0]}"), False, False, 0)
+            col.pack_start(label(f"{TYPE_TITLES.get(ex.get('type'), 'Ćwiczenie')}  ·  wraca {_when(it['due'])}  ·  "
+                                 f"seria {it['streak']}/{drill.DONE_STREAK}  ·  pomyłek: {it['wrong']}", "dim"),
+                           False, False, 0)
+            row.pack_start(col, True, True, 0)
+            rm = Gtk.Button.new_from_icon_name("user-trash-symbolic", Gtk.IconSize.BUTTON)
+            rm.set_relief(Gtk.ReliefStyle.NONE)
+            rm.set_valign(Gtk.Align.CENTER)
+            rm.set_tooltip_text("Usuń z treningu")
+            rm.connect("clicked", lambda _b, k=it["key"]: self._delete(k))
+            row.pack_start(rm, False, False, 0)
+            box.pack_start(row, False, False, 0)
+        exp.add(box)
+        return exp
+
+    def _delete(self, k):
+        self.app.db.drill_delete(k)
+        self.refresh()
+        self._changed()
+
+    def _changed(self):
+        if self.on_change:
+            self.on_change()
+        self.app.refresh_today()
+
+    def start(self):
+        items = self.app.db.drill_due(drill.ROUND)
+        if not items:
+            self.refresh()
+            return
+        exercises = [dict(it["ex"], _drill_key=it["key"]) for it in items]
+        self.result = dict(done=0, again=0, next=0)
+        self.running = True
+        clear(self.inner)
+        self.inner.pack_start(label("Trening błędów", "hero"), False, False, 0)
+        runner = ExerciseRunner(self.app, exercises, self._finished, source="drill",
+                                drill=False, on_result=self._on_result)
+        self.inner.pack_start(runner, False, False, 0)
+        self.inner.show_all()
+
+    def _on_result(self, ex, res):
+        r = {answers.OK: "ok", answers.ACCENT: "ok", answers.TYPO: "typo"}.get(res, "wrong")
+        out = self.app.db.drill_answer(ex["_drill_key"], r)
+        self.result[out] = self.result.get(out, 0) + 1
+        self.app.db.log_activity(items=1)
+        self._changed()
+
+    def _finished(self, score, total, _mistakes):
+        self.running = False
+        r = self.result
+        clear(self.inner)
+        b = self.inner
+        b.pack_start(label("Trening błędów — koniec rundy", "hero"), False, False, 0)
+        c = card(spacing=6)
+        c.pack_start(label(f"Wynik: {score} / {total}", "title2"), False, False, 0)
+        parts = []
+        if r.get("done"):
+            parts.append(f"opanowane i usunięte z treningu: {r['done']}")
+        if r.get("next"):
+            parts.append(f"dobrze — wrócą za kilka dni: {r['next']}")
+        if r.get("again"):
+            parts.append(f"do poprawy — wrócą jutro: {r['again']}")
+        c.pack_start(label("  ·  ".join(parts) or "—", "dim"), False, False, 0)
+        row = Gtk.Box(spacing=8)
+        due, _ = self.app.db.drill_counts()
+        if due:
+            nb = Gtk.Button(label=f"Kolejna runda ({due})")
+            nb.get_style_context().add_class("suggested-action")
+            nb.connect("clicked", lambda *_: self.start())
+            row.pack_start(nb, False, False, 0)
+        back = Gtk.Button(label="Wróć do listy")
+        back.connect("clicked", lambda *_: self.refresh())
+        row.pack_start(back, False, False, 0)
+        c.pack_start(row, False, False, 0)
+        b.pack_start(c, False, False, 0)
+        b.show_all()
+        self._changed()
 
 
 # ====================================================================== SŁOWNIK

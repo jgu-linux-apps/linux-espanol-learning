@@ -6,7 +6,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib  # noqa: E402
 
-from .widgets import (label, rich_text, scrolled, page_box, card, SpeakButton, clear)
+from .widgets import (label, rich_text, scrolled, page_box, card, SpeakButton, slow_button, clear)
 from .exercise import ExerciseRunner
 from .pron import SpeakPractice
 from .. import speech
@@ -71,6 +71,7 @@ class ReadingsPage(Gtk.Box):
             row = Gtk.Box(spacing=4)
             row.pack_start(label(p, "mid-es", selectable=True), True, True, 0)
             row.pack_start(SpeakButton(app, p), False, False, 0)
+            row.pack_start(slow_button(app, p), False, False, 0)
             c.pack_start(row, False, False, 0)
             if i < len(tparas):
                 t = label(tparas[i], "dim")
@@ -461,6 +462,15 @@ class StatsPage(Gtk.Box):
         mist = db.recent_mistakes(15)
         if mist:
             b.pack_start(label("Ostatnie błędy — warto do nich wrócić", "title2"), False, False, 0)
+            d_due, d_total = db.drill_counts()
+            if d_total:
+                tr = Gtk.Box(spacing=10)
+                tr.pack_start(label(f"W treningu błędów: {d_total} (do powtórki teraz: {d_due})", "dim"),
+                              False, False, 0)
+                tb = Gtk.Button(label="Otwórz trening")
+                tb.connect("clicked", lambda *_: self.app.open_review("drill"))
+                tr.pack_start(tb, False, False, 0)
+                b.pack_start(tr, False, False, 0)
             c = card(spacing=3)
             for m in mist:
                 c.pack_start(label(f"•  {m['q']}  →  {m['expected']}" +

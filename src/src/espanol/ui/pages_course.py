@@ -209,16 +209,24 @@ class TodayPage(Gtk.Box):
 
         # powtórki
         due, new = db.count_due()
+        d_due, d_total = db.drill_counts()
         c2 = card()
-        c2.pack_start(label("Powtórki słówek", "dim"), False, False, 0)
+        c2.pack_start(label("Powtórki", "dim"), False, False, 0)
         c2.pack_start(label(f"{due}", "stat-num", wrap=False), False, False, 0)
-        c2.pack_start(label(f"do powtórzenia dziś · {min(new, db.get('new_per_day', 20))} nowych czeka", "dim"),
+        c2.pack_start(label(f"słówek do powtórzenia dziś · {min(new, db.get('new_per_day', 20))} nowych czeka", "dim"),
                       False, False, 0)
-        bt2 = Gtk.Button(label="Powtarzaj")
-        bt2.set_halign(Gtk.Align.START)
+        c2.pack_start(label(f"Błędy do treningu: {d_due}" + (f" (łącznie {d_total})" if d_total > d_due else ""),
+                            "dim"), False, False, 0)
+        brow = Gtk.Box(spacing=8)
+        bt2 = Gtk.Button(label="Fiszki")
         bt2.set_sensitive(due + new > 0)
-        bt2.connect("clicked", lambda *_: app.show_page("review"))
-        c2.pack_end(bt2, False, False, 0)
+        bt2.connect("clicked", lambda *_: app.open_review("cards"))
+        brow.pack_start(bt2, False, False, 0)
+        bt3 = Gtk.Button(label=f"Błędy ({d_due})")
+        bt3.set_sensitive(d_due > 0)
+        bt3.connect("clicked", lambda *_: app.open_review("drill"))
+        brow.pack_start(bt3, False, False, 0)
+        c2.pack_end(brow, False, False, 0)
         grid.attach(c2, 1, 0, 1, 1)
         b.pack_start(grid, False, False, 0)
 

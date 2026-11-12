@@ -13,6 +13,8 @@ import urllib.request
 from .paths import VENV, VOICES, MODELS, TTS_CACHE, HERE
 
 PIPER_VERSION = "1.8.0"
+SLOW_FACTOR = 1.35   # 🐢 „wolniej”: ok. 74% wybranego tempa
+SLOW_MAX = 1.8       # górna granica — wolniej mowa traci naturalność
 WHISPER_VERSION = "1.2.1"
 
 VOICE_FILES = {
@@ -313,7 +315,9 @@ class Speech:
     def synth(self, text, slow=False):
         """Zwraca ścieżkę do pliku WAV (z pamięci podręcznej)."""
         voice_key = self.db.get("voice", "m")
-        speed = 1.35 if slow else float(self.db.get("tts_scale", 1.0))
+        base = float(self.db.get("tts_scale", 1.0))
+        # 🐢 zawsze wyraźnie wolniej niż wybrane tempo (wcześniej stałe 1.35 ≈ ustawienie „Wolno” 1.3)
+        speed = min(SLOW_MAX, round(base * SLOW_FACTOR, 2)) if slow else base
         h = hashlib.sha1(f"v2|{voice_key}|{speed}|{text}".encode()).hexdigest()[:20]
         out = os.path.join(TTS_CACHE, h + ".wav")
         if os.path.exists(out):
