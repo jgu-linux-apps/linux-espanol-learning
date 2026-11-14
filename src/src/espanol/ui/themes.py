@@ -11,6 +11,16 @@ THEMES = {
              hover="#1E2B47", sel="#12303F", sel_fg="#67E8F9", entry="#0C1424", extra="glass"),
     ),
     "classic": ("Klasyczny (motyw Ubuntu)", None, None),
+    # Aurora: wspólny motyw całej serii (jasny = pastelowe szkło, ciemny = zorza na granacie)
+    "aurora": (
+        "Aurora — fiolet i cyjan",
+        dict(bg="#F4F1FF", fg="#1F1A3A", header="#FBFAFF", header_fg="#1F1A3A", sidebar="#EEEAFF",
+             card="#FFFFFF", border="#E2DCFA", accent="#7C5CFF", accent_fg="#FFFFFF", button="#FFFFFF",
+             hover="#ECE7FF", sel="#7C5CFF", sel_fg="#FFFFFF", entry="#FFFFFF", extra="aurora_light"),
+        dict(bg="#0C0E1A", fg="#ECEBFF", header="#10132A", header_fg="#ECEBFF", sidebar="#0E1122",
+             card="#14172A", border="#252A45", accent="#8B5CF6", accent_fg="#FFFFFF", button="#181C33",
+             hover="#1E2340", sel="#3A2A6E", sel_fg="#FFFFFF", entry="#11142A", extra="aurora_dark"),
+    ),
     "espana": (
         "España — czerwień i złoto",
         dict(bg="#FFF8EC", fg="#2B1D14", header="#AA151B", header_fg="#FFFFFF", sidebar="#F7E9CC",
@@ -70,6 +80,42 @@ EXTRA = {
 .hero-banner label { color: #FFFFFF; }
 button.suggested-action { background-image: linear-gradient(to right, #F97316, #FB923C); border-color: #F97316; }
 .card { box-shadow: 0 2px 10px alpha(#F97316, 0.07); }
+""",
+    "aurora_light": MODERN + """
+window.background { background-image: linear-gradient(135deg, #F6F2FF 0%, #EEF8FF 55%, #FFF4F8 100%); }
+headerbar, .titlebar { box-shadow: inset 0 -1px alpha(#7C5CFF, 0.12); }
+.navigation-sidebar row:selected { background-image: linear-gradient(to right, #7C5CFF, #22B8E6);
+    box-shadow: 0 6px 18px alpha(#7C5CFF, 0.30); }
+.navigation-sidebar row:selected label { font-weight: bold; }
+.navigation-sidebar row:hover:not(:selected) { background-color: #FFFFFF;
+    box-shadow: 0 0 0 1px alpha(#7C5CFF, 0.55), 0 4px 14px alpha(#7C5CFF, 0.22); }
+.hero-banner { background-image: linear-gradient(135deg, #7C5CFF, #22B8E6); box-shadow: 0 6px 18px alpha(#7C5CFF, 0.30); }
+.hero-banner label { color: #FFFFFF; }
+.hero-banner .badge { background-color: alpha(#FFFFFF, 0.22); color: #FFFFFF; }
+button.suggested-action { background-image: linear-gradient(to right, #7C5CFF, #22B8E6); border-color: #7C5CFF;
+    box-shadow: 0 4px 14px alpha(#7C5CFF, 0.35); }
+.card { box-shadow: 0 2px 10px alpha(#7C5CFF, 0.08); }
+.card:hover { border-color: alpha(#7C5CFF, 0.55); box-shadow: 0 3px 14px alpha(#7C5CFF, 0.20); }
+progressbar progress { background-image: linear-gradient(to right, #7C5CFF, #22B8E6); }
+switch:checked { border-color: #7C5CFF; }
+""",
+    "aurora_dark": MODERN + """
+window.background { background-image: radial-gradient(ellipse at 12% 0%, alpha(#22D3EE, 0.20), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, alpha(#A855F7, 0.24), transparent 55%); }
+headerbar, .titlebar { box-shadow: inset 0 -1px alpha(#FFFFFF, 0.07); }
+.navigation-sidebar row:selected { background-image: linear-gradient(to right, alpha(#A855F7, 0.60), alpha(#22D3EE, 0.48));
+    box-shadow: 0 6px 18px alpha(#A855F7, 0.30); }
+.navigation-sidebar row:hover:not(:selected) { background-color: alpha(#FFFFFF, 0.05);
+    box-shadow: 0 0 0 1px alpha(#22D3EE, 0.55), 0 0 18px alpha(#22D3EE, 0.28); }
+.hero-banner { background-image: linear-gradient(135deg, alpha(#A855F7, 0.55), alpha(#22D3EE, 0.40));
+    border: 1px solid alpha(#22D3EE, 0.35); }
+.hero-banner label { color: #FFFFFF; }
+.hero-banner .badge { background-color: alpha(#22D3EE, 0.15); color: #A5F3FC; border: 1px solid alpha(#22D3EE, 0.5); }
+button.suggested-action { background-image: linear-gradient(to right, #A855F7, #22D3EE); border-color: #A855F7;
+    box-shadow: 0 0 16px alpha(#A855F7, 0.45); }
+.card:hover { border-color: alpha(#22D3EE, 0.55); box-shadow: 0 0 16px alpha(#22D3EE, 0.20); }
+progressbar progress { background-image: linear-gradient(to right, #A855F7, #22D3EE); box-shadow: 0 0 8px alpha(#22D3EE, 0.5); }
+switch:checked { border-color: #8B5CF6; }
 """,
     "glass": MODERN + """
 .navigation-sidebar row:selected { background-image: linear-gradient(to right, alpha(#22D3EE, 0.30), alpha(#22D3EE, 0.08));
