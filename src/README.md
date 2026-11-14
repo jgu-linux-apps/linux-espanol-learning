@@ -1,210 +1,216 @@
 # Linux Español Learning
 
-**Prawdziwy kurs hiszpańskiego od zera dla Ubuntu** — hiszpański z Hiszpanii (castellano), wyjaśnienia po polsku.
-Bez punktów, serii i maskotek: lekcje, gramatyka, słownictwo, powtórki, testy i ocena wymowy.
+**A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish.
+Lessons, grammar, vocabulary, spaced repetition, tests and pronunciation scoring.
 
-Wersja **1.13.4** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
+Version **1.13.4** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
+
+> **Language note:** for now the app is **in Polish only**. The interface, the grammar explanations,
+> the translations and the corrections are all in Polish, because the course is written for Polish
+> speakers learning Spanish. An English version is not available yet.
 
 ---
 
-## Co jest w środku
+## What's inside
 
-| Moduł | Zawartość |
+| Module | Contents |
 |---|---|
-| **Kurs A1–A2** | 40 lekcji w 10 działach (A1: 20, A2: 20). Każda lekcja ma 5 kroków: dialog z nagraniem → słownictwo → gramatyka po polsku → ćwiczenia → mówienie. Do tego ciekawostki kulturowe i link do filmów na dany temat. |
-| **Alfabet i wymowa** | Wszystkie litery z nazwą, opisem wymowy dla Polaka i przykładami; trudne dźwięki (rr, j/g, c/z jako „th”, ll, ñ, b=v, nieme h); zasady akcentu; jak pisać á é í ó ú ñ ¿ ¡. |
-| **Ćwiczenia** | Wybór odpowiedzi, uzupełnianie luk, tłumaczenie PL→ES, odmiana czasowników, dyktando (ze słuchu), układanie zdań z rozsypanki. Ok. 430 ćwiczeń autorskich + generowane z dialogów i słownictwa. Brak akcentu nie jest błędem (dostajesz przypomnienie), literówka liczy się za pół punktu. |
-| **Powtórki** | Dwie zakładki. **Fiszki** z algorytmem **FSRS** (jak w nowoczesnym Anki): słowa trafiają tu automatycznie po ukończeniu lekcji; kierunek ES→PL, PL→ES albo na zmianę; skróty klawiszowe Spacja i 1–4. **Błędy — trening**: ćwiczenia, w których się pomyliłeś (lekcje, testy, czytanki), i zdania poprawione przez Paco wracają jutro, potem za 3 i za 7 dni; po 3 dobrych odpowiedziach z rzędu znikają. |
-| **Słownik ES–PL** | Własny słownik hiszpańsko-polski, ok. **1000 haseł**: słowa z lekcji i listy tematyczne, z częścią mowy, przykładami i nagraniem. Wyszukiwanie w obu kierunkach, także bez akcentów. |
-| **Odmiana** | Tabele odmiany dowolnego czasownika: presente, perfecto, indefinido, imperfecto, futuro, condicional, imperativo, *ir a*, *estar + gerundio* — z formą **vosotros** i z czasownikami nieregularnymi, zwrotnymi i ze zmianą tematu. |
-| **Laboratorium wymowy** | Posłuchaj → nagraj się → ocena słowo po słowie (zielone/czerwone), wynik w %, odsłuch własnego nagrania i wskazówki dotyczące typowych błędów Polaków. |
-| **Scenki z Paco** | Dialogi z lekcji do odegrania na głos: Paco gra jedną rolę, Ty drugą; ocena wymowy każdej kwestii i wynik całej scenki. |
-| **Dyktando** | Paco czyta zdanie, Ty je wpisujesz; kolorowe porównanie słowo po słowie (zielone — dobrze, żółte — brak akcentu, czerwone — błąd), rundy po 8 zdań z ukończonych lekcji. |
-| **Czytanki** | 10 tekstów (po jednym na dział), z nagraniem, tłumaczeniem, słowniczkiem i pytaniami. |
-| **Testy i egzaminy** | Test każdego działu (15 pytań) i egzamin próbny A1 / A2 (ok. 40 pytań: słownictwo, gramatyka, tłumaczenie, słuchanie, czytanie + część ustna). Próg 60%. Historia wyników. |
-| **Filmy i słuchanie** | Sprawdzone kanały z hiszpańskim z Hiszpanii (Español con Juan, Easy Spanish, Español Automático, Spanish with Vicente, María Español, Dreaming Spanish, RTVE Play, *Aquí no hay quien viva*). Otwierają się w przeglądarce. |
-| **Dzisiaj** | Przycisk **Kontynuuj** — wraca do ostatnio otwartej lekcji, dokładnie do kroku, na którym skończyłeś (dialog, słownictwo, gramatyka, ćwiczenia, mówienie). Tabela **Postęp kursu** z paskami w %: cały kurs, poziomy A1/A2, każdy dział (lekcje, średni wynik, wynik testu działu, egzaminu) i odsetek opanowanych słówek. |
-| **Rozmowa z botem** | Czat **i rozmowa głosowa** po hiszpańsku z rozmówcą, który zna tylko materiał z Twoich ukończonych lekcji (słownictwo, dialogi, gramatyka). 11 scenek (swobodna rozmowa, bar, targ, droga, sklep, plany, wakacje, hotel, lekarz, rozmowa o pracę, wynajem mieszkania). Poprawki po polsku przy Twoich wypowiedziach, tłumaczenie odpowiedzi, odsłuch głosem lektora, podkreślanie słów spoza Twoich lekcji, automatyczne upraszczanie zbyt trudnych odpowiedzi i podsumowanie (błędy → statystyki, nowe słowa → powtórki). |
-| **Statystyki** | Ukończone lekcje, słowa opanowane, minuty nauki (wykres 30 dni), średnia wymowy, ostatnie błędy. |
+| **A1–A2 course** | 40 lessons in 10 units (A1: 20, A2: 20). Every lesson has 5 steps: a dialogue with audio → vocabulary → grammar (explained in Polish) → exercises → speaking. Plus culture notes and a link to videos on the topic. |
+| **Alphabet and pronunciation** | All letters with their names, a pronunciation guide for Polish speakers and examples; difficult sounds (rr, j/g, c/z as "th", ll, ñ, b=v, silent h); stress rules; how to type á é í ó ú ñ ¿ ¡. |
+| **Exercises** | Multiple choice, fill in the gap, translation PL→ES, verb conjugation, dictation (by ear), building a sentence from shuffled words. About 430 hand-written exercises plus ones generated from the dialogues and vocabulary. A missing accent is not a mistake (you get a reminder); a typo counts as half a point. |
+| **Review** | Two tabs. **Flashcards** with the **FSRS** algorithm (as in modern Anki): words get here automatically after you finish a lesson; ES→PL, PL→ES or alternating; keyboard shortcuts Space and 1–4. **Mistakes — training**: exercises you got wrong (lessons, tests, readings) and sentences corrected by Paco come back tomorrow, then in 3 and in 7 days; after 3 correct answers in a row they disappear. |
+| **ES–PL dictionary** | Its own Spanish–Polish dictionary, about **1000 entries**: words from the lessons and topic lists, with part of speech, examples and audio. Search in both directions, also without accents. |
+| **Conjugation** | Conjugation tables for any verb: presente, perfecto, indefinido, imperfecto, futuro, condicional, imperativo, *ir a*, *estar + gerundio* — with the **vosotros** form and with irregular, reflexive and stem-changing verbs. |
+| **Pronunciation lab** | Listen → record yourself → word-by-word score (green/red), result in %, playback of your own recording and tips on typical mistakes of Polish speakers. |
+| **Scenes with Paco** | Lesson dialogues to act out loud: Paco plays one role, you play the other; every line gets a pronunciation score and the whole scene gets a result. |
+| **Dictation** | Paco reads a sentence and you type it; a colour comparison word by word (green — correct, yellow — missing accent, red — mistake), rounds of 8 sentences from finished lessons. |
+| **Readings** | 10 texts (one per unit), with audio, translation, a glossary and questions. |
+| **Tests and exams** | A test for every unit (15 questions) and a mock A1 / A2 exam (about 40 questions: vocabulary, grammar, translation, listening, reading + a speaking part). Pass mark 60%. Score history. |
+| **Videos and listening** | Hand-picked channels with Spanish from Spain (Español con Juan, Easy Spanish, Español Automático, Spanish with Vicente, María Español, Dreaming Spanish, RTVE Play, *Aquí no hay quien viva*). They open in the browser. |
+| **Today** | One big **Continue** card that takes you back to the lesson you were doing, exactly to the step where you stopped; rings for the daily goal, the streak and the level progress; a week strip; a **Plan for today** (review, lesson, exercise of the day); the hardest words and a word of the day. |
+| **Chat with the bot** | Text **and voice** conversation in Spanish with a partner who only knows the material of your finished lessons (vocabulary, dialogues, grammar). 11 scenes (free talk, bar, market, directions, shop, plans, holidays, hotel, doctor, job interview, renting a flat). Corrections in Polish next to your lines, translation of the replies, playback in the narrator's voice, highlighting of words beyond your lessons, automatic simplifying of replies that are too hard, and a summary (mistakes → statistics, new words → review). |
+| **Statistics** | Finished lessons, mastered words, minutes of study (30-day chart), average pronunciation score, recent mistakes. |
 
-Interfejs jest klasyczny (GTK 3) i automatycznie przełącza się między jasnym i ciemnym motywem systemu — razem z ikoną okna.
+The interface is classic GTK 3 and follows the system light/dark theme automatically — together with the window and dock icons.
 
-### Motywy (Ustawienia → Wygląd)
-| Motyw | Charakter |
+### Themes (Settings → Appearance)
+| Theme | Character |
 |---|---|
-| **Coral (domyślny)** | koral i słoneczne złoto; ciemny — ten sam koral na ciepłym grafitowym tle |
-| **Pomarańcz** | dawny domyślny: brzoskwinia i pomarańcz; ciemny — pomarańcz na ciemnym brązie |
-| **Mediterráneo** | morski turkus i błękit; ciemny — turkus na ciemnym morskim tle |
-| **Systemowy** | wygląd motywu Ubuntu (Yaru), jasny lub ciemny jak system |
-| **Aurora** | wspólny motyw serii JGu Linux Apps: jasny — pastelowe szkło, gradient fiolet → cyjan; ciemny — zorza na granatowym tle z poświatą |
-| **España** | czerwień i złoto hiszpańskiej flagi; ciemny — bordo i złoto |
-| **Azulejo** | błękit i biel sewilskich kafli; ciemny — granat nocy |
-| **Oliva** | oliwka i terakota Andaluzji; ciemny — ciemna oliwka |
+| **Coral (default)** | coral and sunny gold; dark — the same coral on a warm graphite background |
+| **Pomarańcz** | the former default: peach and orange; dark — orange on dark brown |
+| **Mediterráneo** | sea turquoise and blue; dark — turquoise on a dark sea background |
+| **System** | the Ubuntu (Yaru) look, light or dark like the system |
+| **Aurora** | the shared theme of the JGu Linux Apps series: light — pastel glass, violet → cyan gradient; dark — an aurora glow on deep navy |
+| **España** | red and gold of the Spanish flag; dark — burgundy and gold |
+| **Azulejo** | blue and white of Seville tiles; dark — night navy |
+| **Oliva** | olive and terracotta of Andalusia; dark — dark olive |
 
-Każdy motyw ma wersję jasną i ciemną: *Automatycznie (jak system)*, *Zawsze jasny* lub *Zawsze ciemny*. Zmiana działa od razu, bez restartu.
+Every theme has a light and a dark variant: *Automatic (like the system)*, *Always light* or *Always dark*. The change applies at once, without a restart.
 
-## Wymagania
+## Requirements
 
-| | Minimum | Zalecane |
+| | Minimum | Recommended |
 |---|---|---|
 | System | Ubuntu 24.04+ (64-bit) | Ubuntu 26.04 / 26.10 |
-| Procesor | 4 rdzenie (ok. ostatnie 6 lat) | 6–8 rdzeni (np. Ryzen 5/7) |
+| CPU | 4 cores (about the last 6 years) | 6–8 cores (e.g. Ryzen 5/7) |
 | RAM | 8 GB | 16 GB |
-| Dysk | ok. 1 GB | ok. 1,5 GB |
-| Karta graficzna | dowolna (zintegrowana wystarczy) | NVIDIA — opcjonalnie przyspiesza rozpoznawanie mowy (CUDA) |
-| Dźwięk | głośniki + dowolny mikrofon | słuchawki z mikrofonem |
-| Internet | tylko przy pierwszym uruchomieniu (pobranie modeli) | — |
+| Disk | about 1 GB | about 1.5 GB |
+| Graphics | any (integrated is enough) | NVIDIA — optionally speeds up speech recognition (CUDA) |
+| Audio | speakers + any microphone | a headset with a microphone |
+| Internet | only on the first start (downloading the models) | — |
 
-Aplikacja sama sprawdza sprzęt (Ustawienia → *Twój komputer*) i dobiera model rozpoznawania mowy:
-**Szybki** (`base`, ok. 150 MB) lub **Dokładny** (`small`, ok. 470 MB). Przy karcie NVIDIA można wybrać **Bardzo dokładny** (`medium`) i włączyć CUDA.
+The app checks the hardware itself (Settings → *Your computer*) and picks the speech recognition model:
+**Fast** (`base`, about 150 MB) or **Accurate** (`small`, about 470 MB). With an NVIDIA card you can choose **Very accurate** (`medium`) and turn on CUDA.
 
-## Instalacja
+## Installation
 
-Najnowszy plik `linux-espanol-learning_<wersja>_all.deb` pobierz ze [strony Releases](https://github.com/jgu-linux-apps/linux-espanol-learning/releases/latest):
+Download the newest `linux-espanol-learning_<version>_all.deb` from the [Releases page](https://github.com/jgu-linux-apps/linux-espanol-learning/releases/latest):
 
 ```bash
-sudo apt install ./linux-espanol-learning_<wersja>_all.deb
+sudo apt install ./linux-espanol-learning_<version>_all.deb
 ```
 
-Aplikacja pojawi się w menu jako **„Linux Español Learning”** (polecenie: `linux-espanol-learning`).
+The app appears in the menu as **"Linux Español Learning"** (command: `linux-espanol-learning`).
 
-### Pierwsze uruchomienie
-Otworzy się kreator **„Instalacja silnika mowy”**, który pobierze jednorazowo (do `~/.local/share/linux-espanol-learning`):
-1. silnik **Piper** (synteza mowy) i **faster-whisper** (rozpoznawanie mowy): pakiety Python w osobnym środowisku, ok. 200 MB;
-2. dwa głosy z Hiszpanii: męski `es_ES-davefx-medium` i żeński `es_ES-sharvard-medium` (ok. 130 MB);
-3. model Whisper wybrany dla Twojego komputera.
+### First start
+The **"Speech engine installation"** wizard opens and downloads once (to `~/.local/share/linux-espanol-learning`):
+1. the **Piper** engine (speech synthesis) and **faster-whisper** (speech recognition): Python packages in a separate environment, about 200 MB;
+2. two voices from Spain: male `es_ES-davefx-medium` and female `es_ES-sharvard-medium` (about 130 MB);
+3. the Whisper model chosen for your computer.
 
-Potem wszystko działa **offline**. Kreator można uruchomić ponownie w Ustawieniach (np. żeby zmienić model).
-Zanim zainstalujesz silnik, nagrania odtwarza zapasowo `espeak-ng` (jeśli jest zainstalowany) — brzmi robotycznie, ale działa.
+After that everything works **offline**. The wizard can be run again from Settings (e.g. to change the model).
+Before the engine is installed, audio is played by `espeak-ng` as a fallback (if installed) — it sounds robotic, but works.
 
-## Paco i profile użytkowników (1.7)
-- **Paco** — animowany robocik-rozmówca w czarnym berecie, z wąsem i szalikiem w barwach Hiszpanii. Rusza ustami w rytm głosu lektora (według rzeczywistej głośności nagrania), przechyla głowę i pokazuje fale dźwięku, gdy słucha, patrzy w górę i „myśli” w czasie oczekiwania na odpowiedź, mruga i delikatnie się kołysze. Cieszy się po bezbłędnej wypowiedzi, a przy błędzie robi zatroskaną, łagodną minę. Rysowany w Cairo — bez dodatkowych plików.
-- **Profile użytkowników** — przycisk „👤 nazwa” w pasku okna: wiele osób na jednym komputerze, każda z własnym postępem, powtórkami, historią rozmów, motywem i danymi „O mnie”. Przełączanie bez restartu; można dodać, zmienić nazwę i usunąć profil. Wspólne dla wszystkich są silniki mowy, modele, bot (Ollama/Claude) i klucz API. Dotychczasowy postęp trafia do profilu „Główny”.
-- **Bot nie powtarza pytań** — pytanie, które już padło w rozmowie, jest odrzucane (w trybie głosowym nie jest czytane). Znane fakty o uczniu trafiają do bota z listą tematów, o które nie wolno już pytać.
-- Dane profili: `~/.local/share/linux-espanol-learning/profiles/<nazwa>/postep.db` (profil „Główny”: `postep.db`).
+## Paco and user profiles (1.7)
+- **Paco** — an animated little robot conversation partner in a black beret, with a moustache and a scarf in the colours of Spain. He moves his mouth in time with the narrator's voice (following the real loudness of the audio), tilts his head and shows sound waves while listening, looks up and "thinks" while waiting for a reply, blinks and sways gently. He is happy after a flawless answer and makes a concerned, gentle face after a mistake. Drawn with Cairo — no extra files.
+- **User profiles** — the "👤 name" button in the window bar: several people on one computer, each with their own progress, review, conversation history, theme and "About me" data. Switching without a restart; profiles can be added, renamed and deleted. Shared by everyone: the speech engines, the models, the bot (Ollama/Claude) and the API key. Existing progress goes to the "Główny" (main) profile.
+- **The bot does not repeat questions** — a question that was already asked in the conversation is rejected (in voice mode it is not read out). Known facts about the learner are passed to the bot together with a list of topics it must not ask about again.
+- Profile data: `~/.local/share/linux-espanol-learning/profiles/<name>/postep.db` (the main profile: `postep.db`).
 
-## Nowości w rozmowie z botem (1.6)
-- **O mnie (dla bota)** — nowa zakładka: wpisujesz imię, miejscowość, pracę, rodzinę, zainteresowania. Bot traktuje to jako prawdę i nie pyta w kółko o to samo. Dodatkowo aplikacja sama wyłuskuje fakty z tego, co mówisz po hiszpańsku („me llamo…”, „vivo en…”, „trabajo como…”, „me gusta…”); widzisz je w tej zakładce i możesz usunąć.
-- **Poziom rozmówcy** — *Wolno i prosto* (bez nowych słów, bardzo krótkie zdania), *Normalnie*, *Wyzwanie* (dłuższe wypowiedzi, do dwóch nowych słów).
-- **Ocena rozmowy** 0–100 (bezbłędne wypowiedzi, długość wypowiedzi, różnorodność słów).
-- **Historia rozmów** — każda zakończona rozmowa jest zapisana z pełnym zapisem, poprawkami i oceną; możesz ją otworzyć, odsłuchać wypowiedzi bota i śledzić postępy.
-- **Poprawione zdania do powtórek** — jednym kliknięciem trafiają do fiszek.
-- W rozmowie głosowej można przełączać model rozpoznawania mowy (jeśli masz zainstalowane kilka).
-- Poprawki bota są zawsze po polsku; bot nie powtarza własnych zdań.
+## What's new in the bot conversation (1.6)
+- **About me (for the bot)** — a new tab: you enter your name, town, job, family, interests. The bot treats this as true and doesn't keep asking about the same things. In addition, the app picks up facts from what you say in Spanish ("me llamo…", "vivo en…", "trabajo como…", "me gusta…"); you see them in this tab and can delete them.
+- **Partner level** — *Slow and simple* (no new words, very short sentences), *Normal*, *Challenge* (longer replies, up to two new words).
+- **Conversation score** 0–100 (flawless lines, length of your lines, variety of words).
+- **Conversation history** — every finished conversation is saved with the full transcript, corrections and score; you can open it, replay the bot's lines and follow your progress.
+- **Corrected sentences to review** — sent to the flashcards with one click.
+- In voice conversation you can switch the speech recognition model (if you have several installed).
+- The bot's corrections are always in Polish; the bot does not repeat its own sentences.
 
-## Rozmowa głosowa z botem (od 1.4)
-Na ekranie rozmowy kliknij **🎤 Mów** i powiedz zdanie po hiszpańsku. Aplikacja sama wykrywa początek i koniec wypowiedzi (po ok. 3 s ciszy — masz czas na myślenie; długość zmienisz w *Ustawienia → Rozmowa z botem*, a możesz też kliknąć **✔ Skończyłem mówić**), Whisper zamienia mowę na tekst, a bot odpowiada głosem lektora — **zaczyna mówić od pierwszego gotowego zdania**, nie czekając na całą odpowiedź.
-- **Rozmówca mówi na głos** — włącza/wyłącza czytanie odpowiedzi.
-- **Bez rąk** — po odpowiedzi aplikacja sama znów słucha (rozmowa bez dotykania myszy; kończy się, gdy milczysz ok. 12 s).
-- Kliknięcie 🎤 w trakcie mówienia bota przerywa go i oddaje Ci głos. Pisanie z klawiatury działa równolegle.
-- Wymagane: zainstalowany model rozpoznawania mowy (Ustawienia), mikrofon i najlepiej słuchawki (żeby mikrofon nie łapał głosu rozmówcy). Przy odpowiedziach czytanych na bieżąco nie ma automatycznego upraszczania trudnych odpowiedzi — słowa spoza Twoich lekcji są dalej podkreślane.
+## Voice conversation with the bot (since 1.4)
+On the conversation screen click **🎤 Mów** (Speak) and say a sentence in Spanish. The app detects the start and end of your speech itself (after about 3 s of silence — you have time to think; change the length in *Settings → Chat with the bot*, or click **✔ Skończyłem mówić** (I've finished)). Whisper turns the speech into text, and the bot answers in the narrator's voice — **it starts speaking from the first finished sentence**, without waiting for the whole reply.
+- **The partner speaks aloud** — turns reading the replies on/off.
+- **Hands-free** — after a reply the app listens again by itself (a conversation without touching the mouse; it ends when you are silent for about 12 s).
+- Clicking 🎤 while the bot is speaking interrupts it and gives you the floor. Typing works in parallel.
+- Required: an installed speech recognition model (Settings), a microphone and ideally a headset (so the microphone doesn't pick up the partner's voice). With replies read out as they arrive, too-difficult replies are not simplified automatically — words beyond your lessons are still underlined.
 
-## Rozmowa z botem — konfiguracja
-W **Ustawienia → Rozmowa z botem** wybierz silnik:
-- **Ollama (lokalnie, offline, darmowe)** — kliknij **„Zainstaluj Ollamę i model”** (w Ustawieniach albo na ekranie *Rozmowa z botem*). Aplikacja sama pobierze Ollamę do Twojego katalogu domowego (bez sudo, ok. 1–2 GB z bibliotekami dla kart NVIDIA) i wybrany model: **Qwen 3 8B** (zalecany, ok. 5,2 GB — najlepiej z kartą NVIDIA lub 16 GB RAM) albo **Gemma 3 4B** (szybszy, ok. 3,3 GB). Prywatny serwer Ollamy uruchamia się sam przy rozmowie (port 11435) i zamyka razem z aplikacją. Jeśli masz już Ollamę w systemie, aplikacja jej użyje i pobierze tylko model. Własny serwer można ustawić w sekcji *Zaawansowane*.
-- **Claude API (chmura)** — wklej klucz API z console.anthropic.com i wybierz model (Haiku — szybki i tani, Sonnet — najlepszy). Do API trafia tylko tekst rozmowy. Klucz jest zapisany lokalnie w `~/.config/linux-espanol-learning/claude_api_key` (prawa 600). Użycie API jest płatne.
+## Chat with the bot — setup
+In **Settings → Chat with the bot** choose the engine:
+- **Ollama (local, offline, free)** — click **"Install Ollama and the model"** (in Settings or on the *Chat with the bot* screen). The app downloads Ollama to your home directory by itself (no sudo, about 1–2 GB including libraries for NVIDIA cards) and the chosen model: **Qwen 3 8B** (recommended, about 5.2 GB — best with an NVIDIA card or 16 GB RAM) or **Gemma 3 4B** (faster, about 3.3 GB). A private Ollama server starts by itself for the conversation (port 11435) and closes together with the app. If Ollama is already on the system, the app uses it and downloads only the model. Your own server can be set in the *Advanced* section.
+- **Claude API (cloud)** — paste an API key from console.anthropic.com and choose the model (Haiku — fast and cheap, Sonnet — the best). Only the text of the conversation is sent to the API. The key is stored in the system password store (GNOME Keyring), or, without one, locally in `~/.config/linux-espanol-learning/claude_api_key` (mode 600). Using the API is paid.
 
-## Gdzie są dane
+## Where the data is
 
-| Co | Gdzie |
+| What | Where |
 |---|---|
-| Postęp (lekcje, powtórki, testy, statystyki) | `~/.local/share/linux-espanol-learning/postep.db` (SQLite) |
-| Silnik i modele mowy | `~/.local/share/linux-espanol-learning/{engine,voices,whisper}` |
-| Bot offline (Ollama i modele) | `~/.local/share/linux-espanol-learning/{ollama,ollama-models}` |
-| Pamięć podręczna nagrań, Twoje nagrania | `~/.cache/linux-espanol-learning/` |
+| Progress (lessons, review, tests, statistics) | `~/.local/share/linux-espanol-learning/postep.db` (SQLite) |
+| Speech engine and models | `~/.local/share/linux-espanol-learning/{engine,voices,whisper}` |
+| Offline bot (Ollama and models) | `~/.local/share/linux-espanol-learning/{ollama,ollama-models}` |
+| Audio cache, your recordings | `~/.cache/linux-espanol-learning/` |
 
-Kopia zapasowa postępu = skopiowanie pliku `postep.db`.
+Backing up your progress = copying the `postep.db` file (or Settings → Backup).
 
-## Odinstalowanie
+## Uninstalling
 
 ```bash
 sudo apt remove linux-espanol-learning
-rm -rf ~/.local/share/linux-espanol-learning ~/.cache/linux-espanol-learning   # opcjonalnie: modele i postęp
+rm -rf ~/.local/share/linux-espanol-learning ~/.cache/linux-espanol-learning   # optional: models and progress
 ```
 
-## Budowanie ze źródeł
+## Building from source
 
-Kod źródłowy jest w katalogu `src/` repozytorium (paczek `.deb` nie ma w gicie, są w [Releases](https://github.com/jgu-linux-apps/linux-espanol-learning/releases)).
-Wypchnięcie tagu `vX.Y.Z` zgodnego z `VERSION` w `src/src/espanol/__init__.py` uruchamia GitHub Actions
-(`.github/workflows/release.yml`), które budują paczkę i publikują wydanie. Polecenia poniżej uruchamiaj w `src/`:
+The source code is in the `src/` directory of the repository (`.deb` packages are not kept in git, they are on [Releases](https://github.com/jgu-linux-apps/linux-espanol-learning/releases)).
+Pushing a tag `vX.Y.Z` that matches `VERSION` in `src/src/espanol/__init__.py` starts GitHub Actions
+(`.github/workflows/release.yml`), which builds the package and publishes the release. Run the commands below in `src/`:
 
 ```bash
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-gstreamer-1.0 \
      gstreamer1.0-plugins-good python3-venv librsvg2-bin dpkg-dev
-./bin/linux-espanol-learning      # uruchomienie bez instalacji
-./build-deb.sh                    # -> dist/linux-espanol-learning_<wersja>_all.deb
+./bin/linux-espanol-learning      # run without installing
+./build-deb.sh                    # -> dist/linux-espanol-learning_<version>_all.deb
 ```
 
-### Struktura
+### Layout
 ```
-src/espanol/          kod: content (lekcje), conjugate (odmiana), fsrs (powtórki), answers (sprawdzanie),
-                      speech (Piper/Whisper + instalator), audio (GStreamer), db (SQLite), ui/ (GTK 3)
-src/espanol/workers/  procesy silnika mowy uruchamiane w osobnym środowisku Python
-data/lessons/a1, a2/  lekcje w prostym formacie tekstowym (łatwo dopisywać kolejne)
-data/readings/        czytanki;  data/alphabet.txt, vocab_extra.txt, videos.txt
-icons/                ikona jasna i ciemna (SVG)
+src/espanol/          code: content (lessons), conjugate (conjugation), fsrs (review), answers (checking),
+                      speech (Piper/Whisper + installer), audio (GStreamer), db (SQLite), ui/ (GTK 3)
+src/espanol/workers/  speech engine processes run in a separate Python environment
+data/lessons/a1, a2/  lessons in a simple text format (easy to add more)
+data/readings/        readings;  data/alphabet.txt, vocab_extra.txt, videos.txt
+icons/                light and dark icon (SVG)
+packaging/            .desktop file, the icon light/dark helper and its autostart entry
 ```
 
-### Format lekcji (dla rozbudowy kursu)
+### Lesson format (for extending the course)
 ```
 # id: a1-01
 # title: ¡Hola! Powitania
 # unit: 1
 # unit_title: Primeros pasos
-@goals          jeden cel w wierszu
-@dialog         Osoba: zdanie hiszpańskie | tłumaczenie
-@vocab          słowo | tłumaczenie | część mowy | przykład ES / przykład PL
-@grammar        tekst: ## nagłówek, - punkt, || tabela | kolumny, **pogrubienie**
-@exercises      fill|choice|trans|conj: pytanie | odpowiedź /// inna poprawna | opcje; rozdzielone; średnikiem
-@culture        ciekawostka
+@goals          one goal per line
+@dialog         Person: Spanish sentence | translation
+@vocab          word | translation | part of speech | example ES / example PL
+@grammar        text: ## heading, - bullet, || table | columns, **bold**
+@exercises      fill|choice|trans|conj: question | answer /// another correct one | options; separated; by semicolons
+@culture        culture note
 ```
 
-## Uczciwie o ograniczeniach
-- Ocena wymowy działa **na poziomie słów** (czy Whisper zrozumiał to, co miałeś powiedzieć). To dobry sprawdzian zrozumiałości, ale nie analiza pojedynczych głosek jak u lektora.
-- Głosy Piper są syntetyczne — bardzo przyzwoite, ale nie zastąpią nagrań rodzimych użytkowników. Dlatego moduł *Filmy i słuchanie* kieruje do prawdziwych materiałów.
-- Kurs obejmuje A1–A2. Tryb łączący (subjuntivo) i inne tematy B1 są celowo pominięte.
+## Honest limitations
+- Pronunciation scoring works **at word level** (whether Whisper understood what you were supposed to say). It's a good test of intelligibility, but not an analysis of individual sounds like a teacher would do.
+- The Piper voices are synthetic — very decent, but no substitute for recordings of native speakers. That's why the *Videos and listening* module points to real material.
+- The course covers A1–A2. The subjunctive (subjuntivo) and other B1 topics are deliberately left out.
+- The app is in Polish only for now (see the language note at the top).
 
-## Podziękowania
-- [Piper](https://github.com/OHF-Voice/piper1-gpl) (GPL-3.0, pobierany osobno przy pierwszym uruchomieniu) i głosy [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices) — synteza mowy
-- [faster-whisper](https://github.com/SYSTRAN/faster-whisper) / OpenAI Whisper — rozpoznawanie mowy
-- [FSRS](https://github.com/open-spaced-repetition) — algorytm powtórek
-- Kolejność materiału inspirowana poziomami CEFR i planem Instytutu Cervantesa (PCIC). Teksty lekcji, dialogi, czytanki i słownik są autorskie.
+## Credits
+- [Piper](https://github.com/OHF-Voice/piper1-gpl) (GPL-3.0, downloaded separately on the first start) and the voices from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices) — speech synthesis
+- [faster-whisper](https://github.com/SYSTRAN/faster-whisper) / OpenAI Whisper — speech recognition
+- [FSRS](https://github.com/open-spaced-repetition) — review algorithm
+- The order of the material is inspired by the CEFR levels and the Instituto Cervantes curriculum (PCIC). The lesson texts, dialogues, readings and the dictionary are original.
 
-## Licencja
-**Freeware** — aplikacja jest darmowa do użytku, ale bez prawa do modyfikacji i rozpowszechniania zmienionych wersji.
-Komponenty pobierane osobno przy pierwszym uruchomieniu (Piper, faster-whisper, głosy, modele Whisper) mają własne licencje.
+## License
+**Freeware License (No Modifications)** — the app is free to use and to share unmodified; modifying it and distributing changed versions is not permitted (see `LICENSE`).
+Components downloaded separately on the first start (Piper, faster-whisper, voices, Whisper models) have their own licenses.
 
-## Zmiany
-- **1.13.4** — nowe ikony w stylu serii: ciemna — dymek „¡ñ!” na granatowym kafelku, jasna — złoty dymek na kremowym kafelku; ikona w docku i w menu aplikacji przełącza się jasna/ciemna razem z systemem, także gdy aplikacja jest zamknięta (mały pomocnik uruchamiany przy logowaniu i przez samą aplikację).
-- **1.13.0** — nowy wygląd: **menu w zwijanych grupach** (Nauka, Ćwicz, Narzędzia, Ty; licznik powtórek przy „Powtórkach”, Ustawienia w menu ☰); **„Dzisiaj”** z jedną dużą kartą „Kontynuuj”, kółkami celu dziennego, serii i postępu poziomu, paskiem tygodnia, **Planem na dziś** (powtórka, lekcja, ćwiczenie dnia), najtrudniejszymi słówkami i słowem dnia; **„Kurs”** z przełącznikiem A1/A2, kółkiem postępu przy każdym dziale, rozwiniętą bieżącą lekcją (części lekcji i „Kontynuuj”) oraz gwiazdkami i wynikami przy ukończonych lekcjach; **ćwiczenia w trybie skupienia** (bez menu bocznego, pasek z odcinkami, duże zadanie, karty odpowiedzi z klawiszami 1–4, kolorowy pasek wyniku). Nowy motyw domyślny **Coral**, nowe **Mediterráneo**, dawny pomarańczowy jako **Pomarańcz** — każdy z wersją jasną i ciemną w tym samym odcieniu.
-- **1.12.0** — nowy motyw **Aurora** (Ustawienia → Wygląd), ten sam co w innych aplikacjach serii: fioletowo-cyjanowe gradienty, poświata przy najechaniu, wersja jasna i ciemna przełączana razem z systemem.
-- **1.11.0** — **trening błędów**: Powtórki mają dwie zakładki — *Fiszki* i *Błędy (trening)*; każde ćwiczenie, w którym się pomylisz (w lekcji, teście, czytance), oraz zdanie poprawione przez Paco wraca w całości (ten sam typ, opcje, nagranie) jutro, potem za 3 i za 7 dni, a po 3 dobrych odpowiedziach z rzędu znika; literówki i brak akcentu się nie liczą; dotychczasowe błędy są przenoszone automatycznie; licznik na ekranie Dzisiaj i w Statystykach. **🐢 Wolniej**: wolne odtwarzanie jest zawsze wyraźnie wolniejsze od tempa wybranego w Ustawieniach (wcześniej przy tempie „Wolno” prawie się nie różniło) i ma teraz przycisk także w scenkach, w rozmowie z Paco, w czytankach i w fiszkach.
-- **1.10.4** — licencja: aplikacja jest teraz na licencji Freeware License (No Modifications), zob. `LICENSE` — darmowe użytkowanie i udostępnianie bez zmian, bez prawa do modyfikacji; poza tym bez zmian w aplikacji.
-- **1.10.3** — bez zmian w aplikacji: kod w repozytorium w katalogu `src/`, paczka `.deb` na stronie GitHub Releases (budowana automatycznie dla każdego tagu wersji); README: instalacja z Releases.
-- **1.10.2** — lepsze polskie tłumaczenia wypowiedzi Paco: słowniczek gotowych, sprawdzonych tłumaczeń najczęstszych zwrotów, tłumaczenie „sensu, nie słowo w słowo” z przykładami trudnych konstrukcji (gustar, preferencje) i krótka druga runda korekty polszczyzny.
-- **1.10.1** — motyw Nowoczesny (jasny „Soft” i ciemny „Glass”) dostał te same efekty co pozostałe: podświetlenie i poświatę aktywnej pozycji menu, akcent przy najechaniu, płynne przejścia; nowy adres projektu: github.com/jgu-linux-apps; poprawiony opis testu poziomującego.
-- **1.10.0** — klucz Claude API trafia do systemowego schowka haseł (GNOME Keyring; stary plik jest automatycznie migrowany, a gdy schowka brak — plik z prawami 600); **test poziomujący** (Testy i egzaminy oraz karta na ekranie „Dzisiaj” dla nowych: pytania o rosnącej trudności → polecana lekcja startowa, opcjonalnie oznaczenie wcześniejszych jako znanych); **wymowa w statystykach** (wykres średniego wyniku dnia z 30 dni + najtrudniejsze zdania); **skróty klawiszowe** (F1 — lista, Ctrl+1…9 — ekrany, Ctrl+M — mikrofon bota, F2/F3/F4 w Dyktandzie, Ctrl+Enter w Scenkach).
-- **1.9.0** — **Scenki z Paco**: odgrywasz dialog z lekcji (wybierasz rolę), Paco mówi swoje kwestie na głos, a Ty swoje do mikrofonu — każda kwestia dostaje ocenę wymowy słowo po słowie, na końcu wynik całej scenki i lista kwestii do poćwiczenia; **kopia zapasowa postępu** (Ustawienia → Kopia zapasowa): zapis bieżącego profilu do pliku .zip i wczytanie go jako nowy profil (np. na innym komputerze), bez nadpisywania czegokolwiek.
-- **1.8.0** — seria dni nauki i cel dzienny (karta na ekranie „Dzisiaj”, ustawienia celu 5–60 min, systemowe przypomnienie o wybranej godzinie, gdy cel niezaliczony); nowy ekran **Dyktando** (Paco czyta zdanie z ukończonych lekcji, Ty wpisujesz; kolorowe porównanie słowo po słowie, runda 8 zdań, lista do powtórki); lekcja 7: nowa sekcja „Jak szybko wybrać ser/estar”, najczęstsze pomyłki Polaków i 10 nowych ćwiczeń; subtelne efekty motywów (España, Azulejo, Oliva): poświata akcentu, delikatne gradienty, płynne przejścia, poprawione podświetlenie aktywnej pozycji menu.
-- **1.7.6** — pytanie „jak powiedzieć…” po polsku: Paco podaje gotowe zdanie po hiszpańsku z wyjaśnieniem i CZEKA, aż sam je powiesz (nie prowadzi rozmowy dalej); pytanie i wyjaśnienie nie wchodzą do historii ani oceny rozmowy.
-- **1.7.5** — lepsza polszczyzna: tłumaczenia wypowiedzi bota robi osobny, prosty przebieg (niska temperatura, wzorcowy przykład), wyjaśnienia są pisane po polsku z przykładem, bez markdownu i emoji; w Ustawieniach można włączyć Claude API tylko do polskich tłumaczeń i wyjaśnień (rozmowa zostaje lokalna).
-- **1.7.4** — „Wyjaśnienie Paco”: gdy w rozmowie zapytasz o coś po polsku (np. „kiedy mówi się somos, a kiedy es?”), bot odpowiada osobną kartą po polsku — reguła i przykłady — a potem krótko wraca do rozmowy po hiszpańsku (bez fałszywych „poprawek”).
-- **1.7.3** — przycisk „Mów” w nowoczesnym, większym wyglądzie (zaokrąglony, z gradientem, czerwony podczas nagrywania); rozmówca przedstawia się jako Paco (zgodnie z maskotką).
-- **1.7.2** — głos: w Ustawieniach do wyboru dodatkowe głosy Piper (Hiszpania: carlfm, mls_10246, mls_9972; Meksyk: ald, claude — pobierają się przy pierwszym wyborze) i przycisk „▶ Posłuchaj”; jeśli „¡Hola!” brzmi źle w jednym głosie, wybierz inny. Bot: jasne zasady „kto jest kim” (nie mówi o sobie faktów ucznia, odpowiada o sobie na „¿Y tú?”), przykładowe wypowiedzi w prompcie, temat już od pierwszego zdania, filtr zdań przypisujących botowi fakty ucznia; nowy model Qwen 3 14B (dla mocniejszych komputerów).
-- **1.7.1** — mądrzejszy bot: Ollama dostaje 8192 tokeny kontekstu (domyślne 2048 ucinało instrukcje), kara za powtórzenia; bot ma osobowość (Paco z Madrytu), prowadzi rozmowę (reakcja → coś o sobie → nowe pytanie na kolejny temat), nie powtarza wypowiedzi ucznia ani pytań; pamięć między rozmowami (fakty i „o czym rozmawialiście ostatnio”, widoczne w zakładce „O mnie”); lżejsze ograniczenia słownictwa dla początkujących.
-- **1.7.0** — Paco: animowany robocik w rozmowie; profile użytkowników na jednym komputerze; bot nie powtarza pytań i nie dopytuje o znane fakty.
-- **1.6.0** — zakładka „O mnie (dla bota)” i fakty z rozmów, poziomy rozmówcy, ocena rozmowy, historia rozmów, eksport poprawionych zdań do powtórek, wybór modelu mowy w rozmowie, bot „wierzy uczniowi” i nie dopytuje o to, co już usłyszał (łącznie z zawartością planowanych 1.4.3 i 1.5).
-- **1.4.2** — jakość bota: poprawki zawsze po polsku (z automatycznym tłumaczeniem, gdy model odpowie po hiszpańsku), pole „Poprawnie”, poprawki tylko do Twoich wypowiedzi, brak powtórzeń tury, bot nie wraca do słów spoza lekcji; podsumowanie w układzie Ty → Poprawnie → wyjaśnienie.
-- **1.4.1** — więcej czasu na mówienie: domyślnie 3 s ciszy (do 6 s), przycisk „Skończyłem mówić”, 25 s na zebranie myśli, podpowiedź kontekstu dla rozpoznawania mowy.
-- **1.4.0** — rozmowa głosowa z botem: wykrywanie końca wypowiedzi, rozpoznawanie mowy, odpowiedzi strumieniowo czytane od pierwszego zdania, tryb „bez rąk”, przerywanie bota, ustawienie długości ciszy.
-- **1.3.3** — nowy domyślny wygląd (jasny „Soft”, ciemny „Glass”, przełączany z motywem systemu); czytelne podpowiedzi w ćwiczeniach (część mowy, pierwsza litera, liczba liter) zamiast skrótów typu „v”, „phr”.
-- **1.3.2** — krok „Mówienie” kończy się przyciskiem „Zakończ” i podsumowaniem lekcji (zamiast pętli); wyraźniejsza wymowa krótkich słów (cisza przed nagraniem, stabilniejsza synteza).
-- **1.3.1** — instalacja bota offline jednym kliknięciem: Ollama (bez sudo) + wybór modelu Qwen 3 8B / Gemma 3 4B z paskiem postępu; serwer uruchamiany automatycznie.
-- **1.3.0** — Rozmowa z botem (wersja tekstowa): scenki z lekcji, ograniczenie do przerobionego materiału, poprawki, podsumowanie; silnik Ollama (lokalnie) lub Claude API.
-- **1.2.0** — „Kontynuuj, gdzie skończyłeś” oraz tabela postępu kursu w % na ekranie Dzisiaj.
-- **1.1.0** — motywy kolorystyczne España, Azulejo i Oliva (każdy jasny i ciemny) oraz wybór trybu jasny / ciemny / automatyczny.
-- **1.0.2** — naprawiona ocena wymowy: błąd „open() got an unexpected keyword argument 'metadata_errors'” (niezgodność faster-whisper z nową biblioteką PyAV); nagrania są teraz wczytywane bezpośrednio, bez PyAV.
-- **1.0.1** — naprawiony błąd „SQLite objects created in a thread…” przy odtwarzaniu wymowy; nowa nazwa „Linux Español Learning”; wyraźny komunikat o zakończeniu instalacji silnika mowy; ukryte ostrzeżenie HF_TOKEN; licencja freeware.
-- **1.0.0** — pierwsze wydanie.
+## Version history
+- **1.13.4** — new icons in the series style: dark — the "¡ñ!" bubble on a deep navy tile, light — a gold bubble on a cream tile; the dock and app-menu icon switches light/dark together with the system, also while the app is closed (a small helper started at login and by the app itself).
+- **1.13.0** — new look: **sidebar in foldable groups** (Learn, Practice, Tools, You; a review counter next to "Powtórki", Settings in the ☰ menu); **"Today"** with one big "Continue" card, rings for the daily goal, the streak and the level progress, a week strip, a **Plan for today** (review, lesson, exercise of the day), the hardest words and a word of the day; **"Course"** with an A1/A2 switch, a progress ring for every unit, the current lesson expanded (lesson parts and "Continue") and stars and scores on finished lessons; **focus-mode exercises** (no sidebar, a segmented progress bar, a big prompt, answer cards with keys 1–4, a coloured result bar). New default theme **Coral**, new **Mediterráneo**, the former orange one as **Pomarańcz** — each with a light and a dark variant in the same hue.
+- **1.12.0** — new **Aurora** theme (Settings → Appearance), the same as in the other apps of the series: violet-cyan gradients, a glow on hover, light and dark variants switching together with the system.
+- **1.11.0** — **mistake training**: Review has two tabs — *Flashcards* and *Mistakes (training)*; every exercise you get wrong (in a lesson, test or reading) and every sentence corrected by Paco comes back in full (the same type, options, audio) tomorrow, then in 3 and in 7 days, and disappears after 3 correct answers in a row; typos and missing accents don't count; existing mistakes are moved over automatically; a counter on the Today screen and in Statistics. **🐢 Slower**: slow playback is always clearly slower than the speed chosen in Settings (before, with the "Slow" speed it was barely different) and now has a button also in the scenes, in the conversation with Paco, in the readings and in the flashcards.
+- **1.10.4** — license: the app is now published under the Freeware License (No Modifications), see `LICENSE` — free to use and share unmodified, modification is not permitted; no other changes in the app.
+- **1.10.3** — no changes in the app: the code is in the `src/` directory of the repository, the `.deb` package is on the GitHub Releases page (built automatically for every version tag); README: installing from Releases.
+- **1.10.2** — better Polish translations of Paco's lines: a glossary of ready, checked translations of the most common phrases, translating "the meaning, not word for word" with examples of difficult constructions (gustar, preferences) and a short second round of Polish proofreading.
+- **1.10.1** — the Modern theme (light "Soft" and dark "Glass") got the same effects as the others: highlight and glow of the active menu item, accent on hover, smooth transitions; new project address: github.com/jgu-linux-apps; improved description of the placement test.
+- **1.10.0** — the Claude API key goes to the system password store (GNOME Keyring; the old file is migrated automatically, and without a store — a file with mode 600); **placement test** (Tests and exams and a card on the "Today" screen for new learners: questions of increasing difficulty → a recommended starting lesson, optionally marking the earlier ones as known); **pronunciation in statistics** (a 30-day chart of the daily average score + the hardest sentences); **keyboard shortcuts** (F1 — list, Ctrl+1…9 — screens, Ctrl+M — bot microphone, F2/F3/F4 in Dictation, Ctrl+Enter in Scenes).
+- **1.9.0** — **Scenes with Paco**: you act out a lesson dialogue (choosing your role), Paco says his lines aloud and you say yours into the microphone — every line gets a word-by-word pronunciation score, and at the end the whole scene gets a result and a list of lines to practise; **progress backup** (Settings → Backup): saving the current profile to a .zip file and loading it as a new profile (e.g. on another computer), without overwriting anything.
+- **1.8.0** — study streak and daily goal (a card on the "Today" screen, goal settings 5–60 min, a system reminder at a chosen hour when the goal isn't met); a new **Dictation** screen (Paco reads a sentence from finished lessons, you type it; a colour comparison word by word, a round of 8 sentences, a list to review); lesson 7: a new section "How to choose ser/estar quickly", the most common mistakes of Polish speakers and 10 new exercises; subtle theme effects (España, Azulejo, Oliva): accent glow, soft gradients, smooth transitions, improved highlight of the active menu item.
+- **1.7.6** — the question "how do I say…" in Polish: Paco gives a ready sentence in Spanish with an explanation and WAITS until you say it yourself (he doesn't carry on the conversation); the question and the explanation don't go into the history or the conversation score.
+- **1.7.5** — better Polish: translations of the bot's lines are done by a separate, simple pass (low temperature, a model example), explanations are written in Polish with an example, without markdown or emoji; in Settings you can turn on the Claude API just for the Polish translations and explanations (the conversation stays local).
+- **1.7.4** — "Paco's explanation": when you ask something in Polish during the conversation (e.g. "when do you say somos and when es?"), the bot answers with a separate card in Polish — the rule and examples — and then briefly returns to the conversation in Spanish (without false "corrections").
+- **1.7.3** — the "Mów" (Speak) button in a modern, bigger look (rounded, with a gradient, red while recording); the partner introduces himself as Paco (matching the mascot).
+- **1.7.2** — voice: in Settings a choice of extra Piper voices (Spain: carlfm, mls_10246, mls_9972; Mexico: ald, claude — downloaded on first use) and a "▶ Listen" button; if "¡Hola!" sounds wrong in one voice, choose another. Bot: clear "who is who" rules (it doesn't state the learner's facts about itself, answers about itself to "¿Y tú?"), example lines in the prompt, the topic from the first sentence, a filter for sentences that attribute the learner's facts to the bot; a new model Qwen 3 14B (for stronger computers).
+- **1.7.1** — a smarter bot: Ollama gets 8192 tokens of context (the default 2048 cut off the instructions), a repetition penalty; the bot has a personality (Paco from Madrid), leads the conversation (reaction → something about itself → a new question on the next topic), doesn't repeat the learner's lines or questions; memory between conversations (facts and "what you talked about last time", visible in the "About me" tab); lighter vocabulary limits for beginners.
+- **1.7.0** — Paco: an animated little robot in the conversation; user profiles on one computer; the bot doesn't repeat questions or ask again about known facts.
+- **1.6.0** — the "About me (for the bot)" tab and facts from conversations, partner levels, conversation score, conversation history, exporting corrected sentences to review, choosing the speech model in the conversation, the bot "believes the learner" and doesn't ask again about what it already heard (including the content of the planned 1.4.3 and 1.5).
+- **1.4.2** — bot quality: corrections always in Polish (with automatic translation when the model answers in Spanish), a "Correct" field, corrections only of your own lines, no repeated turns, the bot doesn't come back to words beyond the lessons; the summary laid out as You → Correct → explanation.
+- **1.4.1** — more time to speak: 3 s of silence by default (up to 6 s), an "I've finished" button, 25 s to gather your thoughts, a context hint for speech recognition.
+- **1.4.0** — voice conversation with the bot: end-of-speech detection, speech recognition, replies read out as they stream from the first sentence, hands-free mode, interrupting the bot, a silence-length setting.
+- **1.3.3** — a new default look (light "Soft", dark "Glass", switching with the system theme); clear hints in the exercises (part of speech, first letter, number of letters) instead of abbreviations like "v", "phr".
+- **1.3.2** — the "Speaking" step ends with a "Finish" button and a lesson summary (instead of a loop); clearer pronunciation of short words (silence before the audio, more stable synthesis).
+- **1.3.1** — one-click installation of the offline bot: Ollama (no sudo) + a choice of the Qwen 3 8B / Gemma 3 4B model with a progress bar; the server starts automatically.
+- **1.3.0** — Chat with the bot (text version): scenes from the lessons, limited to the material covered, corrections, a summary; the Ollama engine (local) or the Claude API.
+- **1.2.0** — "Continue where you left off" and a course progress table in % on the Today screen.
+- **1.1.0** — the España, Azulejo and Oliva colour themes (each light and dark) and a choice of light / dark / automatic mode.
+- **1.0.2** — fixed pronunciation scoring: the error "open() got an unexpected keyword argument 'metadata_errors'" (faster-whisper incompatible with the new PyAV library); recordings are now loaded directly, without PyAV.
+- **1.0.1** — fixed the error "SQLite objects created in a thread…" when playing pronunciation; the new name "Linux Español Learning"; a clear message when the speech engine installation finishes; the HF_TOKEN warning hidden; freeware license.
+- **1.0.0** — first release.
 
 Created by: JGu · Supported by Claude
