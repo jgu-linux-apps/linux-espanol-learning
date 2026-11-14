@@ -15,7 +15,7 @@ from ..db import DB
 from ..content import Course
 from ..speech import Speech, engine_installed, voices_installed
 from ..audio import Player, Recorder
-from .widgets import CSS, run_bg, label
+from .widgets import CSS, CSS2, run_bg, label
 from . import themes
 from .pages_course import TodayPage, CoursePage, LessonView
 from .pages_tools import AlphabetPage, ReviewPage, DictionaryPage, ConjugationPage, PronLabPage
@@ -47,6 +47,14 @@ PAGES = [
     ("settings", "Ustawienia", "emblem-system-symbolic"),
 ]
 
+# menu w grupach (1.13); „Ustawienia” są w menu ☰ w nagłówku
+NAV_GROUPS = [
+    ("learn", "Nauka", ["today", "course", "review", "tests"]),
+    ("practice", "Ćwicz", ["pron", "dictation", "scenes", "bot", "readings", "videos"]),
+    ("tools", "Narzędzia", ["dictionary", "conj", "alphabet"]),
+    ("you", "Ty", ["stats", "learner"]),
+]
+
 
 class App(Gtk.Application):
     def __init__(self):
@@ -62,6 +70,11 @@ class App(Gtk.Application):
         prov.load_from_data(CSS)
         Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), prov,
                                                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+        prov2 = Gtk.CssProvider()            # nowe elementy (1.13): nad motywem, który czyści tła kontenerów
+        prov2.load_from_data(CSS2)
+        Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), prov2,
+                                                 Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 2)
+        self.palette = None
         local_icons = os.path.join(DATA, "..", "icons")
         if os.path.isdir(local_icons):
             Gtk.IconTheme.get_default().append_search_path(os.path.abspath(local_icons))
@@ -164,6 +177,7 @@ class App(Gtk.Application):
             self.theme_provider = None
         name = self.db.get("color_theme", "system")
         entry = themes.THEMES.get(name)
+        self.palette = (entry[2] if dark else entry[1]) if entry and entry[1] else None  # kolory kółek postępu
         if entry and entry[1]:
             prov = Gtk.CssProvider()
             prov.load_from_data(themes.css(entry[2] if dark else entry[1]).encode())
@@ -174,6 +188,7 @@ class App(Gtk.Application):
         Gtk.Window.set_default_icon_name(icon)
         if self.win:
             self.win.set_icon_name(icon)
+            self.win.queue_draw()
 
     # ------------------------------------------------------------ okno
     def build_window(self):
@@ -200,27 +215,59 @@ class App(Gtk.Application):
         win.set_titlebar(hb)
 
         paned = Gtk.Box()
-        side = Gtk.ListBox()
-        side.set_size_request(220, -1)
-        side.get_style_context().add_class("navigation-sidebar")
-        self.side_rows = {}
-        for key, title, icon in PAGES:
-            row = Gtk.ListBoxRow()
-            hb2 = Gtk.Box(spacing=10)
-            hb2.get_style_context().add_class("sidebar-row")
-            hb2.pack_start(Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU), False, False, 0)
-            hb2.pack_start(label(title, wrap=False), False, False, 0)
-            row.add(hb2)
-            row.key = key
-            side.add(row)
-            self.side_rows[key] = row
-        side.connect("row-selected", self._side_selected)
-        self.side = side
+        # menu w zwijanych grupach (1.13); stan zwinięcia zapamiętany w ustawieniach
+        nav = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        nav.get_style_context().add_class("navigation-sidebar")
+        nav.set_size_request(230, -1)
+        titles = {k: (t, i) for k, t, i in PAGES}
+        closed = set(self.db.get("nav_closed", []) or [])
+        self.side_rows, self.side_lists, self.nav_groups = {}, [], {}
+        self._nav_lock = False
+        for gkey, gtitle, keys in NAV_GROUPS:
+            head = Gtk.Button()
+            head.get_style_context().add_class("nav-head")
+            hbox = Gtk.Box(spacing=6)
+            hbox.pack_start(Gtk.Label(label=gtitle.upper(), xalign=0), True, True, 0)
+            arrow = Gtk.Image.new_from_icon_name("pan-down-symbolic", Gtk.IconSize.MENU)
+            hbox.pack_end(arrow, False, False, 0)
+            head.add(hbox)
+            lb = Gtk.ListBox()
+            lb.get_style_context().add_class("navigation-sidebar")
+            for key in keys:
+                title, icon = titles[key]
+                row = Gtk.ListBoxRow()
+                hb2 = Gtk.Box(spacing=10)
+                hb2.get_style_context().add_class("sidebar-row")
+                hb2.pack_start(Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU), False, False, 0)
+                hb2.pack_start(label(title, wrap=False), False, False, 0)
+                if key == "review":
+                    self.review_badge = Gtk.Label()
+                    self.review_badge.get_style_context().add_class("nav-count")
+                    self.review_badge.set_no_show_all(True)
+                    hb2.pack_end(self.review_badge, False, False, 0)
+                row.add(hb2)
+                row.key = key
+                lb.add(row)
+                self.side_rows[key] = row
+            lb.connect("row-selected", self._side_selected)
+            rev = Gtk.Revealer()
+            rev.add(lb)
+            rev.set_transition_duration(150)
+            rev.set_reveal_child(gkey not in closed)
+            arrow.set_from_icon_name("pan-down-symbolic" if gkey not in closed else "pan-end-symbolic", Gtk.IconSize.MENU)
+            head.connect("clicked", lambda _b, g=gkey: self._toggle_group(g))
+            self.nav_groups[gkey] = (rev, arrow, keys)
+            self.side_lists.append(lb)
+            nav.pack_start(head, False, False, 0)
+            nav.pack_start(rev, False, False, 0)
+        self.side = nav
         sw = Gtk.ScrolledWindow()
         sw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        sw.add(side)
+        sw.add(nav)
+        self.side_scroll = sw
         paned.pack_start(sw, False, False, 0)
-        paned.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
+        self.side_sep = Gtk.Separator(orientation=Gtk.Orientation.VERTICAL)
+        paned.pack_start(self.side_sep, False, False, 0)
 
         self.stack = Gtk.Stack()
         self.stack.set_transition_type(Gtk.StackTransitionType.CROSSFADE)
@@ -238,7 +285,8 @@ class App(Gtk.Application):
         win.connect("key-press-event", self._on_key)
         win.connect("delete-event", self._on_close)
         win.show_all()
-        self.side.select_row(self.side_rows["today"])
+        self._select_side("today")
+        self.update_review_badge()
 
     # ------------------------------------------------------------ profile użytkowników
     def _profile_button(self):
@@ -438,8 +486,47 @@ class App(Gtk.Application):
                 return self.pages["review"].on_key(ev.keyval)
         return False
 
-    def _side_selected(self, _lb, row):
+    def _toggle_group(self, gkey):
+        rev, arrow, _keys = self.nav_groups[gkey]
+        show = not rev.get_reveal_child()
+        rev.set_reveal_child(show)
+        arrow.set_from_icon_name("pan-down-symbolic" if show else "pan-end-symbolic", Gtk.IconSize.MENU)
+        closed = set(self.db.get("nav_closed", []) or [])
+        (closed.discard if show else closed.add)(gkey)
+        self.db.set("nav_closed", sorted(closed))
+
+    def _select_side(self, key, notify=True):
+        """Zaznacza pozycję menu (w jej grupie, inne grupy bez zaznaczenia); rozwija zwiniętą grupę."""
+        row = self.side_rows.get(key)
+        self._nav_lock = not notify
+        try:
+            for lb in self.side_lists:
+                if row is None or row.get_parent() is not lb:
+                    lb.unselect_all()
+            if row is not None:
+                for gkey, (rev, _a, keys) in self.nav_groups.items():
+                    if key in keys and not rev.get_reveal_child():
+                        self._toggle_group(gkey)
+                row.get_parent().select_row(row)
+        finally:
+            self._nav_lock = False
+
+    def update_review_badge(self):
+        b = getattr(self, "review_badge", None)
+        if b is None:
+            return
+        due, new = self.db.count_due()
+        n = due + min(new, int(self.db.get("new_per_day", 20)))
+        b.set_text(str(n))
+        b.set_visible(n > 0)
+
+    def _side_selected(self, lb, row):
         if row is None:
+            return
+        for other in self.side_lists:          # jedna zaznaczona pozycja w całym menu
+            if other is not lb:
+                other.unselect_all()
+        if self._nav_lock:
             return
         key = row.key
         if key in ("review", "stats", "learner"):
@@ -448,16 +535,27 @@ class App(Gtk.Application):
             self.pages["bot"].show_start()
         if key == "today":
             self.pages["today"].refresh()
+        self.set_focus_mode(False)
         self.stack.set_visible_child_name(key)
 
     def show_page(self, key):
         row = self.side_rows.get(key)
-        if row and self.side.get_selected_row() is not row:
-            self.side.select_row(row)
+        if row and not row.is_selected():
+            self._select_side(key)
         else:
+            if row is None:
+                self._select_side(None)
             if key in ("review", "stats", "today", "learner"):
                 self.pages[key].refresh()
+            self.set_focus_mode(False)
             self.stack.set_visible_child_name(key)
+
+    def set_focus_mode(self, on):
+        """Tryb skupienia (ćwiczenia w lekcji): bez menu bocznego."""
+        if getattr(self, "side_scroll", None) is None:
+            return
+        self.side_scroll.set_visible(not on)
+        self.side_sep.set_visible(not on)
 
     def _show_dynamic(self, widget, name, sidebar_key):
         old = self.stack.get_child_by_name(name)
@@ -468,9 +566,7 @@ class App(Gtk.Application):
         widget.show_all()
         if hasattr(widget, "stack"):
             widget.stack.set_visible_child_name("intro")
-        self.side.handler_block_by_func(self._side_selected)
-        self.side.select_row(self.side_rows[sidebar_key])
-        self.side.handler_unblock_by_func(self._side_selected)
+        self._select_side(sidebar_key, notify=False)
         self.stack.set_visible_child_name(name)
 
     # ------------------------------------------------------------ nawigacja
@@ -509,6 +605,7 @@ class App(Gtk.Application):
             self.pages["today"].refresh()
 
     def refresh_all(self):
+        self.update_review_badge()
         for k in ("today", "course", "tests", "settings"):
             try:
                 self.pages[k].refresh()

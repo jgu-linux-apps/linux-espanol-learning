@@ -1,16 +1,41 @@
 """Motywy kolorystyczne aplikacji — każdy w wersji jasnej i ciemnej."""
 
 THEMES = {
+    # klucz „system” = motyw domyślny (dawniej pomarańcz/cyjan; od 1.13 Coral — ten sam odcień w jasnym i ciemnym)
     "system": (
-        "Nowoczesny (domyślny) — jasny „Soft”, ciemny „Glass”",
+        "Coral (domyślny) — koral i słońce",
+        dict(bg="#FFF7F5", fg="#2A1B19", header="#FFECE8", header_fg="#3A2420", sidebar="#FFEDE9",
+             card="#FFFFFF", border="#F7D6CF", accent="#E8505B", accent_fg="#FFFFFF", button="#FFFFFF",
+             hover="#FFE0D9", sel="#E8505B", sel_fg="#FFFFFF", entry="#FFFFFF", extra="coral_light",
+             accent2="#F59E0B", ring2="#F43F5E", ring3="#0EA5E9"),
+        dict(bg="#1A1416", fg="#F5E6E8", header="#151012", header_fg="#F5E6E8", sidebar="#1A1416",
+             card="#241B1E", border="#3C2C31", accent="#FB7185", accent_fg="#2A0A10", button="#2A2024",
+             hover="#3A2830", sel="#FB7185", sel_fg="#2A0A10", entry="#201719", extra="coral_dark",
+             accent2="#FBBF24", ring2="#F43F5E", ring3="#A78BFA"),
+    ),
+    "pomarancz": (
+        "Pomarańcz — ciepły pomarańcz (dawny domyślny)",
         dict(bg="#FFF8F3", fg="#1F2937", header="#FFEFE4", header_fg="#3B2A20", sidebar="#FFEEE3",
              card="#FFFFFF", border="#F6DCCB", accent="#F97316", accent_fg="#FFFFFF", button="#FFFFFF",
-             hover="#FFE3D0", sel="#F97316", sel_fg="#FFFFFF", entry="#FFFFFF", extra="soft"),
-        dict(bg="#0F172A", fg="#E2E8F0", header="#0B1220", header_fg="#E2E8F0", sidebar="#0F172A",
-             card="#141C2E", border="#26334D", accent="#22D3EE", accent_fg="#06202A", button="#18223A",
-             hover="#1E2B47", sel="#12303F", sel_fg="#67E8F9", entry="#0C1424", extra="glass"),
+             hover="#FFE3D0", sel="#F97316", sel_fg="#FFFFFF", entry="#FFFFFF", extra="soft",
+             accent2="#F59E0B", ring2="#F43F5E", ring3="#0EA5E9"),
+        dict(bg="#1A1410", fg="#F3E8DF", header="#15100C", header_fg="#F3E8DF", sidebar="#1A1410",
+             card="#251C16", border="#3D2E24", accent="#FB923C", accent_fg="#2A1405", button="#2B211A",
+             hover="#3A2C22", sel="#FB923C", sel_fg="#2A1405", entry="#201812", extra="soft_dark",
+             accent2="#FBBF24", ring2="#FB7185", ring3="#38BDF8"),
     ),
-    "classic": ("Klasyczny (motyw Ubuntu)", None, None),
+    "mar": (
+        "Mediterráneo — morski turkus",
+        dict(bg="#F2FAF9", fg="#12302D", header="#E3F4F2", header_fg="#12302D", sidebar="#E3F4F2",
+             card="#FFFFFF", border="#C7E6E2", accent="#0D9488", accent_fg="#FFFFFF", button="#FFFFFF",
+             hover="#D2EEEA", sel="#0D9488", sel_fg="#FFFFFF", entry="#FFFFFF", extra="mar_light",
+             accent2="#0EA5E9", ring2="#F43F5E", ring3="#6366F1"),
+        dict(bg="#0B1A1D", fg="#E2F2F0", header="#0A1517", header_fg="#E2F2F0", sidebar="#0B1A1D",
+             card="#10252A", border="#1E3B40", accent="#2DD4BF", accent_fg="#06201E", button="#142C30",
+             hover="#16363B", sel="#2DD4BF", sel_fg="#06201E", entry="#0D2124", extra="mar_dark",
+             accent2="#38BDF8", ring2="#FB7185", ring3="#A78BFA"),
+    ),
+    "classic": ("Systemowy — jasny/ciemny jak Ubuntu", None, None),
     # Aurora: wspólny motyw całej serii (jasny = pastelowe szkło, ciemny = zorza na granacie)
     "aurora": (
         "Aurora — fiolet i cyjan",
@@ -50,6 +75,21 @@ THEMES = {
     ),
 }
 
+def _grad(a1, a2, dark):
+    """Wspólne akcenty palet z gradientem (Coral, Pomarańcz ciemny, Mediterráneo): ten sam odcień w jasnym i ciemnym."""
+    return MODERN + f"""
+.navigation-sidebar row:selected {{ background-image: linear-gradient(to right, {a1}, {a2});
+    box-shadow: 0 4px 12px alpha({a1}, {0.30 if dark else 0.35}); }}
+.navigation-sidebar row:selected label {{ font-weight: bold; }}
+.hero-banner {{ background-image: linear-gradient(to right, {a1}, {a2}); box-shadow: 0 6px 18px alpha({a1}, 0.30); }}
+.hero-banner label {{ color: #FFFFFF; }}
+button.suggested-action {{ background-image: linear-gradient(to right, {a1}, {a2}); border-color: {a1};
+    box-shadow: 0 4px 12px alpha({a1}, 0.30); }}
+progressbar progress {{ background-image: linear-gradient(to right, {a1}, {a2}); }}
+.card {{ box-shadow: 0 2px 10px alpha({a1}, {0.10 if dark else 0.07}); }}
+"""
+
+
 MODES = {"auto": "Automatycznie (jak system)", "light": "Zawsze jasny", "dark": "Zawsze ciemny"}
 
 
@@ -71,6 +111,11 @@ stackswitcher button:last-child { border-radius: 0 12px 12px 0; }
 progressbar trough, progressbar progress { border-radius: 6px; min-height: 8px; }
 """
 EXTRA = {
+    "coral_light": _grad("#E8505B", "#F59E0B", False),
+    "coral_dark": _grad("#FB7185", "#FBBF24", True),
+    "soft_dark": _grad("#F97316", "#F59E0B", True),
+    "mar_light": _grad("#0D9488", "#0EA5E9", False),
+    "mar_dark": _grad("#2DD4BF", "#38BDF8", True),
     "soft": MODERN + """
 .navigation-sidebar row:selected { background-image: linear-gradient(to right, #F97316, #FB923C);
     box-shadow: 0 4px 12px alpha(#F97316, 0.35); }

@@ -125,6 +125,17 @@ class DB:
         self.log_activity(items=1)
         return n
 
+    def hardest(self, n=3):
+        """Najtrudniejsze słówka w powtórkach (najwięcej pomyłek, potem trudność) — na stronę „Dzisiaj”."""
+        return [r["es"] for r in self.con.execute(
+            "SELECT es FROM cards WHERE reps>0 ORDER BY lapses DESC, difficulty DESC LIMIT ?", (n,))]
+
+    def reviewed_today(self):
+        return self.con.execute("SELECT COUNT(*) FROM reviews WHERE ts>=?", (_day_start(),)).fetchone()[0]
+
+    def lessons_done_today(self):
+        return self.con.execute("SELECT COUNT(*) FROM lessons WHERE done_at>=?", (_day_start(),)).fetchone()[0]
+
     def card_stats(self):
         r = self.con.execute(
             "SELECT COUNT(*) total, SUM(state=0) nowe, SUM(state IN (1,3)) uczone, "

@@ -4,7 +4,7 @@ import re
 
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, GLib  # noqa: E402
+from gi.repository import Gtk, Gdk, GLib  # noqa: E402
 
 from .. import answers
 from .widgets import label, AccentBar, SpeakButton, clear, slow_button
@@ -42,21 +42,48 @@ class ExerciseRunner(Gtk.Box):
         self.answered = False
         self.allow_skip = allow_skip
 
+        # postęp: odcinki (do 30 zadań) albo zwykły pasek; licznik obok
         top = Gtk.Box(spacing=10)
         self.counter = label("", "dim", wrap=False)
-        self.bar = Gtk.ProgressBar()
-        self.bar.set_valign(Gtk.Align.CENTER)
+        self.segs = []
+        n = len(exercises)
+        if n <= 30:
+            segbox = Gtk.Box(spacing=5, homogeneous=True)
+            segbox.set_valign(Gtk.Align.CENTER)
+            for _ in range(n):
+                sg = Gtk.Box()
+                sg.get_style_context().add_class("seg")
+                segbox.pack_start(sg, True, True, 0)
+                self.segs.append(sg)
+            top.pack_start(segbox, True, True, 0)
+            self.bar = None
+        else:
+            self.bar = Gtk.ProgressBar()
+            self.bar.set_valign(Gtk.Align.CENTER)
+            top.pack_start(self.bar, True, True, 0)
         top.pack_start(self.counter, False, False, 0)
-        top.pack_start(self.bar, True, True, 0)
         if show_progress:
             self.pack_start(top, False, False, 0)
 
-        self.area = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12)
-        self.area.get_style_context().add_class("card")
+        self.area = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14)
+        self.area.set_margin_top(8)
         self.pack_start(self.area, False, False, 0)
 
+        # pasek wyniku po odpowiedzi: ✓ / ! / ✗, tytuł i wyjaśnienie
+        self.fb_bar = Gtk.Box(spacing=14)
+        self.fb_bar.get_style_context().add_class("fb-bar")
+        self.fb_icon = Gtk.Label()
+        self.fb_icon.get_style_context().add_class("fb-icon")
+        self.fb_icon.set_valign(Gtk.Align.CENTER)
+        self.fb_bar.pack_start(self.fb_icon, False, False, 0)
         self.feedback = label("", wrap=True, markup=True)
-        self.pack_start(self.feedback, False, False, 0)
+        self.feedback.set_valign(Gtk.Align.CENTER)
+        self.fb_bar.pack_start(self.feedback, True, True, 0)
+        self.fb_bar.set_no_show_all(True)       # widoczny dopiero po odpowiedzi
+        self.fb_icon.show()
+        self.feedback.show()
+        self.pack_start(self.fb_bar, False, False, 0)
+        self.help = label("", "ex-help", wrap=True)
 
         btns = Gtk.Box(spacing=8)
         self.skip_btn = Gtk.Button(label="Nie wiem")
@@ -67,13 +94,48 @@ class ExerciseRunner(Gtk.Box):
         btns.pack_end(self.check_btn, False, False, 0)
         if allow_skip:
             btns.pack_end(self.skip_btn, False, False, 0)
+        btns.pack_start(self.help, True, True, 0)
         self.pack_start(btns, False, False, 0)
+        self._key_hook = None
+        self.connect("realize", self._hook_keys)
+        self.connect("destroy", self._unhook_keys)
         self._show()
+
+    # klawisze 1–9 wybierają odpowiedź w zadaniach z wyborem
+    def _hook_keys(self, *_):
+        top = self.get_toplevel()
+        if isinstance(top, Gtk.Window) and self._key_hook is None:
+            self._key_hook = (top, top.connect("key-press-event", self._on_key))
+
+    def _unhook_keys(self, *_):
+        if self._key_hook:
+            top, hid = self._key_hook
+            try:
+                top.disconnect(hid)
+            except Exception:  # noqa
+                pass
+            self._key_hook = None
+
+    def _on_key(self, _w, ev):
+        if not self.get_mapped() or self.answered or self.idx >= len(self.items):
+            return False
+        if self.items[self.idx]["type"] != "choice":
+            return False
+        k = Gdk.keyval_to_unicode(ev.keyval)
+        if k and chr(k).isdigit():
+            i = int(chr(k)) - 1
+            if 0 <= i < len(self.choice_buttons):
+                self.choice_buttons[i].set_active(True)
+                return True
+        return False
 
     # ------------------------------------------------------------
     def _show(self):
         clear(self.area)
         self.feedback.set_markup("")
+        self.fb_bar.hide()
+        for c in ("fb-ok", "fb-warn", "fb-bad"):
+            self.fb_bar.get_style_context().remove_class(c)
         self.answered = False
         self.check_btn.set_label("Sprawdź")
         self.skip_btn.set_sensitive(True)
@@ -82,10 +144,21 @@ class ExerciseRunner(Gtk.Box):
             self.on_finish(round(self.score), n, self.mistakes)
             return
         self.counter.set_text(f"{self.idx + 1} / {n}")
-        self.bar.set_fraction(self.idx / max(1, n))
+        if self.bar is not None:
+            self.bar.set_fraction(self.idx / max(1, n))
+        for i, sg in enumerate(self.segs):
+            ctx = sg.get_style_context()
+            ctx.remove_class("seg-done")
+            ctx.remove_class("seg-cur")
+            if i < self.idx:
+                ctx.add_class("seg-done")
+            elif i == self.idx:
+                ctx.add_class("seg-cur")
         ex = self.items[self.idx]
         t = ex["type"]
-        self.area.pack_start(label(TYPE_TITLES.get(t, "Ćwiczenie"), "dim"), False, False, 0)
+        self.area.pack_start(label(TYPE_TITLES.get(t, "Ćwiczenie").upper(), "ex-kind"), False, False, 0)
+        self.help.set_text("Klawisze 1–4 wybierają odpowiedź · Enter: dalej" if t == "choice"
+                           else "Enter sprawdza odpowiedź, potem przechodzi dalej")
         self.entry = None
         self.choice = None
         if t == "choice":
@@ -100,11 +173,13 @@ class ExerciseRunner(Gtk.Box):
         if ex.get("audio") and t == "listen":
             GLib.timeout_add(250, lambda: (self.app.say(ex["audio"]), False)[1])
 
-    def _q_row(self, text, audio=None, cls="mid-es"):
-        row = Gtk.Box(spacing=6)
-        row.pack_start(label(text, cls), True, True, 0)
+    def _q_row(self, text, audio=None, cls="ex-prompt"):
+        row = Gtk.Box(spacing=10)
         if audio:
-            row.pack_start(SpeakButton(self.app, audio), False, False, 0)
+            sb = SpeakButton(self.app, audio)
+            sb.set_valign(Gtk.Align.CENTER)
+            row.pack_start(sb, False, False, 0)
+        row.pack_start(label(text, cls), True, True, 0)
         self.area.pack_start(row, False, False, 0)
 
     def _build_choice(self, ex):
@@ -112,20 +187,27 @@ class ExerciseRunner(Gtk.Box):
         opts = list(ex["options"]) or list(ex["answers"])
         if ex.get("shuffle", True):
             random.shuffle(opts)
-        flow = Gtk.FlowBox()
-        flow.set_selection_mode(Gtk.SelectionMode.NONE)
-        flow.set_max_children_per_line(2 if max(len(o) for o in opts) > 28 else 4)
-        flow.set_column_spacing(8)
-        flow.set_row_spacing(8)
+        # duże karty odpowiedzi z numerem (klawisze 1–4)
+        grid = Gtk.Grid(column_spacing=12, row_spacing=12, column_homogeneous=True)
+        cols = 1 if max(len(o) for o in opts) > 60 else 2
         self.choice_buttons = []
-        for o in opts:
-            b = Gtk.ToggleButton(label=o)
-            b.get_style_context().add_class("choice-btn")
-            b.get_child().set_line_wrap(True)
+        for i, o in enumerate(opts):
+            b = Gtk.ToggleButton()
+            b.get_style_context().add_class("choice-card")
+            inner = Gtk.Box(spacing=12)
+            key = Gtk.Label(label=str(i + 1))
+            key.get_style_context().add_class("choice-key")
+            key.set_valign(Gtk.Align.CENTER)
+            inner.pack_start(key, False, False, 0)
+            txt = Gtk.Label(label=o, xalign=0)
+            txt.set_line_wrap(True)
+            inner.pack_start(txt, True, True, 0)
+            b.add(inner)
+            b.opt = o
             b.connect("toggled", self._on_choice, o)
-            flow.add(b)
+            grid.attach(b, i % cols, i // cols, 1, 1)
             self.choice_buttons.append(b)
-        self.area.pack_start(flow, False, False, 0)
+        self.area.pack_start(grid, False, False, 0)
 
     def _on_choice(self, btn, opt):
         if self.answered:
@@ -143,7 +225,7 @@ class ExerciseRunner(Gtk.Box):
             row = Gtk.Box(spacing=8)
             row.pack_start(SpeakButton(self.app, ex["audio"], tooltip="Odtwórz jeszcze raz"), False, False, 0)
             row.pack_start(slow_button(self.app, ex["audio"]), False, False, 0)
-            row.pack_start(label("Posłuchaj i zapisz, co słyszysz.", "dim"), False, False, 0)
+            row.pack_start(label("Posłuchaj i zapisz, co słyszysz.", "mid-es"), False, False, 0)
             self.area.pack_start(row, False, False, 0)
         else:
             q = ex["q"]
@@ -170,7 +252,7 @@ class ExerciseRunner(Gtk.Box):
             if tiles != words or len(words) < 2:
                 break
         self.order_picked = []
-        self.order_label = label("…", "big-es")
+        self.order_label = label("…", "ex-prompt")
         self.area.pack_start(self.order_label, False, False, 0)
         flow = Gtk.FlowBox()
         flow.set_selection_mode(Gtk.SelectionMode.NONE)
@@ -229,18 +311,22 @@ class ExerciseRunner(Gtk.Box):
         self.skip_btn.set_sensitive(False)
         self.check_btn.set_label("Dalej  →")
         esc = GLib.markup_escape_text
+        big = '<span size="large"><b>{}</b></span>'
         if res == answers.OK:
             self.score += 1
-            msg = '<span foreground="#2e9e44"><b>¡Muy bien! Dobrze.</b></span>'
+            kind, icon = "fb-ok", "✓"
+            msg = big.format("¡Muy bien!") + "\nDobrze."
         elif res == answers.ACCENT:
             self.score += 1
-            msg = (f'<span foreground="#c77c00"><b>Dobrze, ale uważaj na akcenty:</b></span> '
-                   f'{esc(best)}')
+            kind, icon = "fb-warn", "!"
+            msg = big.format("Dobrze, ale uważaj na akcenty") + f"\n{esc(best)}"
         elif res == answers.TYPO:
             self.score += 0.5
-            msg = f'<span foreground="#c77c00"><b>Prawie — literówka.</b></span> Poprawnie: <b>{esc(best)}</b>'
+            kind, icon = "fb-warn", "!"
+            msg = big.format("Prawie — literówka") + f"\nPoprawnie: <b>{esc(best)}</b>"
         else:
-            msg = f'<span foreground="#d0353f"><b>Niestety nie.</b></span> Poprawnie: <b>{esc(best)}</b>'
+            kind, icon = "fb-bad", "✗"
+            msg = big.format("Niestety nie") + f"\nPoprawnie: <b>{esc(best)}</b>"
             self.mistakes.append(dict(q=ex["q"], given=given, expected=best))
             try:
                 self.app.db.save_mistake(ex.get("source", self.source), ex["q"], given, best)
@@ -258,12 +344,15 @@ class ExerciseRunner(Gtk.Box):
             except Exception as e:  # noqa
                 print("on_result:", e)
         self.feedback.set_markup(msg)
+        self.fb_icon.set_text(icon)
+        self.fb_bar.get_style_context().add_class(kind)
+        self.fb_bar.show()
         if ex["type"] == "choice":
             for b in self.choice_buttons:
-                if answers.norm(b.get_label()) == answers.norm(ex["answers"][0]):
-                    b.get_style_context().add_class("suggested-action")
+                if answers.norm(b.opt) == answers.norm(ex["answers"][0]):
+                    b.get_style_context().add_class("ok")
                 elif b.get_active():
-                    b.get_style_context().add_class("destructive-action")
+                    b.get_style_context().add_class("bad")
         # odczytaj poprawne zdanie po hiszpańsku
         if ex["type"] in ("trans", "order", "listen", "fill", "conj", "fix") and self.app.db.get("autoplay", True):
             spoken = best

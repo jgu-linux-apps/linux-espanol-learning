@@ -197,3 +197,129 @@ def clear(box):
     for ch in box.get_children():
         box.remove(ch)
         ch.destroy()
+
+
+# ====================================================================== nowy wygląd (1.13)
+# Style nowych elementów idą osobnym dostawcą NAD motywem (motyw czyści tła zwykłych kontenerów: box, label).
+CSS2 = b"""
+.nav-head { background: none; border: none; box-shadow: none; padding: 10px 10px 3px 14px; min-height: 0; }
+.nav-head label { font-size: 11px; font-weight: bold; letter-spacing: 1px; opacity: 0.55; }
+.nav-head:hover label { opacity: 0.85; }
+.nav-count { font-size: 11px; font-weight: bold; padding: 0 7px; border-radius: 99px;
+  background-color: @theme_selected_bg_color; color: @theme_selected_fg_color; }
+.kicker { font-size: 12px; font-weight: bold; letter-spacing: 1px; opacity: 0.65; }
+.hero-title { font-size: 26px; font-weight: bold; }
+.hello { font-size: 25px; font-weight: bold; }
+.stat-big { font-size: 26px; font-weight: 800; }
+.dot { min-width: 24px; min-height: 24px; border-radius: 99px; font-size: 12px; font-weight: bold; }
+.dot-done { background-color: #16A34A; color: #FFFFFF; }
+.dot-cur { background-color: @theme_selected_bg_color; color: @theme_selected_fg_color; }
+.dot-todo { border: 2px solid alpha(currentColor, 0.18); opacity: 0.75; }
+.week { min-width: 30px; min-height: 30px; border-radius: 99px; font-size: 13px; }
+.week-on { background-color: #F43F5E; color: #FFFFFF; }
+.week-today { border: 2px dashed #F43F5E; color: #F43F5E; }
+.week-off { border: 2px solid alpha(currentColor, 0.15); }
+.week-day { font-size: 11px; opacity: 0.6; }
+.plan-row { padding: 9px 0; border-top: 1px solid alpha(currentColor, 0.10); }
+.part { font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 99px; border: 1px solid alpha(currentColor, 0.15); }
+.part-done { background-color: #16A34A; color: #FFFFFF; border-color: #16A34A; }
+.part-cur { background-color: @theme_selected_bg_color; color: @theme_selected_fg_color; border-color: @theme_selected_bg_color; }
+.cur-lesson { background-color: alpha(@theme_selected_bg_color, 0.10); border: 2px solid alpha(@theme_selected_bg_color, 0.45);
+  border-radius: 14px; padding: 12px 14px; }
+.stars { color: #F59E0B; letter-spacing: 1px; }
+.stars-off { opacity: 0.25; letter-spacing: 1px; }
+.score { color: #16A34A; font-weight: bold; }
+.lvl-switch { background-color: alpha(@theme_selected_bg_color, 0.10); border-radius: 12px; padding: 4px; }
+.notice { padding: 10px 16px; }
+.seg { min-height: 10px; border-radius: 5px; background-color: alpha(currentColor, 0.12); }
+.seg-done { background-color: @theme_selected_bg_color; }
+.seg-cur { background-color: alpha(@theme_selected_bg_color, 0.45); }
+.ex-prompt { font-size: 28px; font-weight: bold; }
+.ex-kind { font-size: 12px; font-weight: bold; letter-spacing: 1px; opacity: 0.65; }
+.choice-card { padding: 14px 16px; border-radius: 14px; font-size: 16px; }
+.choice-key { min-width: 26px; min-height: 26px; border-radius: 8px; border: 2px solid alpha(currentColor, 0.2);
+  font-size: 13px; font-weight: bold; }
+.choice-card.ok { border: 2px solid #16A34A; background-color: alpha(#16A34A, 0.12); }
+.choice-card.bad { border: 2px solid #DC2626; background-color: alpha(#DC2626, 0.10); }
+.fb-bar { padding: 14px 18px; border-radius: 14px; }
+.fb-ok { background-color: alpha(#16A34A, 0.12); border: 2px solid #16A34A; }
+.fb-warn { background-color: alpha(#D97706, 0.12); border: 2px solid #D97706; }
+.fb-bad { background-color: alpha(#DC2626, 0.10); border: 2px solid #DC2626; }
+.fb-icon { min-width: 40px; min-height: 40px; border-radius: 99px; font-size: 20px; font-weight: bold; color: #FFFFFF; }
+.fb-ok .fb-icon { background-color: #16A34A; } .fb-warn .fb-icon { background-color: #D97706; }
+.fb-bad .fb-icon { background-color: #DC2626; }
+.ex-help { font-size: 12px; opacity: 0.6; }
+"""
+
+
+def ring_colors(widget, app=None):
+    """Kolory kółek postępu z palety motywu (dla motywu systemowego: kolor zaznaczenia GTK)."""
+    p = getattr(app, "palette", None) or {}
+    ctx = widget.get_style_context()
+    ok, acc = ctx.lookup_color("theme_selected_bg_color")
+    fg = ctx.get_color(Gtk.StateFlags.NORMAL)
+    a = p.get("accent")
+    return {"accent": a or (acc.to_string() if ok else "#3584e4"), "ring2": p.get("ring2", "#F43F5E"),
+            "ring3": p.get("ring3") or p.get("accent2") or "#0EA5E9", "fg": fg}
+
+
+class Ring(Gtk.DrawingArea):
+    """Kółko postępu: łuk od góry zgodnie z ruchem wskazówek, w środku liczba i podpis."""
+
+    def __init__(self, app, frac, big, small="", color="accent", size=84, width=8):
+        super().__init__()
+        self.app, self.frac, self.big, self.small = app, max(0.0, min(1.0, frac)), str(big), small
+        self.color, self.size, self.width = color, size, width
+        self.set_size_request(size, size)
+        self.set_halign(Gtk.Align.CENTER)
+        self.set_valign(Gtk.Align.CENTER)
+        self.connect("draw", self._draw)
+
+    def _draw(self, w, cr):
+        import math
+        gi.require_version("PangoCairo", "1.0")
+        from gi.repository import Gdk, PangoCairo
+        c = ring_colors(w, self.app)
+        s, lw = self.size, self.width
+        cx = cy = s / 2
+        r = s / 2 - lw / 2 - 1
+        fg = c["fg"]
+        cr.set_line_width(lw)
+        cr.set_source_rgba(fg.red, fg.green, fg.blue, 0.12)
+        cr.arc(cx, cy, r, 0, 2 * math.pi)
+        cr.stroke()
+        if self.frac > 0:
+            col = Gdk.RGBA()
+            col.parse(c.get(self.color, self.color))
+            cr.set_source_rgba(col.red, col.green, col.blue, 1)
+            cr.set_line_cap(1)  # ROUND
+            cr.arc(cx, cy, r, -math.pi / 2, -math.pi / 2 + 2 * math.pi * self.frac)
+            cr.stroke()
+        cr.set_source_rgba(fg.red, fg.green, fg.blue, 1)
+        lay = PangoCairo.create_layout(cr)
+        lay.set_font_description(w.get_style_context().get_font(Gtk.StateFlags.NORMAL))  # czcionka motywu
+        big = max(11, int(s * 0.24))
+        small = max(8, int(s * 0.13))
+        txt = f"<b><span size='{big * 1024}'>{html.escape(self.big)}</span></b>"
+        if self.small:
+            txt += f"\n<span size='{small * 1024}' alpha='65%'>{html.escape(self.small)}</span>"
+        lay.set_markup(txt, -1)
+        lay.set_alignment(Pango.Alignment.CENTER)
+        tw, th = lay.get_pixel_size()
+        cr.move_to(cx - tw / 2, cy - th / 2)
+        PangoCairo.show_layout(cr, lay)
+        return False
+
+
+def dot(text, state):
+    """Kółko stanu lekcji/punktu planu: done (✓), cur, todo."""
+    lb = Gtk.Label(label="✓" if state == "done" else text)
+    lb.get_style_context().add_class("dot")
+    lb.get_style_context().add_class("dot-" + state)
+    lb.set_valign(Gtk.Align.CENTER)
+    return lb
+
+
+def stars_for(score):
+    """Gwiazdki za wynik lekcji: ≥90% ★★★, ≥75% ★★, inaczej ★."""
+    return 3 if score >= 90 else 2 if score >= 75 else 1

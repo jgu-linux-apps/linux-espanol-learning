@@ -3,7 +3,7 @@
 **Prawdziwy kurs hiszpańskiego od zera dla Ubuntu** — hiszpański z Hiszpanii (castellano), wyjaśnienia po polsku.
 Bez punktów, serii i maskotek: lekcje, gramatyka, słownictwo, powtórki, testy i ocena wymowy.
 
-Wersja **1.12.0** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
+Wersja **1.13.0** · Created by: **JGu** · Supported by **Claude** · część serii *JGu Linux Apps*
 
 ---
 
@@ -32,8 +32,10 @@ Interfejs jest klasyczny (GTK 3) i automatycznie przełącza się między jasnym
 ### Motywy (Ustawienia → Wygląd)
 | Motyw | Charakter |
 |---|---|
-| **Nowoczesny (domyślny)** | jasny „Soft” — brzoskwinia i pomarańcz, zaokrąglone karty; ciemny „Glass” — granat z cyjanowymi akcentami |
-| **Klasyczny** | wygląd motywu Ubuntu (Yaru) |
+| **Coral (domyślny)** | koral i słoneczne złoto; ciemny — ten sam koral na ciepłym grafitowym tle |
+| **Pomarańcz** | dawny domyślny: brzoskwinia i pomarańcz; ciemny — pomarańcz na ciemnym brązie |
+| **Mediterráneo** | morski turkus i błękit; ciemny — turkus na ciemnym morskim tle |
+| **Systemowy** | wygląd motywu Ubuntu (Yaru), jasny lub ciemny jak system |
 | **Aurora** | wspólny motyw serii JGu Linux Apps: jasny — pastelowe szkło, gradient fiolet → cyjan; ciemny — zorza na granatowym tle z poświatą |
 | **España** | czerwień i złoto hiszpańskiej flagi; ciemny — bordo i złoto |
 | **Azulejo** | błękit i biel sewilskich kafli; ciemny — granat nocy |
@@ -174,6 +176,7 @@ icons/                ikona jasna i ciemna (SVG)
 Komponenty pobierane osobno przy pierwszym uruchomieniu (Piper, faster-whisper, głosy, modele Whisper) mają własne licencje.
 
 ## Zmiany
+- **1.13.0** — nowy wygląd: **menu w zwijanych grupach** (Nauka, Ćwicz, Narzędzia, Ty; licznik powtórek przy „Powtórkach”, Ustawienia w menu ☰); **„Dzisiaj”** z jedną dużą kartą „Kontynuuj”, kółkami celu dziennego, serii i postępu poziomu, paskiem tygodnia, **Planem na dziś** (powtórka, lekcja, ćwiczenie dnia), najtrudniejszymi słówkami i słowem dnia; **„Kurs”** z przełącznikiem A1/A2, kółkiem postępu przy każdym dziale, rozwiniętą bieżącą lekcją (części lekcji i „Kontynuuj”) oraz gwiazdkami i wynikami przy ukończonych lekcjach; **ćwiczenia w trybie skupienia** (bez menu bocznego, pasek z odcinkami, duże zadanie, karty odpowiedzi z klawiszami 1–4, kolorowy pasek wyniku). Nowy motyw domyślny **Coral**, nowe **Mediterráneo**, dawny pomarańczowy jako **Pomarańcz** — każdy z wersją jasną i ciemną w tym samym odcieniu.
 - **1.12.0** — nowy motyw **Aurora** (Ustawienia → Wygląd), ten sam co w innych aplikacjach serii: fioletowo-cyjanowe gradienty, poświata przy najechaniu, wersja jasna i ciemna przełączana razem z systemem.
 - **1.11.0** — **trening błędów**: Powtórki mają dwie zakładki — *Fiszki* i *Błędy (trening)*; każde ćwiczenie, w którym się pomylisz (w lekcji, teście, czytance), oraz zdanie poprawione przez Paco wraca w całości (ten sam typ, opcje, nagranie) jutro, potem za 3 i za 7 dni, a po 3 dobrych odpowiedziach z rzędu znika; literówki i brak akcentu się nie liczą; dotychczasowe błędy są przenoszone automatycznie; licznik na ekranie Dzisiaj i w Statystykach. **🐢 Wolniej**: wolne odtwarzanie jest zawsze wyraźnie wolniejsze od tempa wybranego w Ustawieniach (wcześniej przy tempie „Wolno” prawie się nie różniło) i ma teraz przycisk także w scenkach, w rozmowie z Paco, w czytankach i w fiszkach.
 - **1.10.4** — licencja: aplikacja jest teraz na licencji Freeware License (No Modifications), zob. `LICENSE` — darmowe użytkowanie i udostępnianie bez zmian, bez prawa do modyfikacji; poza tym bez zmian w aplikacji.

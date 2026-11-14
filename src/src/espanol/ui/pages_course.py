@@ -5,9 +5,10 @@ import urllib.parse
 
 import gi
 gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, GLib  # noqa: E402
+from gi.repository import Gtk, Gdk, GLib  # noqa: E402
 
-from .widgets import (label, rich_text, scrolled, page_box, card, SpeakButton, slow_button, clear)
+from .widgets import (label, rich_text, scrolled, page_box, card, SpeakButton, slow_button, clear, Ring, dot,
+                      stars_for)
 from .exercise import ExerciseRunner
 from .pron import SpeakPractice
 from ..content import POS_NAMES
@@ -88,6 +89,40 @@ def _today_progress_table(self, done):
 
 
 # ====================================================================== DZISIAJ
+_DAYS = ["pn", "wt", "śr", "cz", "pt", "so", "nd"]
+_WEEKDAYS = ["poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"]
+_MONTHS = ["stycznia", "lutego", "marca", "kwietnia", "maja", "czerwca", "lipca", "sierpnia", "września",
+           "października", "listopada", "grudnia"]
+_TABS = ["intro", "vocab", "grammar", "ex", "speak"]
+_TAB_SHORT = {"intro": "Dialog", "vocab": "Słówka", "grammar": "Gramatyka", "ex": "Ćwiczenia", "speak": "Mówienie"}
+# ćwiczenie dnia w „Planie na dziś” — zmienia się codziennie
+_DAILY = [("scenes", "Scenka z Paco", "mówienie · ok. 6 min", "face-smile-symbolic"),
+          ("pron", "Laboratorium wymowy", "wymowa · ok. 5 min", "audio-input-microphone-symbolic"),
+          ("dictation", "Dyktando", "słuchanie i pisanie · ok. 5 min", "document-edit-symbolic"),
+          ("readings", "Czytanka", "czytanie · ok. 6 min", "x-office-document-symbolic")]
+
+
+def _btn(text, primary=False, cb=None, small=False):
+    b = Gtk.Button(label=text)
+    if primary:
+        b.get_style_context().add_class("suggested-action")
+    b.set_valign(Gtk.Align.CENTER)
+    if cb:
+        b.connect("clicked", lambda *_: cb())
+    return b
+
+
+def _current_lesson(app):
+    """(lekcja, krok, czy_w_trakcie): ostatnio otwarta niedokończona albo następna z kursu."""
+    db, course = app.db, app.course
+    done = db.done_lessons()
+    last = db.get("last_lesson")
+    if last and last.get("id") in course.by_id and last["id"] not in done:
+        return course.by_id[last["id"]], last.get("tab") or "intro", True
+    nxt = course.next_lesson(set(done))
+    return nxt, "intro", False
+
+
 class TodayPage(Gtk.Box):
     def __init__(self, app):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
@@ -96,233 +131,379 @@ class TodayPage(Gtk.Box):
         self.pack_start(scrolled(self.inner), True, True, 0)
         self.refresh()
 
-    _progress_table = _today_progress_table
-
     def refresh(self):
         app, db, course = self.app, self.app.db, self.app.course
         clear(self.inner)
         b = self.inner
         done = db.done_lessons()
-        due0, _new0 = db.count_due()
-        hero = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
-        hero.get_style_context().add_class("hero-banner")
-        bd = label("DZISIAJ", "badge", wrap=False)
-        bd.set_halign(Gtk.Align.START)
-        hero.pack_start(bd, False, False, 0)
-        hero.pack_start(label(_greeting() + " 👋", "hero"), False, False, 0)
-        hero.pack_start(label(f"Ukończone lekcje: {len(done)} z {len(course.lessons)}  ·  "
-                              f"słówek do powtórzenia dziś: {due0}"), False, False, 0)
-        b.pack_start(hero, False, False, 0)
+
+        # powitanie, data i tydzień nauki
+        from .. import profiles
+        name = profiles.active().get("name", "")
+        hello = _greeting()
+        if name and name != "Główny":
+            hello = hello.rstrip("!") + f", {name}!"
+        t = time.localtime()
+        top = Gtk.Box(spacing=12)
+        top.pack_start(label(hello, "hello", wrap=False), False, False, 0)
+        dt = label(f"{_WEEKDAYS[t.tm_wday]}, {t.tm_mday} {_MONTHS[t.tm_mon - 1]}", "dim", wrap=False)
+        dt.set_valign(Gtk.Align.END)
+        dt.set_margin_bottom(3)
+        top.pack_start(dt, False, False, 0)
+        top.pack_end(self._week(), False, False, 0)
+        b.pack_start(top, False, False, 0)
 
         if not done and not db.get("placement_offered"):
             pc = card(spacing=4)
             pr = Gtk.Box(spacing=12)
             pr.pack_start(label("Znasz już trochę hiszpańskiego? Zrób krótki test poziomujący, a podpowiem, "
-                                "od której lekcji zacząć.", None), True, True, 0)
-            pb = Gtk.Button(label="Zrób test")
-            pb.get_style_context().add_class("suggested-action")
-            pb.set_valign(Gtk.Align.CENTER)
-            pb.connect("clicked", lambda *_: app.open_placement())
-            nb = Gtk.Button(label="Zaczynam od zera")
-            nb.set_valign(Gtk.Align.CENTER)
-            nb.connect("clicked", lambda *_: (db.set("placement_offered", True), self.refresh()))
-            pr.pack_start(pb, False, False, 0)
-            pr.pack_start(nb, False, False, 0)
+                                "od której lekcji zacząć."), True, True, 0)
+            pr.pack_start(_btn("Zrób test", True, app.open_placement), False, False, 0)
+            pr.pack_start(_btn("Zaczynam od zera", cb=lambda: (db.set("placement_offered", True), self.refresh())),
+                          False, False, 0)
             pc.pack_start(pr, False, False, 0)
             b.pack_start(pc, False, False, 0)
 
-        # seria + cel dzienny
-        cur, best = db.streak()
-        goal = int(db.get("daily_goal", 10))
-        got = db.today_seconds() / 60.0
-        gc = card(spacing=6)
-        grow = Gtk.Box(spacing=16)
-        fire = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
-        fire.pack_start(label(("🔥 " if cur else "") + str(cur), "stat-num", wrap=False), False, False, 0)
-        fire.pack_start(label("dni z rzędu" if cur != 1 else "dzień z rzędu", "dim", wrap=False), False, False, 0)
-        grow.pack_start(fire, False, False, 0)
-        gcol = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
-        done_goal = got >= goal
-        gcol.pack_start(label(f"Cel dzienny: {min(int(got), goal)} / {goal} min" + ("  ✔ zrobione!" if done_goal else ""),
-                              "title2", wrap=False), False, False, 0)
-        gcol.pack_start(_bar(got / max(1, goal), 320), False, False, 0)
-        msg = ("Świetnie — dzisiejszy cel zaliczony." if done_goal else
-               ("Zrób dziś choć chwilę nauki, żeby nie stracić serii." if cur and db.today_seconds() < 60
-                else "Jeszcze trochę — każda minuta się liczy."))
-        gcol.pack_start(label(msg + (f"  Rekord: {best} dni." if best > 1 else ""), "dim"), False, False, 0)
-        grow.pack_start(gcol, True, True, 0)
-        gc.pack_start(grow, False, False, 0)
-        b.pack_start(gc, False, False, 0)
+        b.pack_start(self._hero(done), False, False, 0)
+
+        cols = Gtk.Grid(column_spacing=14, row_spacing=14)
+        plan = self._plan(done)
+        plan.set_hexpand(True)
+        cols.attach(plan, 0, 0, 1, 1)
+        right = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14)
+        right.set_size_request(380, -1)
+        right.pack_start(self._reviews(), False, False, 0)
+        w = self._word()
+        if w:
+            right.pack_start(w, False, False, 0)
+        cols.attach(right, 1, 0, 1, 1)
+        b.pack_start(cols, False, False, 0)
 
         if not app.speech.tts_available() or not app.speech.stt_available():
-            c = card()
-            c.pack_start(label("Dokończ instalację silnika mowy", "title2"), False, False, 0)
-            c.pack_start(label("Nagrania wymowy i ocena Twojej wymowy działają po pobraniu głosów i modelu "
-                               "rozpoznawania mowy (jednorazowo, ok. 0,3–0,7 GB). Wszystko działa potem offline."),
-                         False, False, 0)
-            btn = Gtk.Button(label="Zainstaluj teraz")
-            btn.get_style_context().add_class("suggested-action")
-            btn.set_halign(Gtk.Align.START)
-            btn.connect("clicked", lambda *_: app.open_setup())
-            c.pack_start(btn, False, False, 0)
-            b.pack_start(c, False, False, 0)
-
-        # kontynuuj
-        last = db.get("last_lesson")
-        if last and last.get("id") in course.by_id:
-            les = course.by_id[last["id"]]
-            tab = last.get("tab") or "intro"
-            cc = card(spacing=6)
+            n = card(spacing=4)
+            n.get_style_context().add_class("notice")
             row = Gtk.Box(spacing=12)
-            col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
-            col.pack_start(label("Kontynuuj, gdzie skończyłeś", "dim"), False, False, 0)
-            col.pack_start(label(f"{les.level} · Lekcja {les.number}: {les.title}", "title2"), False, False, 0)
-            state = "ukończona — możesz powtórzyć" if les.id in done else "w trakcie"
-            col.pack_start(label(f"Krok: {LessonView.TAB_NAMES.get(tab, tab)}  ·  {state}", "dim"), False, False, 0)
-            row.pack_start(col, True, True, 0)
-            kb = Gtk.Button(label="▶  Kontynuuj")
-            kb.get_style_context().add_class("suggested-action")
-            kb.set_valign(Gtk.Align.CENTER)
-            kb.connect("clicked", lambda *_: app.open_lesson(les.id, tab))
-            row.pack_start(kb, False, False, 0)
-            cc.pack_start(row, False, False, 0)
-            b.pack_start(cc, False, False, 0)
-
-        grid = Gtk.Grid(column_spacing=14, row_spacing=14, column_homogeneous=True)
-        # następna lekcja
-        nxt = course.next_lesson(set(done))
-        c1 = card()
-        c1.pack_start(label("Następna lekcja", "dim"), False, False, 0)
-        if nxt:
-            c1.pack_start(label(f"{nxt.level} · Lekcja {nxt.number}", "badge", wrap=False), False, False, 0)
-            c1.pack_start(label(nxt.title, "title2"), False, False, 0)
-            c1.pack_start(label(" · ".join(nxt.goals[:2]), "dim"), False, False, 0)
-            bt = Gtk.Button(label="Zaczynamy  →")
-            bt.get_style_context().add_class("suggested-action")
-            bt.set_halign(Gtk.Align.START)
-            bt.connect("clicked", lambda *_: app.open_lesson(nxt.id))
-            c1.pack_end(bt, False, False, 0)
-        else:
-            c1.pack_start(label("¡Enhorabuena! Ukończyłeś cały kurs A1–A2. 🎉", "title2"), False, False, 0)
-            c1.pack_start(label("Powtarzaj słówka, rób egzaminy próbne i czytaj czytanki.", "dim"), False, False, 0)
-        grid.attach(c1, 0, 0, 1, 1)
-
-        # powtórki
-        due, new = db.count_due()
-        d_due, d_total = db.drill_counts()
-        c2 = card()
-        c2.pack_start(label("Powtórki", "dim"), False, False, 0)
-        c2.pack_start(label(f"{due}", "stat-num", wrap=False), False, False, 0)
-        c2.pack_start(label(f"słówek do powtórzenia dziś · {min(new, db.get('new_per_day', 20))} nowych czeka", "dim"),
-                      False, False, 0)
-        c2.pack_start(label(f"Błędy do treningu: {d_due}" + (f" (łącznie {d_total})" if d_total > d_due else ""),
-                            "dim"), False, False, 0)
-        brow = Gtk.Box(spacing=8)
-        bt2 = Gtk.Button(label="Fiszki")
-        bt2.set_sensitive(due + new > 0)
-        bt2.connect("clicked", lambda *_: app.open_review("cards"))
-        brow.pack_start(bt2, False, False, 0)
-        bt3 = Gtk.Button(label=f"Błędy ({d_due})")
-        bt3.set_sensitive(d_due > 0)
-        bt3.connect("clicked", lambda *_: app.open_review("drill"))
-        brow.pack_start(bt3, False, False, 0)
-        c2.pack_end(brow, False, False, 0)
-        grid.attach(c2, 1, 0, 1, 1)
-        b.pack_start(grid, False, False, 0)
-
-        # postęp kursu
-        b.pack_start(self._progress_table(done), False, False, 0)
-
-        # słowo dnia
-        words = [w for w in course.dictionary if w.get("ex_es")]
-        if words:
-            rnd = random.Random(time.strftime("%Y%m%d"))
-            w = rnd.choice(words)
-            c3 = card()
-            c3.pack_start(label("Palabra del día — słowo dnia", "dim"), False, False, 0)
-            row = Gtk.Box(spacing=6)
-            row.pack_start(label(w["es"], "big-es", wrap=False), False, False, 0)
-            row.pack_start(SpeakButton(app, w["es"]), False, False, 0)
-            c3.pack_start(row, False, False, 0)
-            c3.pack_start(label(w["pl"]), False, False, 0)
-            row2 = Gtk.Box(spacing=6)
-            row2.pack_start(label(f"{w['ex_es']} — {w['ex_pl']}", "dim"), True, True, 0)
-            row2.pack_start(SpeakButton(app, w["ex_es"]), False, False, 0)
-            c3.pack_start(row2, False, False, 0)
-            b.pack_start(c3, False, False, 0)
-
-        # aktywność
-        act = db.activity(7)
-        mins = sum(a["seconds"] for a in act) // 60
-        st = db.card_stats()
-        c4 = card()
-        c4.pack_start(label("Ostatnie 7 dni", "dim"), False, False, 0)
-        c4.pack_start(label(f"{mins} min nauki · {len(act)} dni aktywnych · "
-                            f"{st['opanowane']} słów opanowanych · {st['total']} w powtórkach"), False, False, 0)
-        b.pack_start(c4, False, False, 0)
+            row.pack_start(label("🎙️ Nagrania i ocena wymowy potrzebują jednorazowo silnika mowy "
+                                 "(ok. 0,3–0,7 GB). Potem wszystko działa offline.", "dim"), True, True, 0)
+            row.pack_start(_btn("Zainstaluj", cb=app.open_setup), False, False, 0)
+            n.pack_start(row, False, False, 0)
+            b.pack_start(n, False, False, 0)
         self.show_all()
+
+    def _week(self):
+        """Bieżący tydzień: 🔥 dni z nauką, przerywane kółko = dziś jeszcze bez nauki."""
+        import datetime
+        act = {a["day"] for a in self.app.db.activity(14) if a["seconds"] >= 60 or a["items"] > 0}
+        today = datetime.date.today()
+        monday = today - datetime.timedelta(days=today.weekday())
+        box = Gtk.Box(spacing=6)
+        for i in range(7):
+            d = monday + datetime.timedelta(days=i)
+            on = d.strftime("%Y-%m-%d") in act
+            col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+            dl = Gtk.Label(label="🔥" if on else ("·" if d == today else ""))
+            dl.get_style_context().add_class("week")
+            dl.get_style_context().add_class("week-on" if on else "week-today" if d == today else "week-off")
+            col.pack_start(dl, False, False, 0)
+            col.pack_start(label(_DAYS[i], "week-day", wrap=False, xalign=0.5), False, False, 0)
+            box.pack_start(col, False, False, 0)
+        return box
+
+    def _hero(self, done):
+        app, db, course = self.app, self.app.db, self.app.course
+        c = card(spacing=6)
+        row = Gtk.Box(spacing=24)
+        col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        les, tab, started = _current_lesson(app)
+        if les:
+            step = _TABS.index(tab) if tab in _TABS else 0
+            col.pack_start(label(("KONTYNUUJ" if started else "NASTĘPNA LEKCJA") + f" · {les.level} · DZIAŁ {les.unit}",
+                                 "kicker"), False, False, 0)
+            col.pack_start(label(f"Lekcja {les.number}: {les.title.split('—')[0].strip()}", "hero-title"), False, False, 0)
+            sub = les.title.split("—", 1)[1].strip() if "—" in les.title else " · ".join(les.goals[:2])
+            col.pack_start(label(sub, "dim"), False, False, 0)
+            pr = Gtk.Box(spacing=10)
+            pb = Gtk.ProgressBar()
+            pb.set_fraction(step / len(_TABS))
+            pb.set_size_request(300, -1)
+            pb.set_valign(Gtk.Align.CENTER)
+            pr.pack_start(pb, False, False, 0)
+            pr.pack_start(label(f"{step} z {len(_TABS)} części", "dim", wrap=False), False, False, 0)
+            pr.set_margin_top(6)
+            col.pack_start(pr, False, False, 0)
+            btns = Gtk.Box(spacing=10)
+            btns.set_margin_top(10)
+            btns.pack_start(_btn("▶  Kontynuuj lekcję" if started else "▶  Zacznij lekcję", True,
+                                 lambda: app.open_lesson(les.id, tab)), False, False, 0)
+            due, new = db.count_due()
+            if due + new:
+                btns.pack_start(_btn("Szybka powtórka · 5 min", cb=lambda: app.open_review("cards")), False, False, 0)
+            col.pack_start(btns, False, False, 0)
+            level = les.level
+        else:
+            col.pack_start(label("CAŁY KURS UKOŃCZONY", "kicker"), False, False, 0)
+            col.pack_start(label("¡Enhorabuena! 🎉", "hero-title"), False, False, 0)
+            col.pack_start(label("Powtarzaj słówka, rób egzaminy próbne i czytaj czytanki.", "dim"), False, False, 0)
+            level = "A2"
+        row.pack_start(col, True, True, 0)
+
+        # kółka: cel dzienny, seria, poziom
+        goal = int(db.get("daily_goal", 10))
+        got = db.today_seconds() / 60.0
+        cur, best = db.streak()
+        today_on = db.today_seconds() >= 60 or db.reviewed_today() > 0 or db.lessons_done_today() > 0
+        units = course.units(level)
+        lv_all = sum(len(x) for x in units.values())
+        lv_done = sum(1 for x in units.values() for l in x if l.id in done)
+        rings = Gtk.Box(spacing=18)
+        for ring, cap in ((Ring(app, got / max(1, goal), int(min(got, 999)), f"/ {goal} min"), "Cel dzienny"),
+                          (Ring(app, 1.0 if today_on else (0.5 if cur else 0.0), cur, "dni", "ring2"), "Seria 🔥"),
+                          (Ring(app, lv_done / max(1, lv_all), f"{round(100 * lv_done / max(1, lv_all))}%", level, "ring3"),
+                           f"Poziom {level}")):
+            rc = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+            rc.pack_start(ring, False, False, 0)
+            rc.pack_start(label(cap, "dim", wrap=False, xalign=0.5), False, False, 0)
+            if cap.startswith("Seria") and best > 1:
+                rc.set_tooltip_text(f"Rekord: {best} dni")
+            rings.pack_start(rc, False, False, 0)
+        row.pack_start(rings, False, False, 0)
+        c.pack_start(row, False, False, 0)
+        return c
+
+    def _plan(self, done):
+        """Plan na dziś: powtórka, lekcja, ćwiczenie dnia — odhaczane po kolei."""
+        app, db = self.app, self.app.db
+        c = card(spacing=0)
+        head = Gtk.Box(spacing=8)
+        head.set_margin_bottom(8)
+        head.pack_start(label("PLAN NA DZIŚ", "kicker", wrap=False), False, False, 0)
+        due, new = db.count_due()
+        n_rev = due + min(new, int(db.get("new_per_day", 20)))
+        les, tab, _st = _current_lesson(app)
+        daily = _DAILY[time.localtime().tm_yday % len(_DAILY)]
+        items = [
+            ("Powtórka słówek", f"{n_rev} słówek · ok. {max(2, n_rev // 3)} min" if n_rev else "wszystko powtórzone",
+             n_rev == 0, lambda: app.open_review("cards")),
+            self._lesson_item(les, tab, db.lessons_done_today()),
+            (daily[1], daily[2], False, lambda key=daily[0]: app.show_page(key)),
+        ]
+        n_done = sum(1 for it in items if it[2])
+        head.pack_end(label(f"{n_done} z {len(items)} · ok. 20 min", "dim", wrap=False), False, False, 0)
+        c.pack_start(head, False, False, 0)
+        cur_set = False
+        for i, (title, desc, is_done, cb) in enumerate(items):
+            state = "done" if is_done else ("cur" if not cur_set else "todo")
+            cur_set = cur_set or state == "cur"
+            r = Gtk.Box(spacing=12)
+            r.get_style_context().add_class("plan-row")
+            r.pack_start(dot("▶" if state == "cur" else "", state), False, False, 0)
+            tcol = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)
+            esc = GLib.markup_escape_text(title)
+            tcol.pack_start(label(f"<s>{esc}</s>" if is_done else f"<b>{esc}</b>", markup=True,
+                                  cls="dim" if is_done else None), False, False, 0)
+            tcol.pack_start(label(desc, "dim"), False, False, 0)
+            r.pack_start(tcol, True, True, 0)
+            if cb and not is_done:
+                r.pack_start(_btn("Start", state == "cur", cb), False, False, 0)
+            c.pack_start(r, False, False, 0)
+        return c
+
+    def _lesson_item(self, les, tab, done_today):
+        """Punkt planu „lekcja”: zaliczony, gdy dziś ukończono lekcję (wtedy podpowiada następną)."""
+        app = self.app
+        if not les:
+            return ("Kurs ukończony", "", True, None)
+        short = f"Lekcja {les.number}: {les.title.split('—')[0].strip()}"
+        if done_today:
+            return (f"Lekcja ukończona dziś ({done_today})", f"następna: {short}", True, None)
+        return (short, f"{_TAB_SHORT.get(tab, '')} · ok. 10 min", False, lambda: app.open_lesson(les.id, tab))
+
+    def _reviews(self):
+        app, db = self.app, self.app.db
+        due, new = db.count_due()
+        n = due + min(new, int(db.get("new_per_day", 20)))
+        d_due, _d_total = db.drill_counts()
+        c = card(spacing=4)
+        row = Gtk.Box(spacing=10)
+        col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+        col.pack_start(label("POWTÓRKI", "kicker", wrap=False), False, False, 0)
+        num = Gtk.Box(spacing=8)
+        num.pack_start(label(str(n), "stat-big", wrap=False), False, False, 0)
+        sl = label("słówek dziś", "dim", wrap=False)
+        sl.set_valign(Gtk.Align.END)
+        sl.set_margin_bottom(5)
+        num.pack_start(sl, False, False, 0)
+        col.pack_start(num, False, False, 0)
+        row.pack_start(col, True, True, 0)
+        bb = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        rv = _btn("Powtórz", True, lambda: app.open_review("cards"))
+        rv.set_sensitive(n > 0)
+        bb.pack_start(rv, False, False, 0)
+        if d_due:
+            bb.pack_start(_btn(f"Błędy ({d_due})", cb=lambda: app.open_review("drill")), False, False, 0)
+        row.pack_start(bb, False, False, 0)
+        c.pack_start(row, False, False, 0)
+        hard = db.hardest(3)
+        if hard:
+            c.pack_start(label("Najtrudniejsze: <b>" + " · ".join(GLib.markup_escape_text(h) for h in hard) + "</b>",
+                               "dim", markup=True), False, False, 0)
+        return c
+
+    def _word(self):
+        words = [w for w in self.app.course.dictionary if w.get("ex_es")]
+        if not words:
+            return None
+        w = random.Random(time.strftime("%Y%m%d")).choice(words)
+        c = card(spacing=4)
+        c.pack_start(label("SŁOWO DNIA", "kicker", wrap=False), False, False, 0)
+        row = Gtk.Box(spacing=6)
+        row.pack_start(label(w["es"], "big-es", wrap=False), False, False, 0)
+        row.pack_start(SpeakButton(self.app, w["es"]), False, False, 0)
+        c.pack_start(row, False, False, 0)
+        c.pack_start(label(w["pl"], "dim"), False, False, 0)
+        ex = Gtk.Box(spacing=6)
+        ex.pack_start(label(f"{w['ex_es']} — {w['ex_pl']}", "dim"), True, True, 0)
+        ex.pack_start(SpeakButton(self.app, w["ex_es"]), False, False, 0)
+        c.pack_start(ex, False, False, 0)
+        return c
 
 
 # ====================================================================== KURS
 class CoursePage(Gtk.Box):
+    LEVELS = {"A1": "Poziom początkujący — przetrwanie w codziennych sytuacjach",
+              "A2": "Poziom podstawowy — przeszłość, przyszłość, opowiadanie, opinie"}
+
     def __init__(self, app):
         super().__init__(orientation=Gtk.Orientation.VERTICAL)
         self.app = app
+        self.level = None
+        self.open_units = set()          # działy rozwinięte ręcznie
         self.inner = page_box()
         self.pack_start(scrolled(self.inner), True, True, 0)
         self.refresh()
 
+    def _set_level(self, level):
+        self.level = level
+        self.refresh()
+
+    def _toggle_unit(self, key):
+        (self.open_units.discard if key in self.open_units else self.open_units.add)(key)
+        self.refresh()
+
     def refresh(self):
-        app = self.app
+        app, db, course = self.app, self.app.db, self.app.course
         clear(self.inner)
-        done = app.db.done_lessons()
-        self.inner.pack_start(label("Kurs hiszpańskiego — Hiszpania (castellano)", "hero"), False, False, 0)
-        self.inner.pack_start(label("Poziomy według Europejskiego Systemu Opisu Kształcenia Językowego (CEFR). "
-                                    "Lekcje możesz robić w dowolnej kolejności, ale najlepiej po kolei.", "dim"),
-                              False, False, 0)
-        for level, desc in (("A1", "Poziom początkujący — przetrwanie w codziennych sytuacjach"),
-                            ("A2", "Poziom podstawowy — przeszłość, przyszłość, opowiadanie, opinie")):
-            units = app.course.units(level)
-            n_done = sum(1 for u in units.values() for l in u if l.id in done)
+        done = db.done_lessons()
+        cur, cur_tab, started = _current_lesson(app)
+        if self.level is None:
+            self.level = cur.level if cur else "A1"
+        level = self.level
+
+        head = Gtk.Box(spacing=14)
+        head.pack_start(label("Kurs", "hero", wrap=False), False, False, 0)
+        sw = Gtk.Box(spacing=4)
+        sw.get_style_context().add_class("lvl-switch")
+        for lv in ("A1", "A2"):
+            units = course.units(lv)
             n_all = sum(len(u) for u in units.values())
-            head = Gtk.Box(spacing=10)
-            head.set_margin_top(10)
-            head.pack_start(label(f"Poziom {level}", "title2", wrap=False), False, False, 0)
-            head.pack_start(label(f"{n_done}/{n_all}", "badge", wrap=False), False, False, 0)
-            exam = Gtk.Button(label=f"Egzamin próbny {level}")
-            exam.connect("clicked", lambda _b, lv=level: app.start_exam(lv))
-            head.pack_end(exam, False, False, 0)
-            self.inner.pack_start(head, False, False, 0)
-            self.inner.pack_start(label(desc, "dim"), False, False, 0)
-            for unit, lessons in sorted(units.items()):
-                c = card(spacing=4)
-                uh = Gtk.Box(spacing=8)
-                uh.pack_start(label(f"Dział {unit}: {app.course.unit_title(level, unit)}", "title2"), True, True, 0)
-                best = app.db.best_test("unit", f"{level}-{unit}")
-                tb = Gtk.Button(label="Test działu" + (f" ({best}%)" if best is not None else ""))
-                tb.connect("clicked", lambda _b, lv=level, u=unit: app.start_unit_test(lv, u))
-                uh.pack_end(tb, False, False, 0)
-                c.pack_start(uh, False, False, 0)
-                lb = Gtk.ListBox()
-                lb.set_selection_mode(Gtk.SelectionMode.NONE)
-                for les in lessons:
-                    row = Gtk.ListBoxRow()
-                    hb = Gtk.Box(spacing=10)
-                    hb.set_margin_top(6)
-                    hb.set_margin_bottom(6)
-                    d = done.get(les.id)
-                    mark = label("✔" if d else "○", "lesson-done" if d else "dim", wrap=False)
-                    hb.pack_start(mark, False, False, 0)
-                    hb.pack_start(label(f"{les.number}. {les.title}", wrap=True), True, True, 0)
-                    if d:
-                        hb.pack_start(label(f"{d['best']}%", "dim", wrap=False), False, False, 0)
-                    row.add(hb)
-                    row.lesson_id = les.id
-                    lb.add(row)
-                lb.connect("row-activated", lambda _l, r: app.open_lesson(r.lesson_id))
-                c.pack_start(lb, False, False, 0)
-                self.inner.pack_start(c, False, False, 0)
+            n_done = sum(1 for u in units.values() for l in u if l.id in done)
+            bt = _btn(f"{lv} · {n_done}/{n_all}", lv == level, (lambda lv=lv: self._set_level(lv)))
+            sw.pack_start(bt, False, False, 0)
+        head.pack_start(sw, False, False, 0)
+        head.pack_end(_btn(f"Egzamin próbny {level}", cb=lambda: app.start_exam(level)), False, False, 0)
+        self.inner.pack_start(head, False, False, 0)
+        self.inner.pack_start(label(f"{level} · {self.LEVELS[level]} · Hiszpania (castellano). Lekcje możesz robić "
+                                    "w dowolnej kolejności, ale najlepiej po kolei.", "dim"), False, False, 0)
+
+        for unit, lessons in sorted(course.units(level).items()):
+            key = f"{level}-{unit}"
+            nd = [done[l.id]["best"] for l in lessons if l.id in done]
+            all_done = len(nd) == len(lessons)
+            has_cur = cur is not None and any(l.id == cur.id for l in lessons)
+            expanded = (has_cur and key not in self.open_units) or (not has_cur and key in self.open_units)
+            c = card(spacing=8)
+            uh = Gtk.Box(spacing=14)
+            ring = Ring(app, 1.0 if all_done else len(nd) / max(1, len(lessons)),
+                        "✓" if all_done else f"{len(nd)}/{len(lessons)}", "", "#16A34A" if all_done else "accent",
+                        size=54, width=6)
+            uh.pack_start(ring, False, False, 0)
+            tcol = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=2)
+            tcol.set_valign(Gtk.Align.CENTER)
+            tcol.pack_start(label(f"Dział {unit}: {course.unit_title(level, unit)}", "title2"), False, False, 0)
+            bt = db.best_test("unit", key)
+            bits = [f"{len(nd)} z {len(lessons)} lekcji" if not all_done else f"{len(lessons)} lekcje"]
+            if nd:
+                bits.append(f"średnio {round(sum(nd) / len(nd))}%")
+            if bt is not None:
+                bits.append(f"test działu {bt}%")
+            tcol.pack_start(label(" · ".join(bits), "dim"), False, False, 0)
+            uh.pack_start(tcol, True, True, 0)
+            uh.pack_end(_btn("Pokaż lekcje" if not expanded else "Zwiń", cb=lambda k=key: self._toggle_unit(k)),
+                        False, False, 0)
+            uh.pack_end(_btn("Test działu" + (f" · {bt}%" if bt is not None else ""),
+                             cb=lambda lv=level, u=unit: app.start_unit_test(lv, u)), False, False, 0)
+            c.pack_start(uh, False, False, 0)
+            if expanded:
+                c.pack_start(self._lessons(lessons, done, cur, cur_tab, started), False, False, 0)
+            self.inner.pack_start(c, False, False, 0)
         self.show_all()
+
+    def _lessons(self, lessons, done, cur, cur_tab, started):
+        app = self.app
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+        box.set_margin_top(4)
+        for les in lessons:
+            d = done.get(les.id)
+            if cur is not None and les.id == cur.id:
+                cb = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+                cb.get_style_context().add_class("cur-lesson")
+                r = Gtk.Box(spacing=12)
+                r.pack_start(dot(str(les.number), "cur"), False, False, 0)
+                tc = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=1)
+                tc.pack_start(label(f"<b>{les.number}. {GLib.markup_escape_text(les.title)}</b>", markup=True), False, False, 0)
+                step = _TABS.index(cur_tab) if cur_tab in _TABS else 0
+                tc.pack_start(label(f"{step} z {len(_TABS)} części" if started else "następna lekcja", "dim"), False, False, 0)
+                r.pack_start(tc, True, True, 0)
+                r.pack_start(_btn("▶  Kontynuuj" if started else "▶  Zacznij", True,
+                                  lambda lid=les.id, t=cur_tab: app.open_lesson(lid, t)), False, False, 0)
+                cb.pack_start(r, False, False, 0)
+                parts = Gtk.Box(spacing=8)
+                parts.set_margin_start(36)
+                for i, tk in enumerate(_TABS):
+                    st = "done" if started and i < step else ("cur" if i == step else "todo")
+                    p = Gtk.Label(label=("✓ " if st == "done" else "▶ " if st == "cur" else "") + _TAB_SHORT[tk])
+                    p.get_style_context().add_class("part")
+                    if st != "todo":
+                        p.get_style_context().add_class("part-" + st)
+                    parts.pack_start(p, False, False, 0)
+                cb.pack_start(parts, False, False, 0)
+                box.pack_start(cb, False, False, 0)
+                continue
+            ev = Gtk.EventBox()
+            ev.set_above_child(False)
+            r = Gtk.Box(spacing=12)
+            r.set_margin_start(10)
+            r.set_margin_end(10)
+            r.set_margin_top(5)
+            r.set_margin_bottom(5)
+            r.pack_start(dot(str(les.number), "done" if d else "todo"), False, False, 0)
+            r.pack_start(label(f"{les.number}. {les.title}", None if d else "dim"), True, True, 0)
+            if d:
+                n = stars_for(d["best"])
+                r.pack_start(label("★" * n, "stars", wrap=False), False, False, 0)
+                if n < 3:
+                    r.pack_start(label("★" * (3 - n), "stars-off", wrap=False), False, False, 0)
+                sc = label(f"{d['best']}%", "score", wrap=False)
+                sc.set_width_chars(5)
+                sc.set_xalign(1.0)
+                r.pack_start(sc, False, False, 0)
+            ev.add(r)
+            ev.set_tooltip_text("Otwórz lekcję")
+            ev.connect("button-release-event", lambda _w, _e, lid=les.id: app.open_lesson(lid))
+            ev.connect("realize", lambda w: w.get_window().set_cursor(
+                Gdk.Cursor.new_from_name(w.get_display(), "pointer")))
+            box.pack_start(ev, False, False, 0)
+        return box
 
 
 # ====================================================================== LEKCJA
@@ -363,6 +544,9 @@ class LessonView(Gtk.Box):
         self._start_exercises()
         self.track = False
         self.stack.connect("notify::visible-child-name", self._remember)
+        # tryb skupienia: przy ćwiczeniach znika menu boczne
+        self.stack.connect("notify::visible-child-name",
+                           lambda st, _p: app.set_focus_mode(st.get_visible_child_name() == "ex"))
 
     TAB_NAMES = {"intro": "1. Dialog", "vocab": "2. Słownictwo", "grammar": "3. Gramatyka",
                  "ex": "4. Ćwiczenia", "speak": "5. Mówienie"}
@@ -483,6 +667,8 @@ class LessonView(Gtk.Box):
         items = authored + extra
         rng.shuffle(items)
         inner = page_box()
+        inner.set_halign(Gtk.Align.CENTER)       # tryb skupienia: zadanie na środku, wygodna szerokość
+        inner.set_size_request(880, -1)
         inner.pack_start(label(f"Ćwiczenia ({len(items)})", "title2"), False, False, 0)
         inner.pack_start(ExerciseRunner(self.app, items, self._finished, source=self.lesson.id), False, False, 0)
         self.ex_box.pack_start(scrolled(inner), True, True, 0)
