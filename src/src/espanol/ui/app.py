@@ -93,6 +93,18 @@ class App(Gtk.Application):
             self.add_action(a)
         self.set_accels_for_action("app.quit", ["<Ctrl>q"])
         self._setup_theme()
+        self._start_icon_helper()
+
+    def _start_icon_helper(self):
+        """Dock icon light/dark: the helper (also started at login) runs now too, so it works right after install."""
+        helper = "/usr/lib/linux-espanol-learning/icon-watch.sh"
+        if os.path.exists(helper):
+            try:
+                import subprocess
+                subprocess.Popen(["sh", helper], stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
+                                 stderr=subprocess.DEVNULL, start_new_session=True)
+            except OSError:
+                pass
 
     def do_activate(self):
         if self.win:

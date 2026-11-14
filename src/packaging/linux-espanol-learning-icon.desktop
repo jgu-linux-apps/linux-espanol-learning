@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Linux Español Learning icon theme helper
+Comment=Keeps the app icon in step with the light/dark system theme
+Exec=/usr/lib/linux-espanol-learning/icon-watch.sh
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

@@ -1,13 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <defs>
-    <clipPath id="r"><rect x="8" y="8" width="112" height="112" rx="26"/></clipPath>
-  </defs>
-  <g clip-path="url(#r)">
-    <rect x="8" y="8" width="112" height="112" fill="#2a2a2e"/>
-    <rect x="8" y="8" width="112" height="22" fill="#9e1a2b"/>
-    <rect x="8" y="98" width="112" height="22" fill="#9e1a2b"/>
-  </g>
-  <rect x="8.5" y="8.5" width="111" height="111" rx="26" fill="none" stroke="#ffffff" stroke-opacity=".12"/>
-  <path d="M34 40h60a12 12 0 0 1 12 12v24a12 12 0 0 1-12 12H62l-16 13 3-13h-15a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z" fill="#3b3b40" stroke="#FFC400" stroke-opacity=".7" stroke-width="2"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><defs><clipPath id="r"><rect x="8" y="8" width="112" height="112" rx="26" /></clipPath>
+  <linearGradient id="rimX" x1="0" y1="0" x2="1" y2="1"><stop offset="0.0" stop-color="#f1bf00" /><stop offset="0.5" stop-color="#e8505b" /><stop offset="1.0" stop-color="#c8102e" /></linearGradient></defs><rect x="10" y="10" width="236" height="236" rx="58" fill="#151827" /><g transform="translate(0.0 0.0) scale(2.0)"><path d="M34 40h60a12 12 0 0 1 12 12v24a12 12 0 0 1-12 12H62l-16 13 3-13h-15a12 12 0 0 1-12-12V52a12 12 0 0 1 12-12z" fill="#3b3b40" stroke="#FFC400" stroke-opacity=".7" stroke-width="2" />
   <text x="64" y="80" text-anchor="middle" font-family="Ubuntu, Cantarell, DejaVu Sans, sans-serif" font-weight="700" font-size="40" fill="#FFC400">¡ñ!</text>
-</svg>
+</g></svg>

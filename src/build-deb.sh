@@ -20,10 +20,13 @@ for v in "" "-dark"; do
     rsvg-convert -w $s -h $s icons/$PKG$v.svg -o "$ROOT/usr/share/icons/hicolor/${s}x${s}/apps/$PKG$v.png"
   done
 done
+# icon follows light/dark also while the app is closed (session autostart helper, also started by the app)
+install -D -m 755 packaging/icon-watch.sh "$ROOT/usr/lib/$PKG/icon-watch.sh"
+install -D -m 644 packaging/$PKG-icon.desktop "$ROOT/etc/xdg/autostart/$PKG-icon.desktop"
 install -m 644 README.md "$ROOT/usr/share/doc/$PKG/README.md"
 install -m 644 LICENSE "$ROOT/usr/share/doc/$PKG/copyright"
 install -m 755 packaging/postinst packaging/postrm "$ROOT/DEBIAN/"
-SIZE=$(du -sk "$ROOT/usr" | cut -f1)
+SIZE=$(du -sk "$ROOT/usr" "$ROOT/etc" | awk '{s+=$1} END {print s}')
 sed "s/@SIZE@/$SIZE/; s/^Version: .*/Version: $VER/" packaging/control > "$ROOT/DEBIAN/control"
 find "$ROOT" -type d -exec chmod 755 {} +
 find "$ROOT/usr/share" -type f -exec chmod 644 {} +
