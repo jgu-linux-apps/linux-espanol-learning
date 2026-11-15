@@ -1,0 +1,68 @@
+# id: a2-27
+# title: Comparar — comparatives and superlatives
+# unit: 7
+# unit_title: Recuerdos — memories
+@goals
+Compare people, cities and things
+Use the superlative and the irregular forms
+@dialog
+Andrés: ¿Qué te gusta más: Madrid o Barcelona? | Which do you like more: Madrid or Barcelona?
+Marek: Es difícil. Barcelona es más bonita que Madrid, pero Madrid es más animada. | It's hard to say. Barcelona is prettier than Madrid, but Madrid is livelier.
+Andrés: Y Madrid es más grande. Tiene más habitantes que Barcelona. | And Madrid is bigger. It has more inhabitants than Barcelona.
+Marek: Sí, pero el clima de Barcelona es mejor: tiene playa. | Yes, but Barcelona's climate is better: it has a beach.
+Andrés: Para mí, la ciudad más bonita de España es San Sebastián. | For me, the most beautiful city in Spain is San Sebastián.
+Marek: ¿Más bonita que Sevilla? | More beautiful than Seville?
+Andrés: Bueno, Sevilla es tan bonita como San Sebastián… ¡pero hace demasiado calor! | Well, Seville is as beautiful as San Sebastián… but it's far too hot!
+@vocab
+más … que | more … than, -er than | phr | Es más alto que yo. / He's taller than me.
+menos … que | less … than | phr
+tan … como | as … as | phr
+tanto / tanta … como | as much / as many … as | phr
+mejor | better | adj
+peor | worse | adj
+mayor | older; bigger | adj
+menor | younger; smaller | adj
+el / la más … de | the most … in | phr | el más alto de la clase / the tallest in the class
+animado / animada | lively | adj
+el habitante | inhabitant | m
+el clima | climate | m
+difícil | difficult, hard | adj
+fácil | easy | adj
+demasiado | too, too much | adv
+tranquilo / tranquila | quiet, calm | adj
+moderno / moderna | modern | adj
+antiguo / antigua | old, historic | adj
+@grammar
+## Comparisons
+Spanish has no “-er” ending: everything goes with **más / menos**.
+|| más + adjective + que | Madrid es más grande que Gdańsk.
+|| menos + adjective + que | Gdańsk es menos caro que Madrid.
+|| tan + adjective + como | Sevilla es tan bonita como Granada.
+|| más / menos + noun + que | Madrid tiene más habitantes que Barcelona.
+|| tanto/a/os/as + noun + como | Tengo tantos libros como tú.
+
+## Irregular forms
+|| bueno / bien | mejor (better)
+|| malo / mal | peor (worse)
+|| grande (age) | mayor (older) — **mi hermano mayor**
+|| pequeño (age) | menor (younger) — **mi hermana menor**
+Don't say “más bueno” for “better”.
+
+## The superlative
+**el / la / los / las + (noun) + más + adjective + de**:
+**Es la ciudad más bonita de España.** — It's the most beautiful city in Spain (note: **de**, not “en”).
+**Es el mejor restaurante de Rumia.** — It's the best restaurant in Rumia.
+“Extremely”: **-ísimo**: **bonitísima, carísimo, facilísimo**.
+@exercises
+fill: Mi hermano es ___ alto que yo. | más
+fill: Gdańsk es ___ grande que Madrid. (smaller — use “menos”) | menos
+fill: Sevilla es tan bonita ___ Granada. | como
+choice: The film is better than the book: | La película es mejor que el libro. | La película es más buena que el libro.; La película es mejor que el libro.; La película es mejor como el libro.
+choice: My older brother: | mi hermano mayor | mi hermano más viejo; mi hermano mayor; mi hermano más mayor
+choice: the highest mountain in Spain: | la montaña más alta de España | la montaña más alta en España de; la montaña más alta de España; la más montaña alta de España
+choice: I have as much time as you: | Tengo tanto tiempo como tú. | Tengo tan tiempo como tú.; Tengo tanto tiempo como tú.; Tengo tanto tiempo que tú.
+trans: Barcelona is prettier than Madrid. | Barcelona es más bonita que Madrid.
+trans: It's the best restaurant in town. | Es el mejor restaurante de la ciudad.
+trans: Spanish is easier than Polish. | El español es más fácil que el polaco.
+@culture
+Spain's highest peak, **el Teide** (3,715 m), isn't on the Iberian Peninsula but on Tenerife, in the Canary Islands. It's a volcano.

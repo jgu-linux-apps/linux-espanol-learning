@@ -1,0 +1,74 @@
+# id: a1-02
+# title: ¿De dónde eres? Where you're from and nationality
+# unit: 1
+# unit_title: Primeros pasos — first steps
+@goals
+Say where you're from and what your nationality is
+Learn the verb ser in the present tense
+Learn the subject pronouns
+@dialog
+Lucía: ¿De dónde eres, Marek? | Where are you from, Marek?
+Marek: Soy de Polonia, de Rumia. Es una ciudad cerca de Gdańsk. | I'm from Poland, from Rumia. It's a town near Gdańsk.
+Lucía: ¡Qué interesante! Entonces eres polaco. | How interesting! So you're Polish.
+Marek: Sí, soy polaco. ¿Y tú? ¿Eres española? | Yes, I'm Polish. And you? Are you Spanish?
+Lucía: Sí, soy española, de Valencia. | Yes, I'm Spanish, from Valencia.
+Marek: ¿Y tu amigo Marc? | And your friend Marc?
+Lucía: Marc es de Barcelona. Habla español y catalán. | Marc is from Barcelona. He speaks Spanish and Catalan.
+@vocab
+ser | to be (identity, origin) | v | Soy de Polonia. / I'm from Poland.
+¿de dónde? | where from? | adv | ¿De dónde eres? / Where are you from?
+de | from, of | prep | Soy de Rumia. / I'm from Rumia.
+Polonia | Poland | f
+polaco / polaca | Polish (man / woman) | adj | Soy polaco. / I'm Polish.
+España | Spain | f
+español / española | Spanish (man / woman) | adj
+el español | the Spanish language | m | Hablo un poco de español. / I speak a little Spanish.
+inglés / inglesa | English (man / woman) | adj
+alemán / alemana | German (man / woman) | adj
+francés / francesa | French (man / woman) | adj
+italiano / italiana | Italian (man / woman) | adj
+la ciudad | city, town | f | una ciudad bonita / a pretty town
+el país | country | m
+cerca de | near, close to | prep
+el amigo / la amiga | friend | m
+hablar | to speak (a language), to talk | v | Hablo inglés. / I speak English.
+interesante | interesting | adj
+@grammar
+## Subject pronouns
+|| yo | I
+|| tú | you (informal)
+|| él / ella / usted | he / she / you (formal)
+|| nosotros / nosotras | we (masculine / feminine)
+|| vosotros / vosotras | you all (masculine / feminine)
+|| ellos / ellas / ustedes | they (masc. / fem.) / you all (formal)
+**Usted** and **ustedes** (the polite “you”) take the 3rd-person form of the verb. In Spain you say **vosotros** to a group of friends, and **ustedes** is the polite form.
+The pronoun is usually left out, because the verb ending already shows who is acting: **Soy inglés** (no need for “yo soy”).
+
+## The verb ser (to be) — present tense
+|| yo | soy
+|| tú | eres
+|| él / ella / usted | es
+|| nosotros/as | somos
+|| vosotros/as | sois
+|| ellos / ellas / ustedes | son
+Ser is used, among other things, for origin (**ser de** + place), nationality, profession and identity.
+
+## Nationalities: masculine and feminine
+- Ending in **-o** → feminine in **-a**: polaco → polaca, italiano → italiana.
+- Ending in a consonant → add **-a**: español → española, alemán → alemana (the accent disappears!), inglés → inglesa.
+Unlike in English, nationalities and languages are written with a **small letter**: español, inglés. Countries take a capital: España, Inglaterra.
+@exercises
+fill: Yo ___ de Polonia. | soy
+fill: ¿De dónde ___ tú? | eres
+fill: Ella ___ española. | es
+fill: Nosotros ___ polacos. | somos
+fill: Vosotros ___ de Madrid, ¿verdad? | sois
+fill: Ellos ___ italianos. | son
+choice: Anna is Polish (she's a woman): | Anna es polaca. | Anna es polaco.; Anna es polaca.; Anna es Polonia.
+choice: Laura is Spanish: | Laura es española. | Laura es español.; Laura es española.; Laura es espanola.
+trans: I'm from Poland. | Soy de Polonia. /// Yo soy de Polonia.
+trans: Where are you from? | ¿De dónde eres?
+trans: She is German. | Es alemana. /// Ella es alemana.
+trans: I speak Spanish. | Hablo español. /// Yo hablo español.
+@culture
+In Spain, besides Spanish (castellano), Catalan, Galician and Basque (euskera) are official languages in their regions. That's why Spaniards often call their language **castellano**.

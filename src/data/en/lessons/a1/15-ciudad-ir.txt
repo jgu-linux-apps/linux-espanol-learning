@@ -1,0 +1,74 @@
+# id: a1-15
+# title: Moverse por la ciudad — transport and directions
+# unit: 4
+# unit_title: En la ciudad — in town
+@goals
+Say where you're going and how (ir a, en)
+Ask for and give directions
+@dialog
+Marek: Perdone, ¿para ir al Museo del Prado? | Excuse me, how do I get to the Prado Museum?
+Señora: Está un poco lejos. Puede ir en metro o en autobús. | It's a bit far. You can go by underground or by bus.
+Marek: ¿Y andando? | And on foot?
+Señora: Andando son veinte minutos. Siga todo recto por esta calle y gire a la derecha en la plaza. | On foot it's twenty minutes. Go straight along this street and turn right at the square.
+Marek: ¿Todo recto y luego a la derecha? | Straight on and then right?
+Señora: Eso es. El museo está a la izquierda, enfrente del parque. | That's it. The museum is on the left, opposite the park.
+Marek: Muchas gracias. | Thank you very much.
+@vocab
+ir | to go | v | Voy al trabajo en coche. / I go to work by car.
+el coche | car (in Spain) | m
+el autobús | bus | m
+el metro | underground, subway | m
+el tren | train | m
+el avión | plane | m
+andando / a pie | on foot | adv
+coger | to take; to catch (a bus) — in Spain | v | Cojo el metro. / I take the underground.
+la calle | street | f
+la plaza | square | f
+el museo | museum | m
+el parque | park | m
+la iglesia | church | f
+el banco | bank; bench | m
+la farmacia | chemist's, pharmacy | f
+lejos de | far from | prep
+todo recto | straight on | phr
+a la derecha | (to the) right, on the right | phr
+a la izquierda | (to the) left, on the left | phr
+girar | to turn | v
+seguir | to carry on, to continue | v
+cruzar | to cross | v
+luego | then, later | adv
+el minuto | minute | m
+@grammar
+## The verb ir (to go) — irregular
+|| yo | voy
+|| tú | vas
+|| él/ella/usted | va
+|| nosotros/as | vamos
+|| vosotros/as | vais
+|| ellos/ellas/ustedes | van
+- **ir a + place**: **Voy a Madrid. Voy al banco** (a + el = al).
+- **ir en + means of transport** (“by”): **en coche, en tren, en metro**. But on foot: **a pie / andando**.
+
+## Giving directions (usted form)
+- **Siga todo recto.** — Go straight on.
+- **Gire a la derecha / a la izquierda.** — Turn right / left.
+- **Cruce la calle.** — Cross the street.
+- **Coja la primera / segunda calle.** — Take the first / second street.
+To a friend (tú): **sigue, gira, cruza, coge**.
+
+## Coger in Spain
+In Spain **coger** (to take, to catch) is a completely neutral word: **coger el autobús**. In Latin America it's better avoided — there people say **tomar el autobús**.
+@exercises
+conj: ir (nosotros) | vamos
+conj: ir (yo) | voy
+conj: ir (vosotros) | vais
+fill: Voy ___ trabajo en tren. | al
+fill: Mis padres van a Málaga ___ avión. | en
+fill: Vamos al museo ___ pie. | a
+choice: Turn left (polite): | Gire a la izquierda. | Gire a la derecha.; Gire a la izquierda.; Siga todo recto.
+choice: Chemist's: | la farmacia | la farmacia; el banco; la iglesia
+trans: I go to work by car. | Voy al trabajo en coche.
+trans: Where is the bank? | ¿Dónde está el banco?
+trans: The museum is on the right. | El museo está a la derecha.
+@culture
+The Madrid underground is one of the largest in Europe. Spain also has fast **AVE** trains — from Madrid to Seville they take about 2.5 hours.

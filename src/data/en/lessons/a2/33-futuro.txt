@@ -1,0 +1,73 @@
+# id: a2-33
+# title: El futuro — the simple future
+# unit: 9
+# unit_title: Trabajo y futuro — work and the future
+@goals
+Make predictions and promises
+Form the futuro simple, including irregular verbs
+@dialog
+Pilar: ¿Cómo te imaginas el mundo dentro de veinte años? | How do you imagine the world in twenty years?
+Marek: Creo que los coches serán eléctricos y no habrá conductores. | I think cars will be electric and there won't be any drivers.
+Pilar: ¿Y el trabajo? | And work?
+Marek: Trabajaremos menos horas y muchas personas trabajarán desde casa. | We'll work fewer hours and many people will work from home.
+Pilar: ¿Y tú? ¿Dónde vivirás? | And you? Where will you live?
+Marek: Seguramente viviré en España, cerca del mar. ¡Y hablaré español perfectamente! | I'll probably live in Spain, near the sea. And I'll speak perfect Spanish!
+Pilar: Te lo prometo: si estudias cada día, lo harás. | I promise you: if you study every day, you'll do it.
+@vocab
+imaginarse | to imagine | vr
+dentro de | in (time from now); inside | prep | dentro de dos años / in two years
+creer | to think, to believe | v | Creo que sí. / I think so.
+eléctrico / eléctrica | electric | adj
+el conductor / la conductora | driver | m
+la persona | person | f
+seguramente | probably, surely | adv
+quizás | perhaps, maybe | adv
+el mar | sea | m
+prometer | to promise | v
+el futuro | the future | m
+si | if | conj | Si llueve, no iré. / If it rains, I won't go.
+el próximo año | next year | phr
+perfectamente | perfectly | adv
+@grammar
+## Futuro simple — the endings go on the infinitive
+Spanish needs no “will”: the ending does the job.
+|| yo | hablaré
+|| tú | hablarás
+|| él/ella/usted | hablará
+|| nosotros/as | hablaremos
+|| vosotros/as | hablaréis
+|| ellos/ellas/ustedes | hablarán
+The same endings for **-ar, -er, -ir**: **comeré, viviré**.
+
+## Irregular stems (same endings)
+|| tener | tendré
+|| poder | podré
+|| salir | saldré
+|| venir | vendré
+|| poner | pondré
+|| saber | sabré
+|| querer | querré
+|| hacer | haré
+|| decir | diré
+|| haber | habrá (there will be)
+
+## Futuro or ir a?
+- **ir a** — plans, intentions, something certain: **Voy a cenar con Ana.**
+- **futuro** — predictions, promises, a distant or uncertain future: **Algún día viviré en España.**
+
+## Conditional sentences: si + present, future
+**Si estudias, aprobarás.** — If you study, you'll pass. (As in English, never the future after **si**!)
+@exercises
+conj: hablar (nosotros, futuro) | hablaremos
+conj: vivir (yo, futuro) | viviré
+conj: tener (tú, futuro) | tendrás
+conj: hacer (ellos, futuro) | harán
+conj: decir (yo, futuro) | diré
+conj: poder (vosotros, futuro) | podréis
+conj: salir (ella, futuro) | saldrá
+choice: If it rains, I'll stay at home: | Si llueve, me quedaré en casa. | Si lloverá, me quedaré en casa.; Si llueve, me quedaré en casa.; Si llueve, me quedo en casa mañana será.
+choice: There won't be any drivers: | No habrá conductores. | No habrán conductores.; No habrá conductores.; No hay será conductores.
+trans: In twenty years I'll live in Spain. | Dentro de veinte años viviré en España.
+trans: I promise you. | Te lo prometo.
+@culture
+Spaniards often use the futuro to guess about the present: **¿Dónde está Ana? — Estará en casa.** (She's probably at home.)

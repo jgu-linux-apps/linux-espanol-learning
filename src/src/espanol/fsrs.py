@@ -4,6 +4,7 @@ Oceny: 1 = Nie pamiętam, 2 = Trudne, 3 = Dobrze, 4 = Łatwe.
 """
 import math
 import time
+from .i18n import _  # noqa: E402
 
 W = [0.4872, 1.4003, 3.7145, 13.8206, 5.1618, 1.2298, 0.8975, 0.031, 1.6474,
      0.1367, 1.0461, 2.1072, 0.0793, 0.3246, 1.587, 0.2272, 2.8755]
@@ -95,13 +96,13 @@ def preview_intervals(card, now=None):
 
 def human_delta(sec):
     if sec < 3600:
-        return f"{max(1, round(sec / 60))} min"
+        return _('{} min').format(max(1, round(sec / 60)))
     if sec < DAY:
         return f"{round(sec / 3600)} godz."
     d = round(sec / DAY)
     if d == 1:
-        return "1 dzień"
+        return _("1 dzień")
     if d < 31:
-        return f"{d} dni"
+        return _('{} dni').format(d)
     m = round(d / 30)
     return f"{m} mies."

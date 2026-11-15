@@ -1,0 +1,69 @@
+# id: a2-25
+# title: Cuando era niño… Pretérito imperfecto
+# unit: 7
+# unit_title: Recuerdos — memories
+@goals
+Talk about past habits
+Describe what things used to be like
+Form the pretérito imperfecto
+@dialog
+Abuela: Cuando yo era pequeña, no había móviles ni internet. | When I was little, there were no mobiles or internet.
+Nieto: ¿Y qué hacíais todo el día? | So what did you do all day?
+Abuela: Jugábamos en la calle con los vecinos. Siempre estábamos fuera. | We played in the street with the neighbours. We were always outside.
+Nieto: ¿Ibas al colegio andando? | Did you walk to school?
+Abuela: Sí, el colegio estaba lejos y caminábamos media hora cada día. | Yes, the school was far away and we walked half an hour every day.
+Nieto: ¿Y la televisión? | And the TV?
+Abuela: Solo teníamos un canal y lo veíamos todos juntos los domingos. | We only had one channel and we all watched it together on Sundays.
+@vocab
+el abuelo / la abuela | grandfather / grandmother | m
+el nieto / la nieta | grandson / granddaughter | m
+el vecino / la vecina | neighbour | m
+pequeño / pequeña | small (also: as a child) | adj | Cuando era pequeño… / When I was little…
+el móvil | mobile phone (in Spain) | m
+la televisión | television, TV | f
+el canal | channel | m
+fuera | outside | adv
+caminar | to walk | v
+cada día | every day | phr
+de niño / de niña | as a child | phr
+antes | before, in the past | adv
+ahora | now | adv
+soler | to usually do, to be used to | v | Solía leer mucho. / I used to read a lot.
+juntos / juntas | together | adj
+ni | nor, or (after a negative) | conj
+@grammar
+## Pretérito imperfecto — forms
+|| | hablar | comer / vivir
+|| yo | hablaba | comía / vivía
+|| tú | hablabas | comías / vivías
+|| él/ella/usted | hablaba | comía / vivía
+|| nosotros/as | hablábamos | comíamos / vivíamos
+|| vosotros/as | hablabais | comíais / vivíais
+|| ellos/ellas/ustedes | hablaban | comían / vivían
+Only **three** verbs are irregular:
+- **ser**: era, eras, era, éramos, erais, eran
+- **ir**: iba, ibas, iba, íbamos, ibais, iban
+- **ver**: veía, veías, veía, veíamos, veíais, veían
+**hay → había** (there was / there were).
+
+## When to use the imperfecto
+It often matches English “used to” or “was …-ing”:
+- **habits in the past**: **De niño jugaba al fútbol todos los días.** (As a child I used to play football every day.)
+- **descriptions** of people, places, situations: **La casa era grande. Hacía sol.**
+- **age and time** in the past: **Tenía diez años. Eran las tres.**
+Typical signals: **antes, de niño, cuando era pequeño, siempre, todos los días, a menudo**.
+@exercises
+conj: jugar (nosotros, imperfecto) | jugábamos
+conj: tener (yo, imperfecto) | tenía
+conj: vivir (ellos, imperfecto) | vivían
+conj: ser (yo, imperfecto) | era
+conj: ir (tú, imperfecto) | ibas
+conj: ver (nosotros, imperfecto) | veíamos
+fill: Antes no ___ (haber) internet. | había
+fill: Cuando ___ (ser) pequeño, vivía en un pueblo. | era
+choice: As a child I used to play football every day: | De niño jugaba al fútbol todos los días. | De niño jugué al fútbol todos los días.; De niño jugaba al fútbol todos los días.; De niño he jugado al fútbol todos los días.
+trans: When I was little, I lived in Gdańsk. | Cuando era pequeña, vivía en Gdańsk.
+trans: There used to be no mobiles. | Antes no había móviles.
+trans: We had a dog. | Teníamos un perro.
+@culture
+In Spanish villages (**pueblos**) the custom of **tomar el fresco** is still alive — on summer evenings older neighbours put chairs out in front of their houses and chat in the street until late.

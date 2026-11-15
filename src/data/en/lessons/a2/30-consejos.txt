@@ -1,0 +1,64 @@
+# id: a2-30
+# title: Consejos — advice, obligations and the imperative (tú)
+# unit: 8
+# unit_title: Salud y cuidados — health
+@goals
+Give advice and talk about obligations (deber, hay que, tener que)
+Form the affirmative imperative for tú and vosotros
+@dialog
+Elena: Estoy muy estresada. Duermo mal y no tengo energía. | I'm very stressed. I sleep badly and I have no energy.
+Marek: Tienes que descansar más. ¿Por qué no haces deporte? | You have to rest more. Why don't you do some sport?
+Elena: No tengo tiempo… | I don't have time…
+Marek: Pues sal a caminar media hora cada día. Y apaga el móvil una hora antes de dormir. | Then go for a half-hour walk every day. And switch your phone off an hour before bed.
+Elena: ¿Y qué más? | And what else?
+Marek: Come mejor y bebe menos café. Hay que cuidarse, Elena. | Eat better and drink less coffee. You have to look after yourself, Elena.
+Elena: Tienes razón. Debería cambiar algunas cosas. | You're right. I should change a few things.
+@vocab
+deber + infinitivo | should, must | v | Debes dormir más. / You should sleep more.
+hay que + infinitivo | one has to, you need to | phr | Hay que comer bien. / You need to eat well.
+el consejo | (piece of) advice | m
+descansar | to rest | v
+cuidarse | to look after yourself | vr
+estresado / estresada | stressed | adj
+la energía | energy | f
+apagar | to switch off, to put out | v
+encender | to switch on, to light | v
+dejar de + infinitivo | to stop (doing) | phr | Dejé de fumar. / I stopped smoking.
+fumar | to smoke | v
+sano / sana | healthy | adj
+la cosa | thing | f
+tener razón | to be right | phr
+¿por qué no…? | why don't you…? | phr
+@grammar
+## Advice and obligations
+- **tener que** + infinitive — to have to (a particular person): **Tienes que descansar.**
+- **deber** + infinitive — should, must: **Debes dormir más.** More politely: **Deberías…** (you should).
+- **hay que** + infinitive — one has to (in general, no person): **Hay que beber agua.**
+- **¿Por qué no…?** — Why don't you…? **¿Por qué no vas al médico?**
+
+## The affirmative imperative — tú
+The **tú** form = the 3rd person singular of the present tense:
+**habla, come, escribe, duerme, empieza**.
+Irregular: **ten** (tener), **ven** (venir), **pon** (poner), **sal** (salir), **haz** (hacer), **di** (decir), **ve** (ir), **sé** (ser).
+
+## The imperative — vosotros (Spain)
+The infinitive with **-r → -d**: **hablad, comed, escribid, venid**.
+
+## With pronouns
+Pronouns are attached to the end and an accent is added: **levántate, cuídate, siéntate**; vosotros: **levantaos, sentaos**.
+@exercises
+conj: comer (tú, imperativo) | come
+conj: hacer (tú, imperativo) | haz
+conj: salir (tú, imperativo) | sal
+conj: venir (tú, imperativo) | ven
+conj: hablar (vosotros, imperativo) | hablad
+conj: escribir (vosotros, imperativo) | escribid
+choice: You need to drink a lot: | Hay que beber mucho. | Hay que beber mucho.; Tiene que beber mucho hay.; Hay beber mucho.
+choice: Take care! (tú) | ¡Cuídate! | ¡Cuídate!; ¡Te cuidas!; ¡Cuida te!
+fill: Tienes ___ dormir más. | que
+fill: ___ (deber, tú, polite form) ir al médico. | Deberías
+trans: You should rest more. | Deberías descansar más. /// Debes descansar más.
+trans: Switch off your phone! | ¡Apaga el móvil!
+trans: You're right. | Tienes razón.
+@culture
+The **Mediterranean diet** — olive oil, vegetables, fish, beans and lentils — is considered one of the healthiest in the world. Spaniards are among the longest-living people in Europe.

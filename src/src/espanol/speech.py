@@ -11,6 +11,7 @@ import threading
 import urllib.request
 
 from .paths import VENV, VOICES, MODELS, TTS_CACHE, HERE
+from .i18n import _  # noqa: E402
 
 PIPER_VERSION = "1.8.0"
 SLOW_FACTOR = 1.35   # 🐢 „wolniej”: ok. 74% wybranego tempa
@@ -23,18 +24,18 @@ VOICE_FILES = {
 }
 # dodatkowe głosy Piper (pobierane na żądanie z Ustawień): klucz -> (plik, ścieżka, opis)
 EXTRA_VOICES = {
-    "es_carlfm": ("es_ES-carlfm-x_low", "es/es_ES/carlfm/x_low", "Męski — Hiszpania (carlfm, lekki)"),
-    "es_mls1": ("es_ES-mls_10246-low", "es/es_ES/mls_10246/low", "Hiszpania (mls_10246)"),
-    "es_mls2": ("es_ES-mls_9972-low", "es/es_ES/mls_9972/low", "Hiszpania (mls_9972)"),
-    "mx_ald": ("es_MX-ald-medium", "es/es_MX/ald/medium", "Męski — Meksyk (ald)"),
-    "mx_claude": ("es_MX-claude-high", "es/es_MX/claude/high", "Żeński — Meksyk (claude, wysoka jakość)"),
+    "es_carlfm": ("es_ES-carlfm-x_low", "es/es_ES/carlfm/x_low", _("Męski — Hiszpania (carlfm, lekki)")),
+    "es_mls1": ("es_ES-mls_10246-low", "es/es_ES/mls_10246/low", _("Hiszpania (mls_10246)")),
+    "es_mls2": ("es_ES-mls_9972-low", "es/es_ES/mls_9972/low", _("Hiszpania (mls_9972)")),
+    "mx_ald": ("es_MX-ald-medium", "es/es_MX/ald/medium", _("Męski — Meksyk (ald)")),
+    "mx_claude": ("es_MX-claude-high", "es/es_MX/claude/high", _("Żeński — Meksyk (claude, wysoka jakość)")),
 }
 VOICE_URL = "https://huggingface.co/rhasspy/piper-voices/resolve/main/{path}/{name}{ext}?download=true"
 
 WHISPER_SIZES = {
-    "base": ("Szybki", "ok. 150 MB"),
-    "small": ("Dokładny", "ok. 470 MB"),
-    "medium": ("Bardzo dokładny (zalecana karta NVIDIA)", "ok. 1,5 GB"),
+    "base": (_("Szybki"), "ok. 150 MB"),
+    "small": (_("Dokładny"), "ok. 470 MB"),
+    "medium": (_("Bardzo dokładny (zalecana karta NVIDIA)"), "ok. 1,5 GB"),
 }
 
 VENV_PY = os.path.join(VENV, "bin", "python")
@@ -86,7 +87,7 @@ def meets_minimum(hw):
     if hw["cores"] < 4:
         problems.append(f"procesor ma {hw['cores']} rdzenie (minimum 4)")
     if hw["ram"] and hw["ram"] < 7.5:
-        problems.append(f"pamięć RAM: {hw['ram']} GB (minimum 8 GB)")
+        problems.append(_('pamięć RAM: {} GB (minimum 8 GB)').format(hw['ram']))
     return problems
 
 
@@ -98,7 +99,7 @@ def engine_installed():
 
 
 def voices_installed():
-    return all(os.path.exists(os.path.join(VOICES, n + ".onnx")) for n, _ in VOICE_FILES.values())
+    return all(os.path.exists(os.path.join(VOICES, n + ".onnx")) for n, _u in VOICE_FILES.values())
 
 
 def voice_info(key):
@@ -168,12 +169,12 @@ class Setup:
             if line:
                 self.log("  " + line[-160:])
         if p.wait() != 0:
-            raise RuntimeError(f"polecenie zakończyło się błędem ({p.returncode})")
+            raise RuntimeError(_('polecenie zakończyło się błędem ({})').format(p.returncode))
 
     def _run(self):
         try:
             if not engine_installed():
-                self.log("Krok 1/3: przygotowanie silnika mowy (Piper + Whisper)…")
+                self.log(_("Krok 1/3: przygotowanie silnika mowy (Piper + Whisper)…"))
                 self.progress(0.05)
                 if not os.path.exists(VENV_PY):
                     self._sh([sys.executable, "-m", "venv", VENV])
@@ -183,11 +184,11 @@ class Setup:
                 self._sh(pip + [f"piper-tts=={PIPER_VERSION}", f"faster-whisper=={WHISPER_VERSION}"])
                 open(os.path.join(VENV, ".ok"), "w").write("ok")
             if self.cuda and not glob.glob(os.path.join(VENV, "lib", "python*", "site-packages", "nvidia", "cudnn")):
-                self.log("Pobieranie bibliotek CUDA dla karty NVIDIA (ok. 1 GB)…")
+                self.log(_("Pobieranie bibliotek CUDA dla karty NVIDIA (ok. 1 GB)…"))
                 self._sh([VENV_PY, "-m", "pip", "install", "--disable-pip-version-check", "--progress-bar", "off",
                           "nvidia-cublas-cu12", "nvidia-cudnn-cu12==9.*"])
             self.progress(0.4)
-            self.log("Krok 2/3: pobieranie głosów hiszpańskich (Hiszpania)…")
+            self.log(_("Krok 2/3: pobieranie głosów hiszpańskich (Hiszpania)…"))
             os.makedirs(VOICES, exist_ok=True)
             items = list(VOICE_FILES.values())
             for i, (name, path) in enumerate(items):
@@ -199,8 +200,7 @@ class Setup:
                     self.log(f"  {name}{ext}")
                     self._download(url, dest, 0.4 + 0.2 * i / len(items), 0.2 / len(items))
             self.progress(0.6)
-            self.log(f"Krok 3/3: pobieranie modelu rozpoznawania mowy „{self.size}” "
-                     f"({WHISPER_SIZES[self.size][1]})… to może chwilę potrwać.")
+            self.log(_('Krok 3/3: pobieranie modelu rozpoznawania mowy „{}” ({})… to może chwilę potrwać.').format(self.size, WHISPER_SIZES[self.size][1]))
             os.makedirs(MODELS, exist_ok=True)
             env = engine_env(self.cuda)
             code = ("import sys; from faster_whisper.utils import download_model; "
@@ -208,10 +208,10 @@ class Setup:
             self._sh([VENV_PY, "-c", code], env=env)
             open(os.path.join(MODELS, f".ok-{self.size}"), "w").write("ok")
             self.progress(1.0)
-            self.log("Wszystko gotowe. ¡Vamos!")
+            self.log(_("Wszystko gotowe. ¡Vamos!"))
             self.done(True, "")
         except Exception as e:  # noqa
-            self.log(f"BŁĄD: {e}")
+            self.log(_('BŁĄD: {}').format(e))
             self.done(False, str(e))
 
     def _download(self, url, dest, base, span):
@@ -311,7 +311,7 @@ class Worker:
         while True:
             line = self.proc.stdout.readline()
             if not line:
-                raise RuntimeError("silnik mowy nie uruchomił się")
+                raise RuntimeError(_("silnik mowy nie uruchomił się"))
             msg = json.loads(line)
             if msg.get("warning"):
                 self.warning = msg["warning"]
@@ -326,7 +326,7 @@ class Worker:
             line = self.proc.stdout.readline()
             if not line:
                 self.proc = None
-                raise RuntimeError("silnik mowy przerwał pracę")
+                raise RuntimeError(_("silnik mowy przerwał pracę"))
             return json.loads(line)
 
     def stop(self):
@@ -395,7 +395,7 @@ class Speech:
         if shutil.which("espeak-ng"):
             subprocess.run(["espeak-ng", "-v", "es", "-s", "120" if slow else "150", "-w", out, text], check=True)
             return out
-        raise RuntimeError("Brak silnika mowy — dokończ instalację komponentów w Ustawieniach.")
+        raise RuntimeError(_("Brak silnika mowy — dokończ instalację komponentów w Ustawieniach."))
 
     # ---- rozpoznawanie ----
     def stt_available(self):

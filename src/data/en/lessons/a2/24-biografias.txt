@@ -1,0 +1,66 @@
+# id: a2-24
+# title: Biografías — telling a life story
+# unit: 6
+# unit_title: Experiencias — experiences
+@goals
+Tell a life story (your own or someone else's)
+Use time expressions: a los … años, al cabo de, después de
+@dialog
+Periodista: Marek, cuéntenos un poco su vida. | Marek, tell us a little about your life.
+Marek: Nací en 1985 en Gdynia. A los dieciocho años empecé a estudiar informática. | I was born in 1985 in Gdynia. At eighteen I started studying computer science.
+Periodista: ¿Y cuándo empezó a trabajar? | And when did you start working?
+Marek: Terminé la carrera en 2007 y dos años después encontré mi primer trabajo. | I finished my degree in 2007 and two years later I found my first job.
+Periodista: ¿Cuándo se casó? | When did you get married?
+Marek: Me casé en 2012. Al cabo de tres años nació nuestro hijo y nos mudamos a Rumia. | I got married in 2012. Three years later our son was born and we moved to Rumia.
+Periodista: ¿Y por qué decidió aprender español? | And why did you decide to learn Spanish?
+Marek: Después de mi primer viaje a España, me enamoré del país. | After my first trip to Spain, I fell in love with the country.
+@vocab
+nacer | to be born | v | Nací en 1983. / I was born in 1983.
+morir | to die | v
+casarse | to get married | vr | Se casaron en 2010. / They got married in 2010.
+mudarse | to move (house) | vr
+la carrera | (university) degree, studies | f | terminar la carrera / to finish your degree
+encontrar | to find | v
+decidir | to decide | v
+enamorarse de | to fall in love with | vr
+el viaje | trip, journey | m
+cuándo | when | adv
+a los … años | at the age of … | phr
+al cabo de | after (a period of time) | phr | al cabo de un año / a year later
+después de | after (something) | prep
+dos años después | two years later | phr
+desde | since, from | prep
+la vida | life | f
+contar | to tell; to count | v
+primero / primera | first | adj | mi primer trabajo / my first job
+@grammar
+## Time expressions in a life story
+- **en + year**: **en 1983**. Years are read as whole numbers, not in pairs as in English: **mil novecientos ochenta y tres**, **dos mil siete**.
+- **a los dieciocho años** — at (the age of) eighteen
+- **dos años después / más tarde** — two years later
+- **al cabo de tres años** — after three years
+- **después de + noun / infinitive**: **después de la boda**, **después de terminar la carrera** (after finishing — infinitive, not “-ing”)
+
+## Primero → primer
+Before a masculine singular noun **primero** and **tercero** drop the -o: **mi primer trabajo**, **el tercer piso**. But: **la primera vez**.
+
+## Reflexive verbs in the indefinido
+**me casé, te casaste, se casó, nos casamos, os casasteis, se casaron**.
+
+## Morir (o→u in the 3rd person)
+**murió, murieron**: **Cervantes murió en 1616.**
+@exercises
+conj: nacer (yo, indefinido) | nací
+conj: casarse (ellos, indefinido) | se casaron
+conj: mudarse (nosotros, indefinido) | nos mudamos
+conj: morir (él, indefinido) | murió
+conj: encontrar (yo, indefinido) | encontré
+fill: Empecé a trabajar ___ los veinte años. | a
+fill: ___ cabo de un año, volvió a Polonia. | Al
+choice: my first job: | mi primer trabajo | mi primero trabajo; mi primer trabajo; mi primera trabajo
+choice: 1983 is read as: | mil novecientos ochenta y tres | diecinueve ochenta y tres; mil novecientos ochenta y tres; mil nueve ciento ochenta y tres
+trans: I was born in Gdynia. | Nací en Gdynia.
+trans: When did you get married? (you two) | ¿Cuándo os casasteis?
+trans: After my degree I found a job. | Después de la carrera encontré trabajo. /// Después de terminar la carrera encontré trabajo.
+@culture
+**Miguel de Cervantes**, the author of “Don Quixote”, died in 1616 — the same year as Shakespeare. The anniversary of their deaths, 23 April, is World Book Day.

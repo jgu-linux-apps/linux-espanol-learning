@@ -1,0 +1,66 @@
+# id: a2-37
+# title: Opiniones — giving your opinion, agreeing and disagreeing
+# unit: 10
+# unit_title: Sociedad y costumbres — society and customs
+@goals
+Give your opinion and back it up
+Agree and disagree politely
+@dialog
+Sergio: ¿Qué opinas de las redes sociales? | What do you think of social media?
+Marek: Pienso que son útiles, pero creo que pasamos demasiado tiempo con el móvil. | I think they're useful, but I believe we spend too much time on our phones.
+Sergio: Estoy de acuerdo contigo. Además, hay muchas noticias falsas. | I agree with you. Besides, there's a lot of fake news.
+Marek: Sin embargo, para aprender idiomas son fantásticas. | However, for learning languages they're fantastic.
+Sergio: Bueno, depende. Yo no estoy tan seguro. | Well, it depends. I'm not so sure.
+Marek: ¿Por qué? | Why?
+Sergio: Porque para mí, es mejor hablar con personas de verdad. | Because for me it's better to talk to real people.
+Marek: En eso tienes razón. | You're right about that.
+@vocab
+opinar | to think, to have an opinion | v | ¿Qué opinas? / What do you think?
+pensar | to think | v | Pienso que… / I think that…
+creer que | to believe that | phr
+en mi opinión | in my opinion | phr
+para mí | for me, in my view | phr
+estar de acuerdo | to agree | phr | No estoy de acuerdo. / I don't agree.
+depende | it depends | phr
+además | besides, moreover | adv
+sin embargo | however | phr
+por un lado… por otro lado | on the one hand… on the other hand | phr
+las redes sociales | social media | fpl
+la noticia | (piece of) news | f
+falso / falsa | false, fake | adj
+útil | useful | adj
+seguro / segura | sure; safe | adj
+el idioma | (foreign) language | m
+@grammar
+## Giving your opinion
+- **Creo que / Pienso que / Me parece que** + clause: **Creo que es importante.**
+- **En mi opinión, … / Para mí, …**
+- **¿Qué opinas de…? ¿Qué piensas de…? ¿Qué te parece…?**
+Note: the negative **No creo que…** needs the subjunctive — a B1 topic. For now say: **Creo que no** (I don't think so).
+
+## Agreeing and disagreeing
+Notice that “to agree” is **estar de acuerdo**, not a single verb:
+|| Estoy de acuerdo (contigo). | I agree (with you).
+|| No estoy de acuerdo. | I don't agree.
+|| Tienes razón. | You're right.
+|| Depende. | It depends.
+|| No estoy tan seguro/a. | I'm not so sure.
+|| ¡Claro que sí! / ¡Claro que no! | Of course! / Of course not!
+
+## Linking words
+**además** (besides), **sin embargo** (however), **por eso** (that's why), **por un lado… por otro…**
+
+## Contigo, conmigo
+**con + tú = contigo**, **con + yo = conmigo**: **¿Vienes conmigo?**
+@exercises
+choice: I agree with you: | Estoy de acuerdo contigo. | Estoy de acuerdo con tú.; Estoy de acuerdo contigo.; Soy de acuerdo contigo.
+choice: In my opinion: | En mi opinión | En mi opinión; Por mi opinión; A mi opinión
+choice: However: | sin embargo | además; sin embargo; por eso
+choice: Are you coming with me? | ¿Vienes conmigo? | ¿Vienes con yo?; ¿Vienes conmigo?; ¿Vienes con mí?
+fill: ¿Qué ___ (opinar, tú) de esta película? | opinas
+fill: ___ que tienes razón. (creer, yo) | Creo
+trans: I think it's important. | Creo que es importante. /// Pienso que es importante.
+trans: I don't agree. | No estoy de acuerdo.
+trans: It depends. | Depende.
+@culture
+Spaniards argue in a lively, loud way, often interrupting each other — it's a sign of involvement, not bad manners. A silence in a conversation can feel more awkward to them than a heated exchange.

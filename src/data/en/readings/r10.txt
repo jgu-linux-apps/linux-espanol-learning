@@ -1,0 +1,26 @@
+# id: r10
+# level: A2
+# unit: 10
+# title: La noche de las doce uvas
+@text
+Era mi primera Nochevieja en España. Mis amigos españoles me invitaron a cenar en su casa en Valencia, y me explicaron la tradición: a las doce en punto hay que comer doce uvas, una con cada campanada del reloj. Si lo consigues, tendrás suerte todo el año.
+Parecía fácil. A las once y cincuenta y cinco encendimos la televisión para ver el reloj de la Puerta del Sol, en Madrid. Todos teníamos nuestras doce uvas preparadas en un plato. Yo estaba muy nervioso.
+De repente empezaron las campanadas. Comí la primera uva, luego la segunda… pero las uvas eran grandes y tenían semillas. Cuando sonó la última campanada, ¡yo todavía tenía cinco uvas en el plato! Todos se rieron mucho.
+Al final, mi amiga Lucía me dijo: "No te preocupes, el año que viene compramos uvas sin semillas". Y así fue. Desde entonces, cada Nochevieja como mis doce uvas, aunque esté en Polonia.
+@translation
+It was my first New Year's Eve in Spain. My Spanish friends invited me to dinner at their home in Valencia and explained the tradition to me: at twelve o'clock sharp you have to eat twelve grapes, one with each stroke of the clock. If you manage it, you'll be lucky all year.
+It seemed easy. At five to twelve we switched on the TV to watch the clock in the Puerta del Sol in Madrid. We all had twelve grapes ready on a plate. I was very nervous.
+Suddenly the clock started striking. I ate the first grape, then the second… but the grapes were big and had pips. When the last stroke sounded, I still had five grapes on my plate! Everyone laughed a lot.
+In the end my friend Lucía said: “Don't worry, next year we'll buy seedless grapes.” And so we did. Since then I eat my twelve grapes every New Year's Eve, even when I'm in Poland.
+@glossary
+en punto | sharp, on the dot (of time)
+conseguir | to manage, to achieve
+la suerte | luck
+la semilla | pip, seed
+reírse | to laugh
+aunque esté | even when I am (subjunctive — level B1)
+@questions
+¿Dónde pasó el narrador su primera Nochevieja en España? | En Valencia. | En Madrid.; En Valencia.; En Polonia.
+¿Qué hay que hacer a las doce? | Comer doce uvas. | Beber cava.; Comer doce uvas.; Cantar una canción.
+¿Por qué no pudo comer todas las uvas? | Eran grandes y tenían semillas. | No le gustaban.; Eran grandes y tenían semillas.; Llegó tarde.
+¿Qué hace ahora cada Nochevieja? | Come doce uvas. | Viaja a España.; Come doce uvas.; Va a la Puerta del Sol.

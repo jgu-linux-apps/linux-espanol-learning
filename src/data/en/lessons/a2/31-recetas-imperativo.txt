@@ -1,0 +1,70 @@
+# id: a2-31
+# title: Recetas — recipes and the imperative (usted, ustedes, negatives)
+# unit: 8
+# unit_title: Salud y cuidados — health
+@goals
+Understand and give a recipe
+Form the usted/ustedes and negative imperatives
+@dialog
+Carmen: Hoy vamos a hacer una tortilla de patatas. Primero, pela y corta las patatas. | Today we're making a Spanish omelette. First, peel and cut the potatoes.
+Marek: ¿En trozos grandes? | Into big pieces?
+Carmen: No, en trozos finos. Luego fríelas en aceite de oliva con la cebolla. | No, into thin slices. Then fry them in olive oil with the onion.
+Marek: ¿Cuántos huevos pongo? | How many eggs do I put in?
+Carmen: Cinco o seis. Bátelos en un bol y añade sal. | Five or six. Beat them in a bowl and add salt.
+Marek: ¿Y ahora? | And now?
+Carmen: Mezcla las patatas con los huevos y ponlo todo en la sartén. ¡Pero no lo dejes mucho tiempo! | Mix the potatoes with the eggs and put it all in the frying pan. But don't leave it too long!
+Marek: ¿Y cómo le doy la vuelta? | And how do I turn it over?
+Carmen: Con un plato. ¡Y no tengas miedo! | With a plate. And don't be afraid!
+@vocab
+la receta | recipe; prescription | f
+pelar | to peel | v
+cortar | to cut | v
+freír | to fry | v
+batir | to beat, to whisk | v
+añadir | to add | v
+mezclar | to mix | v
+hervir | to boil | v
+el trozo | piece | m
+el aceite de oliva | olive oil | m
+la sal | salt | f
+la sartén | frying pan | f
+el bol | bowl | m
+el plato | plate; dish | m
+dar la vuelta | to turn over | phr
+tener miedo | to be afraid | phr
+fino / fina | thin, fine | adj
+la tortilla de patatas | Spanish (potato) omelette | f
+@grammar
+## The imperative — usted / ustedes
+It's formed from the **yo** form of the present tense by “swapping” the vowel:
+- **-ar → -e / -en**: hablar (hablo) → **hable / hablen**
+- **-er, -ir → -a / -an**: comer (como) → **coma / coman**; salir (salgo) → **salga / salgan**
+Irregular: **sea** (ser), **vaya** (ir), **esté** (estar), **dé** (dar), **sepa** (saber).
+
+## Negative commands (no + …)
+In the negative every person uses the subjunctive forms:
+|| | affirmative | negative
+|| tú | habla, come | no hables, no comas
+|| usted | hable, coma | no hable, no coma
+|| vosotros | hablad, comed | no habléis, no comáis
+|| ustedes | hablen, coman | no hablen, no coman
+**¡No tengas miedo!** (tú) — Don't be afraid! **¡No lo dejes!** — Don't leave it!
+
+## Pronouns
+- In the affirmative **at the end**: **bátelos, ponlo, fríelas, siéntese**.
+- In the negative **before the verb**: **no lo dejes, no se siente**.
+@exercises
+conj: hablar (usted, imperativo) | hable
+conj: comer (ustedes, imperativo) | coman
+conj: salir (usted, imperativo) | salga
+conj: ir (usted, imperativo) | vaya
+fill: ¡No ___ (tú, hablar) tan alto! | hables
+fill: ¡No ___ (tú, comer) tanto! | comas
+fill: ___ (tú, añadir) sal a los huevos. | Añade
+choice: Don't be afraid! (tú) | ¡No tengas miedo! | ¡No tienes miedo!; ¡No tengas miedo!; ¡No ten miedo!
+choice: Please sit down (usted): | Siéntese. | Siéntese.; Siéntate.; Se siente.
+choice: Don't leave it! | ¡No lo dejes! | ¡No déjalo!; ¡No lo dejes!; ¡No lo deja!
+trans: Cut the potatoes. (tú) | Corta las patatas.
+trans: Add salt. (tú) | Añade sal.
+@culture
+The **tortilla de patatas** is one of Spain's national symbols — and the cause of an eternal argument: **con cebolla o sin cebolla?** Spaniards are split into “cebollistas” (with onion) and “sincebollistas” (without).

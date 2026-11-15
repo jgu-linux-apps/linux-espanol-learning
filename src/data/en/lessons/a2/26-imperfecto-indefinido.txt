@@ -1,0 +1,59 @@
+# id: a2-26
+# title: Imperfecto or indefinido? Telling a story
+# unit: 7
+# unit_title: Recuerdos — memories
+@goals
+Combine the background (imperfecto) with the events (indefinido)
+Tell an anecdote
+@dialog
+Marek: ¿Sabes qué me pasó ayer? | Do you know what happened to me yesterday?
+Paula: No, ¿qué te pasó? | No, what happened?
+Marek: Estaba en el tren y leía un libro en español. De repente, una señora me habló. | I was on the train reading a book in Spanish. Suddenly a lady spoke to me.
+Paula: ¿Y qué quería? | And what did she want?
+Marek: Era española, de Bilbao. Vio el libro y me preguntó si estudiaba español. | She was Spanish, from Bilbao. She saw the book and asked me if I was learning Spanish.
+Paula: ¡Qué casualidad! | What a coincidence!
+Marek: Hablamos todo el viaje. ¡Y no entendí solo la mitad, entendí casi todo! | We talked the whole journey. And I didn't understand just half of it, I understood almost everything!
+@vocab
+pasar | to happen; to spend (time) | v | ¿Qué pasó? / What happened?
+de repente | suddenly | phr
+preguntar | to ask | v
+contestar | to answer | v
+entender | to understand | v
+la señora / el señor | lady / gentleman; Mrs / Mr | f
+la casualidad | chance, coincidence | f
+la mitad | half | f
+casi | almost | adv
+mientras | while | conj | Mientras cocinaba, sonó el teléfono. / While I was cooking, the phone rang.
+sonar | to ring (a phone), to sound | v
+de pronto | suddenly | phr
+en ese momento | at that moment | phr
+@grammar
+## Background and events
+In a story both tenses work together — much like English “was …-ing” and the simple past:
+- **Imperfecto** = background, description, an action in progress (“what was going on”): **Estaba en el tren. Leía un libro. Llovía.**
+- **Indefinido** = a particular event that “interrupts” the background or moves the story on: **Una señora me habló.**
+**Leía un libro cuando una señora me habló.** — I was reading a book when a lady spoke to me.
+
+## A simple rule to start with
+|| Question | Tense
+|| What was going on? What was it like? (background) | imperfecto
+|| What happened? What did he do? (action) | indefinido
+|| What did you usually do? (habit) | imperfecto
+|| What did you do once, in a finished time? | indefinido
+
+## Mientras and cuando
+- **mientras** + imperfecto: **Mientras cocinaba, sonó el teléfono.**
+- **cuando** + indefinido: **Cuando llegué, todos dormían.**
+@exercises
+choice: ___ un libro cuando sonó el teléfono. | Leía | Leí; Leía; He leído
+choice: Cuando ___ a casa, mi mujer dormía. | llegué | llegaba; llegué; llego
+choice: Ayer ___ todo el día y no salimos de casa. | llovió | llovía; llovió; llueve
+choice: De pronto, ___ un ruido. | oímos | oíamos; oímos; oyendo
+fill: Mientras yo ___ (cocinar), mi hijo jugaba. | cocinaba
+fill: El niño ___ (dormir) cuando llegamos. | dormía
+fill: ¿Qué te ___ (pasar) ayer? | pasó
+trans: Suddenly the phone rang. | De repente sonó el teléfono. /// De pronto sonó el teléfono.
+trans: She was Spanish, from Bilbao. | Era española, de Bilbao.
+trans: I understood almost everything. | Entendía casi todo. /// Entendí casi todo.
+@culture
+**Bilbao** is the largest city of the Basque Country, famous for the Guggenheim Museum. The Basques have their own language, **euskera**, which isn't related to Spanish at all.

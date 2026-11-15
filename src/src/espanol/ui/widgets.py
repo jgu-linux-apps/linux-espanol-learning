@@ -6,6 +6,7 @@ import threading
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib, Pango  # noqa: E402
+from ..i18n import _  # noqa: E402
 
 CSS = b"""
 .hero-banner { padding: 16px; border-radius: 10px; background-color: alpha(@theme_selected_bg_color, 0.14); }
@@ -178,8 +179,8 @@ class SpeakButton(Gtk.Button):
         self.set_image(Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.BUTTON))
         self.set_relief(Gtk.ReliefStyle.NONE)
         self.set_valign(Gtk.Align.CENTER)
-        self.set_tooltip_text(tooltip or ("Posłuchaj wolno" if slow else "Posłuchaj (prawy przycisk — wolniej)"))
-        self.connect("clicked", lambda *_: self.app.say(self.text, self.slow))
+        self.set_tooltip_text(tooltip or (_("Posłuchaj wolno") if slow else _("Posłuchaj (prawy przycisk — wolniej)")))
+        self.connect("clicked", lambda *_a: self.app.say(self.text, self.slow))
         self.connect("button-press-event", self._press)
 
     def _press(self, _w, ev):
@@ -230,6 +231,8 @@ CSS2 = b"""
 .stars-off { opacity: 0.25; letter-spacing: 1px; }
 .score { color: #16A34A; font-weight: bold; }
 .lvl-switch { background-color: alpha(@theme_selected_bg_color, 0.10); border-radius: 12px; padding: 4px; }
+.lvl-planned { opacity: 1; }
+.lvl-planned label { color: alpha(@theme_fg_color, 0.5); font-style: italic; }
 .notice { padding: 10px 16px; }
 .seg { min-height: 10px; border-radius: 5px; background-color: alpha(currentColor, 0.12); }
 .seg-done { background-color: @theme_selected_bg_color; }

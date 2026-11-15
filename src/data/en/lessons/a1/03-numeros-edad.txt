@@ -1,0 +1,74 @@
+# id: a1-03
+# title: Números 0–20 and age
+# unit: 1
+# unit_title: Primeros pasos — first steps
+@goals
+Count from 0 to 20
+Ask someone's age and say yours
+Give a phone number
+@dialog
+Profesora: ¿Cuántos años tienes, Sara? | How old are you, Sara?
+Sara: Tengo diecinueve años. | I'm nineteen.
+Profesora: ¿Y tu hermano? | And your brother?
+Sara: Mi hermano tiene doce años. | My brother is twelve.
+Profesora: ¿Cuál es tu número de teléfono? | What's your phone number?
+Sara: Es el seis, uno, cinco, cero, tres, ocho, dos, nueve, siete. | It's six, one, five, zero, three, eight, two, nine, seven.
+Profesora: Perfecto, gracias. | Great, thank you.
+@vocab
+cero | zero | num
+uno / una | one | num
+dos | two | num
+tres | three | num
+cuatro | four | num
+cinco | five | num
+seis | six | num
+siete | seven | num
+ocho | eight | num
+nueve | nine | num
+diez | ten | num
+once | eleven | num
+doce | twelve | num
+trece | thirteen | num
+catorce | fourteen | num
+quince | fifteen | num
+dieciséis | sixteen | num
+diecisiete | seventeen | num
+dieciocho | eighteen | num
+diecinueve | nineteen | num
+veinte | twenty | num
+tener | to have | v | Tengo veinte años. / I'm twenty.
+el año | year | m
+¿cuántos? / ¿cuántas? | how many? | adv | ¿Cuántos años tienes? / How old are you?
+el número de teléfono | phone number | m
+el hermano / la hermana | brother / sister | m
+@grammar
+## Age: tener + años
+In Spanish you don't “are” an age, you **have** years: **Tengo 30 años** — I'm 30 (literally “I have 30 years”). Never say “soy 30”!
+
+## The verb tener (to have) — irregular
+|| yo | tengo
+|| tú | tienes
+|| él / ella / usted | tiene
+|| nosotros/as | tenemos
+|| vosotros/as | tenéis
+|| ellos / ellas / ustedes | tienen
+
+## Numbers 16–19
+They are a shortened “ten and six”: **dieciséis** (diez y seis), **diecisiete**, **dieciocho**, **diecinueve**. Watch the accent on **dieciséis**.
+
+## Uno, un, una
+Before a masculine noun **uno** becomes **un**: **un año** (one year), but **una hermana** (one sister). When counting, though, you say “uno, dos, tres…”.
+@exercises
+fill: Yo ___ veinte años. | tengo
+fill: ¿Cuántos años ___ tú? | tienes
+fill: Mi hermana ___ quince años. | tiene
+fill: Nosotros ___ un perro. | tenemos
+choice: 14 is: | catorce | cuatro; catorce; cuarenta
+choice: 16 is: | dieciséis | diecisiete; seis; dieciséis
+choice: 7 + 5 = | doce | once; doce; trece
+choice: How do you ask someone's age? | ¿Cuántos años tienes? | ¿Cuántos años eres?; ¿Cuántos años tienes?; ¿Qué años tienes?
+trans: I'm eighteen. | Tengo dieciocho años.
+trans: How old are you? | ¿Cuántos años tienes?
+trans: My brother is eleven. | Mi hermano tiene once años.
+@culture
+Spanish mobile numbers usually start with 6 or 7 and have 9 digits. Spaniards often say them in pairs or threes: “seiscientos quince, cero tres…” — to begin with, digit by digit is fine.

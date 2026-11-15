@@ -1,0 +1,65 @@
+# id: a1-05
+# title: La familia — family and possessives
+# unit: 2
+# unit_title: Mi mundo — my world
+@goals
+Talk about your family
+Use mi, tu, su, nuestro, vuestro
+@dialog
+Marta: ¿Quién es este chico de la foto? | Who is this boy in the photo?
+Marek: Es mi hijo, Kuba. Tiene diez años. | It's my son, Kuba. He's ten.
+Marta: ¡Qué guapo! ¿Y esta mujer? | How handsome! And this woman?
+Marek: Es mi mujer, Ania. Y estos son mis padres. | That's my wife, Ania. And these are my parents.
+Marta: ¿Tienes hermanos? | Do you have any brothers or sisters?
+Marek: Sí, tengo una hermana. Su marido es español. | Yes, I have a sister. Her husband is Spanish.
+Marta: ¡Ah! ¿Y vuestros hijos hablan español? | Oh! And do your children speak Spanish?
+Marek: Mis sobrinos sí. ¡Mi hijo todavía no! | My nephews do. My son not yet!
+@vocab
+la familia | family | f
+el padre | father | m
+la madre | mother | f
+los padres | parents | mpl
+el hijo / la hija | son / daughter | m | Tengo dos hijos. / I have two children.
+los hijos | children (someone's), sons | mpl
+el abuelo / la abuela | grandfather / grandmother | m
+el tío / la tía | uncle / aunt | m
+el primo / la prima | cousin | m
+el sobrino / la sobrina | nephew / niece | m
+el novio / la novia | boyfriend / girlfriend | m
+casado / casada | married | adj
+el chico / la chica | boy / girl | m
+la foto | photo | f
+¿quién? | who? | pron | ¿Quién es? / Who is it?
+guapo / guapa | handsome / pretty | adj
+todavía | still, yet | adv
+este / esta | this | det
+@grammar
+## Possessives (before the noun)
+|| mi / mis | my
+|| tu / tus | your (informal)
+|| su / sus | his, her, its, your (formal); their
+|| nuestro, nuestra / nuestros, nuestras | our
+|| vuestro, vuestra / vuestros, vuestras | your (plural)
+- **mi, tu, su** only change for number: **mi hermano**, **mis hermanos**.
+- **nuestro, vuestro** also change for gender: **nuestra casa**, **vuestros padres**.
+- **su** can mean “his”, “her”, “their” or the polite “your” — the context tells you which.
+
+## Masculine plural for mixed groups
+**Los padres** are parents, **los hijos** are children (sons and daughters), **los hermanos** are brothers and sisters, **los abuelos** are grandparents. The masculine plural covers a mixed group.
+
+## Este, esta, estos, estas
+**este chico** (this boy), **esta mujer** (this woman), **estos padres**, **estas fotos**.
+@exercises
+fill: (my) ___ padre es médico. | Mi
+fill: (my) ___ hermanas viven en Gdańsk. | Mis
+fill: (our) ___ casa es grande. | Nuestra
+fill: (your, plural) ___ hijos son muy guapos. | Vuestros
+fill: (her) Ana y ___ marido. | su
+choice: Brothers and sisters are: | los hermanos | los hermanos; los primos; los padres
+choice: My mother's mother is: | mi abuela | mi tía; mi abuela; mi prima
+choice: This woman: | esta mujer | este mujer; esta mujer; estos mujer
+trans: I have two children. | Tengo dos hijos.
+trans: My parents are from Gdańsk. | Mis padres son de Gdańsk.
+trans: Who is this boy? | ¿Quién es este chico?
+@culture
+Spaniards have **two surnames**: the first from the father, the second from the mother, e.g. Federico García Lorca. Women don't change their surname when they marry.

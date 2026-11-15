@@ -1,13 +1,16 @@
 # Linux Español Learning
 
-**A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish.
+**A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish or English.
 Lessons, grammar, vocabulary, spaced repetition, tests and pronunciation scoring.
 
-Version **1.13.6** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
+Version **1.17.2** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
 
-> **Language note:** for now the app is **in Polish only**. The interface, the grammar explanations,
-> the translations and the corrections are all in Polish, because the course is written for Polish
-> speakers learning Spanish. An English version is not available yet.
+> **Language note:** the course is available **for Polish speakers** and, since 1.14, **for English
+> speakers**. The course language belongs to the learner profile (☰ profile menu →
+> “Name and language”), so one person can learn in Polish and another in English on the same computer.
+> In English: the whole interface, the alphabet and pronunciation tips for English speakers, all 40 lessons
+> (A1 and A2), the readings, the dictionary, the video list, the scenes and the bot (Paco), who corrects,
+> translates and explains in English.
 
 ---
 
@@ -15,20 +18,20 @@ Version **1.13.6** · Created by: **JGu** · Supported by **Claude** · part of 
 
 | Module | Contents |
 |---|---|
-| **A1–A2 course** | 40 lessons in 10 units (A1: 20, A2: 20). Every lesson has 5 steps: a dialogue with audio → vocabulary → grammar (explained in Polish) → exercises → speaking. Plus culture notes and a link to videos on the topic. |
-| **Alphabet and pronunciation** | All letters with their names, a pronunciation guide for Polish speakers and examples; difficult sounds (rr, j/g, c/z as "th", ll, ñ, b=v, silent h); stress rules; how to type á é í ó ú ñ ¿ ¡. |
+| **A1–A2 course** | 40 lessons in 10 units (A1: 20, A2: 20). Every lesson has 5 steps: a dialogue with audio → vocabulary → grammar (explained in Polish or English) → exercises → speaking. Plus culture notes and a link to videos on the topic. |
+| **Alphabet and pronunciation** | All letters with their names, a pronunciation guide for Polish or English speakers (by course language) and examples; difficult sounds (rr, j/g, c/z as "th", ll, ñ, b=v, silent h); stress rules; how to type á é í ó ú ñ ¿ ¡. |
 | **Exercises** | Multiple choice, fill in the gap, translation PL→ES, verb conjugation, dictation (by ear), building a sentence from shuffled words. About 430 hand-written exercises plus ones generated from the dialogues and vocabulary. A missing accent is not a mistake (you get a reminder); a typo counts as half a point. |
-| **Review** | Two tabs. **Flashcards** with the **FSRS** algorithm (as in modern Anki): words get here automatically after you finish a lesson; ES→PL, PL→ES or alternating; keyboard shortcuts Space and 1–4. **Mistakes — training**: exercises you got wrong (lessons, tests, readings) and sentences corrected by Paco come back tomorrow, then in 3 and in 7 days; after 3 correct answers in a row they disappear. |
-| **ES–PL dictionary** | Its own Spanish–Polish dictionary, about **1000 entries**: words from the lessons and topic lists, with part of speech, examples and audio. Search in both directions, also without accents. |
+| **Review** | Two tabs. **Flashcards** with the **FSRS** algorithm (as in modern Anki): words get here automatically after you finish a lesson; ES→PL/EN, PL/EN→ES or alternating; keyboard shortcuts Space and 1–4. **Mistakes — training**: exercises you got wrong (lessons, tests, readings) and sentences corrected by Paco come back tomorrow, then in 3 and in 7 days; after 3 correct answers in a row they disappear. |
+| **ES–PL / ES–EN dictionary** | Its own Spanish–Polish (or Spanish–English) dictionary, about **1000 entries**: words from the lessons and topic lists, with part of speech, examples and audio. Search in both directions, also without accents. |
 | **Conjugation** | Conjugation tables for any verb: presente, perfecto, indefinido, imperfecto, futuro, condicional, imperativo, *ir a*, *estar + gerundio* — with the **vosotros** form and with irregular, reflexive and stem-changing verbs. |
-| **Pronunciation lab** | Listen → record yourself → word-by-word score (green/red), result in %, playback of your own recording and tips on typical mistakes of Polish speakers. |
+| **Pronunciation lab** | Listen → record yourself → word-by-word score (green/red), result in %, playback of your own recording and tips on typical mistakes of Polish (or English) speakers. |
 | **Scenes with Paco** | Lesson dialogues to act out loud: Paco plays one role, you play the other; every line gets a pronunciation score and the whole scene gets a result. |
 | **Dictation** | Paco reads a sentence and you type it; a colour comparison word by word (green — correct, yellow — missing accent, red — mistake), rounds of 8 sentences from finished lessons. |
 | **Readings** | 10 texts (one per unit), with audio, translation, a glossary and questions. |
 | **Tests and exams** | A test for every unit (15 questions) and a mock A1 / A2 exam (about 40 questions: vocabulary, grammar, translation, listening, reading + a speaking part). Pass mark 60%. Score history. |
 | **Videos and listening** | Hand-picked channels with Spanish from Spain (Español con Juan, Easy Spanish, Español Automático, Spanish with Vicente, María Español, Dreaming Spanish, RTVE Play, *Aquí no hay quien viva*). They open in the browser. |
 | **Today** | One big **Continue** card that takes you back to the lesson you were doing, exactly to the step where you stopped; rings for the daily goal, the streak and the level progress; a week strip; a **Plan for today** (review, lesson, exercise of the day); the hardest words and a word of the day. |
-| **Chat with the bot** | Text **and voice** conversation in Spanish with a partner who only knows the material of your finished lessons (vocabulary, dialogues, grammar). 11 scenes (free talk, bar, market, directions, shop, plans, holidays, hotel, doctor, job interview, renting a flat). Corrections in Polish next to your lines, translation of the replies, playback in the narrator's voice, highlighting of words beyond your lessons, automatic simplifying of replies that are too hard, and a summary (mistakes → statistics, new words → review). |
+| **Chat with the bot** | Text **and voice** conversation in Spanish with a partner who only knows the material of your finished lessons (vocabulary, dialogues, grammar). 11 scenes (free talk, bar, market, directions, shop, plans, holidays, hotel, doctor, job interview, renting a flat). Corrections in the course language (Polish or English) next to your lines — every sentence goes through a separate grammar check, so typical beginner mistakes are caught reliably — translation of the replies, playback in the narrator's voice, highlighting of words beyond your lessons, automatic simplifying of replies that are too hard, and a summary (mistakes → statistics, new words → review). |
 | **Statistics** | Finished lessons, mastered words, minutes of study (30-day chart), average pronunciation score, recent mistakes. |
 
 The interface is classic GTK 3 and follows the system light/dark theme automatically — together with the window and dock icons.
@@ -83,7 +86,7 @@ Before the engine is installed, audio is played by `espeak-ng` as a fallback (if
 
 ## Paco and user profiles (1.7)
 - **Paco** — an animated little robot conversation partner in a black beret, with a moustache and a scarf in the colours of Spain. He moves his mouth in time with the narrator's voice (following the real loudness of the audio), tilts his head and shows sound waves while listening, looks up and "thinks" while waiting for a reply, blinks and sways gently. He is happy after a flawless answer and makes a concerned, gentle face after a mistake. Drawn with Cairo — no extra files.
-- **User profiles** — the "👤 name" button in the window bar: several people on one computer, each with their own progress, review, conversation history, theme and "About me" data. Switching without a restart; profiles can be added, renamed and deleted. Shared by everyone: the speech engines, the models, the bot (Ollama/Claude) and the API key. Existing progress goes to the "Główny" (main) profile.
+- **User profiles** — the "👤 name" button in the window bar: several people on one computer, each with their own progress, review, conversation history, theme and "About me" data. Switching without a restart; profiles can be added, renamed and deleted. Shared by everyone: the speech engines, the models, the bot (Ollama/Claude) and the API key. Existing progress goes to the default profile, shown as "Główny" in Polish and "Main" in English (until you rename it).
 - **The bot does not repeat questions** — a question that was already asked in the conversation is rejected (in voice mode it is not read out). Known facts about the learner are passed to the bot together with a list of topics it must not ask about again.
 - Profile data: `~/.local/share/linux-espanol-learning/profiles/<name>/postep.db` (the main profile: `postep.db`).
 
@@ -94,7 +97,7 @@ Before the engine is installed, audio is played by `espeak-ng` as a fallback (if
 - **Conversation history** — every finished conversation is saved with the full transcript, corrections and score; you can open it, replay the bot's lines and follow your progress.
 - **Corrected sentences to review** — sent to the flashcards with one click.
 - In voice conversation you can switch the speech recognition model (if you have several installed).
-- The bot's corrections are always in Polish; the bot does not repeat its own sentences.
+- The bot's corrections are always in the course language (Polish or English), never in Spanish; the bot does not repeat its own sentences.
 
 ## Voice conversation with the bot (since 1.4)
 On the conversation screen click **🎤 Mów** (Speak) and say a sentence in Spanish. The app detects the start and end of your speech itself (after about 3 s of silence — you have time to think; change the length in *Settings → Chat with the bot*, or click **✔ Skończyłem mówić** (I've finished)). Whisper turns the speech into text, and the bot answers in the narrator's voice — **it starts speaking from the first finished sentence**, without waiting for the whole reply.
@@ -106,7 +109,7 @@ On the conversation screen click **🎤 Mów** (Speak) and say a sentence in Spa
 ## Chat with the bot — setup
 In **Settings → Chat with the bot** choose the engine:
 - **Ollama (local, offline, free)** — click **"Install Ollama and the model"** (in Settings or on the *Chat with the bot* screen). The app downloads Ollama to your home directory by itself (no sudo, about 1–2 GB including libraries for NVIDIA cards) and the chosen model: **Qwen 3 8B** (recommended, about 5.2 GB — best with an NVIDIA card or 16 GB RAM) or **Gemma 3 4B** (faster, about 3.3 GB). A private Ollama server starts by itself for the conversation (port 11435) and closes together with the app. If Ollama is already on the system, the app uses it and downloads only the model. Your own server can be set in the *Advanced* section.
-- **Claude API (cloud)** — paste an API key from console.anthropic.com and choose the model (Haiku — fast and cheap, Sonnet — the best). Only the text of the conversation is sent to the API. The key is stored in the system password store (GNOME Keyring), or, without one, locally in `~/.config/linux-espanol-learning/claude_api_key` (mode 600). Using the API is paid.
+- **Claude API (cloud)** — paste an API key from console.anthropic.com (the “Create an API key” link next to the key field opens the right page) and choose the model (Haiku — fast and cheap, Sonnet — the best). Only the text of the conversation is sent to the API. The key is stored in the system password store (GNOME Keyring), or, without one, locally in `~/.config/linux-espanol-learning/claude_api_key` (mode 600). Using the API is paid.
 
 ## Where the data is
 
@@ -167,8 +170,8 @@ packaging/            .desktop file, the icon light/dark helper and its autostar
 ## Honest limitations
 - Pronunciation scoring works **at word level** (whether Whisper understood what you were supposed to say). It's a good test of intelligibility, but not an analysis of individual sounds like a teacher would do.
 - The Piper voices are synthetic — very decent, but no substitute for recordings of native speakers. That's why the *Videos and listening* module points to real material.
-- The course covers A1–A2. The subjunctive (subjuntivo) and other B1 topics are deliberately left out.
-- The app is in Polish only for now (see the language note at the top).
+- The course covers A1–A2. The subjunctive (subjuntivo) and other B1 topics are deliberately left out for now; B1 and B2 are planned (greyed out on the Course screen).
+- The app is in Polish and English (see the language note at the top).
 
 ## Credits
 - [Piper](https://github.com/OHF-Voice/piper1-gpl) (GPL-3.0, downloaded separately on the first start) and the voices from [rhasspy/piper-voices](https://huggingface.co/rhasspy/piper-voices) — speech synthesis
@@ -181,6 +184,13 @@ packaging/            .desktop file, the icon light/dark helper and its autostar
 Components downloaded separately on the first start (Piper, faster-whisper, voices, Whisper models) have their own licenses.
 
 ## Version history
+- **1.17.2** — Settings → Chat with the bot (Claude API engine): a **“Create an API key”** link next to the key field opens the Anthropic console page where you create a key.
+- **1.17.1** — the Course screen shows the next levels **B1** and **B2** as greyed-out “planned” buttons (“w planach” in Polish), so you can see where the course is heading.
+- **1.17.0** — **Paco catches mistakes much more reliably** (Polish and English versions): every sentence you say is checked by a separate, short grammar check that runs at the same time as Paco's reply. In tests with the offline model (qwen3:8b) it caught 20 of 20 typical beginner mistakes (yo tiene, yo es, ser/estar, gender, gustar, past tense) with no false alarms on correct sentences, where before Paco noticed about one mistake in three. Missing accents and a left-out “yo” are not counted as mistakes; if the check fails, the correction from Paco's reply is used as before.
+- **1.16.1** — in the English version the default profile is called “Main” instead of “Główny” (a renamed profile keeps its name), and the Aurora and Oliva theme names are in English.
+- **1.16.0** — **English version (part 3)**: the bot (Paco) and the scenes in English. For an English-speaking learner Paco translates his replies into English, writes corrections in English, recognises questions asked in English (“how do I say…”, “what's the difference between…”) and answers them in English, and no longer assumes the learner lives in Poland; the 11 bot situations, levels, summaries, chat history, the offline bot installer and the “Scenes with Paco” screen are in English too. The Polish version works as before. Tests check the bot's prompt, help-question detection and phrasebook in both languages.
+- **1.15.0** — **English version (part 2)**: the 20 A2 lessons, the 10 readings (translations and glossaries), the 284 extra dictionary words and the video list are in English too, so the whole course except the bot works in English. Grammar notes compare with English where it helps (present perfect, “used to”, “-ing”, “for/since”). Tests check that the English readings and vocabulary keep exactly the same Spanish as the Polish ones.
+- **1.14.0** — **English version (part 1)**: every learner profile has its own course language, Polish or English (chosen when you create a profile and in “Name and language”; switching to a profile in another language restarts the app). In English: the whole interface, the alphabet with pronunciation tips written for English speakers, the pronunciation feedback, and all 20 A1 lessons (dialogue translations, vocabulary, grammar, exercises, culture notes). The Spanish stays the same in both versions, so progress and reviews carry over. The A2 lessons, readings, extra dictionary words and the bot follow in the next versions. Tests check that every text has an English version and that the English lessons match the Polish ones.
 - **1.13.6** — the app icons in the GitHub release packages use the Ubuntu font for "¡ñ!" again (1.13.4 and 1.13.5 release packages drew it in a fallback font). No other changes.
 - **1.13.5** — the voice no longer reads the slash: "el tío / la tía" is read as "el tío", a short pause, "la tía"; "él/ella" the same, and "nosotros/as" as "nosotros… nosotras". Pronunciation practice stops recording by itself after a moment of silence (the same setting as the voice conversation, 3 s by default; Settings → "Recording — silence that ends what you say"); clicking still works, and with no speech for 8 s it stops and asks you to try again.
 - **1.13.4** — new icons in the series style: dark — the "¡ñ!" bubble on a deep navy tile, light — a gold bubble on a cream tile; the dock and app-menu icon switches light/dark together with the system, also while the app is closed (a small helper started at login and by the app itself).

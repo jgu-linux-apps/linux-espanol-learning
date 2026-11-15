@@ -9,6 +9,9 @@ gi.require_version("Gtk", "3.0")
 gi.require_version("Gdk", "3.0")
 from gi.repository import Gtk, Gdk, Gio, GLib  # noqa: E402
 
+from .. import i18n  # noqa: E402
+i18n.init()          # course language of the active profile — before the pages, which translate at import time
+
 from .. import VERSION
 from ..paths import APP_ID, APP_NAME, DATA
 from ..db import DB
@@ -25,34 +28,35 @@ from .page_dictation import DictationPage
 from .page_scenes import ScenesPage
 from .pages_more import (ReadingsPage, VideosPage, TestsPage, StatsPage, SettingsPage, SetupDialog,
                          TestView, build_unit_test, build_exam)
+from ..i18n import _  # noqa: E402
 
 ICON = "linux-espanol-learning"
 
 PAGES = [
-    ("today", "Dzisiaj", "go-home-symbolic"),
-    ("course", "Kurs", "accessories-dictionary-symbolic"),
-    ("alphabet", "Alfabet i wymowa", "format-text-bold-symbolic"),
-    ("review", "Powtórki", "view-refresh-symbolic"),
-    ("dictionary", "Słownik ES–PL", "edit-find-symbolic"),
-    ("conj", "Odmiana", "view-list-symbolic"),
-    ("pron", "Laboratorium wymowy", "audio-input-microphone-symbolic"),
-    ("dictation", "Dyktando", "document-edit-symbolic"),
-    ("scenes", "Scenki z Paco", "face-smile-symbolic"),
-    ("bot", "Rozmowa z botem", "user-available-symbolic"),
-    ("learner", "O mnie (dla bota)", "avatar-default-symbolic"),
-    ("readings", "Czytanki", "x-office-document-symbolic"),
-    ("videos", "Filmy i słuchanie", "video-x-generic-symbolic"),
-    ("tests", "Testy i egzaminy", "emblem-ok-symbolic"),
-    ("stats", "Statystyki", "x-office-spreadsheet-symbolic"),
-    ("settings", "Ustawienia", "emblem-system-symbolic"),
+    ("today", _("Dzisiaj"), "go-home-symbolic"),
+    ("course", _("Kurs"), "accessories-dictionary-symbolic"),
+    ("alphabet", _("Alfabet i wymowa"), "format-text-bold-symbolic"),
+    ("review", _("Powtórki"), "view-refresh-symbolic"),
+    ("dictionary", _("Słownik ES–PL"), "edit-find-symbolic"),
+    ("conj", _("Odmiana"), "view-list-symbolic"),
+    ("pron", _("Laboratorium wymowy"), "audio-input-microphone-symbolic"),
+    ("dictation", _("Dyktando"), "document-edit-symbolic"),
+    ("scenes", _("Scenki z Paco"), "face-smile-symbolic"),
+    ("bot", _("Rozmowa z botem"), "user-available-symbolic"),
+    ("learner", _("O mnie (dla bota)"), "avatar-default-symbolic"),
+    ("readings", _("Czytanki"), "x-office-document-symbolic"),
+    ("videos", _("Filmy i słuchanie"), "video-x-generic-symbolic"),
+    ("tests", _("Testy i egzaminy"), "emblem-ok-symbolic"),
+    ("stats", _("Statystyki"), "x-office-spreadsheet-symbolic"),
+    ("settings", _("Ustawienia"), "emblem-system-symbolic"),
 ]
 
 # menu w grupach (1.13); „Ustawienia” są w menu ☰ w nagłówku
 NAV_GROUPS = [
-    ("learn", "Nauka", ["today", "course", "review", "tests"]),
-    ("practice", "Ćwicz", ["pron", "dictation", "scenes", "bot", "readings", "videos"]),
-    ("tools", "Narzędzia", ["dictionary", "conj", "alphabet"]),
-    ("you", "Ty", ["stats", "learner"]),
+    ("learn", _("Nauka"), ["today", "course", "review", "tests"]),
+    ("practice", _("Ćwicz"), ["pron", "dictation", "scenes", "bot", "readings", "videos"]),
+    ("tools", _("Narzędzia"), ["dictionary", "conj", "alphabet"]),
+    ("you", _("Ty"), ["stats", "learner"]),
 ]
 
 
@@ -62,6 +66,7 @@ class App(Gtk.Application):
         GLib.set_application_name(APP_NAME)
         GLib.set_prgname("linux-espanol-learning")
         self.win = None
+        self._lang = i18n.LANG      # language this process was started in (texts are translated at import)
 
     # ------------------------------------------------------------ start
     def do_startup(self):
@@ -86,8 +91,8 @@ class App(Gtk.Application):
         self.recorder = Recorder()
         self._seq = []
         self._seq_token = 0
-        for name, cb in (("about", self.on_about), ("shortcuts", self.show_shortcuts), ("settings", lambda *_: self.show_page("settings")),
-                         ("quit", lambda *_: self.quit())):
+        for name, cb in (("about", self.on_about), ("shortcuts", self.show_shortcuts), ("settings", lambda *_a: self.show_page("settings")),
+                         ("quit", lambda *_a: self.quit())):
             a = Gio.SimpleAction.new(name, None)
             a.connect("activate", cb)
             self.add_action(a)
@@ -143,7 +148,7 @@ class App(Gtk.Application):
         db.set("remind_last", today)
         cur, _best = db.streak()
         n = Gio.Notification.new("Linux Español Learning")
-        n.set_body((f"Masz serię {cur} dni — " if cur else "") + f"zostało Ci kilka minut do dzisiejszego celu ({goal} min). ¡Vamos!")
+        n.set_body((_('Masz serię {} dni — ').format(cur) if cur else "") + _('zostało Ci kilka minut do dzisiejszego celu ({} min). ¡Vamos!').format(goal))
         n.set_icon(Gio.ThemedIcon.new("linux-espanol-learning"))
         try:
             self.send_notification("remind", n)
@@ -159,7 +164,7 @@ class App(Gtk.Application):
         src = Gio.SettingsSchemaSource.get_default()
         if src and src.lookup("org.gnome.desktop.interface", True):
             self.gsettings = Gio.Settings.new("org.gnome.desktop.interface")
-            self.gsettings.connect("changed", lambda *_: self._apply_theme())
+            self.gsettings.connect("changed", lambda *_a: self._apply_theme())
         self._apply_theme()
 
     def system_dark(self):
@@ -213,12 +218,12 @@ class App(Gtk.Application):
         hb = Gtk.HeaderBar()
         hb.set_show_close_button(True)
         hb.set_title(APP_NAME)
-        hb.set_subtitle("Kurs hiszpańskiego A1–A2 · Hiszpania")
+        hb.set_subtitle(_("Kurs hiszpańskiego A1–A2 · Hiszpania"))
         menu = Gio.Menu()
-        menu.append("Ustawienia", "app.settings")
-        menu.append("Skróty klawiszowe", "app.shortcuts")
-        menu.append("O programie", "app.about")
-        menu.append("Zakończ", "app.quit")
+        menu.append(_("Ustawienia"), "app.settings")
+        menu.append(_("Skróty klawiszowe"), "app.shortcuts")
+        menu.append(_("O programie"), "app.about")
+        menu.append(_("Zakończ"), "app.quit")
         mb = Gtk.MenuButton()
         mb.set_menu_model(menu)
         mb.set_image(Gtk.Image.new_from_icon_name("open-menu-symbolic", Gtk.IconSize.BUTTON))
@@ -305,17 +310,17 @@ class App(Gtk.Application):
         from .. import profiles
         cur = profiles.active()
         btn = Gtk.MenuButton()
-        btn.set_label("👤 " + cur["name"])
-        btn.set_tooltip_text("Profil użytkownika — osobny postęp dla każdej osoby")
+        btn.set_label("👤 " + profiles.display_name(cur))
+        btn.set_tooltip_text(_("Profil użytkownika — osobny postęp dla każdej osoby"))
         pop = Gtk.Popover()
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         for side in ("start", "end", "top", "bottom"):
             getattr(box, f"set_margin_{side}")(10)
-        box.pack_start(label("Profile na tym komputerze", "dim"), False, False, 0)
+        box.pack_start(label(_("Profile na tym komputerze"), "dim"), False, False, 0)
         for p in profiles.all_profiles():
             row = Gtk.Box(spacing=4)
             is_cur = p["id"] == cur["id"]
-            b = Gtk.Button(label=("✔  " if is_cur else "     ") + p["name"])
+            b = Gtk.Button(label=("✔  " if is_cur else "     ") + profiles.display_name(p))
             b.set_relief(Gtk.ReliefStyle.NONE)
             b.set_halign(Gtk.Align.FILL)
             b.connect("clicked", lambda _b, pid=p["id"], po=pop: (po.popdown(), self.switch_profile(pid)))
@@ -323,70 +328,82 @@ class App(Gtk.Application):
             if not is_cur and p["id"] != profiles.DEFAULT_ID:
                 rm = Gtk.Button.new_from_icon_name("edit-delete-symbolic", Gtk.IconSize.BUTTON)
                 rm.set_relief(Gtk.ReliefStyle.NONE)
-                rm.set_tooltip_text("Usuń profil i jego postęp")
+                rm.set_tooltip_text(_("Usuń profil i jego postęp"))
                 rm.connect("clicked", lambda _b, pp=p, po=pop: (po.popdown(), self.delete_profile(pp)))
                 row.pack_start(rm, False, False, 0)
             box.pack_start(row, False, False, 0)
         box.pack_start(Gtk.Separator(), False, False, 4)
-        new = Gtk.Button(label="➕  Nowy profil…")
+        new = Gtk.Button(label=_("➕  Nowy profil…"))
         new.set_relief(Gtk.ReliefStyle.NONE)
-        new.connect("clicked", lambda *_: (pop.popdown(), self.new_profile()))
+        new.connect("clicked", lambda *_a: (pop.popdown(), self.new_profile()))
         box.pack_start(new, False, False, 0)
-        ren = Gtk.Button(label="✎  Zmień nazwę bieżącego…")
+        ren = Gtk.Button(label=_("✎  Nazwa i język bieżącego…"))
         ren.set_relief(Gtk.ReliefStyle.NONE)
-        ren.connect("clicked", lambda *_: (pop.popdown(), self.rename_profile()))
+        ren.connect("clicked", lambda *_a: (pop.popdown(), self.rename_profile()))
         box.pack_start(ren, False, False, 0)
         pop.add(box)
         box.show_all()
         btn.set_popover(pop)
         return btn
 
-    def _ask_name(self, title, initial=""):
+    def _ask_name(self, title, initial="", lang=None):
+        """Name (and, with lang, the course language) of a profile; returns (name, lang) or None."""
         d = Gtk.Dialog(title=title, transient_for=self.win, modal=True)
-        d.add_button("Anuluj", Gtk.ResponseType.CANCEL)
+        d.add_button(_("Anuluj"), Gtk.ResponseType.CANCEL)
         ok = d.add_button("OK", Gtk.ResponseType.OK)
         ok.get_style_context().add_class("suggested-action")
         box = d.get_content_area()
         for side in ("start", "end", "top", "bottom"):
             getattr(box, f"set_margin_{side}")(14)
         box.set_spacing(8)
-        box.pack_start(label("Nazwa (np. imię):"), False, False, 0)
+        box.pack_start(label(_("Nazwa (np. imię):")), False, False, 0)
         e = Gtk.Entry()
         e.set_text(initial)
         e.set_activates_default(True)
         e.set_max_length(30)
         box.pack_start(e, False, False, 0)
+        combo = None
+        if lang is not None:
+            box.pack_start(label(_("Język kursu · Course language:")), False, False, 0)
+            combo = Gtk.ComboBoxText()
+            for code, name in i18n.LANGS.items():
+                combo.append(code, name)
+            combo.set_active_id(lang)
+            box.pack_start(combo, False, False, 0)
+            box.pack_start(label(_("Zmiana języka uruchomi aplikację ponownie."), "dim"), False, False, 0)
         d.set_default_response(Gtk.ResponseType.OK)
         d.show_all()
         r = d.run()
         name = e.get_text().strip()
+        chosen = combo.get_active_id() if combo else None
         d.destroy()
-        return name if r == Gtk.ResponseType.OK and name else None
+        return (name, chosen) if r == Gtk.ResponseType.OK and name else None
 
     def new_profile(self):
         from .. import profiles
-        name = self._ask_name("Nowy profil")
-        if name:
-            pid = profiles.add(name)
+        res = self._ask_name(_("Nowy profil"), lang=i18n.LANG)
+        if res:
+            pid = profiles.add(res[0], res[1])
             self.switch_profile(pid)
 
     def rename_profile(self):
         from .. import profiles
         cur = profiles.active()
-        name = self._ask_name("Zmień nazwę profilu", cur["name"])
-        if name:
-            profiles.rename(cur["id"], name)
+        res = self._ask_name(_("Zmień nazwę profilu"), profiles.display_name(cur), lang=i18n.profile_lang(cur))
+        if res:
+            profiles.rename(cur["id"], res[0])
+            profiles.set_lang(cur["id"], res[1])
             self.switch_profile(cur["id"], force=True)
 
     def delete_profile(self, p):
         from .. import profiles
         d = Gtk.MessageDialog(transient_for=self.win, modal=True, message_type=Gtk.MessageType.WARNING,
                               buttons=Gtk.ButtonsType.NONE,
-                              text=f"Usunąć profil „{p['name']}”?")
-        d.format_secondary_text("Cały postęp, powtórki, historia rozmów i dane „O mnie” tego profilu zostaną "
-                                "trwale usunięte.")
-        d.add_button("Anuluj", Gtk.ResponseType.CANCEL)
-        d.add_button("Usuń", Gtk.ResponseType.OK)
+                              text=_('Usunąć profil „{}”?').format(p['name']))
+        d.format_secondary_text(_("Cały postęp, powtórki, historia rozmów i dane „O mnie” tego profilu zostaną "
+                                "trwale usunięte."))
+        d.add_button(_("Anuluj"), Gtk.ResponseType.CANCEL)
+        d.add_button(_("Usuń"), Gtk.ResponseType.OK)
         r = d.run()
         d.destroy()
         if r == Gtk.ResponseType.OK:
@@ -399,6 +416,9 @@ class App(Gtk.Application):
         if pid == profiles.active_id() and not force:
             return
         profiles.set_active(pid)
+        if i18n.init() != self._lang:            # another course language: start again in it
+            self._restart()
+            return
         try:
             self.recorder.stop(lambda _p: None)
         except Exception:  # noqa
@@ -415,6 +435,15 @@ class App(Gtk.Application):
         self.win.present()
         self.speech.preload_stt()
 
+    def _restart(self):
+        try:
+            self.recorder.stop(lambda _p: None)
+            self.stop_audio()
+            self.speech.shutdown()
+        except Exception:  # noqa
+            pass
+        os.execv(sys.executable, [sys.executable] + sys.argv)
+
     def _migrate_drill(self):
         """Jednorazowo przenosi dotychczasowe błędy do treningu (Powtórki → Błędy)."""
         try:
@@ -429,7 +458,7 @@ class App(Gtk.Application):
         self.show_page("review")
         self.pages["review"].show_tab(tab)
 
-    def _on_close(self, *_):
+    def _on_close(self, *_a):
         from ..ollama_local import Manager
         Manager.stop()
         self.speech.shutdown()
@@ -440,24 +469,24 @@ class App(Gtk.Application):
         from .placement import PlacementDialog
         self.db.set("placement_offered", True)
         d = PlacementDialog(self)
-        d.connect("destroy", lambda *_: self.pages["today"].refresh())
+        d.connect("destroy", lambda *_a: self.pages["today"].refresh())
         d.show()
 
     SHORTCUTS = [
-        ("Ctrl+1 … Ctrl+9", "Przejdź do kolejnych ekranów menu"),
-        ("F1", "Ta lista skrótów"),
-        ("Ctrl+Q", "Zakończ"),
-        ("Powtórki: Spacja / Enter", "Pokaż odpowiedź"),
-        ("Powtórki: 1 2 3 4", "Oceń fiszkę (znowu / trudne / dobrze / łatwe)"),
-        ("Dyktando: F2 / F3 / F4", "Posłuchaj / wolno / podpowiedź"),
-        ("Dyktando: Enter", "Sprawdź / dalej"),
-        ("Rozmowa z botem: Ctrl+M", "Mikrofon: mów / skończ mówić"),
-        ("Scenki: Ctrl+Enter", "Następna kwestia"),
+        ("Ctrl+1 … Ctrl+9", _("Przejdź do kolejnych ekranów menu")),
+        ("F1", _("Ta lista skrótów")),
+        ("Ctrl+Q", _("Zakończ")),
+        (_("Powtórki: Spacja / Enter"), _("Pokaż odpowiedź")),
+        (_("Powtórki: 1 2 3 4"), _("Oceń fiszkę (znowu / trudne / dobrze / łatwe)")),
+        (_("Dyktando: F2 / F3 / F4"), _("Posłuchaj / wolno / podpowiedź")),
+        (_("Dyktando: Enter"), _("Sprawdź / dalej")),
+        (_("Rozmowa z botem: Ctrl+M"), _("Mikrofon: mów / skończ mówić")),
+        (_("Scenki: Ctrl+Enter"), _("Następna kwestia")),
     ]
 
-    def show_shortcuts(self, *_):
+    def show_shortcuts(self, *_a):
         d = Gtk.MessageDialog(transient_for=self.win, modal=True, message_type=Gtk.MessageType.INFO,
-                              buttons=Gtk.ButtonsType.CLOSE, text="Skróty klawiszowe")
+                              buttons=Gtk.ButtonsType.CLOSE, text=_("Skróty klawiszowe"))
         d.format_secondary_text("\n".join(f"{k}  —  {v}" for k, v in self.SHORTCUTS))
         d.run()
         d.destroy()
@@ -590,15 +619,15 @@ class App(Gtk.Application):
 
     def start_unit_test(self, level, unit):
         items = build_unit_test(self.course, level, unit)
-        title = f"Test — {level}, dział {unit}: {self.course.unit_title(level, unit)}"
+        title = _('Test — {}, dział {}: {}').format(level, unit, self.course.unit_title(level, unit))
         self._show_dynamic(TestView(self, "unit", f"{level}-{unit}", title, items), "test", "tests")
 
     def start_exam(self, level):
         items = build_exam(self.course, level)
         sentences = [es for l in self.course.lessons if l.level == level
-                     for _, es, _ in l.dialog if 4 <= len(es.split()) <= 10]
+                     for _u, es, _u in l.dialog if 4 <= len(es.split()) <= 10]
         speak = random.sample(sentences, min(3, len(sentences)))
-        self._show_dynamic(TestView(self, "exam", level, f"Egzamin próbny — poziom {level}", items, speak),
+        self._show_dynamic(TestView(self, "exam", level, _('Egzamin próbny — poziom {}').format(level), items, speak),
                            "test", "tests")
 
     def open_conjugation(self, verb):
@@ -636,7 +665,7 @@ class App(Gtk.Application):
             self.player.play(path, on_done=then)
 
         def err(e):
-            self.toast(f"Nie mogę odtworzyć: {e}")
+            self.toast(_('Nie mogę odtworzyć: {}').format(e))
         run_bg(lambda: self.speech.synth(text, slow), done, err)
 
     def say_sequence(self, texts):
@@ -661,40 +690,40 @@ class App(Gtk.Application):
         print(text, file=sys.stderr)
         if not self.win or getattr(self, "_toast_open", False):
             return
-        if "silnika mowy" in text or "Brak" in text:
+        if "silnika mowy" in text or _("Brak") in text:
             if getattr(self, "_engine_warned", False):
                 return
             self._engine_warned = True
         self._toast_open = True
         dlg = Gtk.MessageDialog(transient_for=self.win, modal=True, message_type=Gtk.MessageType.INFO,
                                 buttons=Gtk.ButtonsType.OK, text=text)
-        if "silnika mowy" in text or "Brak" in text:
-            dlg.format_secondary_text("Przejdź do Ustawień i kliknij „Zainstaluj / zaktualizuj komponenty”.")
+        if "silnika mowy" in text or _("Brak") in text:
+            dlg.format_secondary_text(_("Przejdź do Ustawień i kliknij „Zainstaluj / zaktualizuj komponenty”."))
         dlg.run()
         dlg.destroy()
         self._toast_open = False
 
     # ------------------------------------------------------------ o programie
-    def on_about(self, *_):
+    def on_about(self, *_a):
         d = Gtk.AboutDialog(transient_for=self.win, modal=True)
         d.set_program_name(APP_NAME)
         d.set_version(VERSION)
         d.set_logo_icon_name(ICON + ("-dark" if self.is_dark() else ""))
-        d.set_comments("Prawdziwy kurs hiszpańskiego od zera (A1–A2, hiszpański z Hiszpanii)\n"
+        d.set_comments(_("Prawdziwy kurs hiszpańskiego od zera (A1–A2, hiszpański z Hiszpanii)\n"
                        "z lekcjami, słownikiem ES–PL, powtórkami FSRS, testami i oceną wymowy offline.\n\n"
-                       "Created by: JGu\nSupported by Claude")
+                       "Created by: JGu\nSupported by Claude"))
         d.set_authors(["Created by: JGu", "Supported by Claude"])
         d.set_website("https://github.com/jgu-linux-apps")
         d.set_website_label("JGu Linux Apps")
         d.set_license_type(Gtk.License.CUSTOM)
-        d.set_license("Freeware — darmowe użytkowanie.\nBez prawa do modyfikacji i rozpowszechniania zmienionych wersji.\n\n"
+        d.set_license(_("Freeware — darmowe użytkowanie.\nBez prawa do modyfikacji i rozpowszechniania zmienionych wersji.\n\n"
                       "Komponenty pobierane osobno (Piper, faster-whisper, głosy, modele Whisper)\n"
-                      "mają własne licencje.")
-        d.add_credit_section("Wykorzystane projekty", [
-            "Piper TTS — synteza mowy (OHF-Voice, GPL-3.0, pobierany osobno)",
-            "Głosy es_ES davefx i sharvard (piper-voices)",
-            "faster-whisper / OpenAI Whisper — rozpoznawanie mowy",
-            "FSRS — algorytm powtórek (open-spaced-repetition)",
+                      "mają własne licencje."))
+        d.add_credit_section(_("Wykorzystane projekty"), [
+            _("Piper TTS — synteza mowy (OHF-Voice, GPL-3.0, pobierany osobno)"),
+            _("Głosy es_ES davefx i sharvard (piper-voices)"),
+            _("faster-whisper / OpenAI Whisper — rozpoznawanie mowy"),
+            _("FSRS — algorytm powtórek (open-spaced-repetition)"),
         ])
         d.run()
         d.destroy()

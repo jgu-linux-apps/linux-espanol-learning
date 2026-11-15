@@ -1,9 +1,10 @@
+from ..i18n import _  # noqa: E402
 """Motywy kolorystyczne aplikacji — każdy w wersji jasnej i ciemnej."""
 
 THEMES = {
     # klucz „system” = motyw domyślny (dawniej pomarańcz/cyjan; od 1.13 Coral — ten sam odcień w jasnym i ciemnym)
     "system": (
-        "Coral (domyślny) — koral i słońce",
+        _("Coral (domyślny) — koral i słońce"),
         dict(bg="#FFF7F5", fg="#2A1B19", header="#FFECE8", header_fg="#3A2420", sidebar="#FFEDE9",
              card="#FFFFFF", border="#F7D6CF", accent="#E8505B", accent_fg="#FFFFFF", button="#FFFFFF",
              hover="#FFE0D9", sel="#E8505B", sel_fg="#FFFFFF", entry="#FFFFFF", extra="coral_light",
@@ -14,7 +15,7 @@ THEMES = {
              accent2="#FBBF24", ring2="#F43F5E", ring3="#A78BFA"),
     ),
     "pomarancz": (
-        "Pomarańcz — ciepły pomarańcz (dawny domyślny)",
+        _("Pomarańcz — ciepły pomarańcz (dawny domyślny)"),
         dict(bg="#FFF8F3", fg="#1F2937", header="#FFEFE4", header_fg="#3B2A20", sidebar="#FFEEE3",
              card="#FFFFFF", border="#F6DCCB", accent="#F97316", accent_fg="#FFFFFF", button="#FFFFFF",
              hover="#FFE3D0", sel="#F97316", sel_fg="#FFFFFF", entry="#FFFFFF", extra="soft",
@@ -38,7 +39,7 @@ THEMES = {
     "classic": ("Systemowy — jasny/ciemny jak Ubuntu", None, None),
     # Aurora: wspólny motyw całej serii (jasny = pastelowe szkło, ciemny = zorza na granacie)
     "aurora": (
-        "Aurora — fiolet i cyjan",
+        _("Aurora — fiolet i cyjan"),
         dict(bg="#F4F1FF", fg="#1F1A3A", header="#FBFAFF", header_fg="#1F1A3A", sidebar="#EEEAFF",
              card="#FFFFFF", border="#E2DCFA", accent="#7C5CFF", accent_fg="#FFFFFF", button="#FFFFFF",
              hover="#ECE7FF", sel="#7C5CFF", sel_fg="#FFFFFF", entry="#FFFFFF", extra="aurora_light"),
@@ -47,7 +48,7 @@ THEMES = {
              hover="#1E2340", sel="#3A2A6E", sel_fg="#FFFFFF", entry="#11142A", extra="aurora_dark"),
     ),
     "espana": (
-        "España — czerwień i złoto",
+        _("España — czerwień i złoto"),
         dict(bg="#FFF8EC", fg="#2B1D14", header="#AA151B", header_fg="#FFFFFF", sidebar="#F7E9CC",
              card="#FFFFFF", border="#E8D3A8", accent="#C8102E", accent_fg="#FFFFFF", button="#FBEFD6",
              hover="#F5E2BC", sel="#F1BF00", sel_fg="#2B1D14", entry="#FFFFFF"),
@@ -56,7 +57,7 @@ THEMES = {
              hover="#4A3630", sel="#AA151B", sel_fg="#FFF2D6", entry="#261B18"),
     ),
     "azulejo": (
-        "Azulejo — błękit sewilskich kafli",
+        _("Azulejo — błękit sewilskich kafli"),
         dict(bg="#F4F8FC", fg="#12263F", header="#1F4E8C", header_fg="#FFFFFF", sidebar="#E3ECF7",
              card="#FFFFFF", border="#C9D8EC", accent="#1F5FAF", accent_fg="#FFFFFF", button="#E9F0F9",
              hover="#DAE6F4", sel="#1F5FAF", sel_fg="#FFFFFF", entry="#FFFFFF"),
@@ -65,7 +66,7 @@ THEMES = {
              hover="#2C4263", sel="#2F64A8", sel_fg="#FFFFFF", entry="#132033"),
     ),
     "oliva": (
-        "Oliva — oliwka i terakota Andaluzji",
+        _("Oliva — oliwka i terakota Andaluzji"),
         dict(bg="#F5F3EA", fg="#2C2A1E", header="#5B6B2E", header_fg="#FFFFFF", sidebar="#E8E6D2",
              card="#FFFFFF", border="#D6D2B5", accent="#C0603A", accent_fg="#FFFFFF", button="#ECE9D8",
              hover="#E0DCC4", sel="#5B6B2E", sel_fg="#FFFFFF", entry="#FFFFFF"),
@@ -90,7 +91,7 @@ progressbar progress {{ background-image: linear-gradient(to right, {a1}, {a2});
 """
 
 
-MODES = {"auto": "Automatycznie (jak system)", "light": "Zawsze jasny", "dark": "Zawsze ciemny"}
+MODES = {"auto": _("Automatycznie (jak system)"), "light": _("Zawsze jasny"), "dark": _("Zawsze ciemny")}
 
 
 MODERN = """

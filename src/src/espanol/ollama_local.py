@@ -13,6 +13,7 @@ import time
 import urllib.request
 
 from .paths import USER_DATA
+from .i18n import _  # noqa: E402
 
 DIR = os.path.join(USER_DATA, "ollama")
 MODELS_DIR = os.path.join(USER_DATA, "ollama-models")
@@ -23,12 +24,12 @@ MANAGED_URL = "http://" + MANAGED_HOST
 
 # Modele do wyboru w kreatorze (nazwa, opis, rozmiar pobierania)
 MODELS = [
-    ("qwen3:8b", "Zalecany — bardzo dobry hiszpański (Qwen 3, 8B)", "ok. 5,2 GB",
-     "najlepiej z kartą NVIDIA 6–8 GB lub 16 GB RAM"),
-    ("qwen3:14b", "Najmądrzejszy — najlepsze rozmowy (Qwen 3, 14B)", "ok. 9 GB",
-     "wymaga karty NVIDIA 12 GB+ lub 32 GB RAM; wolniejszy"),
-    ("gemma3:4b", "Szybki — lżejszy model (Gemma 3, 4B)", "ok. 3,3 GB",
-     "dla słabszych komputerów; częściej się myli"),
+    ("qwen3:8b", _("Zalecany — bardzo dobry hiszpański (Qwen 3, 8B)"), "ok. 5,2 GB",
+     _("najlepiej z kartą NVIDIA 6–8 GB lub 16 GB RAM")),
+    ("qwen3:14b", _("Najmądrzejszy — najlepsze rozmowy (Qwen 3, 14B)"), "ok. 9 GB",
+     _("wymaga karty NVIDIA 12 GB+ lub 32 GB RAM; wolniejszy")),
+    ("gemma3:4b", _("Szybki — lżejszy model (Gemma 3, 4B)"), "ok. 3,3 GB",
+     _("dla słabszych komputerów; częściej się myli")),
 ]
 
 
@@ -64,7 +65,7 @@ class Manager:
         if _alive(MANAGED_URL):
             return MANAGED_URL
         if not installed():
-            raise RuntimeError("Ollama nie jest zainstalowana — użyj przycisku „Zainstaluj Ollamę i model”.")
+            raise RuntimeError(_("Ollama nie jest zainstalowana — użyj przycisku „Zainstaluj Ollamę i model”."))
         with cls._lock:
             if cls._proc is None or cls._proc.poll() is not None:
                 env = dict(os.environ, OLLAMA_HOST=MANAGED_HOST, OLLAMA_MODELS=MODELS_DIR)
@@ -77,8 +78,8 @@ class Manager:
             if _alive(MANAGED_URL, 1):
                 return MANAGED_URL
             time.sleep(0.5)
-        raise RuntimeError("Serwer Ollamy nie wystartował (szczegóły: ~/.local/share/"
-                           "linux-espanol-learning/ollama/serve.log)")
+        raise RuntimeError(_("Serwer Ollamy nie wystartował (szczegóły: ~/.local/share/"
+                           "linux-espanol-learning/ollama/serve.log)"))
 
     @classmethod
     def stop(cls):
@@ -105,30 +106,30 @@ class Installer:
         try:
             if self.use_system:
                 url = SYSTEM_URL
-                self.log("Używam Ollamy zainstalowanej w systemie.")
+                self.log(_("Używam Ollamy zainstalowanej w systemie."))
             else:
                 if not installed():
                     self._install()
-                self.log("Uruchamiam serwer Ollamy…")
+                self.log(_("Uruchamiam serwer Ollamy…"))
                 url = Manager.ensure_running()
-            self.log(f"Pobieram model {self.model}… (to największy plik — może potrwać kilka–kilkanaście minut)")
+            self.log(_('Pobieram model {}… (to największy plik — może potrwać kilka–kilkanaście minut)').format(self.model))
             self._pull(url)
             self.progress(1.0)
-            self.log("Gotowe! Bot jest gotowy do rozmowy. ¡Vamos a hablar!")
+            self.log(_("Gotowe! Bot jest gotowy do rozmowy. ¡Vamos a hablar!"))
             self.done(True, url)
         except Exception as e:  # noqa
-            self.log(f"BŁĄD: {e}")
+            self.log(_('BŁĄD: {}').format(e))
             self.done(False, str(e))
 
     def _install(self):
         arch = {"x86_64": "amd64", "aarch64": "arm64"}.get(platform.machine())
         if not arch:
-            raise RuntimeError(f"nieobsługiwana architektura: {platform.machine()}")
+            raise RuntimeError(_('nieobsługiwana architektura: {}').format(platform.machine()))
         os.makedirs(DIR, exist_ok=True)
         base = f"https://ollama.com/download/ollama-linux-{arch}"
         zst = shutil.which("zstd") is not None
         url, kind = (base + ".tar.zst", "zst") if zst and self._exists(base + ".tar.zst") else (base + ".tgz", "tgz")
-        self.log(f"Krok 1/2: pobieram Ollamę ({url.rsplit('/', 1)[1]}; z bibliotekami dla kart NVIDIA, ok. 1–2 GB)…")
+        self.log(_('Krok 1/2: pobieram Ollamę ({}; z bibliotekami dla kart NVIDIA, ok. 1–2 GB)…').format(url.rsplit('/', 1)[1]))
         tmp = os.path.join(DIR, "download." + kind)
         req = urllib.request.Request(url, headers={"User-Agent": "linux-espanol-learning"})
         with urllib.request.urlopen(req, timeout=60) as r, open(tmp, "wb") as f:
@@ -145,7 +146,7 @@ class Installer:
                 if got - last > 100 << 20:
                     last = got
                     self.log(f"  {got >> 20} MB" + (f" / {total >> 20} MB" if total else ""))
-        self.log("Rozpakowuję…")
+        self.log(_("Rozpakowuję…"))
         if kind == "zst":
             cmd = ["tar", "--use-compress-program=unzstd", "-xf", tmp, "-C", DIR]
         else:
@@ -153,9 +154,9 @@ class Installer:
         subprocess.run(cmd, check=True)
         os.remove(tmp)
         if not installed():
-            raise RuntimeError("w archiwum nie znaleziono programu ollama")
+            raise RuntimeError(_("w archiwum nie znaleziono programu ollama"))
         os.chmod(BIN, 0o755)
-        self.log("Ollama zainstalowana (bez uprawnień administratora).")
+        self.log(_("Ollama zainstalowana (bez uprawnień administratora)."))
 
     @staticmethod
     def _exists(url):

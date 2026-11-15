@@ -1,0 +1,70 @@
+# id: a1-11
+# title: ¿Qué hora es? The time and your daily routine
+# unit: 3
+# unit_title: Día a día — day by day
+@goals
+Ask and tell the time
+Talk about your day
+Use reflexive verbs
+@dialog
+Isabel: ¿A qué hora te levantas? | What time do you get up?
+Marek: Me levanto a las seis y media. Me ducho, desayuno y salgo de casa a las siete y cuarto. | I get up at half past six. I have a shower, have breakfast and leave home at quarter past seven.
+Isabel: ¡Qué pronto! Yo me levanto a las nueve. | That's early! I get up at nine.
+Marek: ¿Y a qué hora te acuestas? | And what time do you go to bed?
+Isabel: Muy tarde, a la una o a las dos. | Very late, at one or two.
+Marek: Perdona, ¿qué hora es ahora? | Sorry, what time is it now?
+Isabel: Son las cinco menos diez. | It's ten to five.
+@vocab
+levantarse | to get up | vr | Me levanto a las siete. / I get up at seven.
+ducharse | to have a shower | vr
+lavarse | to wash (yourself) | vr
+vestirse | to get dressed | vr
+acostarse | to go to bed | vr
+despertarse | to wake up | vr
+desayunar | to have breakfast | v
+comer | to have lunch; to eat | v
+cenar | to have dinner | v
+salir | to go out, to leave | v | Salgo de casa a las ocho. / I leave home at eight.
+¿qué hora es? | what time is it? | phr
+la hora | hour; time | f
+y media | half past | phr | las tres y media / 3:30
+y cuarto | quarter past | phr
+menos cuarto | quarter to | phr
+pronto | early; soon | adv
+tarde | late | adv
+ahora | now | adv
+después | then, afterwards | adv
+perdona | sorry, excuse me (to “tú”) | interj
+@grammar
+## What time is it?
+- **¿Qué hora es?** — **Es la una** (1:00), **Son las dos / las tres…**
+- **y cuarto** (quarter past), **y media** (half past), **menos cuarto** (quarter to)
+- **Son las cinco y diez** (5:10), **Son las cinco menos diez** (4:50 — literally “five minus ten”).
+- **¿A qué hora…?** — What time…? **A las ocho.** — At eight.
+
+## Reflexive verbs
+Many daily actions are reflexive in Spanish (“I get myself up”). The reflexive pronoun goes before the verb and changes with the person:
+|| yo | me levanto
+|| tú | te levantas
+|| él/ella/usted | se levanta
+|| nosotros/as | nos levantamos
+|| vosotros/as | os levantáis
+|| ellos/ellas/ustedes | se levantan
+Note: **acostarse** (o→ue: me acuesto), **vestirse** (e→i: me visto), **despertarse** (e→ie: me despierto) — more about these changes in the next lesson.
+
+## Salir — irregular “yo” form
+**salgo**, sales, sale, salimos, salís, salen.
+@exercises
+choice: 15:30 | Son las tres y media. | Son las tres y media.; Son las tres y cuarto.; Es la tres y media.
+choice: 1:00 | Es la una. | Son la una.; Es la una.; Es una hora.
+choice: 8:45 | Son las nueve menos cuarto. | Son las ocho y cuarto.; Son las nueve menos cuarto.; Son las ocho menos cuarto.
+fill: Yo ___ levanto a las siete. | me
+fill: ¿A qué hora ___ duchas? | te
+fill: Nosotros ___ acostamos tarde. | nos
+conj: levantarse (ellos) | se levantan
+conj: salir (yo) | salgo
+trans: What time is it? | ¿Qué hora es?
+trans: I have dinner at nine. | Ceno a las nueve.
+trans: What time do you get up? | ¿A qué hora te levantas?
+@culture
+In Spain **comer** mostly means having lunch — the main meal of the day, around 2 pm. Many companies have a long lunch break, although in big cities more and more people work straight through (**jornada continua**).

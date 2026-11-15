@@ -1,0 +1,73 @@
+# id: a1-18
+# title: El tiempo — weather, seasons and months
+# unit: 5
+# unit_title: Planes y tiempo libre — plans and free time
+@goals
+Describe the weather
+Name the months and seasons
+Say the date
+@dialog
+Mercedes: ¿Qué tiempo hace en Polonia en diciembre? | What's the weather like in Poland in December?
+Marek: Hace mucho frío y a veces nieva. En la costa también hace viento. | It's very cold and sometimes it snows. On the coast it's windy too.
+Mercedes: Aquí en Sevilla, en invierno hace sol y unos quince grados. | Here in Seville, in winter it's sunny and about fifteen degrees.
+Marek: ¡Qué envidia! ¿Y en verano? | I'm so jealous! And in summer?
+Mercedes: En verano hace muchísimo calor: ¡a veces cuarenta grados! | In summer it's incredibly hot: sometimes forty degrees!
+Marek: Entonces voy en primavera, en abril. | Then I'll come in spring, in April.
+@vocab
+el tiempo | weather; time | m | ¿Qué tiempo hace? / What's the weather like?
+hace calor | it's hot | phr
+hace frío | it's cold | phr
+hace sol | it's sunny | phr
+hace viento | it's windy | phr
+hace buen tiempo | the weather is nice | phr
+hace mal tiempo | the weather is bad | phr
+llover | to rain | v | Llueve mucho. / It rains a lot.
+nevar | to snow | v | Nieva. / It's snowing.
+está nublado | it's cloudy | phr
+el grado | degree | m
+la primavera | spring | f
+el verano | summer | m
+el otoño | autumn, fall | m
+el invierno | winter | m
+enero | January | m
+febrero | February | m
+marzo | March | m
+abril | April | m
+mayo | May | m
+junio | June | m
+julio | July | m
+agosto | August | m
+septiembre | September | m
+octubre | October | m
+noviembre | November | m
+diciembre | December | m
+la costa | coast | f
+@grammar
+## Weather: hace, hay, está
+- **hace** (literally “it makes”) + calor, frío, sol, viento, buen/mal tiempo: **Hace frío.**
+- **llueve / nieva** (from llover o→ue, nevar e→ie): **En noviembre llueve mucho.**
+- **está** + nublado / despejado: **Está nublado.**
+- **hay** + tormenta, niebla: **Hay niebla.**
+To make it stronger: **hace mucho frío / mucho calor** (not “muy frío”!), because frío and calor are nouns here.
+
+## Months and dates
+Months are written with a small letter. A date: **el + number + de + month (+ de + year)**:
+- **Hoy es el 9 de noviembre.** — Today is the 9th of November.
+- **en abril** — in April; **en verano** — in summer.
+- The 1st of the month is **el uno** (in Spain) or **el primero**.
+
+## The ending -ísimo
+**muchísimo** — very, very much; **guapísimo** — gorgeous.
+@exercises
+choice: It's very cold: | Hace mucho frío. | Es muy frío.; Hace mucho frío.; Hace muy frío.
+choice: It's raining: | Llueve. | Llueve.; Hace lluvia.; Es lluvia.
+choice: The month after June: | julio | junio; julio; agosto
+choice: It's cloudy: | Está nublado. | Hace nublado.; Está nublado.; Es nublado.
+fill: En verano ___ calor. | hace
+fill: Hoy es el diez ___ mayo. | de
+fill: En enero ___ (nevar) en la montaña. | nieva
+trans: What's the weather like? | ¿Qué tiempo hace?
+trans: In summer it's sunny. | En verano hace sol.
+trans: Today is the first of December. | Hoy es el uno de diciembre. /// Hoy es el primero de diciembre.
+@culture
+Spain has very different climates: green, rainy Galicia in the north, hot Andalusia in the south and the Canary Islands with eternal spring, where winter is about 20 degrees.

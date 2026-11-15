@@ -1,0 +1,66 @@
+# id: a2-29
+# title: En el médico — the body and health
+# unit: 8
+# unit_title: Salud y cuidados — health
+@goals
+Name the parts of the body
+Describe your symptoms at the doctor's (doler, tener fiebre)
+Understand simple advice
+@dialog
+Médica: Buenos días. ¿Qué le pasa? | Good morning. What's the matter?
+Marek: Me duele mucho la garganta y tengo fiebre desde ayer. | I have a very sore throat and I've had a fever since yesterday.
+Médica: ¿Le duele también la cabeza? | Do you have a headache too?
+Marek: Sí, un poco. Y estoy muy cansado. | Yes, a bit. And I'm very tired.
+Médica: A ver… Tiene la garganta muy roja. Es una infección. | Let's see… Your throat is very red. It's an infection.
+Marek: ¿Es grave? | Is it serious?
+Médica: No, no se preocupe. Tome estas pastillas cada ocho horas y beba mucha agua. | No, don't worry. Take these tablets every eight hours and drink plenty of water.
+Marek: ¿Puedo ir a trabajar? | Can I go to work?
+Médica: Mejor quédese en casa dos o tres días. | Better stay at home for two or three days.
+@vocab
+doler | to hurt, to ache | v | Me duele la cabeza. / I have a headache.
+el cuerpo | body | m
+la cabeza | head | f
+la garganta | throat | f
+el estómago | stomach | m
+la espalda | back | f
+el brazo | arm | m
+la mano | hand | f
+la pierna | leg | f
+el pie | foot | m
+el diente / la muela | tooth / back tooth, molar | m
+el oído | (inner) ear, hearing | m
+la fiebre | fever, temperature | f
+la tos | cough | f
+el resfriado | cold | m | Estoy resfriado. / I've got a cold.
+la gripe | flu | f
+la pastilla | tablet, pill | f
+la receta | prescription; recipe | f
+grave | serious (of an illness) | adj
+preocuparse | to worry | vr | No se preocupe. / Don't worry.
+quedarse | to stay | vr
+el centro de salud | health centre, GP surgery | m
+@grammar
+## Doler — works like gustar
+The part of the body is the subject: “my head hurts me”.
+|| me duele + singular | Me duele la cabeza.
+|| me duelen + plural | Me duelen los pies.
+Use the article, not a possessive (unlike English “my back”): **Me duele la espalda** (not “mi espalda”). The question: **¿Qué te duele? / ¿Qué le duele?**
+
+## Symptoms
+- **tener** + fiebre, tos, gripe, dolor de cabeza: **Tengo dolor de estómago.**
+- **estar** + resfriado, mareado (dizzy), enfermo: **Estoy resfriada.**
+
+## The doctor's advice (usted imperative)
+**Tome** (take), **beba** (drink), **descanse** (rest), **quédese en casa** (stay at home), **no se preocupe** (don't worry). More about the imperative in the next lessons.
+@exercises
+choice: My legs hurt: | Me duelen las piernas. | Me duele las piernas.; Me duelen las piernas.; Me duelen mis piernas.
+choice: I have a headache: | Me duele la cabeza. | Me duele la cabeza.; Tengo duele la cabeza.; Mi cabeza duele me.
+choice: I've got a cold (said by a man): | Estoy resfriado. | Soy resfriado.; Estoy resfriado.; Tengo resfriado estoy.
+fill: ¿Qué ___ duele? (to you) | te
+fill: A mi hijo le ___ (doler) los oídos. | duelen
+fill: Tengo ___ desde ayer. (a fever) | fiebre
+trans: I have a sore throat. | Me duele la garganta.
+trans: I have a cough and a fever. | Tengo tos y fiebre.
+trans: Is it serious? | ¿Es grave?
+@culture
+The emergency number in Spain (as in the whole EU) is **112**. In pharmacies (**farmacias**, with a green cross) the pharmacists often give advice on minor complaints, and one pharmacy in each area is always open at night (**farmacia de guardia**).

@@ -1,0 +1,77 @@
+# id: a1-10
+# title: -er and -ir verbs. Numbers up to 100
+# unit: 3
+# unit_title: Día a día — day by day
+@goals
+Conjugate regular -er and -ir verbs
+Count from 21 to 100
+Say where you live
+@dialog
+Álvaro: ¿Dónde vives? | Where do you live?
+Marek: Vivo en Rumia, en el norte de Polonia. ¿Y vosotros? | I live in Rumia, in the north of Poland. And you two?
+Álvaro: Vivimos en Sevilla. Mi mujer escribe libros y yo vendo bicicletas. | We live in Seville. My wife writes books and I sell bikes.
+Marek: ¿Coméis en casa o en restaurantes? | Do you eat at home or in restaurants?
+Álvaro: Normalmente comemos en casa. Mi mujer cocina muy bien. | We usually eat at home. My wife is a very good cook.
+Marek: ¿Y leéis mucho? | And do you read a lot?
+Álvaro: Ella lee unos cincuenta libros al año. ¡Yo solo leo el periódico! | She reads about fifty books a year. I only read the newspaper!
+@vocab
+comer | to eat; to have lunch | v | Comemos a las dos. / We have lunch at two.
+beber | to drink | v | Bebo agua. / I drink water.
+leer | to read | v
+aprender | to learn | v | Aprendo español. / I'm learning Spanish.
+vender | to sell | v
+comprender | to understand | v
+vivir | to live | v | Vivo en Londres. / I live in London.
+escribir | to write | v
+abrir | to open | v
+recibir | to receive, to get | v
+el libro | book | m
+el periódico | newspaper | m
+la bicicleta | bicycle, bike | f
+el agua | water | f | el agua fría / cold water
+el norte | north | m
+el sur | south | m
+normalmente | usually, normally | adv
+solo | only, just | adv
+veinte | twenty | num
+treinta | thirty | num
+cuarenta | forty | num
+cincuenta | fifty | num
+sesenta | sixty | num
+setenta | seventy | num
+ochenta | eighty | num
+noventa | ninety | num
+cien | a hundred | num
+@grammar
+## -er (comer) and -ir (vivir) verbs
+|| | comer | vivir
+|| yo | como | vivo
+|| tú | comes | vives
+|| él/ella/usted | come | vive
+|| nosotros/as | comemos | vivimos
+|| vosotros/as | coméis | vivís
+|| ellos/ellas/ustedes | comen | viven
+Only the **nosotros** and **vosotros** forms differ: **-emos/-éis** for -er, **-imos/-ís** for -ir.
+
+## Numbers 21–100
+- 21–29 are written as one word: **veintiuno, veintidós, veintitrés… veintinueve**.
+- From 31 on with “y” (and): **treinta y uno, cuarenta y cinco, noventa y nueve**.
+- 100 = **cien**; 101 = **ciento uno**.
+
+## El agua
+**Agua** is feminine, but in the singular it takes **el** (because it starts with a stressed “a”): **el agua fría**, **las aguas**.
+@exercises
+conj: comer (nosotros) | comemos
+conj: vivir (vosotros) | vivís
+conj: escribir (yo) | escribo
+conj: leer (tú) | lees
+conj: beber (ellos) | beben
+conj: aprender (ella) | aprende
+choice: 45 is: | cuarenta y cinco | cuatro y cinco; cuarenta y cinco; cincuenta y cuatro
+choice: 22 is: | veintidós | veinte y dos; veintidós; doce
+choice: 100 is: | cien | ciento; cien; mil
+trans: Where do you live? | ¿Dónde vives?
+trans: We drink water. | Bebemos agua.
+trans: She writes books. | Escribe libros. /// Ella escribe libros.
+@culture
+Spanish newspapers (such as El País, El Mundo or ABC) are mostly read online today, but a morning paper with a coffee at the bar is still an everyday sight.

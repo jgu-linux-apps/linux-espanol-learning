@@ -1,0 +1,19 @@
+# id: r01
+# level: A1
+# unit: 1
+# title: Me presento
+@text
+Hola. Me llamo Ola y soy polaca. Soy de Sopot, una ciudad pequeña cerca de Gdańsk. Tengo treinta y dos años. Soy enfermera y trabajo en un hospital. Hablo polaco, inglés y un poco de español.
+Mi amigo Javier es español. Es de Valencia y es profesor de música. Tiene veintiocho años. Javier habla español, catalán e inglés. ¡No habla polaco!
+@translation
+Hi. My name is Ola and I'm Polish. I'm from Sopot, a small town near Gdańsk. I'm thirty-two. I'm a nurse and I work in a hospital. I speak Polish, English and a little Spanish.
+My friend Javier is Spanish. He's from Valencia and he's a music teacher. He's twenty-eight. Javier speaks Spanish, Catalan and English. He doesn't speak Polish!
+@glossary
+pequeña | small
+cerca de | near
+e | and (before a word starting with “i-”/“hi-”)
+@questions
+¿De dónde es Ola? | De Sopot. | De Gdańsk.; De Sopot.; De Valencia.
+¿Cuántos años tiene Ola? | 32 | 23; 28; 32
+¿Qué es Javier? | Profesor de música. | Enfermero.; Profesor de música.; Médico.
+¿Qué idioma NO habla Javier? | Polaco. | Catalán.; Inglés.; Polaco.

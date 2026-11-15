@@ -1,0 +1,80 @@
+# id: a1-16
+# title: De compras — clothes, prices, this/that
+# unit: 4
+# unit_title: En la ciudad — in town
+@goals
+Buy clothes and ask about sizes
+Use este, ese, aquel
+Give prices and big numbers
+@dialog
+Dependienta: Hola, ¿puedo ayudarle? | Hello, can I help you?
+Marek: Sí, busco una chaqueta para el invierno. | Yes, I'm looking for a jacket for the winter.
+Dependienta: ¿Qué talla tiene? | What size are you?
+Marek: La cincuenta. ¿Cuánto cuesta esa chaqueta negra? | Fifty. How much is that black jacket?
+Dependienta: Ciento veinte euros. Y aquella azul, noventa y nueve. | A hundred and twenty euros. And that blue one over there, ninety-nine.
+Marek: ¿Puedo probarme la azul? | Can I try on the blue one?
+Dependienta: Claro, el probador está allí. | Of course, the fitting room is over there.
+Marek: Me queda bien. Me la llevo. | It fits well. I'll take it.
+@vocab
+la tienda | shop | f
+el dependiente / la dependienta | shop assistant | m
+buscar | to look for | v
+costar | to cost | v | ¿Cuánto cuesta? / How much is it?
+probarse | to try on | vr
+la talla | size (clothes) | f
+el número | size (shoes); number | m
+la ropa | clothes | f
+la chaqueta | jacket | f
+el abrigo | coat | m
+la camisa | shirt | f
+la camiseta | T-shirt | f
+los pantalones | trousers, pants | mpl
+la falda | skirt | f
+el vestido | dress | m
+los zapatos | shoes | mpl
+el jersey | jumper, sweater | m
+caro / cara | expensive | adj
+barato / barata | cheap | adj
+quedar bien / mal | to fit / suit well / badly | phr | Te queda muy bien. / It really suits you.
+llevarse | to take (buy) | vr | Me lo llevo. / I'll take it.
+allí | there | adv
+aquí | here | adv
+el invierno | winter | m
+ciento | a hundred (101–199) | num
+doscientos / doscientas | two hundred | num
+quinientos / quinientas | five hundred | num
+mil | a thousand | num
+@grammar
+## Este, ese, aquel — this, that, that over there
+Spanish has three distances where English has two.
+|| | near me | near you | far away
+|| masc. sing. | este | ese | aquel
+|| fem. sing. | esta | esa | aquella
+|| masc. plural | estos | esos | aquellos
+|| fem. plural | estas | esas | aquellas
+The neuter forms **esto, eso, aquello** are for unknown things or ideas: **¿Qué es esto?** — What is this?
+
+## Costar (o→ue)
+**¿Cuánto cuesta?** (one thing) / **¿Cuánto cuestan?** (several things).
+
+## Big numbers
+- 100 = **cien**, 101–199 = **ciento** + …: **ciento veinte**.
+- Hundreds agree in gender: **doscientos euros**, **doscientas personas**.
+- Irregular: **quinientos** (500), **setecientos** (700), **novecientos** (900).
+- 1000 = **mil**, 2000 = **dos mil**.
+
+## Object pronouns (a preview)
+**Me la llevo** — I'll take it (la = la chaqueta). **Me lo llevo** — I'll take it (a masculine thing). More at level A2.
+@exercises
+choice: (this, near me) ___ camisa | esta | esta; este; esa
+choice: (those, far away) ___ zapatos | aquellos | esos; aquellos; aquellas
+choice: How much are these trousers? | ¿Cuánto cuestan estos pantalones? | ¿Cuánto cuesta estos pantalones?; ¿Cuánto cuestan estos pantalones?; ¿Cuánto costan estos pantalones?
+choice: 500 euros | quinientos euros | cincocientos euros; quinientos euros; quinientas euros
+choice: 200 people | doscientas personas | doscientos personas; doscientas personas; dos cien personas
+fill: ¿Cuánto ___ (costar) esta falda? | cuesta
+fill: Esta camiseta es muy ___ (barato). | barata
+trans: I'm looking for a jacket. | Busco una chaqueta.
+trans: What size are you? (polite) | ¿Qué talla tiene?
+trans: I'll take it. | Me lo llevo.
+@culture
+In Spain **las rebajas** (the sales) traditionally start on 7 January, just after the feast of the Three Kings, and on 1 July.

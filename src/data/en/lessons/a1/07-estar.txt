@@ -1,0 +1,100 @@
+# id: a1-07
+# title: Estar — how you feel and where things are. Ser or estar?
+# unit: 2
+# unit_title: Mi mundo — my world
+@goals
+Say how you feel
+Say where something or someone is
+Tell ser and estar apart
+@dialog
+Pedro: ¡Hola, Marek! ¿Cómo estás? | Hi, Marek! How are you?
+Marek: Estoy un poco cansado. Trabajo mucho esta semana. ¿Y tú? | I'm a bit tired. I'm working a lot this week. And you?
+Pedro: Yo estoy muy contento: ¡estoy de vacaciones! | I'm very happy: I'm on holiday!
+Marek: ¡Qué bien! ¿Dónde estás? | Great! Where are you?
+Pedro: Estoy en Málaga, con mi familia. El hotel está cerca de la playa. | I'm in Málaga, with my family. The hotel is near the beach.
+Marek: ¿Y Málaga es bonita? | And is Málaga pretty?
+Pedro: Sí, es una ciudad preciosa. | Yes, it's a beautiful city.
+@vocab
+estar | to be (state, location) | v | Estoy en casa. / I'm at home.
+¿cómo estás? | how are you? | phr
+cansado / cansada | tired | adj
+contento / contenta | happy, pleased | adj
+triste | sad | adj
+enfermo / enferma | ill, sick | adj
+nervioso / nerviosa | nervous, worked up | adj
+ocupado / ocupada | busy | adj
+¿dónde? | where? | adv | ¿Dónde está el hotel? / Where is the hotel?
+la casa | house, home | f | Estoy en casa. / I'm at home.
+la playa | beach | f
+el hotel | hotel | m
+las vacaciones | holiday(s), vacation | fpl | Estoy de vacaciones. / I'm on holiday.
+la semana | week | f
+mucho | a lot, much | adv
+bonito / bonita | pretty, nice | adj
+precioso / preciosa | beautiful, lovely | adj
+abierto / abierta | open | adj
+cerrado / cerrada | closed | adj
+@grammar
+## The verb estar — present tense
+|| yo | estoy
+|| tú | estás
+|| él / ella / usted | está
+|| nosotros/as | estamos
+|| vosotros/as | estáis
+|| ellos / ellas / ustedes | están
+
+## Ser or estar? The key rule
+English has one verb “to be”; Spanish has two.
+**SER** — what/who something is, lasting features:
+- identity, job, nationality, origin: **Soy ingeniero. Es de Málaga.**
+- personality and looks: **Es alto. Es simpática.**
+- dates and the time: **Son las tres. Hoy es lunes.**
+**ESTAR** — how/where something is, states:
+- how you feel and temporary states: **Estoy cansado. Está enfermo.**
+- location: **El hotel está cerca de la playa. Estoy en casa.**
+- **estar de vacaciones** — to be on holiday.
+
+## How to choose quickly? Two questions
+1. Am I saying **who / what / what kind** someone is by nature (job, nationality, feature, time, what it's made of)? → **SER**
+2. Am I saying **where** someone is or **how they are right now** (mood, state, location)? → **ESTAR**
+- Trick: **estar** sounds like “**state**” and “**stay**”: states and where things stay. **Ser** is the essence of a thing.
+- Careful: **ser** is not used for location! You say **Estoy en Londres**, not “Soy en Londres”. Origin is ser: **Soy de Londres** (where I'm from).
+
+## The most common mistakes
+|| ✗ Soy cansado. | ✔ Estoy cansado. (tiredness is a state)
+|| ✗ Estoy ingeniero. | ✔ Soy ingeniero. (a job is identity)
+|| ✗ Somos en casa. | ✔ Estamos en casa. (location)
+|| ✗ Estamos ingleses. | ✔ Somos ingleses. (nationality)
+|| ✗ El hotel es cerca. | ✔ El hotel está cerca. (location)
+- Remember: **somos** = we are (ser), **estamos** = we are / we are located (estar).
+
+## The same adjective, a different meaning
+|| Es aburrido. | He's boring (a boring person).
+|| Está aburrido. | He's bored (right now).
+|| Es listo. | He's clever.
+|| Está listo. | He's ready.
+@exercises
+fill: Hoy ___ muy cansada. (yo) | estoy
+fill: ¿Dónde ___ el hotel? | está
+fill: Nosotros ___ de vacaciones. | estamos
+fill: ¿Cómo ___ vosotros? | estáis
+choice: Madrid ___ en España. | está | es; está; son
+choice: Mi padre ___ médico. | es | es; está; tiene
+choice: Ana ___ enferma hoy. | está | es; está; son
+choice: La tienda ___ cerrada. | está | es; está; hay
+choice: Ellos ___ de Polonia. | son | son; están; tienen
+fill: Nosotros ___ polacos. (who we are) | somos
+fill: Nosotros ___ en casa. (where we are) | estamos
+fill: Yo ___ ingeniero. | soy
+fill: Hoy ___ triste. | estoy
+fill: Mi hermana ___ simpática. | es
+choice: Ellas ___ en el hotel. | están | son; están; hay
+choice: Hoy ___ lunes. | es | es; está; son
+choice: Tú ___ de Polonia, ¿verdad? | eres | eres; estás; tienes
+choice: ¿Dónde ___ tú? | estás | eres; estás; vives
+choice: Mi café ___ frío. | está | es; está; son
+trans: How are you? | ¿Cómo estás?
+trans: I'm at home. | Estoy en casa.
+trans: The hotel is near the beach. | El hotel está cerca de la playa.
+@culture
+In Spain many shops and offices close for the siesta, roughly from 2 to 5 pm, especially in smaller towns. You'll often see the sign **cerrado** on the door at that time.

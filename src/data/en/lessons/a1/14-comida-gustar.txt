@@ -1,0 +1,74 @@
+# id: a1-14
+# title: La comida — food and the verb gustar
+# unit: 4
+# unit_title: En la ciudad — in town
+@goals
+Say what you like and don't like
+Shop at a market
+Use gustar, encantar and también/tampoco
+@dialog
+Vendedora: ¡Hola! ¿Qué le pongo? | Hello! What can I get you?
+Marek: Quería un kilo de tomates y medio kilo de fresas. | I'd like a kilo of tomatoes and half a kilo of strawberries.
+Vendedora: Aquí tiene. ¿Algo más? | Here you are. Anything else?
+Marek: ¿Las naranjas son de Valencia? | Are the oranges from Valencia?
+Vendedora: Sí, son muy dulces. ¿Le gustan las naranjas? | Yes, they're very sweet. Do you like oranges?
+Marek: ¡Me encantan! Pero a mi hijo no le gusta la fruta. | I love them! But my son doesn't like fruit.
+Vendedora: A mi hija tampoco. ¡Solo le gusta el chocolate! | Neither does my daughter. She only likes chocolate!
+@vocab
+gustar | to like (to be pleasing to) | v | Me gusta el café. / I like coffee.
+encantar | to love (a thing) | v | Me encanta España. / I love Spain.
+la fruta | fruit | f
+la verdura | vegetables | f
+el tomate | tomato | m
+la naranja | orange | f
+la manzana | apple | f
+la fresa | strawberry | f
+el plátano | banana | m
+la patata | potato (in Spain) | f
+la cebolla | onion | f
+el pan | bread | m
+el queso | cheese | m
+el jamón | ham | m
+la carne | meat | f
+el pescado | fish (as food) | m
+el pollo | chicken | m
+el arroz | rice | m
+el huevo | egg | m
+el chocolate | chocolate | m
+el kilo | kilo | m | medio kilo / half a kilo
+dulce | sweet | adj
+también | also, too | adv
+tampoco | not … either, neither | adv
+aquí tiene | here you are | phr
+@grammar
+## Gustar — “to be pleasing to”
+Gustar works the other way round from English “like”: the thing you like is the subject, and the person is “to me, to you…”. **Me gusta el café** = coffee is pleasing to me.
+|| (a mí) | me gusta / me gustan
+|| (a ti) | te gusta / te gustan
+|| (a él, ella, usted) | le gusta / le gustan
+|| (a nosotros) | nos gusta / nos gustan
+|| (a vosotros) | os gusta / os gustan
+|| (a ellos, ustedes) | les gusta / les gustan
+- **gusta** + a singular thing or an infinitive: **Me gusta el queso. Me gusta cocinar.**
+- **gustan** + a plural thing: **Me gustan las fresas.**
+- Nouns always take the article: **Me gusta la fruta** (not “me gusta fruta”).
+- With a name: **A Pedro le gusta el jamón.**
+**Encantar** works the same way: **Me encantan las naranjas.**
+
+## También / tampoco
+- **Me gusta el café. — A mí también.** (Me too.)
+- **No me gusta el té. — A mí tampoco.** (Me neither.)
+- **No me gusta. — A mí sí.** / **Me gusta. — A mí no.**
+@exercises
+choice: Me ___ las fresas. | gustan | gusta; gustan; gusto
+choice: Me ___ cocinar. | gusta | gusta; gustan; gusto
+choice: A mi madre ___ gusta el pescado. | le | me; le; les
+choice: I don't like milk. — Me neither. | A mí tampoco. | A mí también.; A mí tampoco.; Yo no.
+fill: ¿Te ___ (gustar) los plátanos? | gustan
+fill: A nosotros ___ encanta España. | nos
+fill: A mis hijos no ___ gusta la verdura. | les
+trans: I like cheese. | Me gusta el queso.
+trans: I love strawberries. | Me encantan las fresas.
+trans: I'd like a kilo of tomatoes. | Quería un kilo de tomates.
+@culture
+**Jamón ibérico** and **jamón serrano** are two famous Spanish cured hams. The most expensive, **jamón ibérico de bellota**, comes from pigs fed on acorns.

@@ -1,0 +1,61 @@
+# id: a1-17
+# title: Tiempo libre — hobbies and interests
+# unit: 5
+# unit_title: Planes y tiempo libre — plans and free time
+@goals
+Talk about your interests
+Say what you like and prefer (me gusta + infinitive, prefiero)
+Suggest going out together
+@dialog
+Clara: ¿Qué te gusta hacer en tu tiempo libre? | What do you like doing in your free time?
+Marek: Me encanta la música. Toco la guitarra y escribo canciones. | I love music. I play the guitar and write songs.
+Clara: ¡Qué guay! A mí me gusta mucho leer y viajar. | Cool! I really like reading and travelling.
+Marek: ¿Te gusta el cine? | Do you like the cinema?
+Clara: Sí, pero prefiero el teatro. | Yes, but I prefer the theatre.
+Marek: ¿Quieres ir a un concierto el viernes? | Do you want to go to a concert on Friday?
+Clara: ¡Vale! ¿A qué hora quedamos? | OK! What time shall we meet?
+@vocab
+el tiempo libre | free time | m
+tocar | to play (an instrument); to touch | v | Toco el piano. / I play the piano.
+la guitarra | guitar | f
+viajar | to travel | v
+el cine | cinema | m
+el teatro | theatre | m
+el concierto | concert | m
+la película | film, movie | f
+la serie | series (TV) | f
+pasear | to go for a walk | v
+nadar | to swim | v
+pintar | to paint | v
+la foto | photo | f | hacer fotos / to take photos
+salir con amigos | to go out with friends | phr
+quedar | to meet up, to arrange to meet | v | ¿Quedamos a las ocho? / Shall we meet at eight?
+vale | OK, all right (in Spain) | interj
+guay | cool, great (informal, Spain) | adj
+la afición | hobby, interest | f
+@grammar
+## Gustar + infinitive
+After **me gusta / me encanta / prefiero / quiero** use the infinitive (where English often uses “-ing”): **Me gusta leer. Prefiero nadar. Quiero viajar.** Gustar then always stays singular, even with several activities: **Me gusta leer y viajar.**
+
+## Jugar or tocar?
+English uses “play” for both; Spanish doesn't.
+- **jugar a** — to play a game or sport: **juego al fútbol, juego a las cartas**.
+- **tocar** — to play an instrument: **toco la guitarra**.
+
+## Suggesting and arranging to meet
+- **¿Quieres + infinitive?** — Do you want to…? **¿Quieres ir al cine?**
+- **¿Vamos a…?** — Shall we go to…? **¿Vamos al teatro?**
+- **¿Quedamos?** — Shall we meet? **¿A qué hora quedamos? ¿Dónde quedamos?**
+- Answers: **¡Vale! / ¡Genial! / Lo siento, no puedo.**
+@exercises
+choice: I play the guitar: | Toco la guitarra. | Juego la guitarra.; Toco la guitarra.; Juego a la guitarra.
+choice: I play football: | Juego al fútbol. | Toco el fútbol.; Juego al fútbol.; Juego el fútbol.
+choice: Me gusta ___ y viajar. | leer | leo; leer; leyendo
+choice: Sorry, I can't: | Lo siento, no puedo. | Lo siento, no puedo.; No quiero, vale.; Perdona, no pido.
+fill: ¿___ (querer, tú) ir al cine? | Quieres
+fill: Prefiero ___ (pasear) por la playa. | pasear
+trans: What do you like doing in your free time? | ¿Qué te gusta hacer en tu tiempo libre?
+trans: I like travelling. | Me gusta viajar.
+trans: What time shall we meet? | ¿A qué hora quedamos?
+@culture
+You'll hear **vale** in Spain every few seconds — it means “OK”, “fine”, “agreed”. And **guay** is a typically Spanish “cool”, hardly used in Latin America.

@@ -1,0 +1,26 @@
+# id: r07
+# level: A2
+# unit: 7
+# title: Los veranos en el pueblo
+@text
+Cuando yo era niño, pasaba todos los veranos en el pueblo de mis abuelos, en Asturias. El pueblo era muy pequeño: tenía una iglesia, un bar y unas treinta casas. No había piscina, pero había un río con el agua muy fría.
+Por las mañanas ayudaba a mi abuelo con las vacas y por las tardes jugaba con los otros niños en la plaza. Mi abuela cocinaba mejor que nadie: su fabada era la más rica del mundo.
+Un verano, cuando tenía doce años, pasó algo increíble. Una noche, mientras todos dormían, oí un ruido en el jardín. Salí con una linterna y… ¡vi un oso! Era enorme. Corrí a casa y desperté a toda la familia, pero cuando salimos, el oso ya no estaba. Nadie me creyó… hasta el día siguiente, cuando el vecino encontró sus huellas.
+@translation
+When I was a child, I spent every summer holiday in my grandparents' village in Asturias. The village was very small: it had a church, a bar and about thirty houses. There was no swimming pool, but there was a river with very cold water.
+In the mornings I helped my grandfather with the cows, and in the afternoons I played with the other children in the square. My grandmother cooked better than anyone: her fabada was the tastiest in the world.
+One summer, when I was twelve, something incredible happened. One night, when everyone was asleep, I heard a noise in the garden. I went out with a torch and… I saw a bear! It was huge. I ran into the house and woke the whole family, but when we went out the bear had gone. Nobody believed me… until the next day, when a neighbour found its footprints.
+@glossary
+el pueblo | village, small town
+el río | river
+la vaca | cow
+la fabada | fabada (Asturian bean stew)
+rico / rica | tasty; rich
+la linterna | torch, flashlight
+el oso | bear
+la huella | footprint, track
+@questions
+¿Dónde pasaba los veranos el narrador? | En el pueblo de sus abuelos. | En la playa.; En el pueblo de sus abuelos.; En Madrid.
+¿Qué hacía por las tardes? | Jugaba con otros niños. | Ayudaba con las vacas.; Jugaba con otros niños.; Nadaba en la piscina.
+¿Qué vio una noche? | Un oso. | Un ladrón.; Un oso.; Una vaca.
+¿Por qué le creyeron al final? | El vecino encontró las huellas. | Hizo una foto.; El vecino encontró las huellas.; El oso volvió.

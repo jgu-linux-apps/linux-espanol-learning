@@ -1,0 +1,74 @@
+# id: a1-06
+# title: ¿Cómo es? Describing people and things
+# unit: 2
+# unit_title: Mi mundo — my world
+@goals
+Describe what a person looks like and what they're like
+Make adjectives agree with the noun
+Name the colours
+@dialog
+Laura: ¿Cómo es tu nuevo jefe? | What's your new boss like?
+Marek: Es alto, moreno y bastante joven. | He's tall, dark-haired and quite young.
+Laura: ¿Y es simpático? | And is he nice?
+Marek: Sí, es muy simpático y trabajador. Pero es un poco serio. | Yes, he's very nice and hard-working. But he's a bit serious.
+Laura: Mi jefa es rubia, tiene los ojos azules y es muy divertida. | My boss is blonde, she has blue eyes and she's great fun.
+Marek: ¡Qué suerte! | Lucky you!
+@vocab
+alto / alta | tall | adj
+bajo / baja | short | adj
+moreno / morena | dark-haired, dark-skinned | adj
+rubio / rubia | fair-haired, blond(e) | adj
+joven | young | adj
+mayor | older, elderly (of a person) | adj
+simpático / simpática | nice, friendly | adj
+antipático / antipática | unfriendly | adj
+divertido / divertida | funny, fun | adj
+serio / seria | serious | adj
+trabajador / trabajadora | hard-working | adj
+inteligente | clever, intelligent | adj
+grande | big | adj
+pequeño / pequeña | small | adj
+nuevo / nueva | new | adj
+viejo / vieja | old | adj
+el jefe / la jefa | boss | m
+los ojos | eyes | mpl
+el pelo | hair | m | Tiene el pelo largo. / She has long hair.
+blanco / blanca | white | adj
+negro / negra | black | adj
+rojo / roja | red | adj
+azul | blue | adj
+verde | green | adj
+amarillo / amarilla | yellow | adj
+bastante | quite, rather | adv
+un poco | a bit, a little | adv
+pero | but | conj
+@grammar
+## What is he like? — ser + adjective
+For lasting features (looks, personality) use **ser**: **Es alto. Es simpática.**
+The question: **¿Cómo es?** — What is he/she/it like?
+
+## Adjective agreement
+The adjective agrees with the noun in gender and number and usually comes **after** the noun:
+|| | masculine | feminine
+|| singular | un chico alto | una chica alta
+|| plural | unos chicos altos | unas chicas altas
+- Adjectives in **-e** and most in a consonant have one form: **inteligente, joven, azul, verde**.
+- Adjectives in **-or** add **-a**: trabajador → trabajadora.
+- Plural: **-s** after a vowel (altos), **-es** after a consonant (azules, jóvenes).
+
+## Tener for describing
+Eyes and hair are something you **have**: **Tiene los ojos verdes. Tiene el pelo rubio / largo / corto.**
+@exercises
+fill: Mi madre es muy ___ (simpático). | simpática
+fill: Las chicas son ___ (alto). | altas
+fill: Tengo los ojos ___ (azul). | azules
+fill: Mis abuelos son ___ (trabajador). | trabajadores
+fill: Es una casa ___ (pequeño). | pequeña
+choice: What is Pedro like? | ¿Cómo es Pedro? | ¿Qué es Pedro?; ¿Cómo es Pedro?; ¿Cómo está Pedro?
+choice: He has green eyes: | Tiene los ojos verdes. | Es los ojos verdes.; Tiene los ojos verdes.; Tiene ojos verdos.
+choice: Nice girls: | chicas simpáticas | chicas simpáticos; chicas simpáticas; chicas simpática
+trans: My boss is tall and dark-haired. | Mi jefe es alto y moreno.
+trans: She has long hair. | Tiene el pelo largo. /// Ella tiene el pelo largo.
+trans: We are young. | Somos jóvenes.
+@culture
+In Spain **guapo** doesn't only mean “good-looking” — people also say “¡Qué guapo!” about a nice thing, like a new jacket. And **moreno** can also mean someone with a suntan.

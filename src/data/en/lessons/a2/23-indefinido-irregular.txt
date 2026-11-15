@@ -1,0 +1,74 @@
+# id: a2-23
+# title: Indefinido — irregular verbs
+# unit: 6
+# unit_title: Experiencias — experiences
+@goals
+Use the most common irregular indefinido forms
+Talk about your holiday
+@dialog
+Teresa: ¿Dónde fuiste de vacaciones el verano pasado? | Where did you go on holiday last summer?
+Marek: Fuimos a Andalucía. Estuvimos dos semanas en Granada y en Córdoba. | We went to Andalusia. We spent two weeks in Granada and Córdoba.
+Teresa: ¿Qué tal fue? | How was it?
+Marek: Fue fantástico, aunque hizo muchísimo calor. | It was fantastic, although it was incredibly hot.
+Teresa: ¿Pudisteis entrar en la Alhambra? | Did you manage to get into the Alhambra?
+Marek: Sí, pero tuvimos que comprar las entradas con un mes de antelación. | Yes, but we had to buy the tickets a month in advance.
+Teresa: ¿Y qué dijo tu hijo? | And what did your son say?
+Marek: Dijo que es el lugar más bonito del mundo. | He said it's the most beautiful place in the world.
+@vocab
+fui | I was / I went (ser, ir) | v
+estuve | I was (estar) | v
+tuve | I had (tener) | v
+hice | I did, I made (hacer) | v
+pude | I could, I managed to (poder) | v
+dije | I said (decir) | v
+vine | I came (venir) | v
+puse | I put (poner) | v
+quise | I wanted (querer) | v
+supe | I found out (saber) | v
+la entrada | (entrance) ticket; entrance | f
+con antelación | in advance | phr
+aunque | although | conj
+el lugar | place | m
+el mundo | world | m
+fantástico / fantástica | fantastic | adj
+entrar | to go in, to enter | v
+@grammar
+## Ser and ir — the same forms!
+**fui, fuiste, fue, fuimos, fuisteis, fueron** — the context tells you which:
+- **Fui a Granada.** — I went to Granada (ir).
+- **Fue fantástico.** — It was fantastic (ser).
+
+## Irregular verbs with a new stem
+These verbs have a special stem and share the endings **-e, -iste, -o, -imos, -isteis, -ieron** (no accents!):
+|| estar | estuv- | estuve, estuviste, estuvo…
+|| tener | tuv- | tuve, tuviste, tuvo…
+|| poder | pud- | pude, pudiste, pudo…
+|| poner | pus- | puse, pusiste, puso…
+|| saber | sup- | supe, supiste, supo…
+|| hacer | hic- | hice, hiciste, **hizo**…
+|| querer | quis- | quise, quisiste, quiso…
+|| venir | vin- | vine, viniste, vino…
+|| decir | dij- | dije, dijiste, dijo, dijimos, dijisteis, **dijeron**
+|| traer | traj- | traje, trajiste, trajo… **trajeron**
+
+## Dar and ver
+**dar**: di, diste, dio, dimos, disteis, dieron. **ver**: vi, viste, vio, vimos, visteis, vieron.
+
+## Hacer + weather in the past
+**Hizo calor. Hizo mucho frío. Llovió mucho.**
+@exercises
+conj: ir (nosotros, indefinido) | fuimos
+conj: estar (yo, indefinido) | estuve
+conj: tener (ellos, indefinido) | tuvieron
+conj: hacer (él, indefinido) | hizo
+conj: decir (ellos, indefinido) | dijeron
+conj: poder (tú, indefinido) | pudiste
+conj: venir (vosotros, indefinido) | vinisteis
+conj: dar (yo, indefinido) | di
+choice: It was fantastic: | Fue fantástico. | Estuvo fantástica.; Fue fantástico.; Fui fantástico.
+choice: Last summer it was very hot: | El verano pasado hizo mucho calor. | El verano pasado hizo mucho calor.; El verano pasado hacía mucho calor ayer.; El verano pasado fue mucho calor.
+trans: Where did you go on holiday? | ¿Dónde fuiste de vacaciones?
+trans: We had to buy the tickets. | Tuvimos que comprar las entradas.
+trans: What did he say? | ¿Qué dijo?
+@culture
+The **Alhambra** in Granada was the palace and fortress of the Muslim rulers. Only a limited number of people can visit it each day, so in season the tickets sell out weeks ahead.

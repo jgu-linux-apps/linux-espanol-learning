@@ -1,0 +1,64 @@
+# id: a2-34
+# title: Buscar trabajo — a job interview
+# unit: 9
+# unit_title: Trabajo y futuro — work and the future
+@goals
+Talk about your work experience
+Get through a simple job interview
+Say how long something has lasted (desde, desde hace, llevar)
+@dialog
+Entrevistadora: Buenos días, siéntese, por favor. Háblenos de su experiencia. | Good morning, please sit down. Tell us about your experience.
+Marek: Soy ingeniero informático. Trabajo en el sector de la nube desde hace diez años. | I'm a software engineer. I've been working in the cloud sector for ten years.
+Entrevistadora: ¿Qué hace exactamente en su puesto actual? | What exactly do you do in your current job?
+Marek: Me encargo de la seguridad y de automatizar procesos. También coordino un equipo de cinco personas. | I'm in charge of security and process automation. I also lead a team of five people.
+Entrevistadora: ¿Por qué quiere trabajar con nosotros? | Why do you want to work with us?
+Marek: Porque su empresa es líder en el sector y me interesa mucho el proyecto. | Because your company leads the sector and I'm very interested in the project.
+Entrevistadora: ¿Cuáles son sus puntos fuertes? | What are your strengths?
+Marek: Soy responsable, organizado y me gusta trabajar en equipo. | I'm responsible, organised and I like teamwork.
+@vocab
+la entrevista de trabajo | job interview | f
+el currículum | CV, résumé | m
+el puesto | position, job | m
+el sueldo | salary | m
+el contrato | contract | m
+el equipo | team; equipment | m | trabajar en equipo / to work in a team
+el proyecto | project | m
+la seguridad | security, safety | f
+la nube | cloud | f
+encargarse de | to be in charge of, to handle | vr
+coordinar | to coordinate | v
+interesar | to interest (works like gustar) | v | Me interesa el puesto. / I'm interested in the job.
+actual | current, present | adj
+responsable | responsible | adj
+organizado / organizada | organised | adj
+el punto fuerte / débil | strength / weakness | m
+desde hace | for (a period, still going on) | phr | desde hace diez años / for ten years
+llevar + tiempo | to have been (somewhere) for | phr | Llevo dos años aquí. / I've been here for two years.
+porque | because | conj
+¿por qué? | why? | adv
+@grammar
+## How long? desde, desde hace, hace, llevar
+Where English uses “have been …-ing for/since”, Spanish uses the **present**:
+- **desde** + a point in time: **Trabajo aquí desde 2015.** — I've worked here since 2015.
+- **desde hace** + a period: **Trabajo aquí desde hace diez años.** — I've worked here for ten years.
+- **llevar** + a period (+ gerund): **Llevo diez años trabajando aquí.** — I've been working here for ten years.
+- **hace** + a period (in the past) = ago: **Empecé hace diez años.** — I started ten years ago.
+
+## Por qué / porque
+- **¿Por qué?** (two words, with an accent) — why?
+- **porque** (one word) — because.
+
+## Interesar
+It works like gustar: **Me interesa el proyecto. Me interesan las nuevas tecnologías.**
+@exercises
+choice: I've worked here since 2015: | Trabajo aquí desde 2015. | Trabajo aquí desde hace 2015.; Trabajo aquí desde 2015.; Trabajo aquí hace 2015.
+choice: I've been learning Spanish for a year: | Estudio español desde hace un año. | Estudio español desde un año.; Estudio español desde hace un año.; Estudio español hace un año desde.
+choice: I started three years ago: | Empecé hace tres años. | Empecé hace tres años.; Empecé desde tres años.; Empecé tres años hace.
+fill: ___ dos años viviendo en Madrid. (llevar, yo) | Llevo
+fill: Me ___ (interesar) mucho los idiomas. | interesan
+fill: ¿Por qué estudias español? — ___ me gusta. | Porque
+trans: I'm responsible and organised. | Soy responsable y organizado.
+trans: I like working in a team. | Me gusta trabajar en equipo.
+trans: Why do you want to work here? (polite) | ¿Por qué quiere trabajar aquí?
+@culture
+In Spain salaries are often paid in **14 instalments** (**catorce pagas**): one every month plus two extra ones — in July and December (**paga extra**).

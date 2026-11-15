@@ -1,0 +1,70 @@
+# id: a1-08
+# title: Hay / está — your flat and where things are
+# unit: 2
+# unit_title: Mi mundo — my world
+@goals
+Describe your flat
+Use hay and está correctly
+Say where things are with prepositions
+@dialog
+Sofía: ¿Cómo es tu piso nuevo? | What's your new flat like?
+Marek: Es pequeño pero muy cómodo. Hay un salón, dos dormitorios, una cocina y un baño. | It's small but very comfortable. There's a living room, two bedrooms, a kitchen and a bathroom.
+Sofía: ¿Hay terraza? | Is there a terrace?
+Marek: No, pero hay un balcón pequeño. | No, but there's a small balcony.
+Sofía: ¿Y dónde está? | And where is it?
+Marek: Está en el centro, al lado de la estación. Enfrente hay un supermercado. | It's in the centre, next to the station. Opposite there's a supermarket.
+Sofía: ¡Perfecto! | Perfect!
+@vocab
+el piso | flat, apartment; floor (storey) | m
+el salón | living room | m
+el dormitorio | bedroom | m
+la cocina | kitchen | f
+el baño | bathroom | m
+la terraza | terrace | f
+el balcón | balcony | m
+la mesa | table | f
+la silla | chair | f
+la cama | bed | f
+el sofá | sofa | m
+cómodo / cómoda | comfortable | adj
+hay | there is, there are | v | Hay un parque cerca. / There's a park nearby.
+al lado de | next to | prep
+enfrente de | opposite | prep
+encima de | on, on top of, above | prep
+debajo de | under | prep
+delante de | in front of | prep
+detrás de | behind | prep
+entre | between | prep
+el centro | centre | m
+la estación | station | f
+el supermercado | supermarket | m
+@grammar
+## Hay — there is / there are
+**Hay** is one form for singular and plural. Use it with an indefinite article, a number or no article at all:
+- **Hay un balcón.** — There's a balcony.
+- **Hay dos dormitorios.** — There are two bedrooms.
+- **¿Hay supermercados cerca?** — Are there any supermarkets nearby?
+
+## Está / están — where a particular thing is
+For a particular, known thing (with **el, la**, a name, **mi**, etc.) use **estar**:
+- **El baño está al lado del dormitorio.** — The bathroom is next to the bedroom.
+- **Mis llaves están encima de la mesa.** — My keys are on the table.
+
+## Contractions: al and del
+**a + el = al**, **de + el = del**: **al lado del sofá** (next to the sofa). With **la** there is no contraction: **al lado de la cama**.
+
+## Piso
+In Spain **el piso** is a flat in an apartment block, and also a floor: **Vivo en el tercer piso.** (I live on the third floor.)
+@exercises
+choice: En mi piso ___ dos baños. | hay | hay; está; están
+choice: El sofá ___ en el salón. | está | hay; está; es
+choice: ¿Dónde ___ las sillas? | están | hay; están; son
+choice: ___ un supermercado enfrente. | Hay | Hay; Está; Es
+fill: La lámpara está encima ___ la mesa. | de
+fill: El gato está debajo ___ sofá. | del
+fill: El banco está al lado ___ hotel. | del
+trans: There are two bedrooms in the flat. | En el piso hay dos dormitorios. /// Hay dos dormitorios en el piso.
+trans: The kitchen is next to the living room. | La cocina está al lado del salón.
+trans: Is there a terrace? | ¿Hay terraza?
+@culture
+Most Spaniards in towns live in apartment blocks (**pisos**), not houses. On the ground floor there's often a bar or a shop, and older buildings have a concierge (**el portero**).

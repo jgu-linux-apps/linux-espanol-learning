@@ -1,3 +1,4 @@
+from .i18n import _  # noqa: E402
 """Odmiana czasowników hiszpańskich (hiszpański z Hiszpanii — z formą vosotros).
 
 Obsługuje czasowniki regularne, zmiany tematu (e>ie, o>ue, e>i, u>ue),
@@ -8,7 +9,7 @@ najważniejszych czasowników nieregularnych.
 PERSONS = ["yo", "tú", "él/ella/usted", "nosotros/as", "vosotros/as", "ellos/ellas/ustedes"]
 
 TENSES = [
-    ("presente", "Presente (teraźniejszy)"),
+    ("presente", _("Presente (teraźniejszy)")),
     ("perfecto", "Pretérito perfecto (he hablado)"),
     ("indefinido", "Pretérito indefinido (hablé)"),
     ("imperfecto", "Pretérito imperfecto (hablaba)"),
@@ -226,7 +227,7 @@ def _ending(inf):
 
 
 def gerund(inf):
-    base, _ = _split_reflexive(inf)
+    base, _u = _split_reflexive(inf)
     irr = IRREGULAR.get(base, {})
     if "gerundio" in irr:
         return irr["gerundio"]
@@ -246,7 +247,7 @@ def gerund(inf):
 
 
 def participle(inf):
-    base, _ = _split_reflexive(inf)
+    base, _u = _split_reflexive(inf)
     if base in PARTICIPLES:
         return PARTICIPLES[base]
     for k, v in PARTICIPLES.items():  # złożenia: describir -> descrito

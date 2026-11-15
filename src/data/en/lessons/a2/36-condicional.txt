@@ -1,0 +1,59 @@
+# id: a2-36
+# title: Me gustaría… The conditional (condicional)
+# unit: 9
+# unit_title: Trabajo y futuro — work and the future
+@goals
+Ask politely and express wishes
+Give advice: yo que tú…, deberías…
+Form the condicional
+@dialog
+Rosa: Marek, ¿podrías ayudarme con el ordenador? No funciona Internet. | Marek, could you help me with the computer? The internet isn't working.
+Marek: Claro. ¿Has reiniciado el router? | Sure. Have you restarted the router?
+Rosa: No… ¿Tendría que hacerlo? | No… Should I?
+Marek: Yo que tú, lo reiniciaría primero. Casi siempre funciona. | If I were you, I'd restart it first. It almost always works.
+Rosa: ¡Ya funciona! Muchas gracias. Me gustaría invitarte a un café. | It works now! Thanks a lot. I'd like to buy you a coffee.
+Marek: Me encantaría. ¿Te vendría bien el jueves? | I'd love that. Would Thursday suit you?
+Rosa: Perfecto, el jueves a las cinco. | Perfect, Thursday at five.
+@vocab
+me gustaría | I'd like | phr | Me gustaría viajar a Cuba. / I'd like to travel to Cuba.
+me encantaría | I'd love to | phr
+¿podrías…? | could you…? | phr
+¿le importaría…? | would you mind…? (polite) | phr
+yo que tú | if I were you | phr
+deberías | you should | v
+reiniciar | to restart | v
+el router | router | m
+Internet | the internet | m
+venir bien | to suit (of a time, a date) | phr | ¿Te viene bien el lunes? / Does Monday suit you?
+invitar a | to invite to; to treat to | v
+el favor | favour | m | ¿Me haces un favor? / Can you do me a favour?
+@grammar
+## The condicional — endings on the infinitive
+It matches English “would”:
+|| yo | hablaría
+|| tú | hablarías
+|| él/ella/usted | hablaría
+|| nosotros/as | hablaríamos
+|| vosotros/as | hablaríais
+|| ellos/ellas/ustedes | hablarían
+The irregular stems are the same as in the futuro: **tendría, podría, saldría, vendría, pondría, sabría, querría, haría, diría, habría**.
+
+## What it's used for
+- **polite requests**: **¿Podrías ayudarme? ¿Le importaría cerrar la ventana?**
+- **wishes**: **Me gustaría vivir en España. Me encantaría.**
+- **advice**: **Deberías descansar. Yo que tú, iría al médico.**
+- **hypotheses**: **Con más dinero, viajaría más.**
+@exercises
+conj: hablar (yo, condicional) | hablaría
+conj: poder (tú, condicional) | podrías
+conj: hacer (nosotros, condicional) | haríamos
+conj: tener (ellos, condicional) | tendrían
+conj: gustar (a mí, condicional) | me gustaría
+choice: Could you help me? | ¿Podrías ayudarme? | ¿Podrías ayudarme?; ¿Puedrías ayudarme?; ¿Podrás ayudarme ahora?
+choice: If I were you, I'd go to the doctor's: | Yo que tú, iría al médico. | Yo que tú, iría al médico.; Yo como tú, voy al médico.; Si yo tú, iría al médico.
+fill: Me ___ (gustar) visitar Cuba. | gustaría
+fill: ___ (deber, tú) dormir más. | Deberías
+trans: I'd like to buy you a coffee. | Me gustaría invitarte a un café.
+trans: Does Thursday suit you? | ¿Te viene bien el jueves?
+@culture
+In Spain an invitation for a coffee often comes with **¡Invito yo!** (It's on me!). Arguing over who pays the bill is an almost ritual scene in Spanish bars.

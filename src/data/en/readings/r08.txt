@@ -1,0 +1,26 @@
+# id: r08
+# level: A2
+# unit: 8
+# title: Consejos para dormir mejor
+@text
+¿Duermes mal? No eres el único: según algunos estudios, uno de cada tres españoles tiene problemas para dormir. Aquí tienes algunos consejos de los expertos.
+Acuéstate y levántate siempre a la misma hora, también los fines de semana. Haz deporte, pero no por la noche: es mejor por la mañana o por la tarde. No tomes café después de las cinco de la tarde y no cenes demasiado.
+Una hora antes de dormir, apaga el móvil, el ordenador y la televisión. La luz de las pantallas no deja descansar al cerebro. Es mejor leer un libro o escuchar música tranquila.
+Tu dormitorio debe ser oscuro, silencioso y no demasiado caliente: la temperatura ideal está entre dieciocho y veinte grados. Y si después de veinte minutos en la cama no puedes dormir, levántate y haz algo relajante.
+@translation
+Do you sleep badly? You're not the only one: according to some studies, one in three Spaniards has trouble sleeping. Here is some advice from the experts.
+Go to bed and get up at the same time every day, weekends included. Do some sport, but not in the evening: the morning or the afternoon is better. Don't drink coffee after five in the afternoon and don't eat too much for dinner.
+An hour before bed, switch off your phone, computer and TV. The light from screens doesn't let your brain rest. It's better to read a book or listen to some calm music.
+Your bedroom should be dark, quiet and not too warm: the ideal temperature is between eighteen and twenty degrees. And if after twenty minutes in bed you can't fall asleep, get up and do something relaxing.
+@glossary
+según | according to
+el estudio | study; research
+la pantalla | screen
+el cerebro | brain
+oscuro / oscura | dark
+relajante | relaxing
+@questions
+¿Cuántos españoles tienen problemas para dormir? | Uno de cada tres. | La mitad.; Uno de cada tres.; Muy pocos.
+¿Cuándo es mejor hacer deporte? | Por la mañana o por la tarde. | Por la noche.; Por la mañana o por la tarde.; Antes de dormir.
+¿Qué hay que hacer una hora antes de dormir? | Apagar las pantallas. | Tomar un café.; Apagar las pantallas.; Hacer deporte.
+¿Cuál es la temperatura ideal del dormitorio? | Entre 18 y 20 grados. | Entre 15 y 16 grados.; Entre 18 y 20 grados.; Más de 25 grados.

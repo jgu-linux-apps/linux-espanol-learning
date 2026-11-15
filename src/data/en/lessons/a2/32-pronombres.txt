@@ -1,0 +1,69 @@
+# id: a2-32
+# title: Lo, la, le — object pronouns
+# unit: 8
+# unit_title: Salud y cuidados — health
+@goals
+Replace nouns with pronouns (lo, la, los, las)
+Use indirect object pronouns (le, les) and the combination se lo
+@dialog
+Marta: ¿Has comprado el regalo para tu madre? | Have you bought the present for your mother?
+Marek: Sí, lo compré ayer. Es un libro de cocina. | Yes, I bought it yesterday. It's a cookbook.
+Marta: ¿Y cuándo se lo vas a dar? | And when are you going to give it to her?
+Marek: Se lo doy el domingo, en su cumpleaños. | I'll give it to her on Sunday, on her birthday.
+Marta: ¿Y las flores? | And the flowers?
+Marek: Las compro el domingo por la mañana. ¿Me ayudas a elegirlas? | I'll buy them on Sunday morning. Will you help me choose them?
+Marta: Claro. Te llamo el sábado y lo hablamos. | Sure. I'll call you on Saturday and we'll talk about it.
+@vocab
+el regalo | present, gift | m
+regalar | to give (as a present) | v | Le regalé un libro. / I gave him a book.
+dar | to give | v
+las flores | flowers | fpl
+ayudar | to help | v | ¿Me ayudas? / Will you help me?
+elegir | to choose | v
+enviar / mandar | to send | v
+prestar | to lend | v
+devolver | to give back, to return | v
+explicar | to explain | v
+enseñar | to teach; to show | v
+el mensaje | message | m
+@grammar
+## Direct object pronouns (whom? what?)
+|| me | me
+|| te | you
+|| lo / la | him, it (masc.) / her, it (fem.)
+|| nos | us
+|| os | you (all)
+|| los / las | them (masc. / fem.)
+**¿El libro? Lo compré ayer.** — The book? I bought it yesterday. (el libro → lo — “it” follows the gender of the noun)
+
+## Indirect object pronouns (to whom?)
+|| me | (to) me
+|| te | (to) you
+|| le | (to) him, her, you (formal)
+|| nos | (to) us
+|| os | (to) you (all)
+|| les | (to) them, you (formal plural)
+**Le doy un regalo a mi madre.** — I give my mother a present. (Spaniards often say both: le … a mi madre.)
+
+## Two pronouns at once: le/les → se
+First “to whom”, then “what”. **le / les + lo / la / los / las → se lo / se la…**:
+**Le doy el libro → Se lo doy.** (never “le lo”!)
+
+## Where the pronoun goes
+Unlike English, the pronoun usually comes **before** the verb.
+- Before a conjugated verb: **Lo compré.**
+- With an infinitive or gerund — before or attached: **Se lo voy a dar = Voy a dárselo.**
+- With an affirmative command — attached: **¡Dámelo!**
+@exercises
+choice: ¿El regalo? ___ compré ayer. | Lo | La; Lo; Le
+choice: ¿Las flores? ___ compro mañana. | Las | Los; Las; Les
+choice: I give mum the flowers (las flores) → ___ doy. | Se las | Le las; Se las; Se los
+choice: I give her the book (el libro) → ___ doy. | Se lo | Le lo; Se la; Se lo
+fill: ¿Me ayudas? — Sí, ___ ayudo. (you) | te
+fill: A mis padres ___ escribo cada semana. | les
+fill: Voy a dár___ (it to her — el libro). | selo
+trans: I bought it yesterday. (el libro) | Lo compré ayer.
+trans: Will you help me? | ¿Me ayudas?
+trans: I'll call you on Saturday. | Te llamo el sábado.
+@culture
+In Spain (especially in Madrid) you'll also hear **le** instead of **lo** for men: **Le vi ayer** instead of **Lo vi ayer**. This is called **leísmo** — the Royal Academy accepts it when talking about a man.

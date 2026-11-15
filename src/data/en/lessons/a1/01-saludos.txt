@@ -1,0 +1,66 @@
+# id: a1-01
+# title: ¡Hola! Greetings and introductions
+# unit: 1
+# unit_title: Primeros pasos — first steps
+@goals
+Say hello and goodbye at different times of day
+Introduce yourself and ask someone's name
+Answer “¿Qué tal?”
+@dialog
+Carmen: ¡Hola! Buenos días. | Hi! Good morning.
+Pablo: ¡Hola! ¿Qué tal? | Hi! How are things?
+Carmen: Muy bien, gracias. ¿Y tú? | Very well, thanks. And you?
+Pablo: Bien, bien. Me llamo Pablo. ¿Cómo te llamas? | Fine, fine. My name is Pablo. What's your name?
+Carmen: Me llamo Carmen. | My name is Carmen.
+Pablo: Encantado, Carmen. | Nice to meet you, Carmen.
+Carmen: Encantada. | Nice to meet you.
+Pablo: Bueno, me voy. ¡Hasta luego! | Right, I'm off. See you later!
+Carmen: ¡Adiós! ¡Hasta mañana! | Bye! See you tomorrow!
+@vocab
+hola | hi, hello | interj | ¡Hola, Pablo! / Hi, Pablo!
+buenos días | good morning (until lunch, about 2 pm) | phr
+buenas tardes | good afternoon, good evening (until dark) | phr
+buenas noches | good evening (after dark), good night | phr
+¿qué tal? | how are things? how's it going? | phr
+bien | well, fine | adv | Estoy bien. / I'm fine.
+muy | very | adv | muy bien / very well
+gracias | thank you, thanks | interj
+y | and | conj | ¿Y tú? / And you?
+llamarse | to be called | vr | Me llamo Ana. / My name is Ana.
+¿cómo? | how? | adv | ¿Cómo te llamas? / What's your name?
+encantado / encantada | nice to meet you (said by a man / a woman) | adj
+adiós | goodbye, bye | interj
+hasta luego | see you later | phr
+hasta mañana | see you tomorrow | phr
+por favor | please | phr
+de nada | you're welcome | phr
+sí | yes | adv
+no | no | adv
+@grammar
+## Greetings during the day
+In Spain **buenos días** is used until lunch (about 2–3 pm), then **buenas tardes** until it gets dark, and in the evening **buenas noches** — which means both “good evening” and “good night”.
+
+## The verb llamarse
+Spaniards don't say “my name is”, they say “I call myself”. The pronoun **me / te / se** goes before the verb:
+|| yo | me llamo | my name is
+|| tú | te llamas | your name is
+|| él / ella / usted | se llama | his/her/your (formal) name is
+
+## Question and exclamation marks
+In Spanish a question or an exclamation also has a mark **at the start**, upside down: **¿Cómo te llamas?**, **¡Hola!**. In the app you type them with the ¿ and ¡ buttons.
+
+## Encantado or encantada?
+A man says **encantado**, a woman **encantada** — the adjective agrees with the person speaking. You can also simply say **mucho gusto**.
+@exercises
+fill: Me ___ Pablo. | llamo
+fill: ¿Cómo te ___? | llamas
+fill: Ella se ___ Carmen. | llama
+choice: It's 9 pm. How do you greet someone? | Buenas noches | Buenos días; Buenas tardes; Buenas noches
+choice: A woman says “nice to meet you”: | Encantada | Encantado; Encantada; Encantados
+choice: The answer to “Gracias”: | De nada | De nada; Por favor; Hasta luego
+trans: Hi! How are things? | ¡Hola! ¿Qué tal?
+trans: Very well, thank you. | Muy bien, gracias.
+trans: What's your name? | ¿Cómo te llamas?
+trans: See you tomorrow! | ¡Hasta mañana!
+@culture
+In Spain friends (and often people you've just met) greet each other with **dos besos** — two kisses on the cheeks, starting with the right one. Men usually shake hands with each other.

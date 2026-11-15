@@ -1,0 +1,298 @@
+// Extra A1–A2 vocabulary by topic: word | translation | part of speech | example ES / EN
+[Animals]
+el perro | dog | m | Tengo un perro. / I have a dog.
+el gato | cat | m
+el pájaro | bird | m
+el pez | fish (alive) | m | Los peces viven en el agua. / Fish live in water.
+el caballo | horse | m
+la vaca | cow | f
+el cerdo | pig | m
+la oveja | sheep | f
+el ratón | mouse | m
+el conejo | rabbit | m
+el oso | bear | m
+el toro | bull | m
+el mosquito | mosquito | m
+el animal | animal | m
+[Nature and landscape]
+el río | river | m
+el lago | lake | m
+el bosque | forest, wood | m
+el árbol | tree | m
+la flor | flower | f
+el campo | countryside; field | m | Vivo en el campo. / I live in the countryside.
+el cielo | sky | m
+el sol | sun | m
+la luna | moon | f
+la estrella | star | f
+la nube | cloud | f
+la lluvia | rain | f
+la nieve | snow | f
+el viento | wind | m
+la tierra | earth, land | f
+la arena | sand | f
+el pueblo | village, small town | m
+[Home and things]
+la puerta | door | f
+la ventana | window | f
+la pared | wall | f
+el suelo | floor | m
+el techo | ceiling; roof | m
+la escalera | stairs | f
+el ascensor | lift, elevator | m
+el jardín | garden | m
+el garaje | garage | m
+la lámpara | lamp | f
+el armario | wardrobe, cupboard | m
+la estantería | shelves, bookcase | f
+la nevera | fridge | f
+el horno | oven | m
+el microondas | microwave | m
+la lavadora | washing machine | f
+el lavavajillas | dishwasher | m
+la ducha | shower | f
+el espejo | mirror | m
+el reloj | clock, watch | m
+la caja | box; till, checkout | f
+la bolsa | bag, carrier bag | f
+el bolso | handbag | m
+la cartera | wallet | f
+las gafas | glasses | fpl
+el paraguas | umbrella | m
+[Food and drink]
+el desayuno | breakfast | m
+la comida | food; lunch | f
+la cena | dinner | f
+el aceite | oil, olive oil | m
+el azúcar | sugar | m
+la pimienta | pepper | f
+la mantequilla | butter | f
+la leche | milk | f
+el yogur | yoghurt | m
+el zumo | juice | m
+el refresco | soft drink | m
+la sopa | soup | f
+la ensalada | salad | f
+la carne de cerdo | pork | f
+la carne de ternera | veal, beef | f
+el marisco | seafood, shellfish | m
+la gamba | prawn | f
+el atún | tuna | m
+la pasta | pasta | f
+el ajo | garlic | m
+la zanahoria | carrot | f
+la lechuga | lettuce | f
+el pimiento | pepper (vegetable) | m
+el limón | lemon | f
+la pera | pear | f
+la uva | grape | f
+la sandía | watermelon | f
+el melón | melon | m
+el pastel | cake | m
+la galleta | biscuit, cookie | f
+el helado | ice cream | m
+el vaso | glass | m
+la taza | cup, mug | f
+la botella | bottle | f
+el cuchillo | knife | m
+el tenedor | fork | m
+la cuchara | spoon | f
+la servilleta | napkin | f
+la carta | menu; letter | f | ¿Me trae la carta? / Could you bring me the menu?
+el menú del día | set lunch menu | m
+el postre | dessert | m
+de primero / de segundo | for the first / second course | phr
+¡que aproveche! | enjoy your meal! | phr
+[Town and places]
+el ayuntamiento | town hall | m
+la biblioteca | library | f
+el mercado | market | m
+la panadería | bakery | f
+la carnicería | butcher's | f
+la pescadería | fishmonger's | f
+la librería | bookshop | f
+el quiosco | kiosk, newsstand | m
+correos | post office | m | ¿Dónde está correos? / Where is the post office?
+la comisaría | police station | f
+el aeropuerto | airport | m
+el puerto | port, harbour | m
+el puente | bridge | m
+la catedral | cathedral | f
+el barrio | neighbourhood | m
+la esquina | corner (of a street) | f
+el semáforo | traffic lights | m
+la parada | stop (bus, tram) | f
+la gasolinera | petrol station | f
+el aparcamiento | car park | m
+el centro comercial | shopping centre | m
+la universidad | university | f
+el instituto | secondary school | m
+[Transport and travel]
+el billete | ticket | m | un billete de ida y vuelta / a return ticket
+de ida y vuelta | return (ticket) | phr
+el andén | platform | m
+la salida | exit; departure | f
+la llegada | arrival | f
+el vuelo | flight | m
+la moto | motorbike | f
+el barco | ship, boat | m
+la carretera | road | f
+la autopista | motorway | f
+el mapa | map | m
+el turista / la turista | tourist | mf
+la oficina de turismo | tourist information office | f
+el cajero automático | cash machine, ATM | m
+[Work, office, technology]
+el ordenador portátil | laptop | m
+la pantalla | screen | f
+el teclado | keyboard | f
+el ratón | (computer) mouse; mouse | m
+la contraseña | password | f
+la aplicación | app, application | f
+la página web | website | f
+el correo electrónico | email | m
+descargar | to download | v
+guardar | to save; to keep | v
+borrar | to delete | v
+imprimir | to print | v
+la impresora | printer | f
+el archivo | file; archive | m
+la red | network | f
+el cliente / la clienta | customer, client | m
+el jefe de equipo | team leader | m
+la jornada | working day | f | jornada completa / full-time
+el horario | timetable, schedule | m
+las vacaciones pagadas | paid holiday | fpl
+el despacho | office, study | m
+[Body and health]
+la cara | face | f
+la nariz | nose | f
+la boca | mouth | f
+la oreja | ear (outer) | f
+el cuello | neck | m
+el hombro | shoulder | m
+el dedo | finger | m
+la rodilla | knee | f
+el corazón | heart | m
+la sangre | blood | f
+el hospital | hospital | m
+la farmacia | chemist's, pharmacy | f
+la ambulancia | ambulance | f
+la herida | wound, injury | f
+el dolor | pain | m
+[Feelings and states]
+feliz | happy | adj
+alegre | cheerful | adj
+enfadado / enfadada | angry | adj
+preocupado / preocupada | worried | adj
+aburrido / aburrida | bored; boring | adj
+sorprendido / sorprendida | surprised | adj
+tranquilo / tranquila | calm, quiet | adj
+el amor | love | m
+el miedo | fear | m
+la alegría | joy | f
+la tristeza | sadness | f
+echar de menos | to miss (someone) | phr | Te echo de menos. / I miss you.
+[Common verbs]
+abrir | to open | v
+cerrar | to close | v
+ayudar | to help | v
+bajar | to go down; to get off | v
+cambiar | to change | v
+cumplir | to fulfil; to turn (an age) | v | Hoy cumplo 40 años. / I turn 40 today.
+dejar | to leave; to let | v
+dar | to give | v
+esperar | to wait; to hope | v
+ganar | to win; to earn | v
+gastar | to spend (money) | v
+llevar | to carry; to wear | v
+llorar | to cry | v
+mover | to move | v
+necesitar | to need | v
+olvidar | to forget | v
+oír | to hear | v
+pensar | to think | v
+perder | to lose; to miss (a train) | v | He perdido el tren. / I've missed the train.
+poner | to put | v
+recordar | to remember, to remind | v
+saber | to know; can (a skill) | v
+sentarse | to sit down | vr
+sentir | to feel; to be sorry | v | Lo siento. / I'm sorry.
+terminar | to finish | v
+usar | to use | v
+ver | to see; to watch | v
+volar | to fly | v
+[Common adjectives]
+largo / larga | long | adj
+corto / corta | short | adj
+ancho / ancha | wide | adj
+estrecho / estrecha | narrow | adj
+gordo / gorda | fat | adj
+delgado / delgada | thin, slim | adj
+fuerte | strong | adj
+débil | weak | adj
+limpio / limpia | clean | adj
+sucio / sucia | dirty | adj
+lleno / llena | full | adj
+vacío / vacía | empty | adj
+caliente | hot (of a thing) | adj
+frío / fría | cold | adj
+rico / rica | rich; tasty | adj
+pobre | poor | adj
+bueno / buena | good | adj
+malo / mala | bad | adj
+nuevo / nueva | new | adj
+último / última | last | adj
+próximo / próxima | next | adj
+mismo / misma | same | adj
+otro / otra | other, another | adj
+necesario / necesaria | necessary | adj
+posible | possible | adj
+libre | free | adj
+famoso / famosa | famous | adj
+peligroso / peligrosa | dangerous | adj
+[Small words and phrases]
+porque | because | conj
+cuando | when (in a sentence) | conj
+donde | where (in a sentence) | adv
+también | also, too | adv
+muy | very | adv
+poco | little, not much | adv
+todo / toda | everything; all, whole | pron
+nadie | nobody | pron
+alguien | somebody | pron
+siempre | always | adv
+casi nunca | hardly ever | phr
+a menudo | often | phr
+pronto | early; soon | adv
+enseguida | straight away | adv
+todavía | still, yet | adv
+sobre | on; about (a topic) | prep | un libro sobre España / a book about Spain
+sin | without | prep
+para | for; in order to | prep
+por | through; for; because of | prep
+hacia | towards | prep
+durante | during | prep
+¡qué pena! | what a pity! | phr
+¡no pasa nada! | it doesn't matter! | phr
+¡ojalá! | I hope so! if only! | interj
+¿en serio? | really? seriously? | phr
+¿me puedes repetir? | can you say that again? | phr
+más despacio, por favor | more slowly, please | phr
+no entiendo | I don't understand | phr
+¿cómo se dice … en español? | how do you say … in Spanish? | phr
+[Countries and nationalities]
+Alemania | Germany | f
+Francia | France | f
+Italia | Italy | f
+Portugal | Portugal | m
+Inglaterra | England | f
+el Reino Unido | the United Kingdom | m
+Estados Unidos | the United States | mpl
+México | Mexico | m
+Argentina | Argentina | f
+Europa | Europe | f
+portugués / portuguesa | Portuguese (man / woman) | adj
+mexicano / mexicana | Mexican (man / woman) | adj
+americano / americana | American (man / woman) | adj
+europeo / europea | European (man / woman) | adj

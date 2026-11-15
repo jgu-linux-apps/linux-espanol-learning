@@ -6,6 +6,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa: E402
 
 from .widgets import label, card
+from ..i18n import _  # noqa: E402
 
 
 def build_questions(course, rng=None):
@@ -32,7 +33,7 @@ def recommend(results):
 
 class PlacementDialog(Gtk.Dialog):
     def __init__(self, app):
-        super().__init__(title="Test poziomujący", transient_for=app.win, modal=True)
+        super().__init__(title=_("Test poziomujący"), transient_for=app.win, modal=True)
         self.app = app
         self.set_default_size(640, 420)
         self.questions = build_questions(app.course)
@@ -50,21 +51,19 @@ class PlacementDialog(Gtk.Dialog):
 
     def show_intro(self):
         self._clear()
-        self.box.pack_start(label("Test poziomujący", "hero"), False, False, 0)
-        self.box.pack_start(label(f"{len(self.questions)} krótkich pytań o rosnącej trudności (słownictwo i "
-                                  "gramatyka). Na tej podstawie podpowiem, od której lekcji najlepiej zacząć. "
-                                  "Nie zgaduj na siłę — „Nie wiem” to dobra odpowiedź."), False, False, 0)
-        b = Gtk.Button(label="Zaczynamy")
+        self.box.pack_start(label(_("Test poziomujący"), "hero"), False, False, 0)
+        self.box.pack_start(label(_('{} krótkich pytań o rosnącej trudności (słownictwo i gramatyka). Na tej podstawie podpowiem, od której lekcji najlepiej zacząć. Nie zgaduj na siłę — „Nie wiem” to dobra odpowiedź.').format(len(self.questions))), False, False, 0)
+        b = Gtk.Button(label=_("Zaczynamy"))
         b.get_style_context().add_class("suggested-action")
         b.set_halign(Gtk.Align.START)
-        b.connect("clicked", lambda *_: self.show_q())
+        b.connect("clicked", lambda *_a: self.show_q())
         self.box.pack_start(b, False, False, 0)
         self.box.show_all()
 
     def show_q(self):
         self._clear()
         les, ex = self.questions[self.i]
-        self.box.pack_start(label(f"Pytanie {self.i + 1} z {len(self.questions)}", "dim"), False, False, 0)
+        self.box.pack_start(label(_('Pytanie {} z {}').format(self.i + 1, len(self.questions)), "dim"), False, False, 0)
         self.box.pack_start(label(ex["q"], "title2"), False, False, 0)
         c = card(spacing=6)
         for opt in ex["options"]:
@@ -72,8 +71,8 @@ class PlacementDialog(Gtk.Dialog):
             b.set_halign(Gtk.Align.FILL)
             b.connect("clicked", lambda _b, o=opt: self.answer(les, ex, o))
             c.pack_start(b, False, False, 0)
-        idk = Gtk.Button(label="Nie wiem")
-        idk.connect("clicked", lambda *_: self.answer(les, ex, None))
+        idk = Gtk.Button(label=_("Nie wiem"))
+        idk.connect("clicked", lambda *_a: self.answer(les, ex, None))
         c.pack_start(idk, False, False, 0)
         self.box.pack_start(c, False, False, 0)
         self.box.show_all()
@@ -91,32 +90,32 @@ class PlacementDialog(Gtk.Dialog):
         self._clear()
         right = sum(1 for _l, ok in self.results if ok)
         start = recommend(self.results)
-        self.box.pack_start(label("Wynik testu", "hero"), False, False, 0)
-        self.box.pack_start(label(f"Poprawnie: {right} z {len(self.results)}", "title2"), False, False, 0)
+        self.box.pack_start(label(_("Wynik testu"), "hero"), False, False, 0)
+        self.box.pack_start(label(_('Poprawnie: {} z {}').format(right, len(self.results)), "title2"), False, False, 0)
         if start is None:
-            self.box.pack_start(label("Znasz materiał całego kursu A1–A2 — możesz iść prosto do egzaminów "
-                                      "próbnych i rozmów z Paco."), False, False, 0)
+            self.box.pack_start(label(_("Znasz materiał całego kursu A1–A2 — możesz iść prosto do egzaminów "
+                                      "próbnych i rozmów z Paco.")), False, False, 0)
             row = Gtk.Box(spacing=8)
-            b = Gtk.Button(label="Egzamin próbny A2")
+            b = Gtk.Button(label=_("Egzamin próbny A2"))
             b.get_style_context().add_class("suggested-action")
-            b.connect("clicked", lambda *_: (self.destroy(), self.app.start_exam("A2")))
+            b.connect("clicked", lambda *_a: (self.destroy(), self.app.start_exam("A2")))
             row.pack_start(b, False, False, 0)
         else:
-            self.box.pack_start(label(f"Polecam zacząć od: {start.level} · Lekcja {start.number}: {start.title}"),
+            self.box.pack_start(label(_('Polecam zacząć od: {} · Lekcja {}: {}').format(start.level, start.number, start.title)),
                                 False, False, 0)
-            self.box.pack_start(label("Wcześniejsze lekcje możesz oznaczyć jako znane — wtedy kurs poprowadzi "
+            self.box.pack_start(label(_("Wcześniejsze lekcje możesz oznaczyć jako znane — wtedy kurs poprowadzi "
                                       "Cię od polecanej lekcji (nic się nie usuwa, wyniki tych lekcji "
-                                      "oznaczone będą jako 100%).", "dim"), False, False, 0)
+                                      "oznaczone będą jako 100%)."), "dim"), False, False, 0)
             row = Gtk.Box(spacing=8)
-            b1 = Gtk.Button(label="Oznacz wcześniejsze jako znane i zacznij")
+            b1 = Gtk.Button(label=_("Oznacz wcześniejsze jako znane i zacznij"))
             b1.get_style_context().add_class("suggested-action")
-            b1.connect("clicked", lambda *_: self._apply(start, True))
-            b2 = Gtk.Button(label="Tylko otwórz lekcję")
-            b2.connect("clicked", lambda *_: self._apply(start, False))
+            b1.connect("clicked", lambda *_a: self._apply(start, True))
+            b2 = Gtk.Button(label=_("Tylko otwórz lekcję"))
+            b2.connect("clicked", lambda *_a: self._apply(start, False))
             row.pack_start(b1, False, False, 0)
             row.pack_start(b2, False, False, 0)
-        close = Gtk.Button(label="Zamknij")
-        close.connect("clicked", lambda *_: self.destroy())
+        close = Gtk.Button(label=_("Zamknij"))
+        close.connect("clicked", lambda *_a: self.destroy())
         row.pack_start(close, False, False, 0)
         self.box.pack_start(row, False, False, 0)
         self.box.show_all()

@@ -33,6 +33,9 @@ jobs:
           fi
           echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
 
+      - name: Tests (translations, English lessons)
+        run: python3 -m unittest discover -s tests -v
+
       - name: Build the package
         run: bash build-deb.sh
 

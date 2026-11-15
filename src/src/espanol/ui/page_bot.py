@@ -14,6 +14,7 @@ from ..audio import Recorder, Vad
 from ..paths import REC_DIR
 from .page_learner import load_manual, load_auto
 from .paco import Paco
+from ..i18n import _
 
 # frazy, które Whisper „wymyśla” z ciszy
 _JUNK = ("amara.org", "subtítulos", "subtitulos", "gracias por ver", "suscríbete", "suscribete")
@@ -46,10 +47,10 @@ class BotPage(Gtk.Box):
         top.pack_start(self.paco_start, False, False, 0)
         tcol = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
         tcol.set_valign(Gtk.Align.CENTER)
-        tcol.pack_start(label("Rozmowa z Paco", "hero"), False, False, 0)
-        tcol.pack_start(label("Paco to Twój rozmówca. Mówisz lub piszesz po hiszpańsku, a on używa tylko słówek "
-                              "i gramatyki z lekcji, które już ukończyłeś. Błędy poprawia łagodnie, a na końcu "
-                              "dostajesz podsumowanie.", "dim"), False, False, 0)
+        tcol.pack_start(label(_("Rozmowa z Paco"), "hero"), False, False, 0)
+        tcol.pack_start(label(_("Paco to Twój rozmówca. Mówisz lub piszesz po hiszpańsku, a on używa tylko słówek "
+                                "i gramatyki z lekcji, które już ukończyłeś. Błędy poprawia łagodnie, a na końcu "
+                                "dostajesz podsumowanie."), "dim"), False, False, 0)
         top.pack_start(tcol, True, True, 0)
         b.pack_start(top, False, False, 0)
         backend = bot.make_backend(app.db)
@@ -57,49 +58,49 @@ class BotPage(Gtk.Box):
         info = card(spacing=4)
         if kind == "claude":
             ok = bool(bot.load_api_key())
-            info.pack_start(label(f"Silnik: Claude API — {bot.CLAUDE_MODELS.get(backend.model, backend.model)}",
+            info.pack_start(label(_("Silnik: Claude API — {}").format(bot.CLAUDE_MODELS.get(backend.model, backend.model)),
                                   "title2"), False, False, 0)
-            info.pack_start(label("Tekst rozmowy jest wysyłany do API Anthropic (nagrania głosu nie). "
-                                  "Wymaga internetu i klucza API; płatne za użycie.", "dim"), False, False, 0)
+            info.pack_start(label(_("Tekst rozmowy jest wysyłany do API Anthropic (nagrania głosu nie). "
+                                    "Wymaga internetu i klucza API; płatne za użycie."), "dim"), False, False, 0)
         else:
             ok = bool(backend.model)
-            info.pack_start(label(f"Silnik: Ollama (lokalnie, offline) — model: {backend.model or 'nie wybrano'}",
+            info.pack_start(label(_("Silnik: Ollama (lokalnie, offline) — model: {}").format(backend.model or _("nie wybrano")),
                                   "title2"), False, False, 0)
-            info.pack_start(label("Wszystko zostaje na Twoim komputerze. Wymaga zainstalowanej Ollamy "
-                                  "i pobranego modelu.", "dim"), False, False, 0)
+            info.pack_start(label(_("Wszystko zostaje na Twoim komputerze. Wymaga zainstalowanej Ollamy "
+                                    "i pobranego modelu."), "dim"), False, False, 0)
         if not ok:
-            info.pack_start(label("⚠ Bot nie jest jeszcze przygotowany.", "warn-text"), False, False, 0)
-            ib = Gtk.Button(label="⬇  Zainstaluj bota offline (Ollama + model) — jednym kliknięciem")
+            info.pack_start(label(_("⚠ Bot nie jest jeszcze przygotowany."), "warn-text"), False, False, 0)
+            ib = Gtk.Button(label=_("⬇  Zainstaluj bota offline (Ollama + model) — jednym kliknięciem"))
             ib.get_style_context().add_class("suggested-action")
             ib.set_halign(Gtk.Align.START)
-            ib.connect("clicked", lambda *_: OllamaSetupDialog(app, app.win))
+            ib.connect("clicked", lambda *_a: OllamaSetupDialog(app, app.win))
             info.pack_start(ib, False, False, 0)
-        sb = Gtk.Button(label="Ustawienia bota")
+        sb = Gtk.Button(label=_("Ustawienia bota"))
         sb.set_halign(Gtk.Align.START)
-        sb.connect("clicked", lambda *_: app.show_page("settings"))
+        sb.connect("clicked", lambda *_a: app.show_page("settings"))
         info.pack_start(sb, False, False, 0)
         b.pack_start(info, False, False, 0)
 
         done = set(app.db.done_lessons())
         if not done:
-            b.pack_start(card(label("Nie masz jeszcze ukończonych lekcji — bot będzie używał tylko materiału z lekcji 1. "
-                                    "Najlepiej najpierw zrób kilka lekcji.", "warn-text")), False, False, 0)
+            b.pack_start(card(label(_("Nie masz jeszcze ukończonych lekcji — bot będzie używał tylko materiału z lekcji 1. "
+                                      "Najlepiej najpierw zrób kilka lekcji."), "warn-text")), False, False, 0)
         lv = Gtk.Box(spacing=10)
-        lv.pack_start(label("Poziom rozmówcy:", wrap=False), False, False, 0)
+        lv.pack_start(label(_("Poziom rozmówcy:"), wrap=False), False, False, 0)
         self.level_combo = Gtk.ComboBoxText()
         for k, (name, _d) in bot.LEVELS.items():
             self.level_combo.append(k, f"{name} — {_d}")
         self.level_combo.set_active_id(app.db.get("bot_level", "normal"))
         self.level_combo.connect("changed", lambda w: app.db.set("bot_level", w.get_active_id()))
         lv.pack_start(self.level_combo, False, False, 0)
-        hist = Gtk.Button(label="📜 Historia rozmów")
-        hist.connect("clicked", lambda *_: self.show_history())
+        hist = Gtk.Button(label=_("📜 Historia rozmów"))
+        hist.connect("clicked", lambda *_a: self.show_history())
         lv.pack_end(hist, False, False, 0)
-        me = Gtk.Button(label="🙂 O mnie (dane dla bota)")
-        me.connect("clicked", lambda *_: app.show_page("learner"))
+        me = Gtk.Button(label=_("🙂 O mnie (dane dla bota)"))
+        me.connect("clicked", lambda *_a: app.show_page("learner"))
         lv.pack_end(me, False, False, 0)
         b.pack_start(lv, False, False, 0)
-        b.pack_start(label("Wybierz scenkę", "title2"), False, False, 0)
+        b.pack_start(label(_("Wybierz scenkę"), "title2"), False, False, 0)
         flow = Gtk.FlowBox()
         flow.set_selection_mode(Gtk.SelectionMode.NONE)
         flow.set_max_children_per_line(3)
@@ -113,9 +114,9 @@ class BotPage(Gtk.Box):
             c.pack_start(label(sc["title"], "title2"), False, False, 0)
             c.pack_start(label(sc["goal"], "dim"), False, False, 0)
             if not unlocked and les:
-                c.pack_start(label(f"Zalecane po lekcji {les.level} {les.number}: {les.title}", "warn-text"),
+                c.pack_start(label(_("Zalecane po lekcji {} {}: {}").format(les.level, les.number, les.title), "warn-text"),
                              False, False, 0)
-            bt = Gtk.Button(label="Rozpocznij" if unlocked else "Rozpocznij mimo to")
+            bt = Gtk.Button(label=_("Rozpocznij") if unlocked else _("Rozpocznij mimo to"))
             if unlocked:
                 bt.get_style_context().add_class("suggested-action")
             bt.set_sensitive(ok)
@@ -141,7 +142,7 @@ class BotPage(Gtk.Box):
         for side in ("start", "end", "top"):
             getattr(head, f"set_margin_{side}")(16)
         back = Gtk.Button.new_from_icon_name("go-previous-symbolic", Gtk.IconSize.BUTTON)
-        back.connect("clicked", lambda *_: (self._cancel_all(), self.show_start()))
+        back.connect("clicked", lambda *_a: (self._cancel_all(), self.show_start()))
         head.pack_start(back, False, False, 0)
         back.set_valign(Gtk.Align.CENTER)
         self.paco = Paco(84)
@@ -150,11 +151,11 @@ class BotPage(Gtk.Box):
         col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         col.set_valign(Gtk.Align.CENTER)
         col.pack_start(label(scenario["title"], "hero"), False, False, 0)
-        col.pack_start(label("Twoje zadanie: " + scenario["goal"], "dim"), False, False, 0)
+        col.pack_start(label(_("Twoje zadanie: ") + scenario["goal"], "dim"), False, False, 0)
         head.pack_start(col, True, True, 0)
-        end = Gtk.Button(label="Zakończ i podsumuj")
+        end = Gtk.Button(label=_("Zakończ i podsumuj"))
         end.set_valign(Gtk.Align.CENTER)
-        end.connect("clicked", lambda *_: self.finish())
+        end.connect("clicked", lambda *_a: self.finish())
         head.pack_end(end, False, False, 0)
         self.outer.pack_start(head, False, False, 0)
 
@@ -169,18 +170,18 @@ class BotPage(Gtk.Box):
             getattr(bottom, f"set_margin_{side}")(16)
         row = Gtk.Box(spacing=8)
         self.entry = Gtk.Entry()
-        self.entry.set_placeholder_text("Napisz po hiszpańsku… (możesz też zapytać po polsku o pomoc)")
-        self.entry.connect("activate", lambda *_: self.send())
+        self.entry.set_placeholder_text(_("Napisz po hiszpańsku… (możesz też zapytać po polsku o pomoc)"))
+        self.entry.connect("activate", lambda *_a: self.send())
         row.pack_start(self.entry, True, True, 0)
-        self.send_btn = Gtk.Button(label="Wyślij")
+        self.send_btn = Gtk.Button(label=_("Wyślij"))
         self.send_btn.get_style_context().add_class("suggested-action")
-        self.send_btn.connect("clicked", lambda *_: self.send())
+        self.send_btn.connect("clicked", lambda *_a: self.send())
         row.pack_start(self.send_btn, False, False, 0)
         bottom.pack_start(row, False, False, 0)
         bottom.pack_start(self._voice_bar(), False, False, 0)
         tools = Gtk.Box(spacing=12)
         tools.pack_start(AccentBar(self.entry), False, False, 0)
-        self.show_pl = Gtk.CheckButton(label="Pokazuj tłumaczenie")
+        self.show_pl = Gtk.CheckButton(label=_("Pokazuj tłumaczenie"))
         self.show_pl.set_active(self.app.db.get("bot_show_pl", True))
         self.show_pl.connect("toggled", self._toggle_pl)
         tools.pack_end(self.show_pl, False, False, 0)
@@ -212,9 +213,9 @@ class BotPage(Gtk.Box):
         app = self.app
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
         row = Gtk.Box(spacing=10)
-        self.mic_btn = Gtk.Button(label="🎤  Mów")
+        self.mic_btn = Gtk.Button(label=_("🎤  Mów"))
         self.mic_btn.get_style_context().add_class("mic-btn")
-        self.mic_btn.connect("clicked", lambda *_: self._mic_clicked())
+        self.mic_btn.connect("clicked", lambda *_a: self._mic_clicked())
         row.pack_start(self.mic_btn, False, False, 0)
         self.level = Gtk.LevelBar()
         self.level.set_min_value(0)
@@ -222,20 +223,20 @@ class BotPage(Gtk.Box):
         self.level.set_size_request(140, 8)
         self.level.set_valign(Gtk.Align.CENTER)
         row.pack_start(self.level, False, False, 0)
-        self.cancel_btn = Gtk.Button(label="✖ Anuluj")
+        self.cancel_btn = Gtk.Button(label=_("✖ Anuluj"))
         self.cancel_btn.set_no_show_all(True)
-        self.cancel_btn.connect("clicked", lambda *_: (self._cancel_listen(), self._set_state("idle")))
+        self.cancel_btn.connect("clicked", lambda *_a: (self._cancel_listen(), self._set_state("idle")))
         row.pack_start(self.cancel_btn, False, False, 0)
         self.vstatus = label("", "dim", wrap=False)
         row.pack_start(self.vstatus, True, True, 0)
         box.pack_start(row, False, False, 0)
         opts = Gtk.Box(spacing=16)
-        self.voice_chk = Gtk.CheckButton(label="Rozmówca mówi na głos")
+        self.voice_chk = Gtk.CheckButton(label=_("Rozmówca mówi na głos"))
         self.voice_chk.set_active(bool(app.db.get("bot_voice", True)) and app.speech.tts_available())
         self.voice_chk.set_sensitive(app.speech.tts_available())
         self.voice_chk.connect("toggled", lambda w: app.db.set("bot_voice", w.get_active()))
         opts.pack_start(self.voice_chk, False, False, 0)
-        self.hands_chk = Gtk.CheckButton(label="Bez rąk: po odpowiedzi sam zacznę słuchać")
+        self.hands_chk = Gtk.CheckButton(label=_("Bez rąk: po odpowiedzi sam zacznę słuchać"))
         self.hands_chk.set_active(bool(app.db.get("bot_handsfree", False)))
         self.hands_chk.connect("toggled", self._hands_toggled)
         opts.pack_start(self.hands_chk, False, False, 0)
@@ -243,15 +244,15 @@ class BotPage(Gtk.Box):
         inst = [(k, v[0]) for k, v in _sp.WHISPER_SIZES.items() if _sp.engine_installed() and _sp.whisper_ready(k)]
         if len(inst) >= 2:
             opts.pack_end(self._whisper_combo(inst), False, False, 0)
-            opts.pack_end(label("Rozpoznawanie mowy:", "dim", wrap=False), False, False, 0)
+            opts.pack_end(label(_("Rozpoznawanie mowy:"), "dim", wrap=False), False, False, 0)
         box.pack_start(opts, False, False, 0)
         self.mic_ok = app.speech.stt_available() and Recorder.available()
         if not self.mic_ok:
             self.mic_btn.set_sensitive(False)
             self.hands_chk.set_sensitive(False)
-            self.vstatus.set_text("Rozmowa głosowa wymaga modelu rozpoznawania mowy i mikrofonu (Ustawienia).")
+            self.vstatus.set_text(_("Rozmowa głosowa wymaga modelu rozpoznawania mowy i mikrofonu (Ustawienia)."))
         else:
-            box.pack_start(label("Wskazówka: najlepiej w słuchawkach — wtedy mikrofon nie łapie głosu rozmówcy.",
+            box.pack_start(label(_("Wskazówka: najlepiej w słuchawkach — wtedy mikrofon nie łapie głosu rozmówcy."),
                                  "dim"), False, False, 0)
         return box
 
@@ -275,14 +276,14 @@ class BotPage(Gtk.Box):
         self.state = st
         if getattr(self, "paco", None):
             self.paco.set_state(st)
-        texts = {"idle": "🎤  Mów", "listening": "✔  Skończyłem mówić",
-                 "thinking": "🎤  Mów", "speaking": "🎤  Przerwij i mów"}
+        texts = {"idle": _("🎤  Mów"), "listening": _("✔  Skończyłem mówić"),
+                 "thinking": _("🎤  Mów"), "speaking": _("🎤  Przerwij i mów")}
         self.mic_btn.set_label(texts[st])
         (self.mic_btn.get_style_context().add_class if st == "listening"
          else self.mic_btn.get_style_context().remove_class)("rec")
         self.cancel_btn.set_visible(st == "listening")
-        status = {"idle": "", "listening": "Słucham… masz czas — kliknij „Skończyłem”, gdy skończysz",
-                  "thinking": "Rozmówca myśli…", "speaking": "Rozmówca mówi…"}[st]
+        status = {"idle": "", "listening": _("Słucham… masz czas — kliknij „Skończyłem”, gdy skończysz"),
+                  "thinking": _("Rozmówca myśli…"), "speaking": _("Rozmówca mówi…")}[st]
         self.vstatus.set_text(note or status)
         self.mic_btn.set_sensitive(self.mic_ok and st != "thinking")
         if st == "thinking":
@@ -331,27 +332,27 @@ class BotPage(Gtk.Box):
         if lid != self._listen_id or self.state != "listening":
             return
         if ev == "start":
-            self.vstatus.set_text("Słyszę Cię… (po dłuższej ciszy sam skończę — albo kliknij „Skończyłem”)")
+            self.vstatus.set_text(_("Słyszę Cię… (po dłuższej ciszy sam skończę — albo kliknij „Skończyłem”)"))
         elif ev in ("end", "max"):
             self._listen_id += 1
             self.level.set_value(0)
             self.app.recorder.stop(self._recorded)
-            self._set_state("thinking", "Rozpoznaję mowę…")
+            self._set_state("thinking", _("Rozpoznaję mowę…"))
         elif ev == "timeout":
             self._cancel_listen()
-            self._set_state("idle", "Nie słyszę, żebyś mówił — kliknij 🎤, gdy będziesz gotowy.")
+            self._set_state("idle", _("Nie słyszę, żebyś mówił — kliknij 🎤, gdy będziesz gotowy."))
             self.hands_chk.set_active(False)
 
     def _recorded(self, path):
         if not path:
-            self._set_state("idle", "Nie udało się nagrać dźwięku — sprawdź mikrofon w ustawieniach systemu.")
+            self._set_state("idle", _("Nie udało się nagrać dźwięku — sprawdź mikrofon w ustawieniach systemu."))
             return
         last = next((t["es"] for t in reversed(self.conv.turns) if t["who"] == "bot"), "") if self.conv else ""
         prompt = ("Conversación en español de España con un estudiante principiante. " + last)[:400]
         run_bg(lambda: self.app.speech.transcribe(path, prompt), self._heard, self._voice_error)
 
     def _voice_error(self, e):
-        self._set_state("idle", f"Błąd rozpoznawania mowy: {e}")
+        self._set_state("idle", _("Błąd rozpoznawania mowy: {}").format(e))
 
     def _heard(self, r):
         if not self.conv:
@@ -360,7 +361,7 @@ class BotPage(Gtk.Box):
         low = text.lower()
         if len(text.strip(" .,!?¡¿…")) < 2 or any(j in low for j in _JUNK):
             self._misses += 1
-            self._set_state("idle", "Nie zrozumiałem — spróbuj jeszcze raz.")
+            self._set_state("idle", _("Nie zrozumiałem — spróbuj jeszcze raz."))
             if self.hands_chk.get_active() and self._misses < 3:
                 GLib.timeout_add(500, lambda: (self.state == "idle" and self._listen(), False)[1])
             return
@@ -414,7 +415,7 @@ class BotPage(Gtk.Box):
                 try:
                     path = speech.synth(sent)
                 except Exception as e:  # noqa
-                    GLib.idle_add(self.app.toast, f"Nie mogę odtworzyć: {e}")
+                    GLib.idle_add(self.app.toast, _("Nie mogę odtworzyć: {}").format(e))
                     continue
                 GLib.idle_add(self._enqueue, path, tid)
             GLib.idle_add(self._tts_finished, tid)
@@ -538,7 +539,7 @@ class BotPage(Gtk.Box):
         c.set_halign(Gtk.Align.START if who == "bot" else Gtk.Align.END)
         c.set_size_request(320, -1)
         top = Gtk.Box(spacing=6)
-        top.pack_start(label("🤖 Rozmówca" if who == "bot" else "🙂 Ty", "dim", wrap=False), False, False, 0)
+        top.pack_start(label(_("🤖 Rozmówca") if who == "bot" else _("🙂 Ty"), "dim", wrap=False), False, False, 0)
         if who == "bot":
             top.pack_end(slow_button(self.app, es), False, False, 0)
             top.pack_end(SpeakButton(self.app, es), False, False, 0)
@@ -558,7 +559,7 @@ class BotPage(Gtk.Box):
             self.pl_labels.append(p)
             c.pack_start(p, False, False, 0)
         if unknown:
-            c.pack_start(label("Podkreślone — słowa spoza Twoich lekcji: " + ", ".join(sorted(set(unknown))), "dim"),
+            c.pack_start(label(_("Podkreślone — słowa spoza Twoich lekcji: ") + ", ".join(sorted(set(unknown))), "dim"),
                          False, False, 0)
         self.chat.pack_start(c, False, False, 0)
         c.show_all()
@@ -584,12 +585,12 @@ class BotPage(Gtk.Box):
     def _help_note(self, text):
         c = card(spacing=4)
         c.set_halign(Gtk.Align.START)
-        c.pack_start(label("💡 Wyjaśnienie Paco", "warn-text", wrap=False), False, False, 0)
+        c.pack_start(label(_("💡 Wyjaśnienie Paco"), "warn-text", wrap=False), False, False, 0)
         lb = label(text)
         lb.set_max_width_chars(70)
         lb.set_selectable(True)
         c.pack_start(lb, False, False, 0)
-        c.pack_start(label("🎤 Teraz spróbuj powiedzieć to sam — Paco czeka na Ciebie.", "dim"), False, False, 0)
+        c.pack_start(label(_("🎤 Teraz spróbuj powiedzieć to sam — Paco czeka na Ciebie."), "dim"), False, False, 0)
         self.chat.pack_start(c, False, False, 0)
         c.show_all()
         GLib.timeout_add(80, self._scroll_end)
@@ -598,9 +599,9 @@ class BotPage(Gtk.Box):
     def _fix_note(self, text, ok=""):
         c = card(spacing=2)
         c.set_halign(Gtk.Align.END)
-        c.pack_start(label("✎ Poprawka", "warn-text", wrap=False), False, False, 0)
+        c.pack_start(label(_("✎ Poprawka"), "warn-text", wrap=False), False, False, 0)
         if ok:
-            c.pack_start(label("Poprawnie: " + ok, "mid-es"), False, False, 0)
+            c.pack_start(label(_("Poprawnie: ") + ok, "mid-es"), False, False, 0)
         lb = label(text)
         lb.set_max_width_chars(60)
         c.pack_start(lb, False, False, 0)
@@ -622,7 +623,7 @@ class BotPage(Gtk.Box):
         if self.state == "thinking":
             self._set_state("idle")
         self._busy(False)
-        c = card(label(f"Błąd silnika bota: {e}", "bad-text"))
+        c = card(label(_("Błąd silnika bota: {}").format(e), "bad-text"))
         self.chat.pack_start(c, False, False, 0)
         c.show_all()
         if self.conv and self.conv.messages and self.conv.messages[-1]["role"] == "user":
@@ -695,37 +696,37 @@ class BotPage(Gtk.Box):
         b = page_box()
         head = Gtk.Box(spacing=10)
         back = Gtk.Button.new_from_icon_name("go-previous-symbolic", Gtk.IconSize.BUTTON)
-        back.connect("clicked", lambda *_: self.show_history() if from_history else self.show_start())
+        back.connect("clicked", lambda *_a: self.show_history() if from_history else self.show_start())
         head.pack_start(back, False, False, 0)
-        head.pack_start(label("Podsumowanie rozmowy" if not from_history else "Zapisana rozmowa", "hero"),
+        head.pack_start(label(_("Podsumowanie rozmowy") if not from_history else _("Zapisana rozmowa"), "hero"),
                         True, True, 0)
         b.pack_start(head, False, False, 0)
         c = card(spacing=4)
         lvl = bot.LEVELS.get(d["level"], ("", ""))[0]
         c.pack_start(label(d["title"], "title2"), False, False, 0)
-        c.pack_start(label(time.strftime("%d.%m.%Y %H:%M", time.localtime(d["ts"])) + (f"  ·  poziom: {lvl}" if lvl else ""),
+        c.pack_start(label(time.strftime("%d.%m.%Y %H:%M", time.localtime(d["ts"])) + (_("  ·  poziom: {}").format(lvl) if lvl else ""),
                            "dim"), False, False, 0)
         score = d["score"] or 0
-        c.pack_start(label(f"Ocena rozmowy: {score}/100 — {s.get('verdict', '')}",
+        c.pack_start(label(_("Ocena rozmowy: {}/100 — {}").format(score, s.get('verdict', '')),
                            "ok-text" if score >= 70 else "warn-text"), False, False, 0)
         bar = Gtk.ProgressBar()
         bar.set_fraction(score / 100)
         c.pack_start(bar, False, False, 0)
-        c.pack_start(label(f"Twoje wypowiedzi: {s['messages']}  ·  słowa: {s['words']} "
-                           f"(różnych: {s['unique']})  ·  poprawki: {len(s['fixes'])}"), False, False, 0)
+        c.pack_start(label(_("Twoje wypowiedzi: {}  ·  słowa: {} (różnych: {})  ·  poprawki: {}").format(
+            s['messages'], s['words'], s['unique'], len(s['fixes']))), False, False, 0)
         if s["messages"]:
             pct = round(100 * (s["messages"] - len(s["fixes"])) / s["messages"])
-            c.pack_start(label(f"Wypowiedzi bez błędów: {pct}%  ·  średnio {s['words'] / s['messages']:.1f} słowa "
-                               f"na wypowiedź", "dim"), False, False, 0)
+            c.pack_start(label(_("Wypowiedzi bez błędów: {}%  ·  średnio {} słowa na wypowiedź").format(
+                pct, f"{s['words'] / s['messages']:.1f}"), "dim"), False, False, 0)
         b.pack_start(c, False, False, 0)
 
         if s["fixes"]:
             c2 = card(spacing=6)
-            c2.pack_start(label("Do poprawy", "title2"), False, False, 0)
+            c2.pack_start(label(_("Do poprawy"), "title2"), False, False, 0)
             esc = GLib.markup_escape_text
             for orig, ok, fix in s["fixes"]:
-                txt = (f'Ty: <span foreground="#d0353f">{esc(orig)}</span>\n'
-                       + (f'Poprawnie: <b><span foreground="#2e9e44">{esc(ok)}</span></b>\n' if ok else "")
+                txt = (_("Ty: ") + f'<span foreground="#d0353f">{esc(orig)}</span>\n'
+                       + (_("Poprawnie: ") + f'<b><span foreground="#2e9e44">{esc(ok)}</span></b>\n' if ok else "")
                        + f"{esc(fix)}")
                 row = Gtk.Box(spacing=8)
                 row.pack_start(label(txt, markup=True), True, True, 0)
@@ -736,15 +737,15 @@ class BotPage(Gtk.Box):
             cards = [(ok, fix) for _o, ok, fix in s["fixes"] if ok]
             if cards:
                 todo = [(ok, fix) for ok, fix in cards if not db.has_card(ok)]
-                ex = Gtk.Button(label=f"➕ Dodaj poprawione zdania do powtórek ({len(todo)})" if todo
-                                else "✔ Poprawione zdania są już w powtórkach")
+                ex = Gtk.Button(label=_("➕ Dodaj poprawione zdania do powtórek ({})").format(len(todo)) if todo
+                                else _("✔ Poprawione zdania są już w powtórkach"))
                 ex.set_sensitive(bool(todo))
                 ex.set_halign(Gtk.Align.START)
 
                 def _export(btn, items=todo):
                     for ok, fix in items:
                         db.add_card(dict(es=ok, pl=fix, pos="zdanie", lesson="rozmowa"))
-                    btn.set_label(f"✔ Dodano {len(items)} do powtórek")
+                    btn.set_label(_("✔ Dodano {} do powtórek").format(len(items)))
                     btn.set_sensitive(False)
                     self.app.refresh_all()
                 ex.connect("clicked", _export)
@@ -755,16 +756,16 @@ class BotPage(Gtk.Box):
                      if w["es"].split("/")[0].strip().split()[-1].lower() in s.get("bot_unknown", [])]
         if new_words:
             c3 = card(spacing=6)
-            c3.pack_start(label("Nowe słowa z rozmowy (są w słowniku)", "title2"), False, False, 0)
+            c3.pack_start(label(_("Nowe słowa z rozmowy (są w słowniku)"), "title2"), False, False, 0)
             for w in new_words[:15]:
                 row = Gtk.Box(spacing=8)
                 row.pack_start(label(f"{w['es']} — {w['pl']}"), True, True, 0)
-                add = Gtk.Button(label="✔ W powtórkach" if db.has_card(w["es"]) else "+ Do powtórek")
+                add = Gtk.Button(label=_("✔ W powtórkach") if db.has_card(w["es"]) else _("+ Do powtórek"))
                 add.set_sensitive(not db.has_card(w["es"]))
 
                 def _add(btn, dd=w):
                     db.add_card(dd)
-                    btn.set_label("✔ W powtórkach")
+                    btn.set_label(_("✔ W powtórkach"))
                     btn.set_sensitive(False)
                 add.connect("clicked", _add)
                 row.pack_start(add, False, False, 0)
@@ -772,11 +773,11 @@ class BotPage(Gtk.Box):
             b.pack_start(c3, False, False, 0)
 
         c4 = card(spacing=6)
-        c4.pack_start(label("Zapis rozmowy", "title2"), False, False, 0)
+        c4.pack_start(label(_("Zapis rozmowy"), "title2"), False, False, 0)
         for t in d["turns"]:
             mine = t["who"] == "me"
             row = Gtk.Box(spacing=8)
-            who = label("🙂 Ty" if mine else "🤖", "dim", wrap=False)
+            who = label(_("🙂 Ty") if mine else "🤖", "dim", wrap=False)
             who.set_size_request(60, -1)
             row.pack_start(who, False, False, 0)
             col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -795,12 +796,12 @@ class BotPage(Gtk.Box):
 
         act = Gtk.Box(spacing=8)
         if from_history:
-            dl = Gtk.Button(label="Usuń z historii")
-            dl.connect("clicked", lambda *_: (db.delete_conversation(cid), self.show_history()))
+            dl = Gtk.Button(label=_("Usuń z historii"))
+            dl.connect("clicked", lambda *_a: (db.delete_conversation(cid), self.show_history()))
             act.pack_start(dl, False, False, 0)
-        again = Gtk.Button(label="Nowa rozmowa")
+        again = Gtk.Button(label=_("Nowa rozmowa"))
         again.get_style_context().add_class("suggested-action")
-        again.connect("clicked", lambda *_: self.show_start())
+        again.connect("clicked", lambda *_a: self.show_start())
         act.pack_end(again, False, False, 0)
         b.pack_start(act, False, False, 0)
         self.outer.pack_start(scrolled(b), True, True, 0)
@@ -814,21 +815,21 @@ class BotPage(Gtk.Box):
         b = page_box()
         head = Gtk.Box(spacing=10)
         back = Gtk.Button.new_from_icon_name("go-previous-symbolic", Gtk.IconSize.BUTTON)
-        back.connect("clicked", lambda *_: self.show_start())
+        back.connect("clicked", lambda *_a: self.show_start())
         head.pack_start(back, False, False, 0)
-        head.pack_start(label("Historia rozmów", "hero"), True, True, 0)
+        head.pack_start(label(_("Historia rozmów"), "hero"), True, True, 0)
         b.pack_start(head, False, False, 0)
         rows = db.list_conversations()
         if not rows:
-            b.pack_start(card(label("Jeszcze nie masz zapisanych rozmów. Po kliknięciu „Zakończ i podsumuj” "
-                                    "rozmowa trafia tutaj.", "dim")), False, False, 0)
+            b.pack_start(card(label(_("Jeszcze nie masz zapisanych rozmów. Po kliknięciu „Zakończ i podsumuj” "
+                                      "rozmowa trafia tutaj."), "dim")), False, False, 0)
         else:
             scores = [r["score"] or 0 for r in rows][:10][::-1]
             if len(scores) >= 2:
                 trend = scores[-1] - scores[0]
-                b.pack_start(label(f"Ostatnie {len(scores)} rozmów — średnia ocena "
-                                   f"{round(sum(scores) / len(scores))}/100"
-                                   + (f", zmiana {trend:+d} pkt względem pierwszej z nich" if trend else ""), "dim"),
+                b.pack_start(label(_("Ostatnie {} rozmów — średnia ocena {}/100").format(len(scores), round(sum(scores) / len(scores)))
+                                   + (_(", zmiana {} pkt względem pierwszej z nich").format(f"{trend:+d}") if trend else ""),
+                                   "dim"),
                              False, False, 0)
         for r in rows:
             c = card(spacing=4)
@@ -836,11 +837,11 @@ class BotPage(Gtk.Box):
             col = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
             col.pack_start(label(r["title"], "title2"), False, False, 0)
             col.pack_start(label(time.strftime("%d.%m.%Y %H:%M", time.localtime(r["ts"]))
-                                 + f"  ·  poziom: {bot.LEVELS.get(r['level'], ('?',))[0]}", "dim"), False, False, 0)
+                                 + _("  ·  poziom: {}").format(bot.LEVELS.get(r['level'], ('?',))[0]), "dim"), False, False, 0)
             row.pack_start(col, True, True, 0)
             sc = r["score"] or 0
             row.pack_start(label(f"{sc}/100", "ok-text" if sc >= 70 else "warn-text", wrap=False), False, False, 0)
-            op = Gtk.Button(label="Otwórz")
+            op = Gtk.Button(label=_("Otwórz"))
             op.connect("clicked", lambda _b, cid=r["id"]: self.show_saved(cid, True))
             row.pack_start(op, False, False, 0)
             c.pack_start(row, False, False, 0)
@@ -854,7 +855,7 @@ class OllamaSetupDialog(Gtk.Dialog):
     def __init__(self, app, parent):
         from .. import ollama_local as ol
         from .. import speech
-        super().__init__(title="Bot offline — instalacja Ollamy i modelu", transient_for=parent, modal=True)
+        super().__init__(title=_("Bot offline — instalacja Ollamy i modelu"), transient_for=parent, modal=True)
         self.app, self.ol = app, ol
         self.set_default_size(680, 560)
         box = self.get_content_area()
@@ -863,26 +864,26 @@ class OllamaSetupDialog(Gtk.Dialog):
             getattr(box, f"set_margin_{side}")(16)
         hw = speech.hardware()
         self.use_system = ol.system_ollama()
-        box.pack_start(label("Jednym kliknięciem zainstaluję wszystko, czego potrzebuje bot — działa potem "
-                             "całkowicie offline, za darmo, bez hasła administratora.", "title2"), False, False, 0)
+        box.pack_start(label(_("Jednym kliknięciem zainstaluję wszystko, czego potrzebuje bot — działa potem "
+                               "całkowicie offline, za darmo, bez hasła administratora."), "title2"), False, False, 0)
         if self.use_system:
-            what = "• Wykryto Ollamę w systemie — użyję jej, pobiorę tylko model."
+            what = _("• Wykryto Ollamę w systemie — użyję jej, pobiorę tylko model.")
         elif ol.installed():
-            what = "• Prywatna Ollama jest już zainstalowana — pobiorę tylko model."
+            what = _("• Prywatna Ollama jest już zainstalowana — pobiorę tylko model.")
         else:
-            what = ("• Ollama (silnik modeli językowych) — do Twojego katalogu domowego, ok. 1–2 GB\n"
-                    "  (zawiera biblioteki dla kart NVIDIA; uruchamia się sama tylko na czas rozmowy)")
-        box.pack_start(label(what + "\n• wybrany model językowy (poniżej)"), False, False, 0)
-        gpu = ", ".join(hw["gpus"]) or "brak"
-        box.pack_start(label(f"Twój komputer: {hw['ram']} GB RAM · karta: {gpu}"
-                             + (" (sterownik NVIDIA aktywny — będzie szybko)" if hw["nvidia"] else ""), "dim"),
+            what = _("• Ollama (silnik modeli językowych) — do Twojego katalogu domowego, ok. 1–2 GB\n"
+                     "  (zawiera biblioteki dla kart NVIDIA; uruchamia się sama tylko na czas rozmowy)")
+        box.pack_start(label(what + _("\n• wybrany model językowy (poniżej)")), False, False, 0)
+        gpu = ", ".join(hw["gpus"]) or _("brak")
+        box.pack_start(label(_("Twój komputer: {} GB RAM · karta: {}").format(hw['ram'], gpu)
+                             + (_(" (sterownik NVIDIA aktywny — będzie szybko)") if hw["nvidia"] else ""), "dim"),
                        False, False, 0)
         rec = ol.recommended_model(hw)
         group = None
         self.radios = {}
         for name, desc, size, note in ol.MODELS:
             rb = Gtk.RadioButton.new_with_label_from_widget(group, f"{desc} — {size}"
-                                                            + ("   ← zalecany dla Ciebie" if name == rec else ""))
+                                                            + (_("   ← zalecany dla Ciebie") if name == rec else ""))
             group = group or rb
             rb.set_active(name == rec)
             box.pack_start(rb, False, False, 0)
@@ -899,9 +900,9 @@ class OllamaSetupDialog(Gtk.Dialog):
         self.tv.set_monospace(True)
         self.tv.set_wrap_mode(Gtk.WrapMode.CHAR)
         box.pack_start(scrolled(self.tv), True, True, 0)
-        self.start_btn = self.add_button("Zainstaluj", Gtk.ResponseType.OK)
+        self.start_btn = self.add_button(_("Zainstaluj"), Gtk.ResponseType.OK)
         self.start_btn.get_style_context().add_class("suggested-action")
-        self.close_btn = self.add_button("Zamknij", Gtk.ResponseType.CLOSE)
+        self.close_btn = self.add_button(_("Zamknij"), Gtk.ResponseType.CLOSE)
         self.connect("response", self._resp)
         self.show_all()
 
@@ -915,7 +916,7 @@ class OllamaSetupDialog(Gtk.Dialog):
             rb.set_sensitive(False)
         self.start_btn.set_sensitive(False)
         self.close_btn.set_sensitive(False)
-        self.status.set_markup("<b>Instaluję…</b> Możesz zostawić to okno otwarte — to potrwa kilka minut.")
+        self.status.set_markup(_("<b>Instaluję…</b> Możesz zostawić to okno otwarte — to potrwa kilka minut."))
         self.ol.Installer(model, self.use_system,
                           lambda t: GLib.idle_add(self._log, t),
                           lambda f: GLib.idle_add(self.bar.set_fraction, min(1.0, f)),
@@ -933,16 +934,16 @@ class OllamaSetupDialog(Gtk.Dialog):
             db.set("ollama_model", self.model)
             db.set("ollama_url", info)
             db.set("ollama_managed", not self.use_system)
-            self.start_btn.set_label("Gotowe ✔")
-            self.status.set_markup('<span foreground="#2e9e44" size="large"><b>✔ Bot jest gotowy!</b></span> '
-                                   'Zamknij to okno i wybierz scenkę w „Rozmowa z botem”.')
+            self.start_btn.set_label(_("Gotowe ✔"))
+            self.status.set_markup('<span foreground="#2e9e44" size="large"><b>' + _("✔ Bot jest gotowy!")
+                                   + '</b></span> ' + _("Zamknij to okno i wybierz scenkę w „Rozmowa z botem”."))
             self.app.pages["settings"].refresh()
             if not self.app.pages["bot"].conv:
                 self.app.pages["bot"].show_start()
         else:
-            self.start_btn.set_label("Spróbuj ponownie")
+            self.start_btn.set_label(_("Spróbuj ponownie"))
             self.start_btn.set_sensitive(True)
             for rb in self.radios.values():
                 rb.set_sensitive(True)
-            self.status.set_markup('<span foreground="#d0353f" size="large"><b>✘ Nie udało się.</b></span> '
-                                   'Sprawdź internet i miejsce na dysku, potem spróbuj ponownie.')
+            self.status.set_markup('<span foreground="#d0353f" size="large"><b>' + _("✘ Nie udało się.")
+                                   + '</b></span> ' + _("Sprawdź internet i miejsce na dysku, potem spróbuj ponownie."))

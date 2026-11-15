@@ -1,0 +1,20 @@
+# id: r03
+# level: A1
+# unit: 3
+# title: Un día normal de Lucía
+@text
+Lucía es periodista y vive en Madrid. Todos los días se levanta a las siete. Se ducha, se viste y desayuna un café con leche y una tostada. Sale de casa a las ocho y cuarto y va a la oficina en metro.
+Trabaja de nueve a dos. A las dos y media come con sus compañeros en un restaurante cerca de la oficina. Por la tarde trabaja hasta las seis. Después, los lunes y los miércoles va al gimnasio, y los jueves estudia inglés.
+Lucía cena a las nueve y media, normalmente en casa. Antes de dormir, lee un libro. Se acuesta a las doce. Los fines de semana duerme mucho: ¡nunca se levanta antes de las diez!
+@translation
+Lucía is a journalist and lives in Madrid. Every day she gets up at seven. She has a shower, gets dressed and has a white coffee and toast for breakfast. She leaves home at quarter past eight and takes the underground to the office.
+She works from nine to two. At half past two she has lunch with colleagues at a restaurant near the office. In the afternoon she works until six. Then on Mondays and Wednesdays she goes to the gym, and on Thursdays she studies English.
+Lucía has dinner at half past nine, usually at home. Before going to sleep she reads a book. She goes to bed at twelve. At weekends she sleeps a lot: she never gets up before ten!
+@glossary
+el periodista / la periodista | journalist
+antes de | before
+@questions
+¿Cómo va Lucía a la oficina? | En metro. | En coche.; En metro.; Andando.
+¿A qué hora come? | A las dos y media. | A las dos.; A las dos y media.; A las nueve y media.
+¿Qué hace los jueves? | Estudia inglés. | Va al gimnasio.; Estudia inglés.; Lee un libro.
+¿Qué hace los fines de semana? | Duerme mucho. | Trabaja.; Duerme mucho.; Se levanta a las siete.

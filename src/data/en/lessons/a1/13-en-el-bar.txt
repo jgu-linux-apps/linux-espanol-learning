@@ -1,0 +1,71 @@
+# id: a1-13
+# title: En el bar — ordering and paying
+# unit: 4
+# unit_title: En la ciudad — in town
+@goals
+Order something to eat and drink
+Ask the price and pay
+Use polite forms (quería, ¿me pone…?)
+@dialog
+Camarero: ¡Buenos días! ¿Qué os pongo? | Good morning! What can I get you?
+Marek: Para mí, un café con leche y una tostada con tomate, por favor. | For me, a white coffee and toast with tomato, please.
+Ania: Yo quería un zumo de naranja y un cruasán. | I'd like an orange juice and a croissant.
+Camarero: Muy bien. ¿Algo más? | Very good. Anything else?
+Marek: No, nada más, gracias. | No, nothing else, thanks.
+Marek: Perdone, ¿cuánto es? | Excuse me, how much is it?
+Camarero: Son siete euros con cincuenta. | That's seven fifty.
+Marek: ¿Puedo pagar con tarjeta? | Can I pay by card?
+Camarero: Sí, claro. | Yes, of course.
+@vocab
+el camarero / la camarera | waiter / waitress | m
+el café con leche | white coffee (coffee with milk) | m
+el café solo | black coffee (espresso) | m
+el cortado | espresso with a dash of milk | m
+el té | tea | m
+el zumo | juice (in Spain) | m | un zumo de naranja / an orange juice
+la cerveza | beer | f
+el vino | wine | m
+la tostada | toast | f
+el bocadillo | baguette sandwich | m
+la tapa | small snack served with a drink | f
+la cuenta | the bill, the check | f | La cuenta, por favor. / The bill, please.
+pagar | to pay | v
+la tarjeta | (bank) card | f
+en efectivo | in cash | phr
+el euro | euro | m
+¿cuánto es? | how much is it? | phr
+quería | I'd like (polite) | v | Quería un café. / I'd like a coffee.
+para mí | for me | phr
+algo | something, anything | pron | ¿Algo más? / Anything else?
+nada | nothing | pron
+claro | of course, sure | adv
+perdone | excuse me, sorry (polite form) | interj
+@grammar
+## How to order
+- **Quería…** — I'd like… (very natural and polite)
+- **Para mí, …** — For me…
+- **¿Me pone…?** — Could you give me…? (typical in Spain)
+- **Un café, por favor.** — the simplest way.
+
+## What the waiter asks
+- **¿Qué os pongo?** / **¿Qué le pongo?** — What can I get you (all / sir, madam)?
+- **¿Algo más?** — Anything else?
+- **¿Para tomar aquí o para llevar?** — To have here or to take away?
+
+## Tú or usted?
+In an ordinary bar in Spain people often say **tú** to the waiter, but **usted** is always safe: **Perdone** (usted) / **Perdona** (tú).
+
+## Prices
+**Son siete euros con cincuenta** (€7.50). The currency takes a plural: **un euro, dos euros**.
+@exercises
+choice: How do you politely order a coffee? | Quería un café, por favor. | Quiero café ahora.; Quería un café, por favor.; Dame café.
+choice: Asking for the bill: | La cuenta, por favor. | La cuenta, por favor.; El cuento, por favor.; La carta, por favor.
+choice: Orange juice in Spain: | un zumo de naranja | un jugo de naranja; un zumo de naranja; una naranja de zumo
+fill: ¿Puedo pagar ___ tarjeta? | con
+fill: Para ___, una cerveza. | mí
+fill: ¿Algo ___? — No, nada más. | más
+trans: How much is it? | ¿Cuánto es?
+trans: A tea for me, please. | Para mí, un té, por favor.
+trans: Can I pay in cash? | ¿Puedo pagar en efectivo?
+@culture
+In many bars in Spain (especially in Granada, León or Jaén) every drink you order comes with a free **tapa**. Tipping isn't compulsory — people leave some change or round up the bill.

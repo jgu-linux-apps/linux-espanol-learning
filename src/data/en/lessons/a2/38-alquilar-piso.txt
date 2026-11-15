@@ -1,0 +1,60 @@
+# id: a2-38
+# title: Alquilar un piso — renting a flat and housework
+# unit: 10
+# unit_title: Sociedad y costumbres — society and customs
+@goals
+Ask about a flat to rent
+Share out the housework
+@dialog
+Marek: Hola, llamo por el anuncio del piso en la calle Colón. ¿Sigue disponible? | Hello, I'm calling about the ad for the flat on Calle Colón. Is it still available?
+Propietaria: Sí. Tiene setenta metros, dos habitaciones y está amueblado. | Yes. It's seventy square metres, two bedrooms, and it's furnished.
+Marek: ¿Cuánto es el alquiler? | How much is the rent?
+Propietaria: Novecientos euros al mes, con los gastos de comunidad incluidos. La luz y el agua van aparte. | Nine hundred euros a month, including the building charges. Electricity and water are extra.
+Marek: ¿Hay que pagar fianza? | Is there a deposit to pay?
+Propietaria: Sí, un mes de fianza. ¿Quiere verlo mañana? | Yes, one month's deposit. Would you like to see it tomorrow?
+Marek: Sí, ¿a las seis le viene bien? | Yes, would six o'clock suit you?
+@vocab
+el alquiler | renting; rent | m
+el propietario / la propietaria | owner, landlord / landlady | m
+disponible | available | adj
+amueblado / amueblada | furnished | adj
+los gastos | costs, bills | mpl
+la comunidad | residents' association (of a building) | f
+la luz | light; electricity | f
+aparte | separately, extra | adv
+la fianza | deposit | f
+el metro cuadrado | square metre | m
+al mes | a month, per month | phr
+las tareas de la casa | housework, chores | fpl
+limpiar | to clean | v
+fregar los platos | to do the washing-up | phr
+poner la lavadora | to put the washing on | phr
+sacar la basura | to take the rubbish out | phr
+hacer la cama | to make the bed | phr
+planchar | to iron | v
+el compañero de piso | flatmate | m
+@grammar
+## Llamar por / preguntar por
+- **Llamo por el anuncio.** — I'm calling about the ad.
+- **Pregunto por el piso.** — I'm asking about the flat.
+
+## Prices and periods
+**al mes** (a month), **al año** (a year), **a la semana** (a week), **por persona** (per person).
+
+## Taking turns with “tocar”
+**Te toca a ti** — It's your turn. **Hoy me toca fregar.** — It's my turn to do the washing-up today. (It works like gustar.)
+
+## Review: hay que / tener que
+**Hay que pagar un mes de fianza. Tienes que sacar la basura.**
+@exercises
+choice: I'm calling about the ad: | Llamo por el anuncio. | Llamo para el anuncio.; Llamo por el anuncio.; Llamo de anuncio.
+choice: It's my turn to wash up today: | Hoy me toca fregar. | Hoy me toca fregar.; Hoy toco fregar.; Hoy es mi tocar fregar.
+choice: To take the rubbish out: | sacar la basura | tirar la basura fuera; sacar la basura; llevar basura
+fill: El piso cuesta 800 euros ___ mes. | al
+fill: ¿El piso sigue ___? (available) | disponible
+fill: Hoy te ___ a ti poner la lavadora. | toca
+trans: How much is the rent? | ¿Cuánto es el alquiler?
+trans: The flat is furnished. | El piso está amueblado.
+trans: You have to pay a deposit. | Hay que pagar fianza. /// Hay que pagar una fianza.
+@culture
+In Spanish apartment blocks everyone pays monthly **gastos de comunidad**, and big decisions about the building are taken at the residents' meeting (**reunión de vecinos**) — famous for long and stormy discussions.

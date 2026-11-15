@@ -1,0 +1,20 @@
+# id: r02
+# level: A1
+# unit: 2
+# title: Mi piso y mi familia
+@text
+Vivo con mi familia en un piso en el centro de Gdynia. El piso no es muy grande, pero es cómodo y bonito. Hay un salón, una cocina, un baño y tres dormitorios. Mi dormitorio está al lado del baño.
+Mi marido se llama Tomasz. Es alto, moreno y muy simpático. Tenemos dos hijos: Zosia tiene ocho años y es muy divertida; Antek tiene cinco años y es un poco serio. También tenemos un gato negro. Normalmente el gato está encima del sofá.
+Hoy estoy un poco cansada porque los niños están enfermos.
+@translation
+I live with my family in a flat in the centre of Gdynia. The flat isn't very big, but it's comfortable and pretty. There's a living room, a kitchen, a bathroom and three bedrooms. My bedroom is next to the bathroom.
+My husband's name is Tomasz. He's tall, dark-haired and very nice. We have two children: Zosia is eight and she's great fun; Antek is five and he's a bit serious. We also have a black cat. The cat usually lies on the sofa.
+Today I'm a bit tired because the children are ill.
+@glossary
+el gato | cat
+porque | because
+@questions
+¿Cuántos dormitorios hay en el piso? | Tres. | Dos.; Tres.; Cuatro.
+¿Cómo es Tomasz? | Alto, moreno y simpático. | Bajo y rubio.; Alto, moreno y simpático.; Serio y antipático.
+¿Dónde está normalmente el gato? | Encima del sofá. | Debajo de la cama.; En la cocina.; Encima del sofá.
+¿Por qué está cansada la mujer? | Porque los niños están enfermos. | Porque trabaja mucho.; Porque los niños están enfermos.; Porque el piso es grande.

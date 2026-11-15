@@ -1,0 +1,60 @@
+# id: a2-35
+# title: ¿Qué estás haciendo? Estar + gerund
+# unit: 9
+# unit_title: Trabajo y futuro — work and the future
+@goals
+Talk about things happening right now
+Form the gerund (including irregular ones)
+@dialog
+Marek: ¿Diga? | Hello?
+Javier: ¡Hola, Marek! Soy Javier. ¿Qué estás haciendo? ¿Te pillo mal? | Hi, Marek! It's Javier. What are you doing? Is this a bad time?
+Marek: Un poco. Estoy preparando una presentación para mañana. | A bit. I'm preparing a presentation for tomorrow.
+Javier: Vale, solo una pregunta rápida. ¿Sigues buscando piso en Valencia? | OK, just a quick question. Are you still looking for a flat in Valencia?
+Marek: Sí, estoy mirando anuncios todos los días. | Yes, I'm looking at ads every day.
+Javier: Mi primo está alquilando su piso. Te mando las fotos. | My cousin is renting out his flat. I'll send you the photos.
+Marek: ¡Genial! Gracias. Te llamo esta noche. | Great! Thanks. I'll call you tonight.
+@vocab
+¿diga? / ¿dígame? | hello? (answering the phone in Spain) | phr
+pillar | to catch; (informal) to catch someone (at a moment) | v | ¿Te pillo mal? / Is this a bad time?
+preparar | to prepare | v
+la presentación | presentation | f
+la pregunta | question | f
+rápido / rápida | quick, fast | adj
+seguir + gerundio | to still be doing, to keep doing | phr | Sigo estudiando. / I'm still studying.
+el anuncio | ad, advert | m
+alquilar | to rent (out) | v
+mandar | to send | v
+en este momento | at the moment | phr
+ahora mismo | right now | phr
+@grammar
+## The gerund (the “-ing” form)
+- **-ar → -ando**: hablar → **hablando**
+- **-er, -ir → -iendo**: comer → **comiendo**, vivir → **viviendo**
+- after a vowel **-yendo**: leer → **leyendo**, oír → **oyendo**, traer → **trayendo**, ir → **yendo**
+- **-ir** verbs with a stem change: e→i, o→u: pedir → **pidiendo**, decir → **diciendo**, dormir → **durmiendo**, sentir → **sintiendo**
+
+## Estar + gerund — “right now”
+**estoy, estás, está, estamos, estáis, están + gerund** — like English “I am …-ing”:
+**Estoy preparando una presentación.** — I'm preparing a presentation.
+Also for temporary situations: **Este mes estoy trabajando mucho.**
+Careful: Spanish uses it only for what's in progress — plans for the future go in the present or with **ir a** (“I'm meeting Ana tomorrow” = **Mañana veo a Ana**).
+
+## Seguir / llevar + gerund
+- **seguir + gerund** — to still be doing: **Sigo buscando piso.**
+- **llevar + time + gerund** — to have been doing something for: **Llevo una hora esperando.**
+
+## Pronouns
+**Lo estoy haciendo = Estoy haciéndolo** (with an accent when attached).
+@exercises
+fill: Estoy ___ (comer). | comiendo
+fill: ¿Qué estás ___ (leer)? | leyendo
+fill: El niño está ___ (dormir). | durmiendo
+fill: Están ___ (pedir) la cuenta. | pidiendo
+fill: Sigo ___ (buscar) trabajo. | buscando
+conj: hablar (nosotros, estar + gerundio) | estamos hablando
+choice: What are you doing now? | ¿Qué estás haciendo? | ¿Qué estás haciendo?; ¿Qué eres haciendo?; ¿Qué haces haciendo?
+choice: I've been waiting for an hour: | Llevo una hora esperando. | Llevo una hora esperando.; Estoy una hora esperando desde.; Espero hace una hora.
+trans: I'm preparing a presentation. | Estoy preparando una presentación.
+trans: I'm still looking for a flat. | Sigo buscando piso.
+@culture
+Spaniards answer the phone with **¿Diga?**, **¿Dígame?** or **¿Sí?**, and to say who's calling they use **Soy…** (“I am…”), not “This is…”.

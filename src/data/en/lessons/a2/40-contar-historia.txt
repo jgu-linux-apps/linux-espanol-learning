@@ -1,0 +1,69 @@
+# id: a2-40
+# title: Contar una historia — linking sentences into a story
+# unit: 10
+# unit_title: Sociedad y costumbres — society and customs
+@goals
+Tell a story from beginning to end
+Use time, cause and result connectors
+Combine all the past tenses of level A2
+@dialog
+Marek: Os voy a contar lo que me pasó en mi primer viaje a Madrid. | I'm going to tell you what happened to me on my first trip to Madrid.
+Lucía: ¡Cuenta, cuenta! | Go on, tell us!
+Marek: Era agosto y hacía un calor horrible. Primero, el avión llegó con tres horas de retraso. | It was August and it was horribly hot. First, the plane arrived three hours late.
+Marek: Luego cogí un taxi, pero el taxista no entendía mi español. Al final llegué al hotel a medianoche. | Then I took a taxi, but the driver didn't understand my Spanish. In the end I got to the hotel at midnight.
+Lucía: ¡Qué desastre! ¿Y qué pasó después? | What a disaster! And what happened next?
+Marek: Como tenía mucha hambre, salí a buscar algo de comer. De repente, encontré un bar lleno de gente y música. Así que entré. | As I was very hungry, I went out to look for something to eat. Suddenly I found a bar full of people and music. So I went in.
+Marek: Al final, cené a las doce y media, como un auténtico madrileño. ¡Fue la mejor noche del viaje! | In the end I had dinner at half past twelve, like a real madrileño. It was the best night of the trip!
+@vocab
+primero | first | adv
+luego / después | then, after that | adv
+entonces | then; so | adv
+al final | in the end, at the end | phr
+por fin | at last, finally | phr
+como | as, since (at the start of a sentence); like | conj | Como llovía, no salí. / As it was raining, I didn't go out.
+así que | so | conj
+por eso | that's why | phr
+el retraso | delay | m
+el taxi / el taxista | taxi / taxi driver | m
+la medianoche | midnight | f
+tener hambre | to be hungry | phr
+tener sed | to be thirsty | phr
+lleno / llena | full | adj
+el desastre | disaster | m
+horrible | horrible, awful | adj
+auténtico / auténtica | real, authentic | adj
+lo que | what (that which) | pron | Lo que me pasó… / What happened to me…
+@grammar
+## The shape of a story
+|| beginning | Un día… / Hace unos años… / Era (+ description)…
+|| sequence | Primero… luego… después… entonces…
+|| a sudden event | De repente… / De pronto…
+|| cause | Como (at the start)… / porque (in the middle)…
+|| result | así que… / por eso…
+|| ending | Al final… / Por fin…
+
+## Three past tenses together
+- **perfecto** — the past linked to the present: **Hoy he contado esta historia tres veces.**
+- **indefinido** — events, the action: **El avión llegó tarde. Cogí un taxi.**
+- **imperfecto** — background, description, causes: **Era agosto. Hacía calor. Tenía hambre.**
+Note: hunger and thirst are things you **have**: **tener hambre / sed** (not “estar”).
+
+## Como or porque?
+- **Como** at the start of a sentence: **Como tenía hambre, salí.**
+- **porque** after the main clause: **Salí porque tenía hambre.**
+
+## Lo que
+**lo que** = what (the thing that): **No entiendo lo que dices.** — I don't understand what you're saying.
+@exercises
+choice: ___ tenía hambre, salí a comer. | Como | Porque; Como; Así que
+choice: Salí a comer ___ tenía hambre. | porque | como; porque; así que
+choice: At last! | ¡Por fin! | ¡Al fin y al cabo!; ¡Por fin!; ¡Al principio!
+choice: No entiendo ___ dices. | lo que | que; lo que; el que
+fill: ___ (hacer) mucho calor, así que fuimos a la playa. | Hacía
+fill: Primero cené y ___ salí a pasear. (then) | luego /// después
+fill: El avión llegó con dos horas de ___. | retraso
+trans: I was very hungry. | Tenía mucha hambre.
+trans: In the end I got to the hotel. | Al final llegué al hotel. /// Por fin llegué al hotel.
+trans: I'm going to tell you what happened to me. | Te voy a contar lo que me pasó.
+@culture
+Madrid people (**los madrileños**, nicknamed **los gatos** — “the cats”) are famous for their nightlife: dinner at 10 pm is normal, and the bars and streets of the centre stay busy long after midnight, even on weekdays.

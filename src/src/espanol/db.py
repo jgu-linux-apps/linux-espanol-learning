@@ -5,6 +5,7 @@ import threading
 import time
 
 from . import fsrs, profiles
+from .i18n import _  # noqa: E402
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS lessons (

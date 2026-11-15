@@ -1,0 +1,70 @@
+# id: a1-04
+# title: Jobs, articles, gender and plural
+# unit: 1
+# unit_title: Primeros pasos — first steps
+@goals
+Say what you do for a living
+Use the articles el, la, un, una
+Form the plural of nouns
+@dialog
+Elena: ¿A qué te dedicas? | What do you do?
+Marek: Soy ingeniero. Trabajo con ordenadores. ¿Y tú? | I'm an engineer. I work with computers. And you?
+Elena: Yo soy profesora en un colegio. | I'm a teacher at a school.
+Marek: ¿Y tu marido? | And your husband?
+Elena: Es médico. Trabaja en un hospital. | He's a doctor. He works in a hospital.
+Marek: ¡Qué bien! Mi mujer es enfermera. | Great! My wife is a nurse.
+@vocab
+dedicarse a | to do (for a living) | vr | ¿A qué te dedicas? / What do you do?
+trabajar | to work | v | Trabajo en una oficina. / I work in an office.
+el ingeniero / la ingeniera | engineer | m
+el profesor / la profesora | teacher | m
+el médico / la médica | doctor | m
+el enfermero / la enfermera | nurse | m
+el camarero / la camarera | waiter / waitress | m
+el estudiante / la estudiante | student | mf
+el informático / la informática | IT specialist | m
+el ordenador | computer (in Spain) | m
+la oficina | office | f
+el colegio | (primary) school | m
+el hospital | hospital | m
+el marido | husband | m
+la mujer | woman; wife | f
+el trabajo | work, job | m
+con | with | prep
+en | in, at, on | prep
+@grammar
+## Noun gender
+Every Spanish noun is masculine or feminine — even things.
+- Usually **-o** → masculine: el libro, el año. **-a** → feminine: la casa, la ciudad.
+- Words ending in **-ción, -sión, -dad, -tad** are usually feminine too: la estación, la ciudad.
+- Exceptions have to be learned: **el día**, **el mapa**, **el problema**, **la mano**, **la foto**.
+
+## Articles
+|| | masculine | feminine
+|| definite (the) | el | la
+|| indefinite (a, an) | un | una
+|| plural definite | los | las
+|| plural indefinite (some) | unos | unas
+
+## Plural
+- After a vowel add **-s**: el libro → los libros.
+- After a consonant add **-es**: el profesor → los profesores, la ciudad → las ciudades.
+- **-z** changes to **-ces**: el lápiz → los lápices.
+
+## Jobs without an article
+When you say what you do, you **don't** use an article (unlike English “an engineer”): **Soy ingeniero** (not “soy un ingeniero”).
+@exercises
+choice: ___ hospital | el | el; la; los
+choice: ___ ciudad | la | el; la; los
+choice: ___ problema | el | el; la; las
+choice: ___ mano | la | el; la; los
+fill: el profesor → los ___ | profesores
+fill: la ciudad → las ___ | ciudades
+fill: el lápiz → los ___ | lápices
+fill: la oficina → las ___ | oficinas
+choice: I'm a doctor: | Soy médico. | Soy un médico.; Soy médico.; Estoy médico.
+trans: I work in an office. | Trabajo en una oficina.
+trans: She is a teacher. | Es profesora. /// Ella es profesora.
+trans: What do you do? | ¿A qué te dedicas?
+@culture
+In Spain a computer is **el ordenador**, while in Latin America it's **la computadora**. The course teaches the Spanish version, but it's worth knowing both.

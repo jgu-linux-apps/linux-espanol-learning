@@ -1,0 +1,61 @@
+# id: a2-39
+# title: Fiestas y tradiciones — Spanish holidays and traditions
+# unit: 10
+# unit_title: Sociedad y costumbres — society and customs
+@goals
+Talk about holidays and traditions
+Give good wishes
+Compare Spanish traditions with others
+@dialog
+Beatriz: ¿Cómo celebráis la Navidad en Polonia? | How do you celebrate Christmas in Poland?
+Marek: Lo más importante es la cena de Nochebuena. Comemos doce platos y no comemos carne. | The most important thing is the Christmas Eve dinner. We eat twelve dishes and no meat.
+Beatriz: ¡Doce platos! Nosotros en Nochevieja comemos doce uvas, una con cada campanada. | Twelve dishes! On New Year's Eve we eat twelve grapes, one with each chime of the clock.
+Marek: ¿Y cuándo recibís los regalos? | And when do you get your presents?
+Beatriz: Muchos niños los reciben el seis de enero. Los traen los Reyes Magos. | Many children get them on the sixth of January. The Three Kings bring them.
+Marek: ¡Qué bonito! Bueno, ¡felices fiestas! | How lovely! Well, happy holidays!
+Beatriz: ¡Igualmente! Y ¡feliz año nuevo! | Same to you! And happy New Year!
+@vocab
+celebrar | to celebrate | v
+la Navidad | Christmas | f
+la Nochebuena | Christmas Eve | f
+la Nochevieja | New Year's Eve | f
+los Reyes Magos | the Three Kings (Wise Men) | mpl
+la uva | grape | f
+la campanada | stroke (of a bell, a clock) | f
+la Semana Santa | Holy Week, Easter | f
+la tradición | tradition | f
+el desfile | parade | m
+los fuegos artificiales | fireworks | mpl
+¡feliz cumpleaños! | happy birthday! | phr
+¡felices fiestas! | happy holidays! | phr
+¡feliz Navidad! | merry Christmas! | phr
+¡feliz año nuevo! | happy New Year! | phr
+¡enhorabuena! | congratulations! | interj
+¡igualmente! | same to you! | interj
+importante | important | adj
+lo más importante | the most important thing | phr
+@grammar
+## Lo + adjective
+**lo** + adjective means “the … thing”: **lo más importante** (the most important thing), **lo mejor** (the best thing), **lo bueno** (the good thing), **lo malo** (the bad thing).
+**Lo mejor de España es la gente.** — The best thing about Spain is the people.
+
+## Good wishes
+- **¡Feliz cumpleaños! ¡Feliz Navidad! ¡Feliz año nuevo!** (feliz + singular)
+- **¡Felices fiestas! ¡Felices vacaciones!** (felices + plural)
+- **¡Enhorabuena!** — congratulations (on a success); **¡Felicidades!** — congratulations, best wishes
+- The answer: **¡Gracias, igualmente!**
+
+## Holiday dates
+**el seis de enero** (Three Kings' Day), **el veinticuatro de diciembre** (Christmas Eve), **el treinta y uno de diciembre** (New Year's Eve).
+@exercises
+choice: Happy holidays! | ¡Felices fiestas! | ¡Feliz fiestas!; ¡Felices fiestas!; ¡Felices fiesta!
+choice: Same to you! | ¡Igualmente! | ¡Igualmente!; ¡También!; ¡Mismo!
+choice: Congratulations (on a success): | ¡Enhorabuena! | ¡Buen provecho!; ¡Enhorabuena!; ¡Salud!
+choice: When do children in Spain traditionally get presents from the Three Kings? | el seis de enero | el veinticuatro de diciembre; el seis de enero; el uno de enero
+fill: Lo ___ importante es la familia. | más
+fill: ¡___ cumpleaños, Ana! | Feliz
+trans: The best thing about Spain is the food. | Lo mejor de España es la comida.
+trans: Merry Christmas! | ¡Feliz Navidad!
+trans: How do you celebrate Christmas? (you all) | ¿Cómo celebráis la Navidad?
+@culture
+Other famous Spanish festivals: **San Fermín** in Pamplona (the running of the bulls, July), **las Fallas** in Valencia (burning huge figures, March), **la Tomatina** in Buñol (a tomato fight, August) and **la Feria de Abril** in Seville.

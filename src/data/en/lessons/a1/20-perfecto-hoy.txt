@@ -1,0 +1,79 @@
+# id: a1-20
+# title: ¿Qué has hecho hoy? Pretérito perfecto
+# unit: 5
+# unit_title: Planes y tiempo libre — plans and free time
+@goals
+Say what you've done today
+Form the pretérito perfecto (he hablado)
+Learn the irregular participles
+@dialog
+Ana: ¡Hola, cariño! ¿Qué tal el día? | Hi, love! How was your day?
+Marek: Muy intenso. He tenido tres reuniones y he escrito muchos correos. | Very busy. I've had three meetings and written loads of emails.
+Ana: ¿Has comido? | Have you eaten?
+Marek: Sí, he comido con un compañero en un restaurante nuevo. ¿Y tú, qué has hecho? | Yes, I had lunch with a colleague at a new restaurant. And what have you done?
+Ana: Esta mañana he ido al médico y luego he hecho la compra. | This morning I went to the doctor's and then I did the food shopping.
+Marek: ¿Y el niño? | And the little one?
+Ana: Ha vuelto del colegio a las cinco y ya ha hecho los deberes. | He came back from school at five and he's already done his homework.
+@vocab
+haber | to have (auxiliary verb) | v
+hoy | today | adv
+esta mañana | this morning | phr
+esta semana | this week | phr
+este año | this year | phr
+ya | already | adv
+la reunión | meeting | f
+el correo | email; post, mail | m
+el compañero / la compañera | colleague, classmate | m
+el restaurante | restaurant | m
+ir al médico | to go to the doctor's | phr | Mañana voy al médico. / Tomorrow I'm going to the doctor's.
+hacer la compra | to do the (food) shopping | phr
+los deberes | homework | mpl
+el niño / la niña | child, boy / girl | m
+cariño | love, darling | m
+intenso / intensa | intense, busy | adj
+@grammar
+## Pretérito perfecto: haber + participle
+It's built like the English present perfect (“I have spoken”):
+|| yo | he hablado
+|| tú | has hablado
+|| él/ella/usted | ha hablado
+|| nosotros/as | hemos hablado
+|| vosotros/as | habéis hablado
+|| ellos/ellas/ustedes | han hablado
+Participle: **-ar → -ado** (hablado), **-er/-ir → -ido** (comido, vivido). It never changes with the person!
+
+## When to use it (in Spain)
+In Spain the pretérito perfecto describes the past within a period that **is still going on** — even where English uses the simple past:
+- **hoy, esta mañana, esta semana, este año** — **Hoy he trabajado mucho.** (I worked a lot today.)
+- life experiences: **¿Has estado en Madrid?** (more at A2)
+- with **ya** (already) and **todavía no** (not yet).
+
+## Irregular participles
+|| hacer | hecho
+|| decir | dicho
+|| ver | visto
+|| escribir | escrito
+|| volver | vuelto
+|| poner | puesto
+|| abrir | abierto
+|| romper | roto
+|| morir | muerto
+Also: **ir → ido**, **ser → sido**.
+
+## Word order
+Nothing goes between **haber** and the participle: **Ya he comido. No he comido.** Pronouns go before haber: **Me he levantado.**
+@exercises
+conj: comer (yo, perfecto) | he comido
+conj: hablar (nosotros, perfecto) | hemos hablado
+conj: hacer (tú, perfecto) | has hecho
+conj: escribir (ella, perfecto) | ha escrito
+conj: volver (ellos, perfecto) | han vuelto
+conj: ver (vosotros, perfecto) | habéis visto
+fill: Hoy me ___ levantado a las siete. | he
+fill: ¿Ya has ___ (decir) la verdad? | dicho
+choice: This morning I went to the doctor's: | Esta mañana he ido al médico. | Esta mañana he ido al médico.; Esta mañana fui médico.; Esta mañana he va al médico.
+trans: What have you done today? | ¿Qué has hecho hoy?
+trans: I've already eaten. | Ya he comido.
+trans: I've written three emails. | He escrito tres correos.
+@culture
+A typical difference: a Spaniard says **Hoy he comido paella**, a Mexican rather **Hoy comí paella**. Learning the Spanish of Spain, use the perfecto for “today” and “this week”.

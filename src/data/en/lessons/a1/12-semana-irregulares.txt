@@ -1,0 +1,77 @@
+# id: a1-12
+# title: Days of the week, how often? Changes e→ie, o→ue, e→i
+# unit: 3
+# unit_title: Día a día — day by day
+@goals
+Name the days of the week
+Say how often you do something
+Conjugate stem-changing verbs
+@dialog
+Raúl: ¿Qué haces los fines de semana? | What do you do at weekends?
+Marek: Los sábados juego al fútbol con mis amigos y los domingos duermo mucho. | On Saturdays I play football with my friends and on Sundays I sleep a lot.
+Raúl: ¿Vas al gimnasio entre semana? | Do you go to the gym during the week?
+Marek: Sí, los lunes y los jueves. A veces también corro por la playa. | Yes, on Mondays and Thursdays. Sometimes I also run on the beach.
+Raúl: Yo nunca hago deporte. Prefiero ver series. | I never do any sport. I prefer watching series.
+Marek: ¡Pues empiezas el lunes conmigo! | Well, you're starting on Monday with me!
+@vocab
+el lunes | Monday | m
+el martes | Tuesday | m
+el miércoles | Wednesday | m
+el jueves | Thursday | m
+el viernes | Friday | m
+el sábado | Saturday | m
+el domingo | Sunday | m
+el fin de semana | weekend | m
+hacer | to do, to make | v | ¿Qué haces? / What are you doing?
+jugar | to play (a game, a sport) | v | Juego al tenis. / I play tennis.
+dormir | to sleep | v
+empezar | to start, to begin | v
+preferir | to prefer | v
+querer | to want; to love | v
+poder | can, to be able to | v
+pedir | to ask for, to order | v
+volver | to come back, to return | v
+correr | to run | v
+el deporte | sport | m
+el gimnasio | gym | m
+siempre | always | adv
+a veces | sometimes | adv
+nunca | never | adv
+todos los días | every day | phr
+@grammar
+## Days of the week
+Unlike in English, they're written with a small letter and with an article: **el lunes** (on Monday), **los lunes** (on Mondays). No preposition: “on Saturday” = **el sábado**.
+
+## Stem changes in the present tense
+In some verbs the stem vowel changes in every person **except nosotros and vosotros**:
+|| | e → ie (querer) | o → ue (poder) | e → i (pedir)
+|| yo | quiero | puedo | pido
+|| tú | quieres | puedes | pides
+|| él/ella | quiere | puede | pide
+|| nosotros | queremos | podemos | pedimos
+|| vosotros | queréis | podéis | pedís
+|| ellos | quieren | pueden | piden
+- e→ie: empezar, preferir, pensar, cerrar, entender
+- o→ue: dormir, volver, poder, contar, encontrar; **jugar** has u→ue: juego
+- e→i: pedir, repetir, servir, vestirse
+
+## Hacer — irregular “yo” form
+**hago**, haces, hace, hacemos, hacéis, hacen.
+
+## Nunca
+**Nunca** before the verb: **Nunca hago deporte.** After the verb it needs **no** (a double negative is correct in Spanish): **No hago nunca deporte.**
+@exercises
+conj: querer (yo) | quiero
+conj: poder (nosotros) | podemos
+conj: dormir (tú) | duermes
+conj: jugar (ellos) | juegan
+conj: pedir (ella) | pide
+conj: empezar (vosotros) | empezáis
+conj: preferir (yo) | prefiero
+conj: hacer (yo) | hago
+choice: On Saturdays I play tennis. | Los sábados juego al tenis. | En sábados juego al tenis.; Los sábados juego al tenis.; Los sábados jugo al tenis.
+choice: The day after Wednesday: | el jueves | el martes; el jueves; el viernes
+trans: I never do any sport. | Nunca hago deporte. /// No hago nunca deporte.
+trans: What do you do at weekends? | ¿Qué haces los fines de semana?
+@culture
+In Spain **el fútbol** is almost a religion: the whole country watches Real Madrid against FC Barcelona (**el Clásico**), and on match days it's hard to find a free seat in a bar.

@@ -1,0 +1,64 @@
+# id: a1-19
+# title: Planes — ir a + infinitive, querer, poder, tener que
+# unit: 5
+# unit_title: Planes y tiempo libre — plans and free time
+@goals
+Talk about future plans (ir a + infinitive)
+Talk about what you have to do (tener que)
+Accept or turn down an invitation
+@dialog
+Diego: ¿Qué vas a hacer este fin de semana? | What are you going to do this weekend?
+Marek: El sábado voy a visitar a mis padres. ¿Y tú? | On Saturday I'm going to visit my parents. And you?
+Diego: Vamos a hacer una barbacoa en mi casa. ¿Puedes venir el domingo? | We're going to have a barbecue at my place. Can you come on Sunday?
+Marek: El domingo por la mañana tengo que trabajar, pero por la tarde sí puedo. | On Sunday morning I have to work, but in the afternoon I can.
+Diego: ¡Genial! ¿Vas a traer a tu familia? | Great! Are you going to bring your family?
+Marek: Mi mujer va a venir, pero mi hijo no puede: tiene que estudiar. | My wife is going to come, but my son can't: he has to study.
+@vocab
+ir a + infinitivo | to be going to (future) | phr | Voy a estudiar. / I'm going to study.
+tener que + infinitivo | to have to | phr | Tengo que trabajar. / I have to work.
+visitar | to visit | v | Visito a mis abuelos. / I visit my grandparents.
+venir | to come | v | ¿Vienes? / Are you coming?
+traer | to bring | v
+invitar | to invite | v
+la barbacoa | barbecue | f
+la fiesta | party; holiday, festival | f
+el cumpleaños | birthday | m
+mañana | tomorrow | adv
+pasado mañana | the day after tomorrow | adv
+esta noche | tonight | phr
+la próxima semana | next week | phr
+genial | great, brilliant | adj
+lo siento | I'm sorry | phr
+@grammar
+## Ir a + infinitive — the simplest future
+Just like English “going to”: **ir** (voy, vas, va, vamos, vais, van) + **a** + infinitive:
+- **Voy a visitar a mis padres.** — I'm going to visit my parents.
+- **¿Qué vas a hacer mañana?** — What are you going to do tomorrow?
+- **Va a llover.** — It's going to rain.
+
+## Tener que — to have to
+**tengo que / tienes que / tiene que…** + infinitive: **Tengo que trabajar.**
+
+## Querer / poder + infinitive
+**Quiero ir. ¿Puedes venir?** Notice the stem changes: quiero, puedo.
+
+## The personal “a”
+When the object of a verb is a **person**, Spanish puts **a** before it (English has nothing here): **Visito a mis padres. Invito a Marta.** But: **Visito Madrid** (a place — no “a”).
+
+## Venir and traer
+- **venir**: vengo, vienes, viene, venimos, venís, vienen
+- **traer**: traigo, traes, trae, traemos, traéis, traen
+@exercises
+fill: Mañana ___ a llover. | va
+fill: Nosotros ___ a hacer una fiesta. | vamos
+fill: ¿Qué ___ a hacer tú esta noche? | vas
+fill: Mi hijo tiene ___ estudiar. | que
+fill: Visito ___ mis abuelos los domingos. | a
+conj: venir (yo) | vengo
+conj: traer (yo) | traigo
+choice: I have to work: | Tengo que trabajar. | Tengo trabajar.; Tengo que trabajar.; Debo de trabajar.
+trans: What are you going to do at the weekend? | ¿Qué vas a hacer el fin de semana? /// ¿Qué vas a hacer este fin de semana?
+trans: Can you come on Sunday? | ¿Puedes venir el domingo?
+trans: I'm sorry, I have to study. | Lo siento, tengo que estudiar.
+@culture
+When invited to a Spanish home it's fine to arrive ten or fifteen minutes late — turning up exactly on time for a private get-together can even surprise people. For work and official appointments, though, you arrive on time.

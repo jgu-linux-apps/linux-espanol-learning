@@ -40,7 +40,10 @@ def load():
     with _lock:
         reg = _read(REG, None)
         if not reg or not reg.get("profiles"):
-            reg = {"active": DEFAULT_ID, "profiles": [{"id": DEFAULT_ID, "name": "Główny"}]}
+            from .i18n import system_lang
+            lang = system_lang()
+            reg = {"active": DEFAULT_ID,
+                   "profiles": [{"id": DEFAULT_ID, "name": "Główny" if lang == "pl" else "Main", "lang": lang}]}
             _write(REG, reg)
         if reg["active"] not in [p["id"] for p in reg["profiles"]]:
             reg["active"] = reg["profiles"][0]["id"]
@@ -76,7 +79,7 @@ def set_active(pid):
             _write(REG, reg)
 
 
-def add(name):
+def add(name, lang=None):
     with _lock:
         reg = load()
         base = re.sub(r"[^a-z0-9]+", "-", name.lower().encode("ascii", "ignore").decode()).strip("-") or "profil"
@@ -84,7 +87,10 @@ def add(name):
         ids = {p["id"] for p in reg["profiles"]}
         while pid in ids or pid == DEFAULT_ID:
             pid, n = f"{base}-{n}", n + 1
-        reg["profiles"].append({"id": pid, "name": name.strip()[:30] or "Profil"})
+        entry = {"id": pid, "name": name.strip()[:30] or "Profil"}
+        if lang:
+            entry["lang"] = lang
+        reg["profiles"].append(entry)
         _write(REG, reg)
         return pid
 
@@ -95,6 +101,15 @@ def rename(pid, name):
         for p in reg["profiles"]:
             if p["id"] == pid:
                 p["name"] = name.strip()[:30] or p["name"]
+        _write(REG, reg)
+
+
+def set_lang(pid, lang):
+    with _lock:
+        reg = load()
+        for p in reg["profiles"]:
+            if p["id"] == pid:
+                p["lang"] = lang
         _write(REG, reg)
 
 
@@ -143,3 +158,15 @@ def migrate_shared():
         _write(SHARED_FILE, data)
     except Exception:  # noqa
         pass
+
+
+DEFAULT_NAMES = {"pl": "Główny", "en": "Main"}
+
+
+def display_name(p):
+    """The default profile's name follows the profile's course language until someone renames it."""
+    name = (p or {}).get("name", "")
+    if name in DEFAULT_NAMES.values():
+        from .i18n import profile_lang
+        return DEFAULT_NAMES.get(profile_lang(p), name)
+    return name

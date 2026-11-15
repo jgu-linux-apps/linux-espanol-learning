@@ -1,0 +1,72 @@
+# id: a2-22
+# title: Ayer… Pretérito indefinido (regular verbs)
+# unit: 6
+# unit_title: Experiencias — experiences
+@goals
+Talk about finished events in the past
+Conjugate regular verbs in the indefinido
+Tell the perfecto and the indefinido apart
+@dialog
+Lola: ¿Qué hiciste ayer? | What did you do yesterday?
+Marek: Ayer trabajé hasta las seis y después cené con unos amigos en el centro. | Yesterday I worked until six and then had dinner with some friends in the centre.
+Lola: ¿Y el fin de semana pasado? | And last weekend?
+Marek: El sábado visité el castillo de Malbork con mi familia. Comimos allí y volvimos por la noche. | On Saturday I visited Malbork Castle with my family. We had lunch there and came back in the evening.
+Lola: ¿Os gustó? | Did you like it?
+Marek: Sí, mucho. Mi hijo sacó cien fotos. | Yes, a lot. My son took a hundred photos.
+Lola: Yo el sábado no salí de casa. Leí un libro entero. | I didn't leave the house on Saturday. I read a whole book.
+@vocab
+ayer | yesterday | adv
+anoche | last night | adv
+anteayer | the day before yesterday | adv
+el año pasado | last year | phr
+la semana pasada | last week | phr
+el fin de semana pasado | last weekend | phr
+hace dos días | two days ago | phr
+en 2020 | in 2020 | phr
+el castillo | castle | m
+sacar | to take out; to take (photos), to get (a mark) | v | sacar fotos / to take photos
+entero / entera | whole, entire | adj
+hasta | until; as far as | prep
+empezar | to start, to begin | v
+terminar | to finish | v
+llegar | to arrive | v
+nacer | to be born | v
+@grammar
+## Pretérito indefinido — regular verbs
+The indefinido is the Spanish simple past (“I spoke, I ate”).
+|| | hablar | comer | vivir
+|| yo | hablé | comí | viví
+|| tú | hablaste | comiste | viviste
+|| él/ella/usted | habló | comió | vivió
+|| nosotros/as | hablamos | comimos | vivimos
+|| vosotros/as | hablasteis | comisteis | vivisteis
+|| ellos/ellas/ustedes | hablaron | comieron | vivieron
+The accent matters: **hablo** (I speak) ≠ **habló** (he spoke).
+
+## Spelling changes in the yo form
+- **-car → -qué**: sacar → **saqué**, buscar → **busqué**, tocar → **toqué**
+- **-gar → -gué**: llegar → **llegué**, pagar → **pagué**, jugar → **jugué**
+- **-zar → -cé**: empezar → **empecé**, almorzar → **almorcé**
+- **leer, creer, oír**: leyó, leyeron; creyó; oyó.
+
+## Perfecto or indefinido? (Spain)
+- **Perfecto** — a period that is still going on: **hoy, esta semana, este año**, experiences.
+- **Indefinido** — a finished period: **ayer, anoche, la semana pasada, en 2020, hace dos años**.
+|| Hoy he comido paella. | I had paella today.
+|| Ayer comí paella. | I had paella yesterday.
+English uses the simple past in both, so let the time word decide.
+@exercises
+conj: trabajar (yo, indefinido) | trabajé
+conj: comer (nosotros, indefinido) | comimos
+conj: vivir (ellos, indefinido) | vivieron
+conj: hablar (tú, indefinido) | hablaste
+conj: llegar (yo, indefinido) | llegué
+conj: empezar (yo, indefinido) | empecé
+conj: leer (ella, indefinido) | leyó
+choice: Ayer ___ con mis amigos. | cené | he cenado; cené; ceno
+choice: Hoy ___ mucho. | he trabajado | he trabajado; trabajé; trabajaba
+choice: En 2019 ___ en Madrid. | viví | he vivido; viví; vivo
+trans: Yesterday I worked until six. | Ayer trabajé hasta las seis.
+trans: Last year we visited Seville. | El año pasado visitamos Sevilla.
+@culture
+Many places have their own Spanish names: London is **Londres**, Edinburgh **Edimburgo**, Dublin **Dublín**, New York **Nueva York** — and Warsaw, where Marek's family flies from, is **Varsovia**.

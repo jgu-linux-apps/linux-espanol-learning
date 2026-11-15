@@ -1,0 +1,65 @@
+# id: a2-21
+# title: ¿Has estado alguna vez…? Life experiences
+# unit: 6
+# unit_title: Experiencias — experiences
+@goals
+Ask about experiences and talk about yours
+Use alguna vez, nunca, ya, todavía no, varias veces
+@dialog
+Irene: Marek, ¿has estado alguna vez en España? | Marek, have you ever been to Spain?
+Marek: Sí, he estado tres veces: en Barcelona, en Madrid y en las Islas Canarias. | Yes, I've been three times: to Barcelona, Madrid and the Canary Islands.
+Irene: ¿Y has probado la paella de verdad? | And have you tried real paella?
+Marek: Todavía no. Nunca he estado en Valencia. | Not yet. I've never been to Valencia.
+Irene: ¡Tienes que ir! ¿Has visto alguna vez un partido en el Bernabéu? | You have to go! Have you ever seen a match at the Bernabéu?
+Marek: Sí, ya he visto dos partidos allí. ¡Una experiencia increíble! | Yes, I've already seen two matches there. An amazing experience!
+Irene: Pues yo nunca he ido a un estadio. | Well, I've never been to a stadium.
+@vocab
+alguna vez | ever (in questions) | phr | ¿Has comido pulpo alguna vez? / Have you ever eaten octopus?
+nunca | never | adv
+ya | already | adv
+todavía no | not yet | phr
+la vez / las veces | time / times (occasion) | f | dos veces / twice
+varias veces | several times | phr
+muchas veces | many times | phr
+probar | to try, to taste | v
+conocer | to know, to get to know | v | ¿Conoces Sevilla? / Do you know Seville?
+la experiencia | experience | f
+increíble | amazing, incredible | adj
+el partido | match, game | m
+el estadio | stadium | m
+la isla | island | f
+de verdad | real; really | phr
+subir | to go up, to climb; to get on | v
+la montaña | mountain, the mountains | f
+el extranjero | abroad; foreigner | m | viajar al extranjero / to travel abroad
+@grammar
+## Pretérito perfecto for experiences
+Just like the English present perfect, for experiences in your **whole life** (no particular date) use the perfecto:
+- **¿Has estado alguna vez en Japón?** — Have you ever been to Japan?
+- **He estado dos veces.** — I've been twice.
+- **Nunca he probado el pulpo.** — I've never tried octopus.
+
+## Ya / todavía no
+- **¿Ya has visto la película?** — Have you seen the film yet?
+- **Sí, ya la he visto. / No, todavía no la he visto.**
+
+## Estar en or ir a?
+- **He estado en Madrid.** — I've been in Madrid (I stayed there).
+- **He ido a Madrid.** — I've gone to Madrid (movement).
+
+## Conocer
+**conocer** (yo **conozco**) — to know a person or a place: **¿Conoces a Pedro? ¿Conoces Madrid?** Facts and skills use **saber**: **Sé nadar.** — I can swim.
+@exercises
+fill: ¿___ estado alguna vez en México? (tú) | Has
+fill: Nunca ___ probado el gazpacho. (yo) | he
+fill: Mis padres ___ viajado mucho. | han
+fill: ¿Ya habéis ___ (ver) la catedral? | visto
+choice: Not yet: | todavía no | ya no; todavía no; nunca más
+choice: Do you know Barcelona? | ¿Conoces Barcelona? | ¿Sabes Barcelona?; ¿Conoces Barcelona?; ¿Conoces a Barcelona?
+choice: I can swim: | Sé nadar. | Conozco nadar.; Sé nadar.; Puedo nadar bien conozco.
+conj: conocer (yo) | conozco
+trans: Have you ever been to Spain? | ¿Has estado alguna vez en España?
+trans: I've never seen a match at a stadium. | Nunca he visto un partido en un estadio.
+trans: I've been to Madrid twice. | He estado en Madrid dos veces. /// He estado dos veces en Madrid.
+@culture
+Real **paella valenciana** comes from around Valencia and is made with chicken, rabbit and green beans — not seafood. Paella with seafood is **paella de marisco**.

@@ -5,6 +5,7 @@ import time
 import gi
 gi.require_version("Gst", "1.0")
 from gi.repository import Gst, GLib  # noqa: E402
+from .i18n import _  # noqa: E402
 
 Gst.init(None)
 
@@ -152,6 +153,6 @@ class Recorder:
                 pass
         elif msg.type in (Gst.MessageType.EOS, Gst.MessageType.ERROR):
             if msg.type == Gst.MessageType.ERROR:
-                err, _ = msg.parse_error()
+                err, _u = msg.parse_error()
                 print("Błąd nagrywania:", err)
             self._finish()

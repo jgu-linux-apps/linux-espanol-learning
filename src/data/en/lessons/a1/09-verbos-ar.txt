@@ -1,0 +1,68 @@
+# id: a1-09
+# title: -ar verbs in the present tense
+# unit: 3
+# unit_title: Día a día — day by day
+@goals
+Conjugate regular -ar verbs
+Talk about work, study and everyday activities
+Ask yes/no questions and say no
+@dialog
+Nuria: ¿Trabajas o estudias? | Do you work or study?
+Marek: Trabajo en una empresa de informática. Y por la tarde estudio español. | I work at an IT company. And in the afternoon I study Spanish.
+Nuria: ¿Dónde estudias? | Where do you study?
+Marek: En casa, con una aplicación. Escucho diálogos y practico la pronunciación. | At home, with an app. I listen to dialogues and practise pronunciation.
+Nuria: ¡Hablas muy bien! ¿Tu mujer también habla español? | You speak very well! Does your wife speak Spanish too?
+Marek: No, no habla español, pero canta canciones en español. | No, she doesn't speak Spanish, but she sings songs in Spanish.
+@vocab
+estudiar | to study, to learn | v | Estudio español. / I'm learning Spanish.
+escuchar | to listen (to) | v | Escucho música. / I listen to music.
+practicar | to practise | v
+cantar | to sing | v
+bailar | to dance | v
+cocinar | to cook | v
+comprar | to buy | v
+llevar | to wear; to take, to carry | v
+mirar | to look (at), to watch | v
+necesitar | to need | v | Necesito ayuda. / I need help.
+tomar | to take; to have (food, drink) | v | Tomo un café. / I'm having a coffee.
+llamar | to call, to phone | v | Llamo a mi madre. / I call my mother.
+la empresa | company, firm | f
+la tarde | afternoon | f | por la tarde / in the afternoon
+la mañana | morning | f | por la mañana / in the morning
+la noche | night, evening | f | por la noche / in the evening, at night
+la canción | song | f
+la música | music | f
+también | also, too | adv
+o | or | conj
+@grammar
+## Regular -ar verbs (hablar — to speak)
+|| yo | hablo
+|| tú | hablas
+|| él / ella / usted | habla
+|| nosotros/as | hablamos
+|| vosotros/as | habláis
+|| ellos / ellas / ustedes | hablan
+Drop **-ar** and add the endings **-o, -as, -a, -amos, -áis, -an**. Each person has its own ending — that's why the pronoun can be left out.
+
+## Saying no
+Put **no** before the verb: **No hablo francés.** — I don't speak French. There's no “do / don't” in Spanish.
+
+## Yes/no questions
+The word order doesn't change — intonation (and the ¿? marks) is enough: **¿Hablas español?** — Do you speak Spanish?
+
+## Times of day
+**por la mañana** (in the morning), **por la tarde** (in the afternoon), **por la noche** (in the evening / at night).
+@exercises
+conj: hablar (nosotros) | hablamos
+conj: estudiar (tú) | estudias
+conj: trabajar (ellos) | trabajan
+conj: escuchar (vosotros) | escucháis
+conj: cocinar (yo) | cocino
+conj: comprar (ella) | compra
+fill: Mi hermano no ___ (bailar) bien. | baila
+fill: ¿___ (tú, tomar) un café? | Tomas
+trans: I don't speak German. | No hablo alemán.
+trans: Do you work or study? | ¿Trabajas o estudias?
+trans: In the afternoon I study Spanish. | Por la tarde estudio español.
+@culture
+Spaniards have lunch late — usually between 2 and 3:30 pm — and dinner as late as 9 or 10 pm. That's why “la tarde” in Spain lasts until the evening.

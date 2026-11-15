@@ -1,0 +1,26 @@
+# id: r06
+# level: A2
+# unit: 6
+# title: Frida Kahlo, una vida intensa
+@text
+Frida Kahlo nació en 1907 en Coyoacán, cerca de la Ciudad de México. A los seis años tuvo poliomielitis y desde entonces una de sus piernas fue más delgada que la otra.
+En 1925, cuando tenía dieciocho años, sufrió un accidente de autobús muy grave. Pasó muchos meses en la cama y durante ese tiempo empezó a pintar. Su madre le puso un espejo encima de la cama y así Frida pintó sus primeros autorretratos.
+En 1929 se casó con el pintor Diego Rivera. Su relación fue difícil: se separaron y, un año después, se casaron otra vez. Frida viajó a Estados Unidos y a Francia, y sus cuadros tuvieron mucho éxito.
+Murió en 1954, en la Casa Azul, donde nació. Hoy esa casa es un museo que visitan miles de personas cada año.
+@translation
+Frida Kahlo was born in 1907 in Coyoacán, near Mexico City. At six she caught polio, and from then on one of her legs was thinner than the other.
+In 1925, when she was eighteen, she had a very serious bus accident. She spent many months in bed and during that time she started painting. Her mother hung a mirror above her bed, and that is how Frida painted her first self-portraits.
+In 1929 she married the painter Diego Rivera. Their relationship was difficult: they split up and a year later married again. Frida travelled to the United States and France, and her paintings were a great success.
+She died in 1954 in the Blue House where she was born. Today that house is a museum visited by thousands of people every year.
+@glossary
+delgado / delgada | thin, slim
+sufrir | to suffer; to have (an accident)
+el espejo | mirror
+el autorretrato | self-portrait
+el cuadro | painting, picture
+el éxito | success
+@questions
+¿Dónde nació Frida Kahlo? | En Coyoacán. | En Madrid.; En Coyoacán.; En París.
+¿Qué le pasó en 1925? | Tuvo un accidente de autobús. | Se casó.; Tuvo un accidente de autobús.; Viajó a Francia.
+¿Cómo pintó sus primeros autorretratos? | Con un espejo encima de la cama. | En un museo.; Con un espejo encima de la cama.; Con Diego Rivera.
+¿Qué es hoy la Casa Azul? | Un museo. | Un hotel.; Un museo.; Una escuela.

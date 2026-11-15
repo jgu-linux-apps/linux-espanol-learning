@@ -106,13 +106,36 @@ TIPS = [
 ]
 
 
+# the same tips for English speakers (other traps: the English r, v, puffed p/t/k, gliding vowels)
+TIPS_EN = [
+    ("rr", "“rr” is a long trilled r (several taps of the tongue) — nothing like the English r."),
+    ("ll", "Say “ll” like the “y” in “yes” (in most of Spain) — not like “l”."),
+    ("ñ", "“ñ” sounds like the “ny” in “canyon”: “niña” ≈ “neen-ya”."),
+    ("j", "“j” is a strong “h” from the back of the throat, like Scottish “loch”."),
+    ("z", "In Spain “z” (and “ce”, “ci”) sounds like the “th” in “think”."),
+    ("ce", "Say “ce” with the “th” of “think”: cena ≈ “thay-na”."),
+    ("ci", "Say “ci” with the “th” of “think”: cine ≈ “thee-nay”."),
+    ("h", "“h” is silent — hola = “ola”."),
+    ("v", "“v” sounds exactly like “b” — never the English “v”."),
+    ("qu", "“qu” is just “k” — “que” = “ke”, the “u” is silent."),
+    ("gue", "In “gue/gui” the “u” is silent: guitarra = “gitarra”."),
+    ("gi", "Say “gi/ge” with the throaty “h” of “j”: gente = “hen-te”."),
+    ("ge", "Say “ge/gi” with the throaty “h” of “j”: gente = “hen-te”."),
+    ("r", "A single “r” inside a word is one quick tap, like the “tt” in American “butter”."),
+    ("e", "Spanish “e” is short and pure, as in “bed” — don't glide it into “ay”."),
+    ("o", "Spanish “o” is short and pure, as in “not” — don't glide it into “oh-oo”."),
+    ("y", "“y” at the end of a word is “ee” (muy = “mwee”), before a vowel like the “y” in “yes”."),
+]
+
+
 def tips_for(words):
     """Podpowiedzi dla słów wymówionych niepoprawnie."""
     out = []
     seen = set()
     for w in words:
         lw = w.lower()
-        for key, tip in TIPS:
+        from .i18n import LANG
+        for key, tip in (TIPS_EN if LANG == "en" else TIPS):
             if key in lw and key not in seen:
                 if key == "e" and len(out) >= 2:
                     continue

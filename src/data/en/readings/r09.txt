@@ -1,0 +1,28 @@
+# id: r09
+# level: A2
+# unit: 9
+# title: El trabajo del futuro
+@text
+¿Cómo será el trabajo dentro de veinte años? Muchos expertos piensan que la inteligencia artificial cambiará casi todas las profesiones. Las máquinas harán las tareas repetitivas y las personas tendrán más tiempo para tareas creativas.
+Probablemente trabajaremos menos horas. En España ya hay empresas que están probando la semana de cuatro días, y los primeros resultados son positivos: los trabajadores están más contentos y no son menos productivos.
+El teletrabajo también seguirá creciendo. Mucha gente podrá vivir en pueblos pequeños y trabajar para empresas de Madrid, Berlín o Nueva York. Esto podría ayudar a la llamada "España vaciada", las zonas del interior que están perdiendo población.
+Sin embargo, no todo será fácil. Habrá que aprender continuamente, y algunos trabajos desaparecerán. Por eso, según los expertos, la habilidad más importante del futuro será saber adaptarse.
+@translation
+What will work be like in twenty years? Many experts believe that artificial intelligence will change almost every job. Machines will do repetitive tasks, and people will have more time for creative ones.
+We'll probably work fewer hours. In Spain there are already companies testing a four-day working week, and the first results are positive: employees are happier and no less productive.
+Remote work will grow too. Many people will be able to live in small towns and work for companies in Madrid, Berlin or New York. This could help the so-called “emptied Spain” — the inland regions that are losing their population.
+Not everything will be easy, though. People will have to keep learning, and some jobs will disappear. That's why, according to the experts, the most important skill of the future will be the ability to adapt.
+@glossary
+la inteligencia artificial | artificial intelligence
+la máquina | machine
+el teletrabajo | remote work, working from home
+crecer | to grow
+vaciado / vaciada | emptied, depopulated
+desaparecer | to disappear
+la habilidad | skill, ability
+adaptarse | to adapt
+@questions
+¿Qué harán las máquinas? | Las tareas repetitivas. | Las tareas creativas.; Las tareas repetitivas.; Nada.
+¿Qué están probando algunas empresas españolas? | La semana de cuatro días. | El trabajo los domingos.; La semana de cuatro días.; Trabajar más horas.
+¿Qué es la "España vaciada"? | Zonas del interior que pierden población. | Las grandes ciudades.; Zonas del interior que pierden población.; Las playas en invierno.
+¿Cuál será la habilidad más importante? | Saber adaptarse. | Saber programar.; Hablar inglés.; Saber adaptarse.

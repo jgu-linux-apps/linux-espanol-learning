@@ -19,13 +19,14 @@ import random
 import functools
 
 from .paths import DATA
+from .i18n import _, data_path  # noqa: E402
 
 POS_NAMES = {
-    "m": "rzeczownik r. męski", "f": "rzeczownik r. żeński", "mf": "rzeczownik r. męski i żeński",
-    "mpl": "rzeczownik l. mn. (męski)", "fpl": "rzeczownik l. mn. (żeński)",
-    "v": "czasownik", "vr": "czasownik zwrotny", "adj": "przymiotnik", "adv": "przysłówek",
-    "prep": "przyimek", "conj": "spójnik", "pron": "zaimek", "interj": "wykrzyknik",
-    "num": "liczebnik", "phr": "zwrot", "art": "rodzajnik", "det": "określnik",
+    "m": _("rzeczownik r. męski"), "f": _("rzeczownik r. żeński"), "mf": _("rzeczownik r. męski i żeński"),
+    "mpl": _("rzeczownik l. mn. (męski)"), "fpl": _("rzeczownik l. mn. (żeński)"),
+    "v": _("czasownik"), "vr": _("czasownik zwrotny"), "adj": _("przymiotnik"), "adv": _("przysłówek"),
+    "prep": _("przyimek"), "conj": _("spójnik"), "pron": _("zaimek"), "interj": _("wykrzyknik"),
+    "num": _("liczebnik"), "phr": _("zwrot"), "art": _("rodzajnik"), "det": _("określnik"),
 }
 
 
@@ -93,17 +94,17 @@ class Lesson:
                 self.goals.append(line.lstrip("- "))
             elif section == "dialog":
                 who, rest = line.split(":", 1) if ":" in line.split("|")[0] else ("", line)
-                es, _, pl = rest.partition("|")
+                es, _u, pl = rest.partition("|")
                 self.dialog.append((who.strip(), es.strip(), pl.strip()))
             elif section == "vocab":
                 p = [x.strip() for x in line.split("|")]
                 ex_es, ex_pl = "", ""
                 if len(p) > 3 and p[3]:
-                    ex_es, _, ex_pl = p[3].partition(" / ")
+                    ex_es, _u, ex_pl = p[3].partition(" / ")
                 self.vocab.append(dict(es=p[0], pl=p[1], pos=p[2] if len(p) > 2 else "",
                                        ex_es=ex_es.strip(), ex_pl=ex_pl.strip(), lesson=None))
             elif section == "exercises":
-                typ, _, rest = line.partition(":")
+                typ, _u, rest = line.partition(":")
                 p = [x.strip() for x in rest.split("|")]
                 ex = dict(type=typ.strip(), q=p[0], answers=[], options=[], hint="")
                 if len(p) > 1:
@@ -127,15 +128,15 @@ class Lesson:
             if len(others) >= 3:
                 opts = rng.sample(others, 3) + [v["pl"]]
                 rng.shuffle(opts)
-                out.append(dict(type="choice", q=f"Co znaczy „{v['es']}”?", answers=[v["pl"]],
+                out.append(dict(type="choice", q=_('Co znaczy „{}”?').format(v['es']), answers=[v["pl"]],
                                 options=opts, hint="", source=self.id, audio=v["es"]))
             if "+" in v["es"] or "…" in v["es"]:
                 continue
-            out.append(dict(type="trans", q=f"Przetłumacz na hiszpański: {v['pl']}",
+            out.append(dict(type="trans", q=_('Przetłumacz na hiszpański: {}').format(v['pl']),
                             answers=_vocab_answers(v["es"]), options=[], hint=_vocab_hint(v), source=self.id))
         for who, es, pl in self.dialog:
             if pl and 2 <= len(es.split()) <= 12:
-                out.append(dict(type="listen", q="Posłuchaj i zapisz zdanie po hiszpańsku.",
+                out.append(dict(type="listen", q=_("Posłuchaj i zapisz zdanie po hiszpańsku."),
                                 answers=[es], options=[], hint=pl, source=self.id, audio=es))
                 if len(es.split()) >= 3:
                     out.append(dict(type="order", q=pl, answers=[es], options=[], hint="",
@@ -143,7 +144,7 @@ class Lesson:
         return out
 
     def speaking_items(self):
-        return [es for _, es, _ in self.dialog if es] + [v["es"] for v in self.vocab[:6]]
+        return [es for _u, es, _u in self.dialog if es] + [v["es"] for v in self.vocab[:6]]
 
 
 def _vocab_hint(v):
@@ -153,12 +154,12 @@ def _vocab_hint(v):
     parts = [POS_NAMES.get(v["pos"], "")] if POS_NAMES.get(v["pos"]) else []
     words = core.split()
     if len(words) > 1:
-        parts.append(f"{len(words)} słowa, pierwsze zaczyna się na „{words[0][0]}”")
+        parts.append(_('{} słowa, pierwsze zaczyna się na „{}”').format(len(words), words[0][0]))
     elif core:
         n = len(core.rstrip("?!"))
-        parts.append(f"zaczyna się na „{core[0]}”, {n} liter" + ("y" if n in (2, 3, 4) else ""))
+        parts.append(_('zaczyna się na „{}”, {} liter').format(core[0], n) + ("y" if n in (2, 3, 4) else ""))
     if first != core and re.match(r"^(el|la|los|las)\s", first):
-        parts.append("z rodzajnikiem lub bez")
+        parts.append(_("z rodzajnikiem lub bez"))
     return " · ".join(parts)
 
 
@@ -183,7 +184,7 @@ class Course:
                 continue
             for fn in sorted(os.listdir(d)):
                 if fn.endswith(".txt"):
-                    les = Lesson(os.path.join(d, fn))
+                    les = Lesson(data_path("lessons", lvl, fn))   # data/en/... when it exists
                     for v in les.vocab:
                         v["lesson"] = les.id
                     self.lessons.append(les)
@@ -203,8 +204,8 @@ class Course:
     def unit_title(self, level, unit):
         for l in self.lessons:
             if l.level == level and l.unit == unit:
-                return l.meta.get("unit_title", f"Dział {unit}")
-        return f"Dział {unit}"
+                return l.meta.get("unit_title", _('Dział {}').format(unit))
+        return _('Dział {}').format(unit)
 
     def next_lesson(self, done_ids):
         for l in self.lessons:
@@ -262,7 +263,7 @@ def load_readings():
                         opts = [o.strip() for o in p[2].split(";")] if len(p) > 2 else []
                         r["questions"].append(dict(type="choice", q=p[0], answers=[p[1]],
                                                    options=opts, hint=""))
-        with open(os.path.join(d, fn), encoding="utf-8") as f:
+        with open(data_path("readings", fn), encoding="utf-8") as f:
             for line in f.read().splitlines():
                 if line.startswith("# ") and ":" in line and section is None:
                     k, v = line[2:].split(":", 1)
@@ -279,7 +280,7 @@ def load_readings():
 
 def load_alphabet():
     """data/alphabet.txt: sekcje @letters (litera | nazwa | wymowa PL | przykłady) i @sounds."""
-    path = os.path.join(DATA, "alphabet.txt")
+    path = data_path("alphabet.txt")
     res = {"letters": [], "sounds": [], "stress": "", "keyboard": ""}
     if not os.path.exists(path):
         return res
@@ -305,7 +306,7 @@ def load_alphabet():
 
 def load_videos():
     """data/videos.txt: [Poziom] potem 'tytuł | url | opis'."""
-    path = os.path.join(DATA, "videos.txt")
+    path = data_path("videos.txt")
     out = []
     if not os.path.exists(path):
         return out
@@ -326,7 +327,7 @@ def load_videos():
 
 def load_extra_vocab():
     """data/vocab_extra.txt: [Temat] potem 'słowo | tłumaczenie | część mowy | przykład'."""
-    path = os.path.join(DATA, "vocab_extra.txt")
+    path = data_path("vocab_extra.txt")
     out = []
     if not os.path.exists(path):
         return out
@@ -342,7 +343,7 @@ def load_extra_vocab():
             p = [x.strip() for x in line.split("|")]
             ex_es, ex_pl = "", ""
             if len(p) > 3 and p[3]:
-                ex_es, _, ex_pl = p[3].partition(" / ")
+                ex_es, _u, ex_pl = p[3].partition(" / ")
             out.append(dict(es=p[0], pl=p[1], pos=p[2] if len(p) > 2 else "", ex_es=ex_es.strip(),
                             ex_pl=ex_pl.strip(), lesson=None, topic=topic, level="A1–A2"))
     return out

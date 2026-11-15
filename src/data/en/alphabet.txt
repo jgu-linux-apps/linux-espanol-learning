@@ -1,0 +1,66 @@
+// letter | name | how to pronounce it (for English speakers) | examples (word = translation; …)
+@letters
+A a | a | like the “a” in “father”, short and open | agua = water; casa = house; mapa = map
+B b | be | like English “b”; between vowels very soft, the lips barely touch | bueno = good; Barcelona; sábado = Saturday
+C c | ce | before e, i — like the “th” in “think” (Spain); elsewhere — “k” | cena = dinner; cine = cinema; casa = house; Cuba
+D d | de | like “d”, tongue on the teeth; between vowels and at the end very soft, almost the “th” in “this” | dos = two; nada = nothing; Madrid
+E e | e | a pure, short “e” as in “bed” — never “ee” or “ay” | euro; mesa = table; leche = milk
+F f | efe | like English “f” | foto = photo; café = coffee; familia = family
+G g | ge | before e, i — a rough “h” from the throat (like Spanish “j”); elsewhere — “g” as in “go” | gente = people; gato = cat; guitarra = guitar; agua = water
+H h | hache | silent — never pronounced | hola = hello; hotel; hermano = brother
+I i | i | like the “ee” in “see”, but short | isla = island; amigo = friend; vivir = to live
+J j | jota | a strong “h” from the back of the throat, like the “ch” in Scottish “loch” | jamón = ham; ojo = eye; Juan
+K k | ka | “k” (only in foreign words) | kilo; kiwi
+L l | ele | a clear “l” as in “leaf”, never the dark “l” of “full” | luna = moon; sol = sun; Lola
+LL ll | doble ele | in most of Spain like the “y” in “yes” | llamar = to call; calle = street; paella
+M m | eme | like “m” | madre = mother; mesa = table; mamá = mum
+N n | ene | like “n” | noche = night; nada = nothing; nuevo = new
+Ñ ñ | eñe | like the “ny” in “canyon” | España = Spain; niño = child; mañana = tomorrow
+O o | o | a pure, short “o” as in “not” — never “oh-oo” | ocho = eight; ojo = eye; mono = monkey
+P p | pe | “p” without the puff of air of English “p” | padre = father; papá = dad; sopa = soup
+Q q | cu | only in “que, qui” = “ke, kee” (the “u” is silent) | queso = cheese; qué = what; quince = fifteen
+R r | erre | at the start of a word and after n, l, s — a long rolled “rr”; inside a word — one quick tap, like the “tt” in American “butter” | pero = but; caro = expensive; Roma; radio
+RR rr | doble erre | a long, trilled “r” (several taps of the tongue) | perro = dog; carro = cart; tierra = earth
+S s | ese | “s” as in “see”, never “z” | sí = yes; casa = house; seis = six
+T t | te | “t” with the tongue on the teeth, without the puff of air | todo = everything; tomate = tomato; té = tea
+U u | u | like the “oo” in “food”, but short | uno = one; luz = light; mucho = a lot
+V v | uve | exactly like “b”! Never the English “v” sound | vino = wine; vivir = to live; nuevo = new
+W w | uve doble | “w” (foreign words) | wifi; web
+X x | equis | “ks”; in “México” — the throaty “h” of “j” | taxi = taxi; examen = exam; México
+Y y | ye (i griega) | before a vowel — like the “y” in “yes”; alone or at the end — “ee” | yo = I; playa = beach; muy = very; y = and
+Z z | zeta | like the “th” in “think” (Spain) | zapato = shoe; azul = blue; diez = ten
+@sounds
+// sound | description | examples
+ce / ci / z | In Spain (outside parts of Andalusia and the Canaries) said like the “th” in “think” — the tongue lightly between the teeth. This is called “distinción”. | cena; cine; zumo; gracias; cerveza; Zaragoza
+j / ge / gi | A rough “h” from the back of the throat, like Scottish “loch” — much stronger than English “h”. | jamón; jueves; gente; girasol; mujer; ojo
+ll / y | Like the “y” in “yes”. Some people say something closer to the “j” in “jam” — both are understood. | llave; lluvia; calle; yo; ayer; playa
+ñ | Like the “ny” in “canyon”: niño ≈ “neen-yo”, mañana ≈ “man-ya-na”. | niño; año; España; mañana; señor
+r / rr | A single “r” inside a word is one light tap of the tongue (like the “tt” in American “butter”). Double “rr” (and “r” at the start of a word) is a long trill. | pero / perro; caro / carro; Roma; rojo; Enrique
+b / v | They sound exactly the same. At the start of a word — like “b”; between vowels — soft, the lips almost don't touch. | vaso; beso; uva; abuelo; vivir
+h | Always silent. | hola; hora; ahora; hablar; hijo
+qu / gu | In “que, qui, gue, gui” the “u” is silent. When it should be heard, it gets two dots: güe, güi. | queso; quiero; guerra; guitarra; pingüino
+vowels | Five short, pure vowels that never glide: say “e” not “ay”, “o” not “oh-oo”. Unstressed vowels keep their full sound — no “uh”. | casa; mesa; libro; todo; tú; Toledo
+d at the end | At the end of a word “d” is very weak, it almost disappears. | Madrid; usted; verdad; ciudad
+diphthongs | Two vowels in one syllable flow together, without a break. | bueno; tienda; ciudad; aire; Europa
+@stress
+## Where does the stress fall?
+Spanish has simple stress rules, and when a word breaks them the stress is written (á, é, í, ó, ú).
+- Words ending in a **vowel, -n or -s** — stress on the **second-to-last** syllable: **CA**-sa, **HA**-blan, **LU**-nes.
+- Words ending in **any other consonant** — stress on the **last** syllable: ha-**BLAR**, Ma-**DRID**, pa-**PEL**.
+- If the stress falls anywhere else, you see it in writing: ca-**FÉ**, a-**DIÓS**, **MÉ**-di-co, ja-**MÓN**, ár-bol.
+## The accent changes the meaning
+|| tu (your) | tú (you)
+|| el (the) | él (he)
+|| si (if) | sí (yes)
+|| mi (my) | mí (me)
+|| que (that, which) | qué (what?)
+|| como (as, I eat) | cómo (how?)
+|| hablo (I speak) | habló (he spoke)
+## The English trap
+English shortens unstressed vowels to “uh” (ba-NA-na → buh-NA-nuh). Spanish never does: every vowel keeps its full sound, so **plátano** is pla-ta-no, not “pluh-tuh-no”. Listen to the recordings and repeat them aloud!
+@keyboard
+## How to type Spanish characters in Ubuntu
+- In this app: the **á é í ó ú ü ñ ¿ ¡** buttons under every text field.
+- In the whole system: Settings → Keyboard → **Compose key** (e.g. right Alt). Then: Compose + ' + a = á, Compose + ~ + n = ñ, Compose + ? + ? = ¿, Compose + ! + ! = ¡.
+- Or add the **Spanish** keyboard layout and switch with Super+Space.
+- A missing accent doesn't count as a mistake in the app — you only get a reminder.

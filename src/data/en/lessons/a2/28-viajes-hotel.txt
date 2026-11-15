@@ -1,0 +1,62 @@
+# id: a2-28
+# title: De viaje — hotels, bookings and problems
+# unit: 7
+# unit_title: Recuerdos — memories
+@goals
+Book a room and check in at a hotel
+Report a problem and ask for help
+@dialog
+Recepcionista: Buenas tardes, ¿en qué puedo ayudarle? | Good afternoon, how can I help you?
+Marek: Buenas tardes. Tengo una reserva a nombre de Marek Nowak. | Good afternoon. I have a booking in the name of Marek Nowak.
+Recepcionista: Sí, una habitación doble para tres noches con desayuno. ¿Me deja su pasaporte? | Yes, a double room for three nights with breakfast. May I have your passport?
+Marek: Aquí tiene. ¿A qué hora es el desayuno? | Here you are. What time is breakfast?
+Recepcionista: De siete a diez y media. Su habitación es la 305, en el tercer piso. | From seven to half past ten. Your room is 305, on the third floor.
+Marek: Perdone, el aire acondicionado de la habitación no funciona. | Excuse me, the air conditioning in the room isn't working.
+Recepcionista: Lo siento mucho. Ahora mismo subimos a arreglarlo. | I'm very sorry. We'll come up and fix it right away.
+@vocab
+la reserva | booking, reservation | f
+reservar | to book, to reserve | v
+la habitación | (hotel) room | f
+la habitación individual / doble | single / double room | f
+la llave | key | f
+el pasaporte | passport | m
+el DNI | ID card (in Spain) | m
+el desayuno | breakfast | m
+la recepción | reception | f
+el aire acondicionado | air conditioning | m
+funcionar | to work (of a machine) | v | No funciona. / It doesn't work.
+arreglar | to fix, to repair | v
+la toalla | towel | f
+la maleta | suitcase | f
+el equipaje | luggage | m
+ahora mismo | right now, right away | phr
+a nombre de | in the name of | phr
+la queja | complaint | f
+el ruido | noise | m
+@grammar
+## Polite requests in a hotel
+- **¿Me deja…?** — May I have / borrow…?
+- **¿Podría…?** — Could you…? **¿Podría cambiarme de habitación?**
+- **Quería reservar una habitación doble para dos noches.**
+- **¿Está incluido el desayuno?** — Is breakfast included?
+
+## Reporting problems
+- **No funciona** + a singular thing: **La ducha no funciona.** (Not “no trabaja” — trabajar is for people.)
+- **No funcionan** + plural: **Las luces no funcionan.**
+- **No hay** + thing: **No hay toallas. No hay agua caliente.**
+- **Hay mucho ruido.** — It's very noisy.
+
+## Ordinal numbers 1–10
+**primero, segundo, tercero, cuarto, quinto, sexto, séptimo, octavo, noveno, décimo**. Before a masculine noun: **el primer piso, el tercer piso**.
+@exercises
+choice: The shower doesn't work: | La ducha no funciona. | La ducha no funciona.; La ducha no trabaja.; La ducha no va funcionar.
+choice: There are no towels: | No hay toallas. | No están toallas.; No hay toallas.; No son toallas.
+choice: on the third floor: | en el tercer piso | en el tercero piso; en el tercer piso; en la tercera piso
+choice: A double room: | una habitación doble | una habitación doble; una habitación dos; un cuarto de dos camas doble
+fill: Tengo una reserva ___ nombre de Ana López. | a
+fill: Las luces no ___ (funcionar). | funcionan
+trans: I'd like to book a single room. | Quería reservar una habitación individual.
+trans: Is breakfast included? | ¿Está incluido el desayuno?
+trans: The air conditioning isn't working. | El aire acondicionado no funciona.
+@culture
+Spain's **paradores** are popular: state-run hotels in historic castles, monasteries and palaces. A night in one of them is a way to sleep in a medieval fortress.

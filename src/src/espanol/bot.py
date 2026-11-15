@@ -9,50 +9,58 @@ import urllib.request
 from .answers import strip_accents
 from .conjugate import conjugate
 from .paths import XDG_CONFIG, PKG
+from . import i18n
+from .i18n import _
 
 CONFIG_DIR = os.path.join(XDG_CONFIG, PKG)
 KEY_FILE = os.path.join(CONFIG_DIR, "claude_api_key")
 
-CLAUDE_MODELS = {"claude-haiku-5-5": "Claude Haiku (szybki, tani)", "claude-sonnet-5-5": "Claude Sonnet (najlepszy)"}
+CLAUDE_MODELS = {"claude-haiku-5-5": _("Claude Haiku (szybki, tani)"),
+                 "claude-sonnet-5-5": _("Claude Sonnet (najlepszy)")}
+
+
+def native():
+    """The learner's own language (the course language) — for prompts."""
+    return "English" if i18n.LANG == "en" else "Polish"
 
 # ------------------------------------------------------------------ scenki
 SCENARIOS = [
-    dict(id="free", title="Swobodna rozmowa o Tobie", lesson="a1-01",
+    dict(id="free", title=_("Swobodna rozmowa o Tobie"), lesson="a1-01",
          role=("Paco, a friendly, cheerful 30-year-old man from Madrid (a little robot-like in spirit, with a black beret and "
                "a moustache) you have just met at a language exchange (intercambio). Your name is Paco. "
                "You work as a graphic designer, live with your dog Toby, love cooking paella and cycling, and have a "
                "younger brother called Pablo. You are male: use masculine forms (encantado, contento)"),
-         goal="Porozmawiaj o sobie: imię, skąd jesteś, praca, rodzina, zainteresowania — tylko tym, co już znasz."),
-    dict(id="bar", title="W barze — zamów i zapłać", lesson="a1-13",
+         goal=_("Porozmawiaj o sobie: imię, skąd jesteś, praca, rodzina, zainteresowania — tylko tym, co już znasz.")),
+    dict(id="bar", title=_("W barze — zamów i zapłać"), lesson="a1-13",
          role="a waiter (camarero) in a busy bar in Madrid",
-         goal="Zamów coś do picia i jedzenia, zapytaj o cenę i zapłać kartą."),
-    dict(id="mercado", title="Na targu", lesson="a1-14",
+         goal=_("Zamów coś do picia i jedzenia, zapytaj o cenę i zapłać kartą.")),
+    dict(id="mercado", title=_("Na targu"), lesson="a1-14",
          role="a fruit and vegetable seller at a market in Valencia",
-         goal="Kup owoce i warzywa (ilości w kilogramach), zapytaj, co jest dobre, powiedz, co lubisz."),
-    dict(id="calle", title="Pytanie o drogę", lesson="a1-15",
+         goal=_("Kup owoce i warzywa (ilości w kilogramach), zapytaj, co jest dobre, powiedz, co lubisz.")),
+    dict(id="calle", title=_("Pytanie o drogę"), lesson="a1-15",
          role="a local person on a street in Sevilla; the learner is a lost tourist",
-         goal="Zapytaj, jak dojść do muzeum lub na dworzec, i upewnij się, że rozumiesz drogę."),
-    dict(id="tienda", title="W sklepie z ubraniami", lesson="a1-16",
+         goal=_("Zapytaj, jak dojść do muzeum lub na dworzec, i upewnij się, że rozumiesz drogę.")),
+    dict(id="tienda", title=_("W sklepie z ubraniami"), lesson="a1-16",
          role="a shop assistant (dependiente) in a clothes shop",
-         goal="Znajdź kurtkę albo koszulę, zapytaj o rozmiar, kolor i cenę, przymierz i kup."),
-    dict(id="planes", title="Plany na weekend", lesson="a1-19",
+         goal=_("Znajdź kurtkę albo koszulę, zapytaj o rozmiar, kolor i cenę, przymierz i kup.")),
+    dict(id="planes", title=_("Plany na weekend"), lesson="a1-19",
          role="a Spanish friend who wants to make plans for the weekend",
-         goal="Umówcie się na weekend: co, gdzie, o której. Odmów jednej propozycji i zaproponuj inną."),
-    dict(id="vacaciones", title="Ostatnie wakacje", lesson="a2-23",
+         goal=_("Umówcie się na weekend: co, gdzie, o której. Odmów jednej propozycji i zaproponuj inną.")),
+    dict(id="vacaciones", title=_("Ostatnie wakacje"), lesson="a2-23",
          role="a Spanish colleague asking about the learner's last holidays",
-         goal="Opowiedz o swoich ostatnich wakacjach w czasie przeszłym: gdzie byłeś, co robiłeś, jak było."),
-    dict(id="hotel", title="Recepcja hotelu", lesson="a2-28",
+         goal=_("Opowiedz o swoich ostatnich wakacjach w czasie przeszłym: gdzie byłeś, co robiłeś, jak było.")),
+    dict(id="hotel", title=_("Recepcja hotelu"), lesson="a2-28",
          role="a hotel receptionist in Granada; there is a problem with the room",
-         goal="Zamelduj się, zapytaj o śniadanie i zgłoś problem z pokojem."),
-    dict(id="medico", title="U lekarza", lesson="a2-29",
+         goal=_("Zamelduj się, zapytaj o śniadanie i zgłoś problem z pokojem.")),
+    dict(id="medico", title=_("U lekarza"), lesson="a2-29",
          role="a doctor (médica) at a health centre in Spain",
-         goal="Opisz objawy (co Cię boli, od kiedy) i zrozum zalecenia."),
-    dict(id="entrevista", title="Rozmowa o pracę", lesson="a2-34",
+         goal=_("Opisz objawy (co Cię boli, od kiedy) i zrozum zalecenia.")),
+    dict(id="entrevista", title=_("Rozmowa o pracę"), lesson="a2-34",
          role="an interviewer from a Spanish IT company",
-         goal="Opowiedz o swoim doświadczeniu, mocnych stronach i dlaczego chcesz tam pracować."),
-    dict(id="piso", title="Wynajem mieszkania", lesson="a2-38",
+         goal=_("Opowiedz o swoim doświadczeniu, mocnych stronach i dlaczego chcesz tam pracować.")),
+    dict(id="piso", title=_("Wynajem mieszkania"), lesson="a2-38",
          role="a landlady renting a flat in Valencia",
-         goal="Zapytaj o mieszkanie: metraż, czynsz, opłaty, kaucję i umów się na oglądanie."),
+         goal=_("Zapytaj o mieszkanie: metraż, czynsz, opłaty, kaucję i umów się na oglądanie.")),
 ]
 
 TENSES_BY_LESSON = [
@@ -155,17 +163,17 @@ BEGINNER_NOTE = ("- The learner is an ABSOLUTE BEGINNER who has finished few les
                  "ciudad, música, bien, mucho, también…), but keep every sentence very short and simple.")
 
 LEVELS = {
-    "easy": ("Wolno i prosto", "Bardzo krótkie, najprostsze zdania, bez nowych słów."),
-    "normal": ("Normalnie", "Krótkie tury, najwyżej jedno nowe słowo."),
-    "hard": ("Wyzwanie", "Dłuższe wypowiedzi, do dwóch nowych słów, mniej podpowiedzi."),
+    "easy": (_("Wolno i prosto"), _("Bardzo krótkie, najprostsze zdania, bez nowych słów.")),
+    "normal": (_("Normalnie"), _("Krótkie tury, najwyżej jedno nowe słowo.")),
+    "hard": (_("Wyzwanie"), _("Dłuższe wypowiedzi, do dwóch nowych słów, mniej podpowiedzi.")),
 }
 LEVEL_RULES = {
     "easy": ("- NO new words at all: use only the known vocabulary and the simplest present-tense sentences.\n"
              "- Very short turns: ONE or TWO sentences, max ~7 words each. Always end with a very simple question."),
-    "normal": ("- At most ONE new word per turn, and only if really needed — then add its Polish meaning in brackets "
+    "normal": ("- At most ONE new word per turn, and only if really needed — then add its {native} meaning in brackets "
                "right after it.\n- Very short turns: 1–3 sentences, max ~12 words each. Always end with a simple "
                "question or prompt so the learner can answer."),
-    "hard": ("- At most TWO new words per turn, each followed by its Polish meaning in brackets.\n"
+    "hard": ("- At most TWO new words per turn, each followed by its {native} meaning in brackets.\n"
              "- Natural, slightly longer turns: 2–4 sentences, max ~15 words each. Use the whole known grammar "
              "freely, ask open questions that need a full sentence to answer, and be less helpful with hints."),
 }
@@ -176,16 +184,26 @@ FACT_LABELS = {"age": "age", "pets": "pets", "study": "studies", "memories": "th
                "lives_in": "lives in", "from": "is from", "nationality": "nationality", "likes": "likes"}
 
 
-FACT_LABELS_PL = {"age": "wiek", "pets": "zwierzęta", "study": "nauka", "memories": "bot pamięta",
-                  "last_talk": "poprzednio rozmawialiście o","name": "imię", "city": "miejscowość", "country": "kraj", "job": "praca / szkoła",
-                  "family": "rodzina", "hobbies": "zainteresowania", "notes": "inne", "lives_in": "mieszka w",
-                  "from": "pochodzi z", "nationality": "narodowość", "likes": "lubi"}
+FACT_LABELS_PL = {"age": _("wiek"), "pets": _("zwierzęta"), "study": _("nauka"), "memories": _("bot pamięta"),
+                  "last_talk": _("poprzednio rozmawialiście o"), "name": _("imię"), "city": _("miejscowość"),
+                  "country": _("kraj"), "job": _("praca / szkoła"), "family": _("rodzina"),
+                  "hobbies": _("zainteresowania"), "notes": _("inne"), "lives_in": _("mieszka w"),
+                  "from": _("pochodzi z"), "nationality": _("narodowość"), "likes": _("lubi")}
+
+
+FIX_EXAMPLE = {"Polish": "Mówimy „me llamo”, nie „me llamo es”.",
+               "English": "We say “me llamo”, not “me llamo es”."}
 
 
 def system_prompt(profile, scenario, level="normal"):
     vocab = ", ".join(profile.vocab[-300:])
     beginner = len(profile.lessons) < 6
-    return f"""You are a conversation partner for a Polish learner of Spanish (level {profile.level}).
+    nat = native()
+    rules = LEVEL_RULES.get(level, LEVEL_RULES["normal"]).format(native=nat)
+    home = ("they live in Poland unless they say otherwise (Poland is a country in Europe; a Polish town is not "
+            "\"near Poland\", it is IN Poland)" if nat == "Polish" else
+            "do not guess their country; use only what they tell you")
+    return f"""You are a conversation partner for a {nat}-speaking learner of Spanish (level {profile.level}).
 Speak the Spanish of Spain (castellano): use "vosotros", Spain vocabulary (coche, ordenador, móvil, zumo, vale) and tú with the learner unless your role is formal.
 
 YOUR ROLE: {scenario['role']}.
@@ -195,7 +213,7 @@ STRICT LIMITS — the learner only knows the material below:
 - Grammar the learner knows: {"; ".join(profile.grammar)}. Do NOT use other tenses or moods (no subjunctive).
 - Topics already studied: {"; ".join(profile.topics[-12:])}.
 - Vocabulary the learner knows (prefer these words, plus very basic function words): {vocab}
-{LEVEL_RULES.get(level, LEVEL_RULES["normal"])}
+{rules}
 {BEGINNER_NOTE if beginner else ""}
 
 CONVERSATION FLOW (VERY IMPORTANT — you are a real, curious person, not a parrot):
@@ -218,22 +236,22 @@ Learner: "Trabajo con ordenadores. ¿Y tú?" -> <es>¡Qué interesante! Yo soy d
 Learner: "Me gusta el fútbol."             -> <es>¡Genial! A mí me gusta montar en bici. ¿Tienes hermanos?</es>
 
 WHAT THE LEARNER TELLS YOU:
-- Treat everything the learner says about themselves as TRUE. Towns and places they mention are real; they live in Poland unless they say otherwise (Poland is a country in Europe; a Polish town is not "near Poland", it is IN Poland).
+- Treat everything the learner says about themselves as TRUE. Towns and places they mention are real; {home}.
 - Never ask again about something the learner has already told you. React to it and ask a NEW follow-up question instead.
 
 CORRECTIONS (about the LEARNER's last message only — never about your own sentences):
-- If the learner's last message has a real mistake, put the corrected learner sentence in Spanish in <ok> and a short explanation WRITTEN IN POLISH (never in Spanish!) in <fix>. Also use the correct form naturally in your reply.
+- If the learner's last message has a real mistake, put the corrected learner sentence in Spanish in <ok> and a short explanation WRITTEN IN {nat.upper()} (never in Spanish!) in <fix>. Also use the correct form naturally in your reply.
 - If it is correct, leave both <ok></ok> and <fix></fix> empty. Ignore missing accents, capital letters and punctuation.
-- If the learner writes in Polish or asks for help, help briefly in <fix> (in Polish), leave <ok> empty, and continue in simple Spanish.
-- <fix> must always be Polish. Example: <ok>Me llamo Jarek.</ok><fix>Mówimy „me llamo”, nie „me llamo es”.</fix>
+- If the learner writes in {nat} or asks for help, help briefly in <fix> (in {nat}), leave <ok> empty, and continue in simple Spanish.
+- <fix> must always be {nat}. Example: <ok>Me llamo Jarek.</ok><fix>{FIX_EXAMPLE[nat]}</fix>
 - Do not repeat or rephrase your previous turn: move the conversation forward with a NEW short question each time.
 
 Stay in your role and on the topic of learning Spanish. Never write anything outside the tags.
 OUTPUT FORMAT (exactly):
 <es>your reply in Spanish</es>
-<pl>Polish translation of your reply</pl>
+<pl>{nat} translation of your reply</pl>
 <ok>corrected learner sentence in Spanish, or empty</ok>
-<fix>short explanation in POLISH, or empty</fix>"""
+<fix>short explanation in {nat.upper()}, or empty</fix>"""
 
 
 def extract_facts(text):
@@ -265,7 +283,7 @@ def extract_facts(text):
                          text, re.I):
         add("family", f"{m.group(1)} {m.group(2)}")
     for m in re.finditer(r"\btengo (\d{1,2}) años\b", text, re.I):
-        add("age", m.group(1) + " lat")
+        add("age", _("{} lat").format(m.group(1)))
     for m in re.finditer(r"\btengo (?:un|una) (perro|gato|pájaro|conejo|pez)\b", text, re.I):
         add("pets", m.group(1))
     for m in re.finditer(r"\b[Mm]i (hermano|hermana|mujer|esposa|marido|novio|novia|madre|padre|hijo|hija) "
@@ -436,8 +454,44 @@ PHRASEBOOK = {_phrase_key(k): v for k, v in {
     "A mí también.": "Ja też.", "A mí no.": "Ja nie.", "¿Cuántos años tienes?": "Ile masz lat?",
 }.items()}
 
+PHRASEBOOK_EN = {_phrase_key(k): v for k, v in {
+    "¡Hola!": "Hi!", "¡Hola! ¿Qué tal?": "Hi! How's it going?", "¿Qué tal?": "How's it going?",
+    "¡Buenos días!": "Good morning!", "¡Buenas tardes!": "Good afternoon!", "¡Buenas noches!": "Good evening!",
+    "¿Cómo estás?": "How are you?", "¿Cómo te llamas?": "What's your name?", "¿De dónde eres?": "Where are you from?",
+    "¿Dónde vives?": "Where do you live?", "¿Y tú?": "And you?", "¡Qué bien!": "Great!", "¡Genial!": "Brilliant!",
+    "¡Perfecto!": "Perfect!", "¡Muy bien!": "Very good!", "¡Qué interesante!": "How interesting!",
+    "Vale.": "OK.", "Entiendo.": "I see.", "¡Encantado!": "Nice to meet you!", "¡Claro!": "Of course!",
+    "¡Qué guay!": "How cool!", "¡Qué pena!": "What a shame!", "¡Hasta luego!": "See you!", "¡Adiós!": "Goodbye!",
+    "Gracias.": "Thank you.", "¡Muchas gracias!": "Thank you very much!", "¿Tienes hermanos?": "Do you have brothers or sisters?",
+    "¿Tienes mascotas?": "Do you have any pets?", "¿A qué te dedicas?": "What do you do?",
+    "¿Trabajas o estudias?": "Do you work or study?", "¿Qué te gusta hacer?": "What do you like doing?",
+    "¿Qué haces en tu tiempo libre?": "What do you do in your free time?", "Yo también.": "Me too.",
+    "A mí también.": "Me too.", "A mí no.": "Not me.", "¿Cuántos años tienes?": "How old are you?",
+}.items()}
+
+
+def phrasebook():
+    return PHRASEBOOK_EN if i18n.LANG == "en" else PHRASEBOOK
+
+
+_EN_WORDS = {"how", "do", "does", "did", "say", "what", "what's", "whats", "why", "when", "which", "mean", "means",
+             "the", "is", "are", "can", "could", "explain", "english", "help", "please", "difference", "between",
+             "should", "use", "word", "this", "that", "i", "i'm", "im", "don't", "dont", "understand", "you",
+             "of", "for", "with", "and", "but", "only", "too", "want", "would", "like", "spanish", "to"}
+
 
 _EMOJI = re.compile("[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200d]+")
+
+
+def is_native(text):
+    """The learner writes/speaks in their own language (asking for help), not in Spanish."""
+    if i18n.LANG == "en":
+        t = (text or "").lower()
+        words = re.findall(r"[a-záéíóúüñ']+", t)
+        en = sum(w in _EN_WORDS for w in words)
+        es = sum(w in _ES_HINT for w in words if w not in _EN_WORDS)
+        return en >= 2 and en > es
+    return is_polish(text)
 
 
 def is_polish(text):
@@ -460,7 +514,101 @@ tener: tengo, tienes, tiene, tenemos, tenéis, tienen
 ir: voy, vas, va, vamos, vais, van
 hablar: hablo, hablas, habla, hablamos, habláis, hablan
 comer: como, comes, come, comemos, coméis, comen; vivir: vivo, vives, vive, vivimos, vivís, viven
-ser = tożsamość, zawód, narodowość, cechy stałe, skąd jesteś; estar = położenie, stan, samopoczucie, miejsce"""
+"""
+SER_ESTAR = {"Polish": "ser = tożsamość, zawód, narodowość, cechy stałe, skąd jesteś; "
+                       "estar = położenie, stan, samopoczucie, miejsce",
+             "English": "ser = identity, job, nationality, permanent traits, where you are from; "
+                        "estar = location, state, how you feel, place"}
+
+
+EXPLAIN_EN = ("You are a friendly teacher of Spanish (castellano, Spain) for an English speaker at level A1. "
+              "The learner asks a question in English. Answer in clear, natural English: briefly (max. 6 lines). "
+              "If the learner asks \"how do I say…\", the FIRST line is the ready Spanish sentence they want to say "
+              "(in their person, natural, castellano), followed by the English translation; then 1–2 sentences of "
+              "explanation (the verbs and forms used) and maybe 1–2 similar examples in the format: Spanish sentence "
+              "— English translation. Silently fix the learner's typos. For questions about a rule: the rule first, "
+              "then 2–3 simple examples. If the learner used a wrong form, point out the right one. "
+              "No markdown or asterisks. Do not invent words.\n"
+              "Example answer to \"how do I say: I have a dog\":\n"
+              "Tengo un perro. — I have a dog.\n"
+              "The verb tener (to have) in the first person singular is \"tengo\".\n"
+              "Likewise: Tengo una hermana. — I have a sister.\n")
+
+TRANSLATE_EN = ("You translate Spanish into English. Translate the MEANING, not word for word — the way a native "
+                "speaker would say it in a relaxed conversation. Output only the translation, without comments, "
+                "quotes or emoji.\n"
+                "Tricky constructions — translate them like this:\n"
+                "¿Te gusta el café o más bien el té? → Do you prefer coffee or tea?\n"
+                "Me encanta cocinar. → I love cooking.\n"
+                "A mí también. → Me too.\n"
+                "¿A qué te dedicas? → What do you do?\n"
+                "Vale, entiendo. → OK, I see.\n"
+                "¿Vas a algún sitio en vacaciones? → Are you going anywhere on holiday?")
+
+
+CHECK_PROMPT = """You check ONE sentence written by a beginner learner of Spanish (castellano, Spain), level A1–A2.
+Find REAL mistakes only: wrong verb form or person (yo tiene → yo tengo), ser/estar, gender or number agreement
+(la coche, los casa), wrong preposition or article, gustar used wrongly (yo gusto → me gusta), a wrong word.
+IGNORE: missing accents, ¿ ¡, capital letters, punctuation, and any style or word choice that is correct.
+Short, simple sentences are fine. Never change the meaning, numbers, names or facts — fix only the mistake.
+If the sentence is correct, answer exactly: OK
+If it has a mistake, answer exactly:
+<ok>the whole corrected sentence</ok><fix>one short explanation in {nat}</fix>
+
+Examples:
+Tengo dos hermanas. -> OK
+Me llamo Jarek y vivo en Rumia. -> OK
+soy informatico -> OK
+Me gusta cocinar. -> OK
+Estoy cansado hoy. -> OK
+Yo tiene dos hermanos. -> <ok>Yo tengo dos hermanos.</ok><fix>{ex1}</fix>
+Yo es informático. -> <ok>Yo soy informático.</ok><fix>{ex2}</fix>
+Soy en Madrid. -> <ok>Estoy en Madrid.</ok><fix>{ex3}</fix>
+Yo gusto el café. -> <ok>Me gusta el café.</ok><fix>{ex4}</fix>"""
+
+CHECK_EXAMPLES = {
+    "Polish": ("Z „yo” używamy formy „tengo” (ja mam), nie „tiene”.",
+               "Z „yo” czasownik ser ma formę „soy”, nie „es”.",
+               "Miejsce, w którym ktoś jest, wyrażamy czasownikiem estar: „estoy”.",
+               "„Lubię” to „me gusta” — rzecz, którą lubisz, jest podmiotem."),
+    "English": ("With “yo” the form is “tengo” (I have), not “tiene”.",
+                "With “yo” the verb ser is “soy”, not “es”.",
+                "Where someone is takes estar: “estoy”.",
+                "“I like” is “me gusta” — the thing you like is the subject."),
+}
+
+
+_PRONOUNS = {"yo", "tu", "el", "ella", "usted", "nosotros", "nosotras", "vosotros", "vosotras", "ellos",
+             "ellas", "ustedes"}
+
+
+def check_sentence(backend, text):
+    """Separate grammar check of the learner's sentence → (ok, fix); ("", "") when it is correct.
+    None when the check could not run (the reply's own <ok>/<fix> is used then)."""
+    from .answers import norm
+    nat = native()
+    ex = CHECK_EXAMPLES[nat]
+    system = CHECK_PROMPT.format(nat=nat, ex1=ex[0], ex2=ex[1], ex3=ex[2], ex4=ex[3])
+    try:
+        try:
+            raw = backend.chat(system, [{"role": "user", "content": text}], temperature=0)
+        except TypeError:
+            raw = backend.chat(system, [{"role": "user", "content": text}])
+    except Exception:  # noqa
+        return None
+    raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.S).strip()
+    m_ok, m_fix = re.search(r"<ok>(.*?)</ok>", raw, re.S), re.search(r"<fix>(.*?)</fix>", raw, re.S)
+    if not m_ok:
+        return ("", "") if raw.upper().startswith("OK") else None
+    ok, fix = m_ok.group(1).strip(), (m_fix.group(1).strip() if m_fix else "")
+    import difflib
+    def bare(x):                              # without accents, punctuation and subject pronouns
+        return [w for w in norm(x, False).split() if w not in _PRONOUNS]
+    if not ok or bare(ok) == bare(text):
+        return "", ""                         # only accents / punctuation / "yo" differ
+    if difflib.SequenceMatcher(None, norm(ok, False), norm(text, False)).ratio() < 0.6:
+        return "", ""                         # a rewrite, not a correction — do not trust it
+    return ok, fix
 
 
 def _same(a, b):
@@ -514,7 +662,7 @@ class SentenceStream:
         return out
 
     def finish(self):
-        body, _ = self._es()
+        body, _closed = self._es()
         rest = body[self.sent:].strip()
         self.sent = len(body)
         return [rest] if rest else []
@@ -604,7 +752,7 @@ def _post(url, body, headers, timeout=90):
         detail = e.read().decode(errors="ignore")[:300]
         raise RuntimeError(f"HTTP {e.code}: {detail}")
     except urllib.error.URLError as e:
-        raise RuntimeError(f"brak połączenia ({e.reason})")
+        raise RuntimeError(_("brak połączenia ({})").format(e.reason))
 
 
 # num_ctx: domyślne 2048 tokenów ucinało początek instrukcji (lista słówek) — model „głupiał”
@@ -612,7 +760,7 @@ OLLAMA_OPTIONS = {"temperature": 0.75, "top_p": 0.9, "repeat_penalty": 1.15, "nu
 
 
 class OllamaBackend:
-    name = "Ollama (lokalnie)"
+    name = _("Ollama (lokalnie)")
 
     def __init__(self, url, model, managed=False):
         self.url = url.rstrip("/")
@@ -621,7 +769,7 @@ class OllamaBackend:
 
     def chat(self, system, messages, temperature=None):
         if not self.model:
-            raise RuntimeError("Nie wybrano modelu Ollama w Ustawieniach.")
+            raise RuntimeError(_("Nie wybrano modelu Ollama w Ustawieniach."))
         if self.managed:
             from .ollama_local import Manager
             self.url = Manager.ensure_running()
@@ -635,7 +783,7 @@ class OllamaBackend:
     def chat_stream(self, system, messages):
         """Generator kawałków tekstu."""
         if not self.model:
-            raise RuntimeError("Nie wybrano modelu Ollama w Ustawieniach.")
+            raise RuntimeError(_("Nie wybrano modelu Ollama w Ustawieniach."))
         if self.managed:
             from .ollama_local import Manager
             self.url = Manager.ensure_running()
@@ -658,7 +806,7 @@ class OllamaBackend:
         except urllib.error.HTTPError as e:
             raise RuntimeError(f"HTTP {e.code}: {e.read().decode(errors='ignore')[:300]}")
         except urllib.error.URLError as e:
-            raise RuntimeError(f"brak połączenia ({e.reason})")
+            raise RuntimeError(_("brak połączenia ({})").format(e.reason))
 
     @staticmethod
     def list_models(url):
@@ -668,14 +816,14 @@ class OllamaBackend:
 
 
 class ClaudeBackend:
-    name = "Claude API (chmura)"
+    name = _("Claude API (chmura)")
 
     def __init__(self, key, model):
         self.key, self.model = key, model
 
     def chat(self, system, messages, temperature=None):
         if not self.key:
-            raise RuntimeError("Brak klucza API Claude — wpisz go w Ustawieniach.")
+            raise RuntimeError(_("Brak klucza API Claude — wpisz go w Ustawieniach."))
         body = {"model": self.model, "max_tokens": 600, "system": system, "messages": messages}
         if temperature is not None:
             body["temperature"] = temperature
@@ -687,7 +835,7 @@ class ClaudeBackend:
 
 def _claude_stream(self, system, messages):
     if not self.key:
-        raise RuntimeError("Brak klucza API Claude — wpisz go w Ustawieniach.")
+        raise RuntimeError(_("Brak klucza API Claude — wpisz go w Ustawieniach."))
     body = {"model": self.model, "max_tokens": 400, "system": system, "messages": messages, "stream": True}
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json", "x-api-key": self.key,
@@ -707,7 +855,7 @@ def _claude_stream(self, system, messages):
     except urllib.error.HTTPError as e:
         raise RuntimeError(f"HTTP {e.code}: {e.read().decode(errors='ignore')[:300]}")
     except urllib.error.URLError as e:
-        raise RuntimeError(f"brak połączenia ({e.reason})")
+        raise RuntimeError(_("brak połączenia ({})").format(e.reason))
 
 
 ClaudeBackend.chat_stream = _claude_stream
@@ -725,12 +873,12 @@ def rate(summary):
     """Ocena rozmowy 0–100 i opis słowny."""
     n = summary["messages"]
     if not n:
-        return 0, "Brak wypowiedzi"
+        return 0, _("Brak wypowiedzi")
     ok = (n - len(summary["fixes"])) / n
     avg = summary["words"] / n
     score = round(60 * ok + 25 * min(1.0, avg / 8) + 15 * min(1.0, summary["unique"] / 20) * 1.0)
-    label = ("Świetnie!" if score >= 85 else "Bardzo dobrze" if score >= 70 else "Dobrze — tak trzymaj"
-             if score >= 50 else "Ćwicz dalej — każda rozmowa pomaga")
+    label = (_("Świetnie!") if score >= 85 else _("Bardzo dobrze") if score >= 70 else _("Dobrze — tak trzymaj")
+             if score >= 50 else _("Ćwicz dalej — każda rozmowa pomaga"))
     return score, label
 
 
@@ -782,7 +930,9 @@ class Conversation:
         return out.strip()
 
     def explain(self, text):
-        """Odpowiedź PO POLSKU na pytanie ucznia o hiszpański (osobna karta „Wyjaśnienie”)."""
+        """Odpowiedź PO POLSKU (EN: in English) na pytanie ucznia o hiszpański (osobna karta „Wyjaśnienie”)."""
+        if i18n.LANG == "en":
+            return self._tutor_chat(EXPLAIN_EN + GRAMMAR_REF + SER_ESTAR["English"], text)
         sysmsg = ("Jesteś życzliwym nauczycielem hiszpańskiego (castellano, Hiszpania) dla Polaka na poziomie A1. "
                   "Uczeń zadaje pytanie po polsku. Odpowiedz POPRAWNĄ, NATURALNĄ POLSZCZYZNĄ: krótko (maks. 6 linijek), "
                   "Jeśli uczeń pyta „jak powiedzieć…”, PIERWSZA linijka to gotowe zdanie po hiszpańsku, które chce powiedzieć "
@@ -795,14 +945,15 @@ class Conversation:
                   "Przykład odpowiedzi na pytanie „jak powiedzieć: mam psa”:\n"
                   "Tengo un perro. — Mam psa.\n"
                   "Czasownik tener (mieć) w 1. osobie liczby pojedynczej to „tengo”.\n"
-                  "Podobnie: Tengo una hermana. — Mam siostrę.\n" + GRAMMAR_REF)
+                  "Podobnie: Tengo una hermana. — Mam siostrę.\n" + GRAMMAR_REF + SER_ESTAR["Polish"])
         return self._tutor_chat(sysmsg, text)
 
     def translate_pl(self, es):
         """Tłumaczenie zdań bota na polski: gotowe zwroty ze słowniczka + model (z przykładami trudnych
         konstrukcji) + krótka korekta polszczyzny."""
         parts = [x for x in re.split(r"(?<=[.!?…])\s+", es.strip()) if x]
-        known = [PHRASEBOOK.get(_phrase_key(x)) for x in parts]
+        book = phrasebook()
+        known = [book.get(_phrase_key(x)) for x in parts]
         a = 0
         while a < len(parts) and known[a] is not None:
             a += 1
@@ -810,7 +961,12 @@ class Conversation:
         while b > a and known[b - 1] is not None:
             b -= 1
         middle = ""
-        if a < b:          # zdania spoza słowniczka (z ewentualnymi zwrotami pomiędzy) tłumaczy model
+        if a < b and i18n.LANG == "en":
+            tr = self._tutor_chat(TRANSLATE_EN, " ".join(parts[a:b]))
+            if not tr or looks_spanish(tr):
+                return ""
+            middle = tr
+        elif a < b:          # zdania spoza słowniczka (z ewentualnymi zwrotami pomiędzy) tłumaczy model
             sysmsg = ("Jesteś tłumaczem z hiszpańskiego na polski. Tłumacz SENS, nie słowo w słowo — tak, jak "
                       "powiedziałby to Polak w swobodnej rozmowie. Zachowaj formę „ty”. Wypisz tylko tłumaczenie, "
                       "bez komentarzy, cudzysłowów i emoji.\n"
@@ -887,7 +1043,8 @@ class Conversation:
             r["fix"] = r["ok"] = ""
         if r["fix"] and looks_spanish(r["fix"]):
             try:
-                tr = self.backend.chat("Translate the user's text into Polish. Output only the Polish translation.",
+                tr = self.backend.chat(f"Translate the user's text into {native()}. Output only the "
+                                       f"{native()} translation.",
                                        [{"role": "user", "content": r["fix"]}]).strip()
                 tr = re.sub(r"</?[a-z]+>", "", tr).strip()
                 if tr and not looks_spanish(tr):
@@ -949,7 +1106,7 @@ class Conversation:
 
     def _help_only(self, text):
         """Pytanie po polsku: tylko wyjaśnienie, rozmowa czeka, aż uczeń sam powie zdanie."""
-        h = self.explain(text) if is_polish(text) else ""
+        h = self.explain(text) if is_native(text) else ""
         if not h:
             return None
         if self.on_help:
@@ -967,12 +1124,31 @@ class Conversation:
         self._learn(text)
         self._pick_topic()
         self.messages.append({"role": "user", "content": text})
-        r = self._finalize(self._reply(), text)
+        check = self._check_async(text)
+        r = self._finalize(self._apply_check(self._reply(), check), text)
         self.messages.append({"role": "assistant", "content": r["es"]})
         if r.get("fix"):
             self.turns[-1]["fix"] = r["fix"]
             self.turns[-1]["ok"] = r.get("ok", "")
         self.turns.append(dict(r, who="bot"))
+        return r
+
+    def _check_async(self, text):
+        """Grammar check of the learner's sentence in a parallel thread (the reply is not slowed down)."""
+        import threading
+        box = {}
+        th = threading.Thread(target=lambda: box.update(r=check_sentence(self.helper or self.backend, text)),
+                              daemon=True)
+        th.start()
+        return th, box
+
+    @staticmethod
+    def _apply_check(r, check):
+        th, box = check
+        th.join(60)
+        res = box.get("r")
+        if res is not None:                  # the separate check wins over the reply's own <ok>/<fix>
+            r["ok"], r["fix"] = res
         return r
 
     def _values(self):
@@ -1042,7 +1218,8 @@ class Conversation:
         self._learn(text)
         self._pick_topic()
         self.messages.append({"role": "user", "content": text})
-        r = self._finalize(self._stream_reply(on_sentence), text)
+        check = self._check_async(text)
+        r = self._finalize(self._apply_check(self._stream_reply(on_sentence), check), text)
         self.messages.append({"role": "assistant", "content": r["es"]})
         if r.get("fix"):
             self.turns[-1]["fix"] = r["fix"]
