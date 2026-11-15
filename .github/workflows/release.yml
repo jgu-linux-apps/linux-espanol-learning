@@ -21,7 +21,9 @@ jobs:
       - name: Build tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends librsvg2-bin
+          sudo apt-get install -y --no-install-recommends librsvg2-bin fonts-ubuntu
+          # the icons' "¡ñ!" is SVG text in the Ubuntu font: without it rsvg-convert falls back to DejaVu
+          fc-match -f '%{family}\n' 'Ubuntu:bold' | grep -q '^Ubuntu' || { echo "Ubuntu font missing"; exit 1; }
 
       - name: Check that the tag matches the app version
         run: |
