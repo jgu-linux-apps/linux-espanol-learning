@@ -7,6 +7,7 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, GLib  # noqa: E402
 
 from .. import answers
+from ..audio import Vad
 from ..paths import REC_DIR
 from .widgets import label, SpeakButton, slow_button, run_bg
 
@@ -18,6 +19,7 @@ class SpeakPractice(Gtk.Box):
         self.on_scored = on_scored
         self.recording = False
         self.last_rec = None
+        self._take = 0
 
         row = Gtk.Box(spacing=8)
         row.pack_start(label(target, "big-es"), True, True, 0)
@@ -65,19 +67,34 @@ class SpeakPractice(Gtk.Box):
             self.recording = True
             self._set_rec_label()
             path = os.path.join(REC_DIR, f"rec-{int(time.time() * 1000)}.wav")
-            self.result.set_markup('<span alpha="70%">Mów teraz… (kliknij ponownie, aby zakończyć)</span>')
+            self.sil = float(self.app.db.get("bot_silence", 3.0))
+            self.result.set_markup('<span alpha="70%">Mów teraz… Nagranie zakończy się samo po '
+                                   f'{self.sil:g} s ciszy (albo kliknij ponownie).</span>')
             self.tips.set_text("")
             self.app.player.stop()
-            self.app.recorder.start(path, on_level=self.level.set_value)
-            # automatyczne zakończenie po 15 s
-            self._auto = GLib.timeout_add_seconds(15, self._auto_stop)
+            self._take += 1
+            take = self._take
+            # koniec po ciszy (jak w rozmowie z botem); bez mowy przez 8 s albo po 15 s nagrywania — też koniec
+            vad = Vad(end_silence=self.sil, wait=8.0, max_len=15.0)
+            self.app.recorder.start(path, on_level=self.level.set_value, vad=vad,
+                                    on_event=lambda ev: self._vad_event(ev, take))
         else:
             self._stop()
 
-    def _auto_stop(self):
-        if self.recording:
+    def _vad_event(self, ev, take):
+        if not self.recording or take != self._take:
+            return
+        if ev == "start":
+            self.result.set_markup('<span alpha="70%">Słyszę Cię… skończę sam po chwili ciszy.</span>')
+        elif ev in ("end", "max"):
             self._stop()
-        return False
+        elif ev == "timeout":
+            self.recording = False
+            self._set_rec_label()
+            self.level.set_value(0)
+            self.app.recorder.stop(lambda _p: None)
+            self.result.set_markup('<span alpha="70%">Nic nie usłyszałem — kliknij „Nagraj się”, '
+                                   'gdy będziesz gotowy.</span>')
 
     def _stop(self):
         self.recording = False

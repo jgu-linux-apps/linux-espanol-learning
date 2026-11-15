@@ -3,7 +3,7 @@
 **A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish.
 Lessons, grammar, vocabulary, spaced repetition, tests and pronunciation scoring.
 
-Version **1.13.4** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
+Version **1.13.5** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
 
 > **Language note:** for now the app is **in Polish only**. The interface, the grammar explanations,
 > the translations and the corrections are all in Polish, because the course is written for Polish
@@ -181,6 +181,7 @@ packaging/            .desktop file, the icon light/dark helper and its autostar
 Components downloaded separately on the first start (Piper, faster-whisper, voices, Whisper models) have their own licenses.
 
 ## Version history
+- **1.13.5** — the voice no longer reads the slash: "el tío / la tía" is read as "el tío", a short pause, "la tía"; "él/ella" the same, and "nosotros/as" as "nosotros… nosotras". Pronunciation practice stops recording by itself after a moment of silence (the same setting as the voice conversation, 3 s by default; Settings → "Recording — silence that ends what you say"); clicking still works, and with no speech for 8 s it stops and asks you to try again.
 - **1.13.4** — new icons in the series style: dark — the "¡ñ!" bubble on a deep navy tile, light — a gold bubble on a cream tile; the dock and app-menu icon switches light/dark together with the system, also while the app is closed (a small helper started at login and by the app itself).
 - **1.13.0** — new look: **sidebar in foldable groups** (Learn, Practice, Tools, You; a review counter next to "Powtórki", Settings in the ☰ menu); **"Today"** with one big "Continue" card, rings for the daily goal, the streak and the level progress, a week strip, a **Plan for today** (review, lesson, exercise of the day), the hardest words and a word of the day; **"Course"** with an A1/A2 switch, a progress ring for every unit, the current lesson expanded (lesson parts and "Continue") and stars and scores on finished lessons; **focus-mode exercises** (no sidebar, a segmented progress bar, a big prompt, answer cards with keys 1–4, a coloured result bar). New default theme **Coral**, new **Mediterráneo**, the former orange one as **Pomarańcz** — each with a light and a dark variant in the same hue.
 - **1.12.0** — new **Aurora** theme (Settings → Appearance), the same as in the other apps of the series: violet-cyan gradients, a glow on hover, light and dark variants switching together with the system.

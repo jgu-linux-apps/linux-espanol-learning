@@ -243,6 +243,41 @@ def engine_env(cuda=False):
     return env
 
 
+_SUFFIX = {"a": "o", "as": "os", "o": "a", "os": "as"}
+
+
+def speech_parts(text):
+    """Warianty do przeczytania osobno: „el tío / la tía” -> ["el tío", "la tía"], „él/ella” -> ["él", "ella"],
+    „nosotros/as” -> ["nosotros", "nosotras"]. Ukośnik nie jest czytany — między wariantami jest pauza."""
+    import re
+
+    def expand(m):
+        w, suf = m.group(1), m.group(2)
+        other = _SUFFIX[suf.lower()]
+        if w.lower().endswith(other) and len(w) > len(other) + 1:
+            return f"{w} / {w[:-len(other)]}{suf}"
+        return m.group(0)
+    t = re.sub(r"(\w+)/(as|os|a|o)\b", expand, text)
+    parts = [p.strip() for p in re.split(r"(?<!\d)\s*[/\\]\s*(?!\d)", t)]
+    return [p for p in parts if p] or [text.strip()]
+
+
+def join_wavs(paths, out, gap=0.15):
+    """Skleja pliki WAV (te same parametry) z krótką ciszą między nimi."""
+    import wave
+    params, chunks = None, []
+    for p in paths:
+        with wave.open(p, "rb") as w:
+            params = params or w.getparams()
+            chunks.append(w.readframes(w.getnframes()))
+    frame = params.sampwidth * params.nchannels
+    silence = b"\0" * (int(params.framerate * gap) * frame)
+    with wave.open(out + ".part", "wb") as w:
+        w.setparams(params)
+        w.writeframes(silence.join(chunks))
+    os.replace(out + ".part", out)
+
+
 def pad_wav(path, lead=0.35, tail=0.25):
     """Dodaje ciszę na początku i końcu nagrania — karta dźwiękowa „budzi się” przez
     ułamek sekundy i bez tego ucina początek krótkich słów (np. „¡Hola!”)."""
@@ -314,6 +349,15 @@ class Speech:
 
     def synth(self, text, slow=False):
         """Zwraca ścieżkę do pliku WAV (z pamięci podręcznej)."""
+        parts = speech_parts(text)
+        if len(parts) > 1:                      # „el tío / la tía”: każdy wariant osobno, z pauzą
+            h = hashlib.sha1(f"join|{self.db.get('voice', 'm')}|{self.db.get('tts_scale', 1.0)}|{slow}|{text}"
+                             .encode()).hexdigest()[:20]
+            out = os.path.join(TTS_CACHE, h + ".wav")
+            if not os.path.exists(out):
+                join_wavs([self.synth(p, slow) for p in parts], out)
+            return out
+        text = parts[0]
         voice_key = self.db.get("voice", "m")
         base = float(self.db.get("tts_scale", 1.0))
         # 🐢 zawsze wyraźnie wolniej niż wybrane tempo (wcześniej stałe 1.35 ≈ ustawienie „Wolno” 1.3)
