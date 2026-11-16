@@ -191,3 +191,14 @@ class Installer:
                 elif seen.get(st) is None:
                     seen[st] = 1
                     self.log("  " + st)
+
+
+def model_present(name, use_system=False):
+    """Is the model already downloaded? Private Ollama: its manifest file; system Ollama: the model list."""
+    if use_system:
+        tags = _alive(SYSTEM_URL) or {}
+        return any(m.get("name") == name for m in tags.get("models", []))
+    repo, _sep, tag = name.partition(":")
+    if "/" not in repo:
+        repo = "library/" + repo
+    return os.path.exists(os.path.join(MODELS_DIR, "manifests", "registry.ollama.ai", repo, tag or "latest"))

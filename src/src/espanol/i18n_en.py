@@ -589,4 +589,13 @@ EN.update({
     "🔑 Utwórz klucz API (console.anthropic.com)": "🔑 Create an API key (console.anthropic.com)",
     "Otwiera w przeglądarce stronę Anthropic, na której zakładasz konto i tworzysz klucz (przycisk „Create Key”). Skopiuj go i wklej obok.":
         "Opens the Anthropic page in your browser, where you sign up and create a key (the “Create Key” button). Copy it and paste it next to this.",
+    # pages_more.py: Bielik (Polish course only; English texts kept complete for the translation test)
+    "Polskie tłumaczenia offline przez Bielika — polski model językowy (dużo lepsza polszczyzna, odpowiedzi ok. 2× wolniej)":
+        "Polish translations offline through Bielik — a Polish language model (much better Polish, replies about 2× slower)",
+    "⬇ Pobierz Bielika (ok. 6,7 GB)": "⬇ Download Bielik (about 6.7 GB)",
+    "✔ Bielik pobrany i włączony": "✔ Bielik downloaded and switched on",
+    "✘ Nie udało się pobrać — sprawdź internet i miejsce na dysku.": "✘ The download failed — check the internet and disk space.",
+    "Pobieranie…": "Downloading…",
+    "Bielik (SpeakLeash) tłumaczy tylko zdania Paco i odpowiada na Twoje pytania po polsku; rozmowa i sprawdzanie błędów zostają na głównym modelu. Gdy zaznaczone są obie opcje, pierwszeństwo ma Claude.":
+        "Bielik (SpeakLeash) only translates Paco's lines and answers your questions in Polish; the chat and the mistake check stay on the main model. When both options are ticked, Claude comes first.",
 })

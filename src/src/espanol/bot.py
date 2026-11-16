@@ -534,16 +534,75 @@ EXPLAIN_EN = ("You are a friendly teacher of Spanish (castellano, Spain) for an 
               "The verb tener (to have) in the first person singular is \"tengo\".\n"
               "Likewise: Tengo una hermana. — I have a sister.\n")
 
-TRANSLATE_EN = ("You translate Spanish into English. Translate the MEANING, not word for word — the way a native "
-                "speaker would say it in a relaxed conversation. Output only the translation, without comments, "
-                "quotes or emoji.\n"
-                "Tricky constructions — translate them like this:\n"
-                "¿Te gusta el café o más bien el té? → Do you prefer coffee or tea?\n"
-                "Me encanta cocinar. → I love cooking.\n"
-                "A mí también. → Me too.\n"
-                "¿A qué te dedicas? → What do you do?\n"
-                "Vale, entiendo. → OK, I see.\n"
-                "¿Vas a algún sitio en vacaciones? → Are you going anywhere on holiday?")
+_TR_RULES = {
+    "English": ("You translate the lines of a Spanish conversation partner into natural, correct English for a learner.\n"
+                "RULES:\n"
+                "- Translate EVERY line COMPLETELY: keep every piece of information (who, what, where, when, numbers).\n"
+                "  Never shorten a sentence to \"Me too\" / \"Me neither\" when it says more.\n"
+                "- Keep the numbering: one translated line for each numbered line, nothing else.\n"
+                "- Translate the meaning naturally, the way a native speaker says it; no comments, quotes or emoji.\n"
+                "- \"usted\" (su, le, tome, siga) is a polite YOU: \"Su mesa\" = \"Your table\", never his/her.\n"
+                "Examples:\n"
+                "1. Yo también juego al tenis. → 1. I play tennis too.\n"
+                "2. Yo tampoco como carne. → 2. I don't eat meat either.\n"
+                "3. A mí también me gusta leer. → 3. I like reading too.\n"
+                "4. A mí también. → 4. Me too.\n"
+                "5. ¡Encantada, Ana! → 5. Nice to meet you, Ana!\n"
+                "6. ¿Vienes mucho a este parque? → 6. Do you come to this park often?\n"
+                "7. ¿Quedamos el viernes? → 7. Shall we meet on Friday?\n"
+                "8. Son dos euros con veinte. → 8. That's two euros twenty.\n"
+                "9. Su mesa está lista, señor. → 9. Your table is ready, sir.\n"
+                "10. Tome esta pastilla por la noche. → 10. Take this pill at night.\n"
+                "11. El invierno pasado fui a Polonia. → 11. Last winter I went to Poland.\n"
+                "12. ¿Te gusta el café o más bien el té? → 12. Do you prefer coffee or tea?"),
+    "Polish": ("Tłumaczysz kwestie hiszpańskiego rozmówcy na naturalną, POPRAWNĄ GRAMATYCZNIE polszczyznę dla ucznia.\n"
+               "ZASADY:\n"
+               "- Tłumacz KAŻDĄ linijkę W CAŁOŚCI: zachowaj każdą informację (kto, co, gdzie, kiedy, liczby).\n"
+               "  Nigdy nie skracaj zdania do „Ja też” / „Ja też nie”, gdy mówi więcej.\n"
+               "- Zachowaj numerację: jedna przetłumaczona linijka na każdą numerowaną linijkę, nic więcej.\n"
+               "- Tłumacz sens, tak jak mówi Polak w swobodnej rozmowie; poprawne przypadki i odmiana; "
+               "bez komentarzy, cudzysłowów i emoji.\n"
+               "- „tú” = „ty”. „usted” (su, le, tome, siga) to forma grzecznościowa: Pan/Pani, „proszę…”.\n"
+               "- Nigdy kalek: „czy cię podoba”, „czy byś”, „co słuchasz” (poprawnie: podoba ci się, czego słuchasz).\n"
+               "Przykłady:\n"
+               "1. Yo también juego al tenis. → 1. Ja też gram w tenisa.\n"
+               "2. Yo tampoco como carne. → 2. Ja też nie jem mięsa.\n"
+               "3. A mí también me gusta leer. → 3. Ja też lubię czytać.\n"
+               "4. A mí también. → 4. Ja też.\n"
+               "5. ¡Encantada, Ana! → 5. Miło mi, Ano!\n"
+               "6. ¿Te gusta tu barrio? → 6. Podoba ci się twoja dzielnica?\n"
+               "7. ¿Vienes mucho a este parque? → 7. Często przychodzisz do tego parku?\n"
+               "8. ¿Quedamos el viernes? → 8. Umówimy się na piątek?\n"
+               "9. Son dos euros con veinte. → 9. Razem dwa euro dwadzieścia.\n"
+               "10. Su mesa está lista, señor. → 10. Pana stolik jest gotowy.\n"
+               "11. Tome esta pastilla por la noche. → 11. Proszę brać tę tabletkę wieczorem.\n"
+               "12. El invierno pasado fui a Polonia. → 12. Zeszłej zimy pojechałem do Polski.\n"
+               "13. ¿Qué libros lees? → 13. Jakie książki czytasz?\n"
+               "14. Mi madre es profesora. → 14. Moja mama jest nauczycielką.\n"
+               "15. ¿Cómo es tu casa? → 15. Jaki jest twój dom?\n"
+               "16. ¿Te gusta el café o más bien el té? → 16. Wolisz kawę czy herbatę?"),
+}
+TRANSLATE_PROMPT = _TR_RULES
+PROOF_PL = ("Jesteś korektorem polszczyzny. Popraw w każdej numerowanej linijce błędy odmiany (przypadki, rodzaj, "
+            "końcówki), kalki i nienaturalne sformułowania. Mówi mężczyzna (Paco). Nie zmieniaj sensu, nie usuwaj "
+            "informacji, zachowaj numerację. Wypisz tylko poprawione linijki.")
+
+
+_ES_LIGHT = {"a", "mí", "mi", "me", "te", "se", "nos", "os", "le", "les", "el", "la", "los", "las", "lo", "un", "una",
+             "unos", "unas", "y", "de", "del", "al", "que"}
+
+
+def _too_short(es, tr):
+    """A translation that lost content ("Yo también tomo café." → "Me too."): much fewer words than the
+    Spanish sentence, counting only Spanish words that carry meaning (not articles, "a mí", "me"…)."""
+    n_es = len([w for w in re.findall(r"\w+", es.lower()) if w not in _ES_LIGHT])
+    return n_es >= 3 and len(re.findall(r"\w+", tr or "")) < 0.6 * n_es
+
+
+def _too_long(es, tr):
+    """A "translation" that adds content the Spanish sentence does not have (the model answered instead)."""
+    n_es = len(re.findall(r"\w+", es))
+    return len(re.findall(r"\w+", tr or "")) > 1.6 * n_es + 3
 
 
 CHECK_PROMPT = """You check ONE sentence written by a beginner learner of Spanish (castellano, Spain), level A1–A2.
@@ -861,6 +920,22 @@ def _claude_stream(self, system, messages):
 ClaudeBackend.chat_stream = _claude_stream
 
 
+BIELIK = "SpeakLeash/bielik-11b-v2.3-instruct:Q4_K_M"
+
+
+def translator(db):
+    """Separate model for translations and explanations (the chat itself stays on the main engine):
+    Claude API when chosen and a key is set; in the Polish course Bielik (a Polish offline model) when chosen."""
+    if db.get("bot_backend", "ollama") != "ollama":
+        return None
+    if db.get("pl_claude", False) and load_api_key():
+        return ClaudeBackend(load_api_key(), "claude-sonnet-5-5")
+    if db.get("pl_bielik", False) and i18n.LANG == "pl":
+        return OllamaBackend(db.get("ollama_url", "http://localhost:11434"), BIELIK,
+                             managed=bool(db.get("ollama_managed", False)))
+    return None
+
+
 def make_backend(db):
     kind = db.get("bot_backend", "ollama")
     if kind == "claude":
@@ -927,6 +1002,7 @@ class Conversation:
         out = re.sub(r"<think>.*?</think>", "", out, flags=re.S)
         out = re.sub(r"</?[a-z]+>", "", out)
         out = re.sub(r"[*_#`]+", "", out)            # bez markdownu
+        out = re.split(r"\n\s*Quick reference", out)[0]  # a model copying the grammar notes from the prompt
         return out.strip()
 
     def explain(self, text):
@@ -949,53 +1025,56 @@ class Conversation:
         return self._tutor_chat(sysmsg, text)
 
     def translate_pl(self, es):
-        """Tłumaczenie zdań bota na polski: gotowe zwroty ze słowniczka + model (z przykładami trudnych
-        konstrukcji) + krótka korekta polszczyzny."""
+        """Translation of Paco's reply into the course language (Polish or English), sentence by sentence:
+        ready phrases from the phrasebook, the rest as a numbered list (no sentence can be dropped or merged);
+        a sentence that comes back much shorter than the Spanish one is translated again on its own."""
         parts = [x for x in re.split(r"(?<=[.!?…])\s+", es.strip()) if x]
+        if not parts:
+            return ""
         book = phrasebook()
-        known = [book.get(_phrase_key(x)) for x in parts]
-        a = 0
-        while a < len(parts) and known[a] is not None:
-            a += 1
-        b = len(parts)
-        while b > a and known[b - 1] is not None:
-            b -= 1
-        middle = ""
-        if a < b and i18n.LANG == "en":
-            tr = self._tutor_chat(TRANSLATE_EN, " ".join(parts[a:b]))
-            if not tr or looks_spanish(tr):
-                return ""
-            middle = tr
-        elif a < b:          # zdania spoza słowniczka (z ewentualnymi zwrotami pomiędzy) tłumaczy model
-            sysmsg = ("Jesteś tłumaczem z hiszpańskiego na polski. Tłumacz SENS, nie słowo w słowo — tak, jak "
-                      "powiedziałby to Polak w swobodnej rozmowie. Zachowaj formę „ty”. Wypisz tylko tłumaczenie, "
-                      "bez komentarzy, cudzysłowów i emoji.\n"
-                      "Trudne konstrukcje — tak tłumacz:\n"
-                      "¿Te gusta el café o más bien el té? → Wolisz kawę czy herbatę?\n"
-                      "¿Te gusta el fútbol? → Lubisz piłkę nożną?\n"
-                      "Me encanta cocinar. → Uwielbiam gotować.\n"
-                      "A mí también. → Ja też.\n"
-                      "¿Qué haces en tu tiempo libre? → Co robisz w wolnym czasie?\n"
-                      "¿A qué te dedicas? → Czym się zajmujesz?\n"
-                      "Vale, entiendo. → Okej, rozumiem.\n"
-                      "¿Vas a algún sitio en vacaciones? → Jedziesz gdzieś na wakacje?\n"
-                      "Nigdy dosłownie: „czy cię podoba”, „czy ty lubisz bardziej”.")
-            tr = self._tutor_chat(sysmsg, " ".join(parts[a:b]))
-            if not tr or looks_spanish(tr):
-                return ""
-            middle = self._polish_check(tr)
-        return " ".join([x for x in known[:a]] + ([middle] if middle else []) + [x for x in known[b:]]).strip()
+        out = [book.get(_phrase_key(x)) for x in parts]
+        todo = [i for i, x in enumerate(out) if x is None]
+        if todo:
+            got = self._translate_lines([parts[i] for i in todo])
+            if got is None:                       # numbering lost — one sentence per request
+                got = [(self._translate_lines([parts[i]]) or [""])[0] for i in todo]
+            for i, tr in zip(todo, got):
+                if _too_short(parts[i], tr) or _too_long(parts[i], tr) or looks_spanish(tr) or not tr:
+                    tr = (self._translate_lines([parts[i]]) or [tr])[0]
+                if not tr or looks_spanish(tr) or _too_short(parts[i], tr) or _too_long(parts[i], tr):
+                    return ""                     # better no translation than a wrong one
+                out[i] = tr
+            if native() == "Polish":
+                self._proofread_pl(out, todo, parts)
+        return " ".join(out).strip()
 
-    def _polish_check(self, pl):
-        """Druga, krótka runda: popraw błędy gramatyczne i kalki w polskim zdaniu (bez zmiany sensu)."""
-        sysmsg = ("Popraw błędy gramatyczne, przypadki i nienaturalne kalki w tym polskim tekście tak, by brzmiał "
-                  "naturalnie w rozmowie. Nie zmieniaj sensu, nie dodawaj nic. Jeśli tekst jest poprawny, przepisz "
-                  "go bez zmian. Wypisz tylko tekst.\n"
-                  "Przykład: „Czy cię bardziej podoba kawa czy herbata?” → „Wolisz kawę czy herbatę?”")
-        fixed = self._tutor_chat(sysmsg, pl)
-        if not fixed or looks_spanish(fixed) or len(fixed) > 2 * len(pl) + 20:
-            return pl
-        return fixed
+    def _proofread_pl(self, out, idx, parts):
+        """Second pass for Polish: fixes inflection and calques in the model's lines (phrasebook lines stay)."""
+        fixed = self._translate_lines_with(PROOF_PL, [out[i] for i in idx])
+        for i, f in zip(idx, fixed or []):
+            if f and not looks_spanish(f) and not _too_short(parts[i], f) and not _too_long(parts[i], f):
+                out[i] = f
+
+    def _translate_lines(self, sentences):
+        """Numbered list in → the same numbered list translated. None when the numbering does not match."""
+        return self._translate_lines_with(TRANSLATE_PROMPT[native()], sentences)
+
+    def _translate_lines_with(self, system, sentences):
+        text = "\n".join(f"{n}. {x}" for n, x in enumerate(sentences, 1))
+        raw = self._tutor_chat(system, text)
+        got = {}
+        for line in raw.splitlines():
+            m = re.match(r"\s*(\d+)[.)]\s*(.+)", line)
+            if m:
+                tr = m.group(2)
+                if "→" in tr:                     # the model echoed "Spanish → n. translation"
+                    tr = re.sub(r"^\s*\d+[.)]\s*", "", tr.rsplit("→", 1)[1])
+                got[int(m.group(1))] = tr.strip().strip('"„”“')
+        if sorted(got) != list(range(1, len(sentences) + 1)):
+            if len(sentences) == 1 and raw.strip() and "\n" not in raw.strip():
+                return [raw.strip().rsplit("→", 1)[-1].strip().strip('"„”“')]
+            return None
+        return [got[n] for n in range(1, len(sentences) + 1)]
 
     def _learn(self, text):
         for k, vals in extract_facts(text).items():
@@ -1137,7 +1216,8 @@ class Conversation:
         """Grammar check of the learner's sentence in a parallel thread (the reply is not slowed down)."""
         import threading
         box = {}
-        th = threading.Thread(target=lambda: box.update(r=check_sentence(self.helper or self.backend, text)),
+        checker = self.helper if isinstance(self.helper, ClaudeBackend) else self.backend
+        th = threading.Thread(target=lambda: box.update(r=check_sentence(checker, text)),
                               daemon=True)
         th.start()
         return th, box

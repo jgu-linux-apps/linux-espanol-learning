@@ -185,6 +185,99 @@ class GrammarCheck(unittest.TestCase):
         self.assertIsNone(bot.check_sentence(Broken(), "Hola."))
 
 
+class ReplyTranslation(unittest.TestCase):
+    """Translation of Paco's replies: every sentence, nothing shortened (fake model, no Ollama needed)."""
+    class _Model:
+        def __init__(self, answers):
+            self.answers, self.calls = list(answers), []
+
+        def chat(self, system, messages, temperature=None):
+            self.calls.append(messages[0]["content"])
+            return self.answers.pop(0) if self.answers else ""
+
+    def tearDown(self):
+        i18n.LANG = "pl"
+
+    def conv(self, answers):
+        from espanol import bot
+        c = bot.Conversation.__new__(bot.Conversation)
+        c.backend, c.helper = self._Model(answers), None
+        return c
+
+    def test_shortened_sentence_is_translated_again(self):
+        i18n.LANG = "en"
+        c = self.conv(["1. Me too.\n2. Do you come to the bar sometimes?", "1. I drink coffee too."])
+        self.assertEqual(c.translate_pl("¡Genial! Yo también tomo café. ¿Vienes a veces al bar?"),
+                         "Brilliant! I drink coffee too. Do you come to the bar sometimes?")
+        self.assertEqual(c.backend.calls[1], "1. Yo también tomo café.")
+
+    def test_echoed_spanish_is_cut_off(self):
+        i18n.LANG = "en"
+        c = self.conv(["1. Vale, entiendo. → 1. OK, I see.\n2. ¿Tienes un perro? → 2. Do you have a dog?"])
+        self.assertEqual(c.translate_pl("Vale, entiendo. ¿Tienes un perro?"), "OK, I see. Do you have a dog?")
+
+    def test_phrasebook_lines_are_not_sent(self):
+        i18n.LANG = "en"
+        c = self.conv(["1. What do you do at the weekend?"])
+        self.assertEqual(c.translate_pl("¡Hola! ¿Qué haces el fin de semana?"), "Hi! What do you do at the weekend?")
+        self.assertEqual(c.backend.calls, ["1. ¿Qué haces el fin de semana?"])
+
+    def test_no_translation_rather_than_a_wrong_one(self):
+        i18n.LANG = "en"
+        c = self.conv(["1. Me too.", "1. Me too."])
+        self.assertEqual(c.translate_pl("Yo también tengo dos gatos negros."), "")
+
+    def test_polish_gets_a_proofreading_pass(self):
+        i18n.LANG = "pl"
+        c = self.conv(["1. Mój brat jest informatykem.", "1. Mój brat jest informatykiem."])
+        self.assertEqual(c.translate_pl("Mi hermano es informático."), "Mój brat jest informatykiem.")
+
+
+class TranslatorChoice(unittest.TestCase):
+    class _DB(dict):
+        def get(self, k, d=None):
+            return super().get(k, d)
+
+    def tearDown(self):
+        i18n.LANG = "pl"
+
+    def test_bielik_only_for_the_polish_course(self):
+        from espanol import bot
+        db = self._DB(bot_backend="ollama", pl_bielik=True, ollama_url="http://127.0.0.1:11435")
+        i18n.LANG = "pl"
+        self.assertEqual(bot.translator(db).model, bot.BIELIK)
+        i18n.LANG = "en"
+        self.assertIsNone(bot.translator(db))
+
+    def test_off_by_default_and_not_with_claude_chat(self):
+        from espanol import bot
+        i18n.LANG = "pl"
+        self.assertIsNone(bot.translator(self._DB(bot_backend="ollama")))
+        self.assertIsNone(bot.translator(self._DB(bot_backend="claude", pl_bielik=True)))
+
+    def test_made_up_content_is_rejected(self):
+        from espanol import bot
+        self.assertTrue(bot._too_long("¿Y qué haces los fines de semana?",
+                                      "A ja w weekendy lubię spędzać czas z rodziną i przyjaciółmi, chodzić na "
+                                      "spacery i odpoczywać."))
+        self.assertFalse(bot._too_long("¿Quiere probársela?", "Czy chciałby Pan ją przymierzyć?"))
+
+    def test_mistake_check_stays_on_the_chat_model(self):
+        from espanol import bot
+        c = bot.Conversation.__new__(bot.Conversation)
+        c.backend = bot.OllamaBackend("x", "qwen3:8b")
+        c.helper = bot.OllamaBackend("x", bot.BIELIK)
+        seen = []
+        orig = bot.check_sentence
+        bot.check_sentence = lambda be, text: seen.append(be.model) or ("", "")
+        try:
+            th, _box = c._check_async("Hola.")
+            th.join(5)
+        finally:
+            bot.check_sentence = orig
+        self.assertEqual(seen, ["qwen3:8b"])
+
+
 class ProfileNames(unittest.TestCase):
     def test_default_name_follows_the_profile_language(self):
         from espanol.profiles import display_name

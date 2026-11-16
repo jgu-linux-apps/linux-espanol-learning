@@ -587,6 +587,48 @@ class SettingsPage(_BackupMixin, Gtk.Box):
         self.pack_start(scrolled(self.inner), True, True, 0)
         self.refresh()
 
+    def _bielik_row(self, grid, db, row):
+        """Option: Polish translations through Bielik, with a download button when the model is missing."""
+        from .. import ollama_local as ol
+        from .. import bot as botmod
+        use_sys = not db.get("ollama_managed", False)
+        have = ol.model_present(botmod.BIELIK, use_sys)
+        box = Gtk.Box(spacing=10)
+        chk = Gtk.CheckButton(label=_("Polskie tłumaczenia offline przez Bielika — polski model językowy "
+                                      "(dużo lepsza polszczyzna, odpowiedzi ok. 2× wolniej)"))
+        chk.set_active(bool(db.get("pl_bielik", False)) and have)
+        chk.set_sensitive(have)
+        chk.connect("toggled", lambda w: db.set("pl_bielik", w.get_active()))
+        box.pack_start(chk, False, False, 0)
+        status = label("", "dim", wrap=False)
+        if not have:
+            dl = Gtk.Button(label=_("⬇ Pobierz Bielika (ok. 6,7 GB)"))
+
+            def finish(ok):
+                if ok:
+                    dl.hide()
+                    chk.set_sensitive(True)
+                    chk.set_active(True)
+                    status.set_text(_("✔ Bielik pobrany i włączony"))
+                else:
+                    dl.set_sensitive(True)
+                    status.set_text(_("✘ Nie udało się pobrać — sprawdź internet i miejsce na dysku."))
+
+            def start(btn):
+                btn.set_sensitive(False)
+                status.set_text(_("Pobieranie…"))
+                ol.Installer(botmod.BIELIK, use_sys,
+                             lambda t: GLib.idle_add(status.set_text, t.strip()[:90]),
+                             lambda f: None,
+                             lambda ok, _info: GLib.idle_add(finish, ok)).start()
+            dl.connect("clicked", start)
+            box.pack_start(dl, False, False, 0)
+        box.pack_start(status, False, False, 0)
+        grid.attach(box, 0, row, 3, 1)
+        grid.attach(label(_("Bielik (SpeakLeash) tłumaczy tylko zdania Paco i odpowiada na Twoje pytania po polsku; "
+                            "rozmowa i sprawdzanie błędów zostają na głównym modelu. Gdy zaznaczone są obie opcje, "
+                            "pierwszeństwo ma Claude."), "dim"), 0, row + 1, 3, 1)
+
     def refresh(self):
         app, db = self.app, self.app.db
         clear(self.inner)
@@ -761,6 +803,9 @@ class SettingsPage(_BackupMixin, Gtk.Box):
             gb.attach(pk, 0, 5, 3, 1)
             gb.attach(label(_("Wysyłane są tylko pojedyncze zdania bota do przetłumaczenia i Twoje pytania po polsku. "
                             "Bez klucza lub bez zaznaczenia wszystko robi lokalny model."), "dim"), 0, 6, 3, 1)
+            from .. import i18n
+            if i18n.LANG == "pl":                    # Bielik: a Polish offline model, only for the Polish course
+                self._bielik_row(gb, db, 7)
             hint = (_("Bot offline: Ollama + model instalują się do Twojego katalogu domowego, bez sudo. "
                     "Na karcie NVIDIA odpowiedzi przychodzą w 1–3 s, na samym procesorze wolniej."))
         else:

@@ -3,7 +3,7 @@
 **A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish or English.
 Lessons, grammar, vocabulary, spaced repetition, tests and pronunciation scoring.
 
-Version **1.17.2** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
+Version **1.18.0** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
 
 > **Language note:** the course is available **for Polish speakers** and, since 1.14, **for English
 > speakers**. The course language belongs to the learner profile (☰ profile menu →
@@ -109,6 +109,7 @@ On the conversation screen click **🎤 Mów** (Speak) and say a sentence in Spa
 ## Chat with the bot — setup
 In **Settings → Chat with the bot** choose the engine:
 - **Ollama (local, offline, free)** — click **"Install Ollama and the model"** (in Settings or on the *Chat with the bot* screen). The app downloads Ollama to your home directory by itself (no sudo, about 1–2 GB including libraries for NVIDIA cards) and the chosen model: **Qwen 3 8B** (recommended, about 5.2 GB — best with an NVIDIA card or 16 GB RAM) or **Gemma 3 4B** (faster, about 3.3 GB). A private Ollama server starts by itself for the conversation (port 11435) and closes together with the app. If Ollama is already on the system, the app uses it and downloads only the model. Your own server can be set in the *Advanced* section.
+- **Bielik for Polish translations (offline, optional)** — Settings → Chat with the bot: “Polskie tłumaczenia offline przez Bielika”. [Bielik](https://huggingface.co/speakleash) (SpeakLeash) is a Polish language model; downloaded on request with one click (about 6.7 GB) into the same private Ollama. It only translates Paco's lines and answers your questions in Polish; the chat and the mistake check stay on the main model. Much better Polish than the main model, but replies take about twice as long (on a 6 GB graphics card the two models take turns in memory). Polish course only; when the Claude option is also ticked, Claude comes first.
 - **Claude API (cloud)** — paste an API key from console.anthropic.com (the “Create an API key” link next to the key field opens the right page) and choose the model (Haiku — fast and cheap, Sonnet — the best). Only the text of the conversation is sent to the API. The key is stored in the system password store (GNOME Keyring), or, without one, locally in `~/.config/linux-espanol-learning/claude_api_key` (mode 600). Using the API is paid.
 
 ## Where the data is
@@ -184,6 +185,8 @@ packaging/            .desktop file, the icon light/dark helper and its autostar
 Components downloaded separately on the first start (Piper, faster-whisper, voices, Whisper models) have their own licenses.
 
 ## Version history
+- **1.18.0** — **Bielik as an optional Polish translator** (offline): a Polish language model for Paco's translations and Polish explanations, downloaded on request (about 6.7 GB). In a test on 34 typical Paco replies it made about 7 mistakes against about 20 for the main model (qwen3:8b), with almost no grammar mistakes; replies take about twice as long. Translations that add content the Spanish sentence does not have are now rejected and translated again, and copied prompt notes are cut from explanations. The mistake check always stays on the main model.
+- **1.17.3** — **complete translations of Paco's replies**: every sentence is translated on its own line, so nothing is shortened any more ("Yo también tomo café" was sometimes shown as just "Me too"); a sentence that comes back much shorter than the Spanish one is translated again, and the formal *usted* is translated as a polite "you" (Pan/Pani in Polish). The Polish translation gets an extra proofreading pass for case endings and calques. With the offline model the Polish translations can still contain grammar mistakes — for the best Polish, turn on translations through the Claude API in Settings.
 - **1.17.2** — Settings → Chat with the bot (Claude API engine): a **“Create an API key”** link next to the key field opens the Anthropic console page where you create a key.
 - **1.17.1** — the Course screen shows the next levels **B1** and **B2** as greyed-out “planned” buttons (“w planach” in Polish), so you can see where the course is heading.
 - **1.17.0** — **Paco catches mistakes much more reliably** (Polish and English versions): every sentence you say is checked by a separate, short grammar check that runs at the same time as Paco's reply. In tests with the offline model (qwen3:8b) it caught 20 of 20 typical beginner mistakes (yo tiene, yo es, ser/estar, gender, gustar, past tense) with no false alarms on correct sentences, where before Paco noticed about one mistake in three. Missing accents and a left-out “yo” are not counted as mistakes; if the check fails, the correction from Paco's reply is used as before.

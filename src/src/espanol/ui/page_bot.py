@@ -135,8 +135,7 @@ class BotPage(Gtk.Box):
         self.conv = bot.Conversation(bot.make_backend(app.db), profile, scenario,
                                      level=app.db.get("bot_level", "normal"),
                                      manual=load_manual(app.db), auto=load_auto(app.db))
-        if app.db.get("pl_claude", False) and bot.load_api_key() and app.db.get("bot_backend", "ollama") == "ollama":
-            self.conv.helper = bot.ClaudeBackend(bot.load_api_key(), "claude-sonnet-5-5")
+        self.conv.helper = bot.translator(app.db)
         clear(self.outer)
         head = Gtk.Box(spacing=10)
         for side in ("start", "end", "top"):
