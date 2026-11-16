@@ -971,6 +971,7 @@ class Conversation:
         self.next_topic = ""
         self.helper = None    # opcjonalny silnik (Claude) tylko do polskich tłumaczeń/wyjaśnień
         self.on_help = None   # callback(tekst) wołany w wątku roboczym, gdy bot wyjaśnia coś po polsku
+        self.defer_translation = False   # True: the reply comes back at once, translate_turn() fills "pl" later
 
     def _pick_topic(self):
         """Dla swobodnej rozmowy: wybiera następny temat, którego jeszcze nie poruszono."""
@@ -1106,9 +1107,12 @@ class Conversation:
         r.setdefault("ok", "")
         r["es"] = re.sub(r"\s{2,}", " ", _EMOJI.sub("", r.get("es", ""))).strip()
         if r["es"] and not r["es"].startswith("("):
-            tr = self.translate_pl(r["es"])
-            if tr:
-                r["pl"] = tr
+            if self.defer_translation:
+                r["pl"], r["pl_pending"] = "", True
+            else:
+                tr = self.translate_pl(r["es"])
+                if tr:
+                    r["pl"] = tr
         if not last_user or last_user.startswith("(start)"):
             r["fix"] = r["ok"] = ""
         # „poprawka” będąca powtórzeniem zdania bota — odrzuć
@@ -1230,6 +1234,14 @@ class Conversation:
         if res is not None:                  # the separate check wins over the reply's own <ok>/<fix>
             r["ok"], r["fix"] = res
         return r
+
+    def translate_turn(self, turn):
+        """Background translation of a bot turn (defer_translation): fills its "pl" and returns it.
+        Runs in a worker thread; an empty string means no reliable translation."""
+        tr = self.translate_pl(turn.get("es", "")) if turn.get("es") else ""
+        turn["pl"] = tr
+        turn.pop("pl_pending", None)
+        return tr
 
     def _values(self):
         """Wartości faktów o uczniu (miasto, praca, imię…) — bot nie może ich mówić o sobie."""

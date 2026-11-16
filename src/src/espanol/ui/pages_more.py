@@ -587,48 +587,6 @@ class SettingsPage(_BackupMixin, Gtk.Box):
         self.pack_start(scrolled(self.inner), True, True, 0)
         self.refresh()
 
-    def _bielik_row(self, grid, db, row):
-        """Option: Polish translations through Bielik, with a download button when the model is missing."""
-        from .. import ollama_local as ol
-        from .. import bot as botmod
-        use_sys = not db.get("ollama_managed", False)
-        have = ol.model_present(botmod.BIELIK, use_sys)
-        box = Gtk.Box(spacing=10)
-        chk = Gtk.CheckButton(label=_("Polskie tłumaczenia offline przez Bielika — polski model językowy "
-                                      "(dużo lepsza polszczyzna, odpowiedzi ok. 2× wolniej)"))
-        chk.set_active(bool(db.get("pl_bielik", False)) and have)
-        chk.set_sensitive(have)
-        chk.connect("toggled", lambda w: db.set("pl_bielik", w.get_active()))
-        box.pack_start(chk, False, False, 0)
-        status = label("", "dim", wrap=False)
-        if not have:
-            dl = Gtk.Button(label=_("⬇ Pobierz Bielika (ok. 6,7 GB)"))
-
-            def finish(ok):
-                if ok:
-                    dl.hide()
-                    chk.set_sensitive(True)
-                    chk.set_active(True)
-                    status.set_text(_("✔ Bielik pobrany i włączony"))
-                else:
-                    dl.set_sensitive(True)
-                    status.set_text(_("✘ Nie udało się pobrać — sprawdź internet i miejsce na dysku."))
-
-            def start(btn):
-                btn.set_sensitive(False)
-                status.set_text(_("Pobieranie…"))
-                ol.Installer(botmod.BIELIK, use_sys,
-                             lambda t: GLib.idle_add(status.set_text, t.strip()[:90]),
-                             lambda f: None,
-                             lambda ok, _info: GLib.idle_add(finish, ok)).start()
-            dl.connect("clicked", start)
-            box.pack_start(dl, False, False, 0)
-        box.pack_start(status, False, False, 0)
-        grid.attach(box, 0, row, 3, 1)
-        grid.attach(label(_("Bielik (SpeakLeash) tłumaczy tylko zdania Paco i odpowiada na Twoje pytania po polsku; "
-                            "rozmowa i sprawdzanie błędów zostają na głównym modelu. Gdy zaznaczone są obie opcje, "
-                            "pierwszeństwo ma Claude."), "dim"), 0, row + 1, 3, 1)
-
     def refresh(self):
         app, db = self.app, self.app.db
         clear(self.inner)
@@ -723,128 +681,8 @@ class SettingsPage(_BackupMixin, Gtk.Box):
 
         # Bot
         from .. import bot as botmod
-        cb = card()
-        cb.pack_start(label(_("Rozmowa z botem"), "title2"), False, False, 0)
-        gb = Gtk.Grid(column_spacing=12, row_spacing=10)
-        kind = Gtk.ComboBoxText()
-        kind.append("ollama", _("Ollama — lokalnie, offline (darmowe)"))
-        kind.append("claude", _("Claude API — chmura (najlepsza jakość, płatne)"))
-        kind.set_active_id(db.get("bot_backend", "ollama"))
-        kind.connect("changed", lambda w: (db.set("bot_backend", w.get_active_id()), self.refresh()))
-        gb.attach(label(_("Silnik:"), wrap=False), 0, 0, 1, 1)
-        gb.attach(kind, 1, 0, 2, 1)
-        if db.get("bot_backend", "ollama") == "ollama":
-            from .. import ollama_local as ol
-            from .page_bot import OllamaSetupDialog
-            model = db.get("ollama_model", "")
-            if model:
-                where = (_("prywatna Ollama aplikacji (uruchamia się sama)") if db.get("ollama_managed")
-                         else db.get("ollama_url", "http://localhost:11434"))
-                gb.attach(label(_('✔ Gotowe — model: {}  ·  {}').format(model, where), "ok-text"), 0, 1, 3, 1)
-                btxt = _("Zmień model / zainstaluj ponownie")
-            else:
-                gb.attach(label(_("Bot offline nie jest jeszcze zainstalowany."), "warn-text"), 0, 1, 3, 1)
-                btxt = _("⬇  Zainstaluj Ollamę i model (automatycznie)")
-            ib = Gtk.Button(label=btxt)
-            if not model:
-                ib.get_style_context().add_class("suggested-action")
-            ib.set_halign(Gtk.Align.START)
-            ib.connect("clicked", lambda *_a: OllamaSetupDialog(app, self.get_toplevel()))
-            gb.attach(ib, 0, 2, 3, 1)
-
-            exp = Gtk.Expander(label=_("Zaawansowane (własny serwer Ollama)"))
-            ga = Gtk.Grid(column_spacing=12, row_spacing=8)
-            ga.set_margin_top(8)
-            url = Gtk.Entry()
-            url.set_text(db.get("ollama_url", "http://localhost:11434"))
-            url.set_width_chars(30)
-
-            def url_changed(w):
-                db.set("ollama_url", w.get_text().strip())
-                db.set("ollama_managed", False)
-            url.connect("changed", url_changed)
-            ga.attach(label(_("Adres Ollama:"), wrap=False), 0, 0, 1, 1)
-            ga.attach(url, 1, 0, 2, 1)
-            mcombo = Gtk.ComboBoxText.new_with_entry()
-            mcombo.get_child().set_text(model)
-            mcombo.get_child().set_placeholder_text(_("nazwa modelu"))
-            mcombo.connect("changed", lambda w: db.set("ollama_model", (w.get_active_text() or "").strip()))
-            status = label("", "dim")
-
-            def refresh_models(*_a):
-                mcombo.remove_all()
-                try:
-                    models = botmod.OllamaBackend.list_models(db.get("ollama_url", "http://localhost:11434"))
-                except Exception:  # noqa
-                    status.set_text(_("Serwer nie odpowiada") + (_(" — prywatna Ollama uruchomi się sama przy rozmowie.")
-                                                             if db.get("ollama_managed") else "."))
-                    return
-                for m in models:
-                    mcombo.append_text(m)
-                status.set_text(_('Modele na serwerze: {}').format(', '.join(models) or _('brak')))
-            rb = Gtk.Button(label=_("Odśwież listę"))
-            rb.connect("clicked", refresh_models)
-            ga.attach(label(_("Model:"), wrap=False), 0, 1, 1, 1)
-            ga.attach(mcombo, 1, 1, 1, 1)
-            ga.attach(rb, 2, 1, 1, 1)
-            ga.attach(status, 0, 2, 3, 1)
-            exp.add(ga)
-            gb.attach(exp, 0, 3, 3, 1)
-            plc = Gtk.CheckButton(label=_("Polskie tłumaczenia i wyjaśnienia przez Claude API (znacznie lepsza polszczyzna)"))
-            plc.set_active(bool(db.get("pl_claude", False)))
-            plc.connect("toggled", lambda w: db.set("pl_claude", w.get_active()))
-            gb.attach(plc, 0, 4, 3, 1)
-            pk = Gtk.Entry()
-            pk.set_visibility(False)
-            pk.set_text(botmod.load_api_key())
-            pk.set_placeholder_text(_("klucz API sk-ant-… (tylko do tłumaczeń; rozmowa zostaje lokalna)"))
-            pk.set_width_chars(46)
-            pk.connect("changed", lambda w: _debounced_key(w))
-            gb.attach(pk, 0, 5, 3, 1)
-            gb.attach(label(_("Wysyłane są tylko pojedyncze zdania bota do przetłumaczenia i Twoje pytania po polsku. "
-                            "Bez klucza lub bez zaznaczenia wszystko robi lokalny model."), "dim"), 0, 6, 3, 1)
-            from .. import i18n
-            if i18n.LANG == "pl":                    # Bielik: a Polish offline model, only for the Polish course
-                self._bielik_row(gb, db, 7)
-            hint = (_("Bot offline: Ollama + model instalują się do Twojego katalogu domowego, bez sudo. "
-                    "Na karcie NVIDIA odpowiedzi przychodzą w 1–3 s, na samym procesorze wolniej."))
-        else:
-            key = Gtk.Entry()
-            key.set_visibility(False)
-            key.set_text(botmod.load_api_key())
-            key.set_placeholder_text("sk-ant-…")
-            key.set_width_chars(40)
-            key.connect("changed", lambda w: _debounced_key(w))
-            gb.attach(label(_("Klucz API:"), wrap=False), 0, 1, 1, 1)
-            gb.attach(key, 1, 1, 2, 1)
-            get_key = Gtk.LinkButton.new_with_label("https://console.anthropic.com/settings/keys",
-                                                    _("🔑 Utwórz klucz API (console.anthropic.com)"))
-            get_key.set_tooltip_text(_("Otwiera w przeglądarce stronę Anthropic, na której zakładasz konto "
-                                       "i tworzysz klucz (przycisk „Create Key”). Skopiuj go i wklej obok."))
-            get_key.set_halign(Gtk.Align.START)
-            gb.attach(get_key, 3, 1, 1, 1)
-            cm = Gtk.ComboBoxText()
-            for k, n in botmod.CLAUDE_MODELS.items():
-                cm.append(k, n)
-            cm.set_active_id(db.get("claude_model", "claude-haiku-5-5"))
-            cm.connect("changed", lambda w: db.set("claude_model", w.get_active_id()))
-            gb.attach(label(_("Model:"), wrap=False), 0, 2, 1, 1)
-            gb.attach(cm, 1, 2, 2, 1)
-            hint = (_("Klucz jest zapisany tylko na tym komputerze (w systemowym schowku haseł — GNOME Keyring; bez niego w pliku z prawami 600). "
-                    "Do API wysyłany jest tylko tekst rozmowy. Klucz utworzysz na console.anthropic.com."))
-        cb.pack_start(gb, False, False, 0)
-        cb.pack_start(label(hint, "dim"), False, False, 0)
-        vr = Gtk.Box(spacing=10)
-        vr.pack_start(label(_("Nagrywanie głosu — cisza kończąca wypowiedź:"), wrap=False), False, False, 0)
-        sil = Gtk.Scale.new_with_range(Gtk.Orientation.HORIZONTAL, 1.0, 6.0, 0.5)
-        sil.set_value(float(db.get("bot_silence", 3.0)))
-        sil.set_size_request(200, -1)
-        sil.set_value_pos(Gtk.PositionType.RIGHT)
-        sil.connect("value-changed", lambda w: db.set("bot_silence", round(w.get_value(), 1)))
-        vr.pack_start(sil, False, False, 0)
-        vr.pack_start(label(_("s  (rozmowa z botem i ćwiczenie wymowy; dłużej = więcej czasu na myślenie, zawsze możesz też kliknąć)"), "dim", wrap=False), False, False, 0)
-        cb.pack_start(vr, False, False, 0)
-        b.pack_start(cb, False, False, 0)
+        from .bot_settings import BotSettings
+        b.pack_start(BotSettings(app, _debounced_key), False, False, 0)
 
         # Cel dzienny
         cg = card()
@@ -923,29 +761,23 @@ class SettingsPage(_BackupMixin, Gtk.Box):
                       False, False, 0)
         c3.pack_start(label(_('Rozpoznawanie mowy (Whisper, model „{}”): {}').format(size, _('✔ zainstalowane') if stt_ok else _('✘ brak'))), False, False, 0)
         g3 = Gtk.Grid(column_spacing=12, row_spacing=10)
-        model = Gtk.ComboBoxText()
-        for k, (name, sz) in speech.WHISPER_SIZES.items():
-            model.append(k, f"{name} — {k} ({sz})" + ("  ← zalecany" if k == speech.recommend(hw) else ""))
-        model.set_active_id(size)
-        g3.attach(label(_("Model rozpoznawania mowy:"), wrap=False), 0, 0, 1, 1)
-        g3.attach(model, 1, 0, 1, 1)
+        c3.pack_start(label(_("Model rozpoznawania mowy wybierasz w sekcji „Rozmowa z botem” powyżej."), "dim"),
+                      False, False, 0)
         cuda = Gtk.CheckButton(label=_("Używaj karty NVIDIA (CUDA) — pobiera dodatkowo ok. 1 GB bibliotek"))
         cuda.set_active(db.get("cuda", False))
         cuda.set_sensitive(hw["nvidia"])
         if not hw["nvidia"]:
             cuda.set_tooltip_text(_("Nie wykryto karty NVIDIA ze sterownikiem (nvidia-smi)."))
-        g3.attach(cuda, 0, 1, 2, 1)
+        g3.attach(cuda, 0, 0, 2, 1)
         c3.pack_start(g3, False, False, 0)
         inst = Gtk.Button(label=_("Zainstaluj / zaktualizuj komponenty"))
         inst.get_style_context().add_class("suggested-action")
         inst.set_halign(Gtk.Align.START)
 
         def do_install(*_a):
-            db.set("whisper", model.get_active_id())
             db.set("cuda", cuda.get_active())
             app.open_setup()
         inst.connect("clicked", do_install)
-        model.connect("changed", lambda w: speech.whisper_ready(w.get_active_id()) and db.set("whisper", w.get_active_id()))
         c3.pack_start(inst, False, False, 0)
         b.pack_start(c3, False, False, 0)
 

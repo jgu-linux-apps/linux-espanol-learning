@@ -598,4 +598,45 @@ EN.update({
     "Pobieranie…": "Downloading…",
     "Bielik (SpeakLeash) tłumaczy tylko zdania Paco i odpowiada na Twoje pytania po polsku; rozmowa i sprawdzanie błędów zostają na głównym modelu. Gdy zaznaczone są obie opcje, pierwszeństwo ma Claude.":
         "Bielik (SpeakLeash) only translates Paco's lines and answers your questions in Polish; the chat and the mistake check stay on the main model. When both options are ticked, Claude comes first.",
+    # ui/bot_settings.py: the bot card in Settings
+    "Wszystko o Paco w jednym miejscu. Kliknij kafelek, żeby wybrać.": "Everything about Paco in one place. Click a tile to choose.",
+    "Mózg Paco — kto prowadzi rozmowę": "Paco's brain — who runs the chat",
+    "Twoja karta graficzna: {} GB pamięci.": "Your graphics card: {} GB of memory.",
+    "🚀 Szybki": "🚀 Fast", "Dobre rozmowy, szybkie odpowiedzi. Zalecany.": "Good chats, quick replies. Recommended.",
+    "🧠 Dokładniejszy": "🧠 Smarter", "Trochę mądrzejszy, ale duży.": "A bit smarter, but big.",
+    "🪶 Lekki": "🪶 Light", "Dla słabszych komputerów, częściej się myli.": "For weaker computers, makes more mistakes.",
+    "⚠ Na Twojej karcie bardzo wolny (nie mieści się w pamięci).": "⚠ Very slow on your card (it doesn't fit in its memory).",
+    "✔ pobrany": "✔ downloaded", "✔ pobrane": "✔ downloaded", "⬇ do pobrania ({})": "⬇ to download ({})",
+    "☁️ Claude (chmura)": "☁️ Claude (cloud)",
+    "Najlepsze rozmowy i najszybsze odpowiedzi.\nPotrzebny klucz API, płatne za użycie.":
+        "The best chats and the fastest replies.\nNeeds an API key, paid per use.",
+    "Model {} nie jest jeszcze pobrany.": "The {} model isn't downloaded yet.", "⬇ Pobierz {} ({})": "⬇ Download {} ({})",
+    "Tłumaczenia odpowiedzi Paco": "Translations of Paco's replies",
+    "Hiszpańską odpowiedź słyszysz od razu; tłumaczenie pojawia się pod nią.":
+        "You hear the Spanish reply straight away; the translation appears under it.",
+    "Przy Claude tłumaczy też Claude — nic nie trzeba wybierać.": "With Claude, Claude translates too — nothing to choose.",
+    "⚡ Ten sam model": "⚡ The same model", "Najszybciej. Bez dodatkowych pobrań.": "Fastest. Nothing extra to download.",
+    "Polszczyzna bywa z błędami.": "The Polish can have mistakes.",
+    "🇵🇱 Bielik": "🇵🇱 Bielik", "Dużo lepsza polszczyzna, offline.\nOdpowiedź ok. 2× wolniej.":
+        "Much better Polish, offline.\nReplies about 2× slower.",
+    "Bielik nie jest jeszcze pobrany.": "Bielik isn't downloaded yet.", "⬇ Pobierz Bielika ({})": "⬇ Download Bielik ({})",
+    "☁️ Claude": "☁️ Claude", "Najlepsza jakość.\nPotrzebny klucz API, płatne za użycie.": "The best quality.\nNeeds an API key, paid per use.",
+    "Klucz jest zapisany tylko na tym komputerze (systemowy schowek haseł). Do API wysyłany jest tylko tekst rozmowy, nigdy nagrania głosu.":
+        "The key is stored only on this computer (the system password store). Only the text of the chat is sent to the API, never voice recordings.",
+    "Rozpoznawanie Twojej mowy": "Recognising your speech", "Dotyczy rozmowy z botem i ćwiczeń wymowy.": "Used in the bot chat and in pronunciation practice.",
+    "Najszybsze, mniej dokładne.": "Fastest, less accurate.", "Dobry kompromis. Zalecane.": "A good balance. Recommended.",
+    "Najdokładniejsze, ale wolniejsze\ni zabiera pamięć karty botowi.": "Most accurate, but slower\nand takes graphics memory from the bot.",
+    "⬇ Pobierz wybrany model rozpoznawania mowy": "⬇ Download the chosen speech recognition model",
+    "Kiedy skończyłeś mówić": "When you've finished speaking",
+    "Po ilu sekundach ciszy Paco uzna, że skończyłeś. Zawsze możesz też kliknąć „Skończyłem”.":
+        "After how many seconds of silence Paco decides you've finished. You can always click “I've finished” too.",
+    "2 s": "2 s", "3 s": "3 s", "4 s": "4 s", "6 s": "6 s", "Szybko": "Quick", "Zalecane": "Recommended",
+    "Spokojnie": "Relaxed", "Dużo czasu na myślenie": "Plenty of time to think",
+    "✔ Pobrano: {}": "✔ Downloaded: {}",
+    "Zaawansowane — własny serwer Ollama": "Advanced — your own Ollama server",
+    "Wróć do prywatnej Ollamy aplikacji": "Back to the app's private Ollama",
+    "Model rozpoznawania mowy wybierasz w sekcji „Rozmowa z botem” powyżej.":
+        "You choose the speech recognition model in the “Chat with the bot” section above.",
+    # page_bot.py: translation in the background
+    "tłumaczę…": "translating…", "(brak tłumaczenia)": "(no translation)",
 })

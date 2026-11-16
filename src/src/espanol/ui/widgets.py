@@ -233,6 +233,14 @@ CSS2 = b"""
 .lvl-switch { background-color: alpha(@theme_selected_bg_color, 0.10); border-radius: 12px; padding: 4px; }
 .lvl-planned { opacity: 1; }
 .lvl-planned label { color: alpha(@theme_fg_color, 0.5); font-style: italic; }
+.choice-tile { padding: 10px 14px; border-radius: 12px; background-image: none;
+               background-color: alpha(@theme_fg_color, 0.04); border: 1px solid alpha(@theme_fg_color, 0.15); }
+.choice-tile:hover { background-color: alpha(@theme_selected_bg_color, 0.10); }
+.choice-tile:checked { background-color: alpha(@theme_selected_bg_color, 0.20); border: 2px solid @theme_selected_bg_color; }
+.choice-tile .tile-title { font-weight: bold; font-size: 1.08em; }
+.choice-tile .tile-sub { font-size: 0.92em; color: alpha(@theme_fg_color, 0.75); }
+.step-title { font-weight: bold; font-size: 1.05em; }
+.pending { font-style: italic; }
 .notice { padding: 10px 16px; }
 .seg { min-height: 10px; border-radius: 5px; background-color: alpha(currentColor, 0.12); }
 .seg-done { background-color: @theme_selected_bg_color; }

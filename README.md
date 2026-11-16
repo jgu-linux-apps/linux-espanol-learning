@@ -3,7 +3,7 @@
 **A real Spanish course from scratch for Ubuntu**: Spanish from Spain (castellano), explained in Polish or English.
 Lessons, grammar, vocabulary, spaced repetition, tests and pronunciation scoring.
 
-Version **1.18.0** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
+Version **1.20.0** · Created by: **JGu** · Supported by **Claude** · part of the *JGu Linux Apps* series
 
 > **Language note:** the course is available **for Polish speakers** and, since 1.14, **for English
 > speakers**. The course language belongs to the learner profile (☰ profile menu →
@@ -185,6 +185,8 @@ packaging/            .desktop file, the icon light/dark helper and its autostar
 Components downloaded separately on the first start (Piper, faster-whisper, voices, Whisper models) have their own licenses.
 
 ## Version history
+- **1.20.0** — **faster chat with Paco**: his reply appears (and is read aloud) straight away and the chat is unlocked at once; the translation is done in the background and fills the line under the bubble (“translating…”) a few seconds later. With qwen3:8b the wait until you can answer dropped from about 10 s to about 5 s per turn, with the same translation quality.
+- **1.19.0** — **all bot settings in one place, as big tiles**: Settings → Chat with the bot now has four numbered steps — (1) Paco's brain: Fast (qwen3:8b), Smarter (qwen3:14b), Light (gemma3:4b) or Claude, each tile showing whether the model is downloaded and warning when it does not fit in your graphics card's memory (then it runs mostly on the processor and is several times slower); (2) translations: the same model, Bielik (Polish course) or Claude; (3) speech recognition: fast / accurate / very accurate; (4) how many seconds of silence end what you say. A model that is not downloaded is never switched on by a click — a download button appears instead. The Claude API key and the “Create an API key” link show up only when Claude is chosen; your own Ollama server is under “Advanced”. The speech-recognition choice moved here from “Speech engine”.
 - **1.18.0** — **Bielik as an optional Polish translator** (offline): a Polish language model for Paco's translations and Polish explanations, downloaded on request (about 6.7 GB). In a test on 34 typical Paco replies it made about 7 mistakes against about 20 for the main model (qwen3:8b), with almost no grammar mistakes; replies take about twice as long. Translations that add content the Spanish sentence does not have are now rejected and translated again, and copied prompt notes are cut from explanations. The mistake check always stays on the main model.
 - **1.17.3** — **complete translations of Paco's replies**: every sentence is translated on its own line, so nothing is shortened any more ("Yo también tomo café" was sometimes shown as just "Me too"); a sentence that comes back much shorter than the Spanish one is translated again, and the formal *usted* is translated as a polite "you" (Pan/Pani in Polish). The Polish translation gets an extra proofreading pass for case endings and calques. With the offline model the Polish translations can still contain grammar mistakes — for the best Polish, turn on translations through the Claude API in Settings.
 - **1.17.2** — Settings → Chat with the bot (Claude API engine): a **“Create an API key”** link next to the key field opens the Anthropic console page where you create a key.

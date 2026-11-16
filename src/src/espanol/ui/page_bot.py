@@ -136,6 +136,7 @@ class BotPage(Gtk.Box):
                                      level=app.db.get("bot_level", "normal"),
                                      manual=load_manual(app.db), auto=load_auto(app.db))
         self.conv.helper = bot.translator(app.db)
+        self.conv.defer_translation = True     # Paco's reply shows at once; the translation follows
         clear(self.outer)
         head = Gtk.Box(spacing=10)
         for side in ("start", "end", "top"):
@@ -451,7 +452,9 @@ class BotPage(Gtk.Box):
         if r.get("fix"):
             self._fix_note(r["fix"], r.get("ok", ""))
         if r.get("es"):
-            self._bubble("bot", r["es"], r.get("pl", ""), r.get("unknown", []))
+            bub = self._bubble("bot", r["es"], r.get("pl", ""), r.get("unknown", []), pending=r.get("pl_pending"))
+            if r.get("pl_pending"):
+                self._translate_later(bub)
         self._persist_facts()
         self.paco.react("worried" if r.get("fix") else "happy")
         self._reply_done = True
@@ -533,7 +536,26 @@ class BotPage(Gtk.Box):
         for lb in self.pl_labels:
             lb.set_visible(w.get_active())
 
-    def _bubble(self, who, es, pl="", unknown=()):
+    def _translate_later(self, bubble):
+        """Translation of the last bot turn in the background; fills the line under the bubble."""
+        conv = self.conv
+        turn = next((t for t in reversed(conv.turns) if t["who"] == "bot"), None) if conv else None
+        lb = getattr(bubble, "_pl_label", None)
+        if turn is None or lb is None:
+            return
+
+        def done(tr):
+            try:
+                if tr:
+                    lb.get_style_context().remove_class("pending")
+                    lb.set_text(tr)
+                else:
+                    lb.set_text(_("(brak tłumaczenia)"))
+            except Exception:  # noqa  — the chat screen may be gone already
+                pass
+        run_bg(lambda: conv.translate_turn(turn), done, lambda e: done(""))
+
+    def _bubble(self, who, es, pl="", unknown=(), pending=False):
         c = card(spacing=4)
         c.set_halign(Gtk.Align.START if who == "bot" else Gtk.Align.END)
         c.set_size_request(320, -1)
@@ -550,19 +572,22 @@ class BotPage(Gtk.Box):
         lb.set_max_width_chars(60)
         c._es_label = lb
         c.pack_start(lb, False, False, 0)
-        if pl:
-            p = label(pl, "dim")
+        if pl or pending:
+            p = label(pl or _("tłumaczę…"), "dim")
+            if pending:
+                p.get_style_context().add_class("pending")
             p.set_max_width_chars(60)
             p.set_no_show_all(True)
             p.set_visible(self.show_pl.get_active())
             self.pl_labels.append(p)
+            c._pl_label = p
             c.pack_start(p, False, False, 0)
         if unknown:
             c.pack_start(label(_("Podkreślone — słowa spoza Twoich lekcji: ") + ", ".join(sorted(set(unknown))), "dim"),
                          False, False, 0)
         self.chat.pack_start(c, False, False, 0)
         c.show_all()
-        if pl:
+        if pl or pending:
             self.pl_labels[-1].set_visible(self.show_pl.get_active())
         GLib.timeout_add(80, self._scroll_end)
         return c
@@ -577,7 +602,9 @@ class BotPage(Gtk.Box):
         self._busy(False)
         if not r.get("es"):
             return
-        self._bubble("bot", r["es"], r.get("pl", ""), r.get("unknown", []))
+        bub = self._bubble("bot", r["es"], r.get("pl", ""), r.get("unknown", []), pending=r.get("pl_pending"))
+        if r.get("pl_pending"):
+            self._translate_later(bub)
         if self.app.db.get("autoplay", True):
             self.app.say(r["es"])
 

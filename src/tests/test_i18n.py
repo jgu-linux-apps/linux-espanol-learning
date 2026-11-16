@@ -233,6 +233,24 @@ class ReplyTranslation(unittest.TestCase):
         self.assertEqual(c.translate_pl("Mi hermano es informático."), "Mój brat jest informatykiem.")
 
 
+class DeferredTranslation(unittest.TestCase):
+    def test_reply_first_translation_later(self):
+        from espanol import bot
+        i18n.LANG = "en"
+        try:
+            c = bot.Conversation.__new__(bot.Conversation)
+            c.backend, c.helper, c.banned, c.defer_translation = ReplyTranslation._Model(["1. Do you have a dog?"]), None, set(), True
+            r = c._finalize(dict(es="¿Tienes un perro?", pl="", fix="", ok="", unknown=[]))
+            self.assertEqual((r["pl"], r.get("pl_pending")), ("", True))
+            self.assertEqual(c.backend.calls, [])                 # nothing translated yet
+            turn = dict(r, who="bot")
+            self.assertEqual(c.translate_turn(turn), "Do you have a dog?")
+            self.assertEqual(turn["pl"], "Do you have a dog?")
+            self.assertNotIn("pl_pending", turn)
+        finally:
+            i18n.LANG = "pl"
+
+
 class TranslatorChoice(unittest.TestCase):
     class _DB(dict):
         def get(self, k, d=None):
