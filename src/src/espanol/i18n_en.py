@@ -639,4 +639,8 @@ EN.update({
         "You choose the speech recognition model in the “Chat with the bot” section above.",
     # page_bot.py: translation in the background
     "tłumaczę…": "translating…", "(brak tłumaczenia)": "(no translation)",
+    # sizes of downloads (speech.py, ollama_local.py, ui/bot_settings.py)
+    "ok. 150 MB": "about 150 MB", "ok. 470 MB": "about 470 MB", "ok. 1,5 GB": "about 1.5 GB",
+    "ok. 5,2 GB": "about 5.2 GB", "ok. 9 GB": "about 9 GB", "ok. 3,3 GB": "about 3.3 GB",
+    "5,2 GB": "5.2 GB", "9 GB": "9 GB", "3,3 GB": "3.3 GB", "6,7 GB": "6.7 GB",
 })

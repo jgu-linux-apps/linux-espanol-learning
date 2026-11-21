@@ -24,11 +24,11 @@ MANAGED_URL = "http://" + MANAGED_HOST
 
 # Modele do wyboru w kreatorze (nazwa, opis, rozmiar pobierania)
 MODELS = [
-    ("qwen3:8b", _("Zalecany — bardzo dobry hiszpański (Qwen 3, 8B)"), "ok. 5,2 GB",
+    ("qwen3:8b", _("Zalecany — bardzo dobry hiszpański (Qwen 3, 8B)"), _("ok. 5,2 GB"),
      _("najlepiej z kartą NVIDIA 6–8 GB lub 16 GB RAM")),
-    ("qwen3:14b", _("Najmądrzejszy — najlepsze rozmowy (Qwen 3, 14B)"), "ok. 9 GB",
+    ("qwen3:14b", _("Najmądrzejszy — najlepsze rozmowy (Qwen 3, 14B)"), _("ok. 9 GB"),
      _("wymaga karty NVIDIA 12 GB+ lub 32 GB RAM; wolniejszy")),
-    ("gemma3:4b", _("Szybki — lżejszy model (Gemma 3, 4B)"), "ok. 3,3 GB",
+    ("gemma3:4b", _("Szybki — lżejszy model (Gemma 3, 4B)"), _("ok. 3,3 GB"),
      _("dla słabszych komputerów; częściej się myli")),
 ]
 

@@ -304,6 +304,23 @@ class ProfileNames(unittest.TestCase):
         self.assertEqual(display_name({"name": "Ola", "lang": "en"}), "Ola")
 
 
+class DownloadSizes(unittest.TestCase):
+    def test_sizes_in_english(self):
+        """Sizes are translated at import time, so this runs in a fresh process with the English course."""
+        import subprocess
+        code = ("import sys; sys.path.insert(0, 'src'); from espanol import i18n; i18n.init(); "
+                "from espanol import speech, ollama_local; "
+                "from espanol.ui import bot_settings as b; "
+                "print('|'.join([v[1] for v in speech.WHISPER_SIZES.values()] + [m[2] for m in ollama_local.MODELS]"
+                " + list(b.SIZES.values())))")
+        out = subprocess.run([sys.executable, "-c", code], cwd=ROOT, capture_output=True, text=True,
+                             env=dict(os.environ, ESPANOL_LANG="en")).stdout.strip()
+        self.assertTrue(out, "no output")
+        self.assertNotIn("ok.", out)
+        self.assertIsNone(re.search(r"\d,\d", out), out)
+        self.assertIn("about 150 MB", out)
+
+
 class SpeechParts(unittest.TestCase):
     def test_slash_is_not_read(self):
         from espanol.speech import speech_parts

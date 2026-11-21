@@ -33,9 +33,9 @@ EXTRA_VOICES = {
 VOICE_URL = "https://huggingface.co/rhasspy/piper-voices/resolve/main/{path}/{name}{ext}?download=true"
 
 WHISPER_SIZES = {
-    "base": (_("Szybki"), "ok. 150 MB"),
-    "small": (_("Dokładny"), "ok. 470 MB"),
-    "medium": (_("Bardzo dokładny (zalecana karta NVIDIA)"), "ok. 1,5 GB"),
+    "base": (_("Szybki"), _("ok. 150 MB")),
+    "small": (_("Dokładny"), _("ok. 470 MB")),
+    "medium": (_("Bardzo dokładny (zalecana karta NVIDIA)"), _("ok. 1,5 GB")),
 }
 
 VENV_PY = os.path.join(VENV, "bin", "python")

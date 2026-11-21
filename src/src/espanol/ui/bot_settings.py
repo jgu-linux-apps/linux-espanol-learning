@@ -16,7 +16,7 @@ from .. import speech
 from ..i18n import _
 
 FAST, SMART, LIGHT = "qwen3:8b", "qwen3:14b", "gemma3:4b"
-SIZES = {FAST: "5,2 GB", SMART: "9 GB", LIGHT: "3,3 GB", botmod.BIELIK: "6,7 GB"}
+SIZES = {FAST: _("5,2 GB"), SMART: _("9 GB"), LIGHT: _("3,3 GB"), botmod.BIELIK: _("6,7 GB")}
 NEEDS_VRAM = {FAST: 6, SMART: 12, LIGHT: 4}       # GB of graphics memory for the whole model to fit
 
 
